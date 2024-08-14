@@ -1,4 +1,4 @@
-name,actor_num_movies,actor_profit_mean,actor_profit_std,actor_score_mean,actor_score_std
+actor_name,actor_num_movies,actor_profit_mean,actor_profit_std,actor_score_mean,actor_score_std
 Jack Nicholson,18,0.799854673787492,1.7092908502649216,6.605555555555556,0.7696234543189993
 Brooke Shields,4,2.2853730319318184,6.528777214910648,5.5,0.7393691004272946
 Mark Hamill,2,21.264188772222223,10.812422360584309,8.5,0.282842712474618

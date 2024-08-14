@@ -106,7 +106,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 105,Blade Runner,R,Action,1982,8.1,710000.0,Ridley Scott,Harrison Ford,United States,28000000.0,41676878.0,The Ladd Company,117.0,42,0.48845992857142856,8.37597167734662,109.13146401704174
 106,The Thing,R,Horror,1982,8.1,382000.0,John Carpenter,Kurt Russell,United States,15000000.0,19632053.0,Universal Pictures,109.0,42,0.3088035333333333,5.102533945647745,104.11072468946857
 107,Conan the Barbarian,R,Action,1982,6.9,141000.0,John Milius,Arnold Schwarzenegger,United States,20000000.0,68851475.0,Universal Pictures,129.0,42,2.44257375,41.06270044514219,81.80995466858612
-108,E.T. the Extra-Terrestrial,PG,Family,1982,7.8,381000.0,Steven Spielberg,Henry Thomas,United States,10500000.0,792910554.0,Universal Pictures,115.0,42,74.51529085714286,1204.6801987684617,100.23432630204894
+108,E.T. the Extra-Terrestrial,PG,Others,1982,7.8,381000.0,Steven Spielberg,Henry Thomas,United States,10500000.0,792910554.0,Universal Pictures,115.0,42,74.51529085714286,1204.6801987684617,100.23432630204894
 109,First Blood,R,Action,1982,7.7,234000.0,Ted Kotcheff,Sylvester Stallone,United States,15000000.0,125212904.0,Anabasis N.V.,93.0,42,7.3475269333333335,121.40730771181077,95.19568823641676
 110,An Officer and a Gentleman,R,Drama,1982,7.0,52000.0,Taylor Hackford,Richard Gere,United States,7500000.0,129795554.0,Lorimar Film Entertainment,124.0,42,16.306073866666665,258.1318931510106,76.01299298294495
 111,Grease 2,PG,Comedy,1982,4.4,34000.0,Patricia Birch,Michelle Pfeiffer,United States,13200000.0,15171476.0,Paramount Pictures,115.0,42,0.14935424242424242,2.4487714429629195,45.91010953583252
@@ -162,7 +162,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 161,Best Friends,PG,Comedy,1982,5.5,2700.0,Norman Jewison,Burt Reynolds,United States,15000000.0,36821203.0,Warner Bros.,116.0,42,1.4547468666666667,24.037598240428256,43.45553878595831
 162,Shoot the Moon,R,Drama,1982,6.9,2500.0,Alan Parker,Albert Finney,United States,12000000.0,9217530.0,Metro-Goldwyn-Mayer (MGM),124.0,42,-0.2318725,-3.7796184890045397,53.98591747490842
 163,Lookin' to Get Out,R,Comedy,1982,5.1,684.0,Hal Ashby,Jon Voight,United States,17000000.0,946461.0,Lorimar Productions,105.0,42,-0.9443258235294117,-15.7218199094893,33.29258537987501
-164,Barbarosa,PG,Western,1982,6.4,1500.0,Fred Schepisi,Willie Nelson,United States,11000000.0,1736123.0,Incorporated Television Company (ITC),90.0,42,-0.8421706363636363,-13.65445430611527,46.804610477377935
+164,Barbarosa,PG,Others,1982,6.4,1500.0,Fred Schepisi,Willie Nelson,United States,11000000.0,1736123.0,Incorporated Television Company (ITC),90.0,42,-0.8421706363636363,-13.65445430611527,46.804610477377935
 165,The Soldier,R,Action,1982,5.3,1100.0,James Glickenhaus,Ken Wahl,United States,4000000.0,6328816.0,James Glickenhaus,96.0,42,0.582204,8.850551631110477,37.11624693156825
 166,Wrong Is Right,R,Comedy,1982,5.7,1800.0,Richard Brooks,Sean Connery,United States,10000000.0,3583513.0,Columbia Pictures,117.0,42,-0.6416487,-10.342155120913059,42.72458908014026
 167,Jekyll and Hyde... Together Again,R,Sci-Fi,1982,6.2,1100.0,Jerry Belson,Mark Blankfield,United States,5000000.0,3792188.0,Paramount Pictures,87.0,42,-0.2415624,-3.7260875723857607,43.41900584447606
@@ -297,7 +297,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 296,2010: the Year We Make Contact,PG,Adventure,1984,6.8,50000.0,Peter Hyams,Roy Scheider,United States,28000000.0,40400657.0,Metro-Goldwyn-Mayer (MGM),116.0,40,0.44288060714285715,7.594390460490333,73.57449233398992
 297,The Killing Fields,R,Biography,1984,7.8,53000.0,Roland Joffé,Sam Waterston,United Kingdom,14400000.0,34700291.0,Goldcrest Films International,141.0,40,1.4097424305555555,23.236416208143677,84.84876810176722
 298,The Cotton Club,R,Crime,1984,6.5,17000.0,Francis Ford Coppola,Richard Gere,United States,58000000.0,25928721.0,Zoetrope Studios,127.0,40,-0.5529530862068965,-9.884563694599173,63.3162960497493
-299,Starman,PG,Romance,1984,7.0,44000.0,John Carpenter,Jeff Bridges,United States,22000000.0,28744356.0,Columbia Pictures,115.0,40,0.30656163636363637,5.182900556419617,74.84361439030279
+299,Starman,PG,Others,1984,7.0,44000.0,John Carpenter,Jeff Bridges,United States,22000000.0,28744356.0,Columbia Pictures,115.0,40,0.30656163636363637,5.182900556419617,74.84361439030279
 300,Night of the Comet,PG-13,Comedy,1984,6.4,19000.0,Thom Eberhardt,Catherine Mary Stewart,United States,700000.0,14418922.0,Atlantic Entertainment Group,95.0,40,19.59846,263.77245142805504,63.0540432521509
 301,The Philadelphia Experiment,PG,Adventure,1984,6.1,15000.0,Stewart Raffill,Michael Paré,United States,21000000.0,8103330.0,New World Pictures,102.0,40,-0.6141271428571429,-10.354203892118841,58.65641342851452
 302,Bolero,R,Comedy,1984,3.0,5100.0,John Derek,Bo Derek,United States,7000000.0,8914881.0,City Films,105.0,40,0.2735544285714286,4.311606434982625,25.610987456137252
@@ -611,7 +611,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 610,Extreme Prejudice,R,Action,1987,6.6,6400.0,Walter Hill,Nick Nolte,United States,22000000.0,11307844.0,Carolco Pictures,104.0,37,-0.4860070909090909,-8.216704646333222,57.84275157769523
 611,Matewan,PG-13,Drama,1987,7.9,7500.0,John Sayles,Chris Cooper,United States,4000000.0,1680358.0,Cinecom Entertainment Group,135.0,37,-0.5799105,-8.815686291528557,70.48900056624278
 612,Suspect,R,Crime,1987,6.6,9600.0,Peter Yates,Cher,United States,14500000.0,18782400.0,TriStar Pictures,121.0,37,0.29533793103448275,4.8700218337745085,60.51882129120912
-613,The Fourth Protocol,R,Thriller,1987,6.6,9200.0,John Mackenzie,Michael Caine,United Kingdom,6000000.0,12423831.0,Fourth Protocol,119.0,37,1.0706385,16.709744171008158,60.23792783604507
+613,The Fourth Protocol,R,Others,1987,6.6,9200.0,John Mackenzie,Michael Caine,United Kingdom,6000000.0,12423831.0,Fourth Protocol,119.0,37,1.0706385,16.709744171008158,60.23792783604507
 614,Hiding Out,PG-13,Comedy,1987,6.4,3500.0,Bob Giraldi,Jon Cryer,United States,7000000.0,7019441.0,De Laurentiis Entertainment Group (DEG),98.0,37,0.0027772857142857143,0.04377396856645254,52.22731678385603
 615,Made in Heaven,PG,Comedy,1987,6.4,3200.0,Alan Rudolph,Timothy Hutton,United States,13000000.0,4572845.0,Lorimar Motion Pictures,103.0,37,-0.6482426923076923,-10.61851343681386,51.65379896824204
 616,Date with an Angel,PG,Comedy,1987,5.7,2600.0,Tom McLoughlin,Michael E. Knight,United States,8000000.0,1988962.0,De Laurentiis Entertainment Group (DEG),105.0,37,-0.75137975,-11.943145134892566,44.82062032685457
@@ -621,7 +621,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 620,Tin Men,R,Comedy,1987,6.6,8000.0,Barry Levinson,Richard Dreyfuss,United States,11000000.0,25411386.0,Touchstone Pictures,112.0,37,1.310126,21.24160452743374,59.31549901636902
 621,Prison,R,Crime,1987,5.8,4000.0,Renny Harlin,Lane Smith,United States,4000000.0,345704.0,Empire Pictures,102.0,37,-0.913574,-13.887973727147397,48.105487912591755
 622,Street Smart,R,Crime,1987,6.4,2900.0,Jerry Schatzberg,Christopher Reeve,United States,5000000.0,1119112.0,Golan-Globus Productions,97.0,37,-0.7761776,-11.972499483877483,51.023782502237225
-623,The House on Carroll Street,PG,Thriller,1987,6.1,2300.0,Peter Yates,Kelly McGillis,United States,14000000.0,459824.0,Orion Pictures,101.0,37,-0.9671554285714286,-15.914124657269648,47.21805285169517
+623,The House on Carroll Street,PG,Others,1987,6.1,2300.0,Peter Yates,Kelly McGillis,United States,14000000.0,459824.0,Orion Pictures,101.0,37,-0.9671554285714286,-15.914124657269648,47.21805285169517
 624,The Principal,R,Action,1987,6.3,9300.0,Christopher Cain,Jim Belushi,United States,11000000.0,19734940.0,TriStar Pictures,109.0,37,0.7940854545454545,12.874829738851078,57.56794897859049
 625,American Ninja 2: The Confrontation,R,Action,1987,4.9,8200.0,Sam Firstenberg,Michael Dudikoff,United States,350000.0,4000000.0,Golan-Globus Productions,90.0,37,10.428571428571429,133.12789366328408,44.15825822293649
 626,A Prayer for the Dying,R,Action,1987,6.3,4800.0,Mike Hodges,Mickey Rourke,United Kingdom,6000000.0,1432687.0,The Samuel Goldwyn Company,107.0,37,-0.7612188333333333,-11.880547881617646,53.40113854044469
@@ -915,7 +915,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 914,Darkman,R,Action,1990,6.4,60000.0,Sam Raimi,Liam Neeson,United States,14000000.0,48878502.0,Renaissance Pictures,96.0,34,2.4913215714285712,40.99361992686275,70.41343898370712
 915,The Hot Spot,R,Crime,1990,6.4,11000.0,Dennis Hopper,Don Johnson,United States,13000000.0,1293976.0,Orion Pictures,130.0,34,-0.9004633846153847,-14.750004377000963,59.55616353139525
 916,Cry-Baby,PG-13,Comedy,1990,6.5,57000.0,John Waters,Johnny Depp,United States,11000000.0,8266343.0,Universal Pictures,85.0,34,-0.24851427272727272,-4.029262758464102,71.18024255430848
-917,Presumed Innocent,R,Mystery,1990,6.9,39000.0,Alan J. Pakula,Harrison Ford,United States,22000000.0,221303188.0,Warner Bros.,127.0,34,9.059235818181818,153.16045060216328,72.94208678327131
+917,Presumed Innocent,R,Others,1990,6.9,39000.0,Alan J. Pakula,Harrison Ford,United States,22000000.0,221303188.0,Warner Bros.,127.0,34,9.059235818181818,153.16045060216328,72.94208678327131
 918,Arachnophobia,PG-13,Comedy,1990,6.4,65000.0,Frank Marshall,Jeff Daniels,United States,22000000.0,53208180.0,Hollywood Pictures,109.0,34,1.4185536363636364,23.982852252586248,70.92571231281777
 919,Days of Thunder,PG-13,Action,1990,6.1,81000.0,Tony Scott,Tom Cruise,United States,60000000.0,157920733.0,Don Simpson/Jerry Bruckheimer Films,107.0,34,1.6320122166666666,29.229102354874215,68.9434470452929
 920,King of New York,R,Crime,1990,7.0,34000.0,Abel Ferrara,Christopher Walken,Italy,5300000.0,2554476.0,Reteitalia,103.0,34,-0.5180233962264151,-8.020668850934001,73.03881062518809
@@ -939,7 +939,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 938,House Party,R,Comedy,1990,6.5,14000.0,Reginald Hudlin,Christopher Reid,United States,2500000.0,26385627.0,"Jackson/McHenry Company,The",100.0,34,9.5542508,140.75132425887986,62.05428195588307
 939,Another 48 Hrs.,R,Action,1990,5.9,40000.0,Walter Hill,Eddie Murphy,United States,38000000.0,153518974.0,Paramount Pictures,93.0,34,3.039973,53.05694278816822,62.520144925266834
 940,Night of the Living Dead,R,Horror,1990,6.9,40000.0,Tom Savini,Tony Todd,United States,4200000.0,5835247.0,21st Century Film Corporation,92.0,34,0.38934452380952383,5.937735680501237,73.1167796583629
-941,Pacific Heights,R,Thriller,1990,6.4,19000.0,John Schlesinger,Melanie Griffith,United States,18000000.0,44926706.0,Morgan Creek Entertainment,102.0,34,1.4959281111111111,24.99079897720962,63.0540432521509
+941,Pacific Heights,R,Others,1990,6.4,19000.0,John Schlesinger,Melanie Griffith,United States,18000000.0,44926706.0,Morgan Creek Entertainment,102.0,34,1.4959281111111111,24.99079897720962,63.0540432521509
 942,Postcards from the Edge,R,Comedy,1990,6.7,16000.0,Mike Nichols,Meryl Streep,United States,22000000.0,39071603.0,Columbia Pictures,101.0,34,0.7759819545454546,13.119180050352444,64.85830480818686
 943,Hard to Kill,R,Action,1990,5.8,28000.0,Bruce Malmuth,Steven Seagal,United States,10000000.0,47410827.0,Warner Bros.,96.0,34,3.7410827,60.299128796745414,59.39176677711258
 944,The NeverEnding Story II: The Next Chapter,PG,Adventure,1990,5.2,25000.0,George Miller,Jonathan Brandis,Germany,36000000.0,17373527.0,Warner Bros.,89.0,34,-0.5174020277777778,-9.002293142813274,52.658481740021756
@@ -1094,7 +1094,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1093,Rambling Rose,R,Drama,1991,6.6,4700.0,Martha Coolidge,Laura Dern,United States,7500000.0,6266621.0,Carolco Pictures,112.0,33,-0.16445053333333334,-2.6033199558726423,55.80509739880778
 1094,Pure Luck,PG,Comedy,1991,5.8,6700.0,Nadia Tass,Martin Short,United States,17010000.0,24941969.0,Hivemind,96.0,33,0.46631211052322163,7.7637758008658535,51.09720427119853
 1095,F/X2,PG-13,Action,1991,5.9,9000.0,Richard Franklin,Bryan Brown,United States,16400000.0,21082165.0,Orion Pictures,108.0,33,0.28549786585365855,4.742916631263769,53.71938115227831
-1096,Mortal Thoughts,R,Mystery,1991,5.7,8400.0,Alan Rudolph,Demi Moore,United States,8000000.0,18784957.0,Columbia Pictures,103.0,33,1.348119625,21.42829686396518,51.50512581353901
+1096,Mortal Thoughts,R,Others,1991,5.7,8400.0,Alan Rudolph,Demi Moore,United States,8000000.0,18784957.0,Columbia Pictures,103.0,33,1.348119625,21.42829686396518,51.50512581353901
 1097,Another You,R,Comedy,1991,5.4,3700.0,Maurice Phillips,Richard Pryor,United States,17000000.0,2865916.0,TriStar Pictures,98.0,33,-0.831416705882353,-13.842027183762669,44.36687573261451
 1098,For the Boys,R,Comedy,1991,6.4,5300.0,Mark Rydell,Bette Midler,United States,40000000.0,23202444.0,All Girl Productions,138.0,33,-0.4199389,-7.3507742868431105,54.882957437057364
 1099,Beastmaster 2: Through the Portal of Time,PG-13,Action,1991,4.1,3000.0,Sylvio Tabet,Marc Singer,United States,6000000.0,869325.0,Les Films 21,107.0,33,-0.8551125,-13.345971691127502,32.82610702736601
@@ -1112,7 +1112,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1111,Run,R,Action,1991,6.2,2600.0,Geoff Burrowes,Patrick Dempsey,United States,16000000.0,4409328.0,Hollywood Pictures,91.0,33,-0.724417,-12.01670111626758,48.752253688859355
 1112,Company Business,PG-13,Action,1991,5.6,2600.0,Nicholas Meyer,Gene Hackman,United States,18000000.0,1501785.0,Pathé Entertainment,98.0,33,-0.9165675,-15.312068789542412,44.034293654453606
 1113,City of Hope,R,Crime,1991,7.3,2300.0,John Sayles,Vincent Spano,United States,3000000.0,1345015.0,Esperanza Films Inc.,129.0,33,-0.5516616666666667,-8.227549866444633,56.50685013399586
-1114,Liebestraum,R,Mystery,1991,5.9,1500.0,Mike Figgis,Kevin Anderson,United States,6900000.0,133645.0,Initial Entertainment Group (IEG),112.0,33,-0.9806311594202899,-15.442030217745335,43.14800028383278
+1114,Liebestraum,R,Others,1991,5.9,1500.0,Mike Figgis,Kevin Anderson,United States,6900000.0,133645.0,Initial Entertainment Group (IEG),112.0,33,-0.9806311594202899,-15.442030217745335,43.14800028383278
 1115,Closet Land,R,Drama,1991,7.1,2700.0,Radha Bharadwaj,Madeleine Stowe,United States,4000000.0,259012.0,Imagine Entertainment,89.0,33,-0.935247,-14.217442445158708,56.09715006914618
 1116,Late for Dinner,PG,Drama,1991,6.4,1700.0,W.D. Richter,Peter Berg,United States,14000000.0,8906823.0,Castle Rock Entertainment,99.0,33,-0.36379835714285713,-5.986144764997047,47.60565459228357
 1117,Reservoir Dogs,R,Crime,1992,8.3,943000.0,Quentin Tarantino,Harvey Keitel,United States,1200000.0,2913644.0,Live Entertainment,99.0,32,1.4280366666666666,19.98941751371896,114.18161896140946
@@ -1243,7 +1243,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1242,Night and the City,R,Comedy,1992,5.8,4600.0,Irwin Winkler,Robert De Niro,United States,20000000.0,6202756.0,Penta Films,105.0,32,-0.6898622,-11.597440964485418,48.91610717836768
 1243,Whispers in the Dark,R,Drama,1992,5.6,2000.0,Christopher Crowe,Annabella Sciorra,United States,18000000.0,11124511.0,Paramount Pictures,103.0,32,-0.3819716111111111,-6.381172783221832,42.56505377343566
 1244,Man Trouble,PG-13,Comedy,1992,4.7,3000.0,Bob Rafelson,Jack Nicholson,United States,30000000.0,4096030.0,Penta Entertainment,100.0,32,-0.8634656666666667,-14.866036198894827,37.62992756795616
-1245,Ruby Cairo,PG-13,Mystery,1992,5.0,2100.0,Graeme Clifford,Andie MacDowell,United States,24000000.0,608866.0,Majestic Films International,90.0,32,-0.9746305833333333,-16.562447572693298,38.248463118557574
+1245,Ruby Cairo,PG-13,Others,1992,5.0,2100.0,Graeme Clifford,Andie MacDowell,United States,24000000.0,608866.0,Majestic Films International,90.0,32,-0.9746305833333333,-16.562447572693298,38.248463118557574
 1246,The Waterdance,R,Drama,1992,6.8,2600.0,Neal Jimenez,Eric Stoltz,United States,2700000.0,1723319.0,No Frills Film Production,106.0,32,-0.3617337037037037,-5.3568284452513195,53.4702137232651
 1247,The Gun in Betty Lou's Handbag,PG-13,Comedy,1992,5.1,1600.0,Allan Moyle,Penelope Ann Miller,United States,13000000.0,3721911.0,In The Bag Productions,89.0,32,-0.7136991538461539,-11.690720381250243,37.62657043196215
 1248,Tombstone,R,Action,1993,7.8,132000.0,George P. Cosmatos,Kurt Russell,United States,25000000.0,56505065.0,Hollywood Pictures,130.0,31,1.2602026,21.46677800905008,91.96634617223435
@@ -1356,7 +1356,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1355,Heaven & Earth,R,Action,1993,6.8,14000.0,Oliver Stone,Hiep Thi Le,United States,33000000.0,5864949.0,Alcor Films,140.0,31,-0.8222742727272727,-14.23522710859629,64.91832573846229
 1356,Indian Summer,PG-13,Comedy,1993,6.6,5300.0,Mike Binder,Alan Arkin,Canada,9000000.0,14904910.0,Outlaw Productions (I),97.0,31,0.6561011111111111,10.505973314198581,56.598049856965396
 1357,Once Upon a Forest,G,Animation,1993,6.5,5200.0,Charles Grosvenor,Michael Crawford,United Kingdom,13000000.0,6582052.0,Hanna-Barbera Productions,71.0,31,-0.4936883076923077,-8.08684153486825,55.61669037970187
-1358,Posse,R,Western,1993,5.5,4200.0,Mario Van Peebles,Mario Van Peebles,United Kingdom,10000000.0,18289763.0,PolyGram Filmed Entertainment,111.0,31,0.8289763,13.36151929577752,45.88561892349303
+1358,Posse,R,Others,1993,5.5,4200.0,Mario Van Peebles,Mario Van Peebles,United Kingdom,10000000.0,18289763.0,PolyGram Filmed Entertainment,111.0,31,0.8289763,13.36151929577752,45.88561892349303
 1359,Even Cowgirls Get the Blues,R,Comedy,1993,4.4,7100.0,Gus Van Sant,Uma Thurman,United States,8000000.0,1708873.0,New Line Cinema,106.0,31,-0.786390875,-12.499645289722219,39.01854027732939
 1360,Best of the Best II,R,Action,1993,5.6,5400.0,Robert Radler,Eric Roberts,United States,7000000.0,6608687.0,Picture Securities,101.0,31,-0.05590185714285714,-0.8810926887322794,48.12726370229325
 1361,The Thief and the Cobbler,G,Animation,1993,7.1,3700.0,Richard Williams,Vincent Price,United Kingdom,25000000.0,669276.0,Richard Williams Productions,90.0,31,-0.97322896,-16.578358143602212,58.33422550028944
@@ -1383,7 +1383,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1382,Son of the Pink Panther,PG,Comedy,1993,3.9,5000.0,Blake Edwards,Roberto Benigni,Italy,25000000.0,2438031.0,Filmauro,93.0,31,-0.90247876,-15.373171900139539,33.21705344652333
 1383,"Bodies, Rest & Motion",R,Drama,1993,5.7,2200.0,Michael Steinberg,Phoebe Cates,United States,2500000.0,764724.0,Fine Line Features,95.0,31,-0.6941104,-10.225496486010268,43.86841204427452
 1384,Mother's Boys,R,Drama,1993,5.4,3000.0,Yves Simoneau,Jamie Lee Curtis,United States,8000000.0,737548.0,Miramax,96.0,31,-0.9078065,-14.42954083324557,43.234384865311334
-1385,The Nutcracker,G,Family,1993,5.9,1900.0,Emile Ardolino,Darci Kistler,United States,19000000.0,2119994.0,Krasnow Productions,92.0,31,-0.8884213684210527,-14.889897302445458,44.54269407441174
+1385,The Nutcracker,G,Others,1993,5.9,1900.0,Emile Ardolino,Darci Kistler,United States,19000000.0,2119994.0,Krasnow Productions,92.0,31,-0.8884213684210527,-14.889897302445458,44.54269407441174
 1386,Philadelphia Experiment II,PG-13,Action,1993,4.5,1900.0,Stephen Cornwell,Brad Johnson,United States,5000000.0,2970.0,Trimark Pictures,97.0,31,-0.999406,-15.41578605100696,33.973241243195396
 1387,Fear of a Black Hat,R,Comedy,1993,7.2,3900.0,Rusty Cundieff,Larry B. Scott,United States,999999.0,233824.0,Incorporated Television Company (ITC),88.0,31,-0.7661757661757662,-10.585108620681515,59.53486919124771
 1388,Boiling Point,R,Action,1993,5.0,5700.0,James B. Harris,Wesley Snipes,United States,9000000.0,10058318.0,StudioCanal,92.0,31,0.11759088888888888,1.8829517581023272,43.24110726911321
@@ -1431,7 +1431,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1430,Texas Chainsaw Massacre: The Next Generation,R,Comedy,1994,3.3,21000.0,Kim Henkel,Renée Zellweger,United States,600000.0,185898.0,Ultra Muchos Productions,87.0,30,-0.69017,-9.182494401035628,32.84251646512834
 1431,The Next Karate Kid,PG,Action,1994,4.5,28000.0,Christopher Cain,Pat Morita,United States,12000000.0,15876353.0,Columbia Pictures,107.0,30,0.3230294166666667,5.265514262043514,46.079819051208034
 1432,Blown Away,R,Action,1994,6.2,29000.0,Stephen Hopkins,Jeff Bridges,United States,28000000.0,30156002.0,Metro-Goldwyn-Mayer (MGM),121.0,30,0.07700007142857143,1.3203752850835306,63.70531687560539
-1433,Color of Night,R,Mystery,1994,5.2,23000.0,Richard Rush,Bruce Willis,United States,40000000.0,19726050.0,Cinergi Pictures Entertainment,121.0,30,-0.50684875,-8.872078197134325,52.22489737353869
+1433,Color of Night,R,Others,1994,5.2,23000.0,Richard Rush,Bruce Willis,United States,40000000.0,19726050.0,Cinergi Pictures Entertainment,121.0,30,-0.50684875,-8.872078197134325,52.22489737353869
 1434,North,PG,Adventure,1994,4.5,13000.0,Rob Reiner,Elijah Wood,United States,40000000.0,7182747.0,Castle Rock Entertainment,87.0,30,-0.820431325,-14.361149890926093,42.627170863996525
 1435,Muriel's Wedding,R,Comedy,1994,7.2,37000.0,P.J. Hogan,Toni Collette,Australia,9000000.0,15482277.0,CiBy 2000,106.0,30,0.720253,11.533220519405585,75.7344469797098
 1436,The Client,PG-13,Crime,1994,6.7,62000.0,Joel Schumacher,Susan Sarandon,United States,45000000.0,117615211.0,Warner Bros.,119.0,30,1.6136713555555555,28.436395869772458,73.93376074898244
@@ -1533,7 +1533,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1532,Die Hard with a Vengeance,R,Action,1995,7.6,370000.0,John McTiernan,Bruce Willis,United States,90000000.0,366101666.0,Cinergi Pictures Entertainment,128.0,29,3.067796288888889,56.18767142617358,97.44156296311509
 1533,Mortal Kombat,PG-13,Action,1995,5.8,112000.0,Paul W.S. Anderson,Christopher Lambert,United States,18000000.0,122195920.0,New Line Cinema,101.0,29,5.788662222222222,96.70470985071161,67.43227407160795
 1534,Mallrats,R,Comedy,1995,7.1,118000.0,Kevin Smith,Shannen Doherty,United States,8000000.0,2122561.0,Gramercy Pictures (I),94.0,29,-0.734679875,-11.677701421697522,82.91692331447938
-1535,12 Monkeys,R,Mystery,1995,8.0,589000.0,Terry Gilliam,Bruce Willis,United States,29000001.0,168839459.0,Universal Pictures,129.0,29,4.822050109584479,82.85635359226437,106.2894517010698
+1535,12 Monkeys,R,Others,1995,8.0,589000.0,Terry Gilliam,Bruce Willis,United States,29000001.0,168839459.0,Universal Pictures,129.0,29,4.822050109584479,82.85635359226437,106.2894517010698
 1536,Leaving Las Vegas,R,Drama,1995,7.5,117000.0,Mike Figgis,Nicolas Cage,United States,3600000.0,32029928.0,Lumiere Pictures,111.0,29,7.897202222222222,119.2196742903927,87.5244691033492
 1537,Showgirls,NC-17,Drama,1995,4.9,64000.0,Paul Verhoeven,Elizabeth Berkley,France,45000000.0,20358624.0,Carolco Pictures,128.0,29,-0.5475861333333333,-9.649657600139868,54.226527975474866
 1538,Before Sunrise,R,Drama,1995,8.1,282000.0,Richard Linklater,Ethan Hawke,United States,2500000.0,5987386.0,Castle Rock Entertainment,101.0,29,1.3949544,20.550191029185793,101.65226503435403
@@ -1718,7 +1718,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1717,Secrets & Lies,R,Comedy,1996,8.0,39000.0,Mike Leigh,Timothy Spall,United Kingdom,4500000.0,13417292.0,Channel Four Films,136.0,28,1.9816204444444445,30.357608691578722,84.57053540089427
 1718,Daylight,PG-13,Action,1996,5.9,68000.0,Rob Cohen,Sylvester Stallone,United States,80000000.0,159212469.0,Universal Pictures,114.0,28,0.9901558625,18.01839813435246,65.65085160653364
 1719,Last Man Standing,R,Action,1996,6.4,54000.0,Walter Hill,Bruce Willis,United States,67000000.0,47267001.0,New Line Cinema,101.0,28,-0.2945223731343284,-5.30735300415743,69.73913168349704
-1720,The Arrival,PG-13,Mystery,1996,6.2,34000.0,David Twohy,Charlie Sheen,United States,25000000.0,14063331.0,Live Entertainment,115.0,28,-0.43746676,-7.451977819485843,64.69151798230946
+1720,The Arrival,PG-13,Others,1996,6.2,34000.0,David Twohy,Charlie Sheen,United States,25000000.0,14063331.0,Live Entertainment,115.0,28,-0.43746676,-7.451977819485843,64.69151798230946
 1721,Ransom,R,Action,1996,6.7,121000.0,Ron Howard,Mel Gibson,United States,80000000.0,309492681.0,Touchstone Pictures,121.0,28,2.8686585125,52.2025199741968,78.41375702467849
 1722,Beavis and Butt-Head Do America,PG-13,Animation,1996,6.8,53000.0,Directors,Mike Judge,United States,12000000.0,63118386.0,Paramount Pictures,81.0,28,4.2598655,69.43758489891025,73.97072090923297
 1723,Fly Away Home,PG,Adventure,1996,6.8,24000.0,Carroll Ballard,Jeff Daniels,United States,22000000.0,25143818.0,Columbia Pictures,107.0,28,0.14290081818181818,2.41596025795228,68.58350194344456
@@ -1841,7 +1841,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 1840,Tomorrow Never Dies,PG-13,Action,1997,6.5,185000.0,Roger Spottiswoode,Pierce Brosnan,United Kingdom,110000000.0,333011068.0,Eon Productions,119.0,27,2.0273733454545453,37.538826463502595,78.832722176393
 1841,Speed 2: Cruise Control,PG-13,Action,1997,3.9,76000.0,Jan de Bont,Sandra Bullock,United States,160000000.0,164508066.0,Blue Tulip Productions,121.0,27,0.0281754125,0.5322528246221605,43.830105615147026
 1842,The Saint,PG-13,Action,1997,6.2,64000.0,Phillip Noyce,Val Kilmer,United States,68000000.0,118063304.0,Paramount Pictures,116.0,27,0.7362250588235294,13.277832381663954,68.61315784651921
-1843,Lost Highway,R,Mystery,1997,7.6,134000.0,David Lynch,Bill Pullman,France,15000000.0,3703548.0,CiBy 2000,134.0,27,-0.7530968,-12.44384073225854,89.72252259989116
+1843,Lost Highway,R,Others,1997,7.6,134000.0,David Lynch,Bill Pullman,France,15000000.0,3703548.0,CiBy 2000,134.0,27,-0.7530968,-12.44384073225854,89.72252259989116
 1844,The Full Monty,R,Comedy,1997,7.2,101000.0,Peter Cattaneo,Robert Carlyle,United Kingdom,3500000.0,257938649.0,Redwave Films,91.0,27,72.69675685714286,1095.4146168099592,82.96470572992847
 1845,Spawn,PG-13,Action,1997,5.2,65000.0,Mark A.Z. Dippé,Michael Jai White,United States,40000000.0,87840042.0,McFarlane Films,96.0,27,1.19600105,20.935268834055055,57.62714125416443
 1846,Seven Years in Tibet,PG-13,Adventure,1997,7.1,134000.0,Jean-Jacques Annaud,Brad Pitt,United States,70000000.0,131457682.0,Mandalay Entertainment,136.0,27,0.8779668857142857,15.859598915762763,83.81972506042464
@@ -2134,7 +2134,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 2133,Mystery Men,PG-13,Action,1999,6.1,64000.0,Kinka Usher,Ben Stiller,United States,68000000.0,33461011.0,Universal Pictures,121.0,25,-0.5079263088235294,-9.160460255961834,67.50649401028504
 2134,Wild Wild West,PG-13,Action,1999,4.9,155000.0,Barry Sonnenfeld,Will Smith,United States,170000000.0,222104681.0,Peters Entertainment,106.0,25,0.30649812352941175,5.8085406453980175,58.56078393991678
 2135,Big Daddy,PG-13,Comedy,1999,6.4,205000.0,Dennis Dugan,Adam Sandler,United States,34200000.0,234801895.0,Jack Giarraputo Productions,93.0,25,5.865552485380117,101.75405719555232,78.2768976519715
-2136,The Ninth Gate,R,Mystery,1999,6.7,172000.0,Roman Polanski,Johnny Depp,France,38000000.0,58401898.0,Artisan Entertainment,133.0,25,0.5368920526315789,9.37042892153841,80.77017336383045
+2136,The Ninth Gate,R,Others,1999,6.7,172000.0,Roman Polanski,Johnny Depp,France,38000000.0,58401898.0,Artisan Entertainment,133.0,25,0.5368920526315789,9.37042892153841,80.77017336383045
 2137,Double Jeopardy,R,Crime,1999,6.5,78000.0,Bruce Beresford,Ashley Judd,United States,70000000.0,177841558.0,Paramount Pictures,105.0,25,1.5405936857142857,27.829293274207235,73.21901668686624
 2138,The Insider,R,Biography,1999,7.8,163000.0,Michael Mann,Russell Crowe,United States,90000000.0,60289912.0,Touchstone Pictures,157.0,25,-0.3301120888888889,-6.046108619231231,93.61174274235341
 2139,Deuce Bigalow: Male Gigolo,R,Comedy,1999,5.7,72000.0,Mike Mitchell,Rob Schneider,United States,17000000.0,92938755.0,Happy Madison Productions,88.0,25,4.4669855882352945,74.36960973283401,63.751201968589704
@@ -2177,7 +2177,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 2176,Teaching Mrs. Tingle,PG-13,Comedy,1999,5.3,20000.0,Kevin Williamson,Helen Mirren,United States,13000000.0,8951935.0,Miramax,96.0,25,-0.3113896153846154,-5.100705112887553,52.48848402844147
 2177,Bicentennial Man,PG,Comedy,1999,6.9,112000.0,Chris Columbus,Robin Williams,United States,100000000.0,87423861.0,1492 Pictures,132.0,25,-0.12576139,-2.316610415105684,80.2211536369129
 2178,Runaway Bride,PG,Comedy,1999,5.6,95000.0,Garry Marshall,Julia Roberts,United States,70000000.0,309460292.0,Paramount Pictures,116.0,25,3.4208613142857143,61.7944586222994,64.185140155263
-2179,The Thirteenth Floor,R,Mystery,1999,7.1,69000.0,Josef Rusnak,Craig Bierko,United States,16000000.0,18564088.0,Columbia Pictures,100.0,25,0.1602555,2.658334144198741,79.1072186634137
+2179,The Thirteenth Floor,R,Others,1999,7.1,69000.0,Josef Rusnak,Craig Bierko,United States,16000000.0,18564088.0,Columbia Pictures,100.0,25,0.1602555,2.658334144198741,79.1072186634137
 2180,Inspector Gadget,PG,Action,1999,4.2,46000.0,David Kellogg,Matthew Broderick,United States,90000000.0,134403112.0,Walt Disney Pictures,78.0,25,0.4933679111111111,9.036191282364756,45.092866036979174
 2181,Arlington Road,R,Action,1999,7.2,83000.0,Mark Pellington,Jeff Bridges,United States,31000000.0,41067311.0,Screen Gems,117.0,25,0.3247519677419355,5.601808340915562,81.5514903848069
 2182,The Hurricane,R,Biography,1999,7.6,93000.0,Norman Jewison,Denzel Washington,United States,50000000.0,73956241.0,Azoff Entertainment,146.0,25,0.47912482,8.493701327604352,86.94669626822899
@@ -2264,7 +2264,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 2263,American Psycho,R,Comedy,2000,7.6,514000.0,Mary Harron,Christian Bale,United States,7000000.0,34266564.0,Am Psycho Productions,101.0,24,3.8952234285714287,61.39425520555355,99.93983693772348
 2264,Gladiator,R,Action,2000,8.5,1400000.0,Ridley Scott,Russell Crowe,United States,103000000.0,465380802.0,Dreamworks Pictures,155.0,24,3.518260213592233,64.91274372662005,120.29185375397664
 2265,Requiem for a Dream,Unrated,Drama,2000,8.3,786000.0,Darren Aronofsky,Ellen Burstyn,United States,4500000.0,7390108.0,Artisan Entertainment,102.0,24,0.6422462222222223,9.838947489933178,112.67011019271416
-2266,Memento,R,Mystery,2000,8.4,1200000.0,Christopher Nolan,Guy Pearce,United States,9000000.0,40047078.0,Newmarket Capital Group,113.0,24,3.4496753333333334,55.2387374154461,117.58178976396913
+2266,Memento,R,Others,2000,8.4,1200000.0,Christopher Nolan,Guy Pearce,United States,9000000.0,40047078.0,Newmarket Capital Group,113.0,24,3.4496753333333334,55.2387374154461,117.58178976396913
 2267,Cast Away,PG-13,Adventure,2000,7.8,542000.0,Robert Zemeckis,Tom Hanks,United States,90000000.0,429632142.0,Twentieth Century Fox,143.0,24,3.773690466666667,69.11634933946226,102.98356598728991
 2268,Scary Movie,R,Comedy,2000,6.2,238000.0,Keenen Ivory Wayans,Anna Faris,United States,19000000.0,278019771.0,Dimension Films,88.0,24,13.63261952631579,228.48201531995548,76.7561609064524
 2269,The Perfect Storm,PG-13,Action,2000,6.4,160000.0,Wolfgang Petersen,George Clooney,United States,140000000.0,328718434.0,Warner Bros.,130.0,24,1.3479888142857144,25.284432405659132,76.69074620298217
@@ -2408,7 +2408,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 2407,Bounce,PG-13,Drama,2000,5.7,20000.0,Don Roos,Ben Affleck,United States,35000000.0,53425292.0,Miramax,106.0,24,0.5264369142857143,9.144661210118603,56.44987904945593
 2408,Brother,R,Crime,2000,7.1,22000.0,Takeshi Kitano,Takeshi Kitano,United States,10000000.0,15250594.0,Recorded Picture Company (RPC),114.0,24,0.5250594,8.462957631634785,70.99146389961722
 2409,Nurse Betty,R,Comedy,2000,6.2,33000.0,Neil LaBute,Renée Zellweger,Germany,35000000.0,29364989.0,Gramercy Pictures (I),110.0,24,-0.1610003142857143,-2.796713697144753,64.50642961078142
-2410,The House of Mirth,PG,Romance,2000,7.0,7200.0,Terence Davies,Gillian Anderson,United Kingdom,10000000.0,5164404.0,Three Rivers Production,135.0,24,-0.4835596,-7.794059885739145,62.17285413502903
+2410,The House of Mirth,PG,Others,2000,7.0,7200.0,Terence Davies,Gillian Anderson,United Kingdom,10000000.0,5164404.0,Three Rivers Production,135.0,24,-0.4835596,-7.794059885739145,62.17285413502903
 2411,Beautiful,PG-13,Comedy,2000,5.6,3700.0,Sally Field,Minnie Driver,United States,14000000.0,3169930.0,Destination Films,112.0,24,-0.7735764285714286,-12.72886586015989,46.01009335234097
 2412,Here on Earth,PG-13,Drama,2000,5.2,8300.0,Mark Piznarski,Chris Klein,United States,15000000.0,10873148.0,Fox 2000 Pictures,96.0,24,-0.27512346666666665,-4.546019317711669,46.92485612768039
 2413,The Million Dollar Hotel,R,Drama,2000,5.9,21000.0,Wim Wenders,Jeremy Davies,Germany,8000000.0,105983.0,Icon Entertainment International,122.0,24,-0.986752125,-15.684377761097037,58.71843852856281
@@ -2417,7 +2417,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 2416,Committed,R,Comedy,2000,5.1,3700.0,Lisa Krueger,Heather Graham,United States,3000000.0,40361.0,Miramax,98.0,24,-0.9865463333333333,-14.713473209228074,41.90204930302481
 2417,Harrison's Flowers,R,Drama,2000,7.1,6100.0,Élie Chouraqui,Andie MacDowell,France,8000000.0,3033646.0,7 Films Cinéma,121.0,24,-0.62079425,-9.86749486748449,61.88391275614595
 2418,The Specials,R,Action,2000,5.8,2200.0,Craig Mazin,Rob Lowe,United States,1000000.0,13276.0,Brillstein-Grey Entertainment,82.0,24,-0.986724,-13.63209583979674,44.63803330820916
-2419,Love's Labour's Lost,PG,Romance,2000,6.0,4400.0,Kenneth Branagh,Alessandro Nivola,United Kingdom,13000000.0,299792.0,Pathé Pictures International,93.0,24,-0.9769390769230769,-16.002711389351553,50.33615891943812
+2419,Love's Labour's Lost,PG,Others,2000,6.0,4400.0,Kenneth Branagh,Alessandro Nivola,United Kingdom,13000000.0,299792.0,Pathé Pictures International,93.0,24,-0.9769390769230769,-16.002711389351553,50.33615891943812
 2420,Lost Souls,R,Drama,2000,4.8,11000.0,Janusz Kaminski,Winona Ryder,United States,50000000.0,31355910.0,Prufrock Pictures,97.0,24,-0.3728818,-6.61027462467818,44.66712264854643
 2421,The Golden Bowl,R,Drama,2000,5.9,4200.0,James Ivory,Uma Thurman,United States,15000000.0,5753678.0,Merchant Ivory Productions,130.0,24,-0.6164214666666666,-10.185477557659542,49.222754845201614
 2422,Digimon: The Movie,PG,Animation,2000,6.1,7000.0,Directors,Lara Jill Miller,United States,5000000.0,16643191.0,Saban Entertainment,82.0,24,2.3286382,35.919124241201224,54.00735911102844
@@ -2800,11 +2800,11 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 2799,X2: X-Men United,PG-13,Action,2003,7.4,521000.0,Bryan Singer,Patrick Stewart,United States,110000000.0,407711549.0,Twentieth Century Fox,134.0,21,2.706468627272727,50.112948538014045,97.40993937344274
 2800,The Rundown,PG-13,Action,2003,6.7,103000.0,Peter Berg,Dwayne Johnson,United States,85000000.0,80981914.0,Columbia Pictures,104.0,21,-0.0472716,-0.8630925220281717,77.33464459031887
 2801,House of 1000 Corpses,R,Horror,2003,6.1,80000.0,Rob Zombie,Sid Haig,United States,7000000.0,16829545.0,Spectacle Entertainment Group,89.0,21,1.4042207142857144,22.132513443368694,68.8676696733017
-2802,Identity,R,Mystery,2003,7.3,233000.0,James Mangold,John Cusack,United States,28000000.0,90259536.0,Columbia Pictures,90.0,21,2.223554857142857,38.1288851286633,90.21919424759922
+2802,Identity,R,Others,2003,7.3,233000.0,James Mangold,John Cusack,United States,28000000.0,90259536.0,Columbia Pictures,90.0,21,2.223554857142857,38.1288851286633,90.21919424759922
 2803,Once Upon a Time in Mexico,R,Action,2003,6.4,156000.0,Robert Rodriguez,Antonio Banderas,United States,29000000.0,98769390.0,Columbia Pictures,102.0,21,2.4058410344827585,41.33910069570438,76.52871223188272
 2804,Cold Mountain,R,Adventure,2003,7.2,142000.0,Anthony Minghella,Jude Law,United States,79000000.0,173013509.0,Miramax,154.0,21,1.190044417721519,21.640908242831753,85.41779282340048
 2805,Cheaper by the Dozen,PG,Comedy,2003,5.9,96000.0,Shawn Levy,Steve Martin,United States,40000000.0,190538630.0,Twentieth Century Fox,98.0,21,3.76346575,65.87717228509844,67.68541047565485
-2806,In the Cut,R,Mystery,2003,5.3,22000.0,Jane Campion,Meg Ryan,United Kingdom,12000000.0,23726793.0,Screen Gems,119.0,21,0.97723275,15.929301534079077,52.9936279814044
+2806,In the Cut,R,Others,2003,5.3,22000.0,Jane Campion,Meg Ryan,United Kingdom,12000000.0,23726793.0,Screen Gems,119.0,21,0.97723275,15.929301534079077,52.9936279814044
 2807,Secondhand Lions,PG,Comedy,2003,7.5,54000.0,Tim McCanlies,Haley Joel Osment,United States,30000000.0,48260279.0,New Line Cinema,109.0,21,0.6086759666666667,10.479396347969791,81.72554494159809
 2808,Scary Movie 3,PG-13,Comedy,2003,5.5,140000.0,David Zucker,Anna Faris,United States,48000000.0,220673217.0,Dimension Films,84.0,21,3.5973586875,63.62544551558904,65.17168735875292
 2809,How to Lose a Guy in 10 Days,PG-13,Comedy,2003,6.4,218000.0,Donald Petrie,Kate Hudson,United States,50000000.0,177502387.0,Lynda Obst Productions,116.0,21,2.55004774,45.20605689910299,78.67040218733585
@@ -3034,7 +3034,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 3033,First Daughter,PG,Comedy,2004,5.1,21000.0,Forest Whitaker,Katie Holmes,United States,30000000.0,10592180.0,New Regency Productions,106.0,20,-0.6469273333333333,-11.137958956161352,50.75661635519835
 3034,Jersey Girl,PG-13,Comedy,2004,6.2,64000.0,Kevin Smith,Ben Affleck,United States,35000000.0,35492921.0,Miramax,102.0,20,0.014083457142857143,0.24464174290170662,68.61315784651921
 3035,The Alamo,PG-13,Drama,2004,6.0,20000.0,John Lee Hancock,Dennis Quaid,United States,107000000.0,25819961.0,Touchstone Pictures,137.0,20,-0.758691953271028,-14.02695432637751,59.42092531521676
-3036,Raise Your Voice,PG,Family,2004,5.9,27000.0,Sean McNamara,Hilary Duff,United States,15000000.0,14867514.0,New Line Cinema,103.0,20,-0.0088324,-0.14594269804837884,60.201193655420155
+3036,Raise Your Voice,PG,Others,2004,5.9,27000.0,Sean McNamara,Hilary Duff,United States,15000000.0,14867514.0,New Line Cinema,103.0,20,-0.0088324,-0.14594269804837884,60.201193655420155
 3037,Hidalgo,PG-13,Action,2004,6.7,79000.0,Joe Johnston,Viggo Mortensen,United States,100000000.0,108040622.0,Touchstone Pictures,136.0,20,0.08040622,1.4811373084479977,75.55726098070937
 3038,Bridget Jones: The Edge of Reason,R,Comedy,2004,6.0,109000.0,Beeban Kidron,Renée Zellweger,United Kingdom,40000000.0,265126918.0,Universal Pictures,108.0,20,5.62817295,98.51773437222876,69.59461896726768
 3039,Mean Creek,R,Crime,2004,7.2,31000.0,Jacob Estes,Rory Culkin,United States,500000.0,802948.0,Whitewater Films,90.0,20,0.605896,7.950787480915773,74.46054588096445
@@ -3109,7 +3109,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 3108,Hard Candy,R,Drama,2005,7.1,156000.0,David Slade,Patrick Wilson,United States,950000.0,7022209.0,Lions Gate Films,104.0,19,6.391798947368421,87.97810941667994,84.89904013224489
 3109,The Sisterhood of the Traveling Pants,PG,Comedy,2005,6.5,56000.0,Ken Kwapis,Amber Tamblyn,United States,25000000.0,42013878.0,Alcon Entertainment,119.0,19,0.68055512,11.59283886889492,71.06519530316237
 3110,The Longest Yard,PG-13,Comedy,2005,6.4,167000.0,Peter Segal,Adam Sandler,United States,82000000.0,191466556.0,Paramount Pictures,113.0,19,1.334958,24.325911456328264,76.96479418495291
-3111,Red Eye,PG-13,Thriller,2005,6.5,115000.0,Wes Craven,Rachel McAdams,United States,26000000.0,96258201.0,Dreamworks Pictures,85.0,19,2.7022385,46.13695842864591,75.74246814774502
+3111,Red Eye,PG-13,Others,2005,6.5,115000.0,Wes Craven,Rachel McAdams,United States,26000000.0,96258201.0,Dreamworks Pictures,85.0,19,2.7022385,46.13695842864591,75.74246814774502
 3112,House of Wax,R,Horror,2005,5.4,118000.0,Jaume Collet-Serra,Chad Michael Murray,Australia,40000000.0,68766121.0,Warner Bros.,113.0,19,0.719153025,12.588335027965833,63.06357547861813
 3113,Four Brothers,R,Action,2005,6.8,138000.0,John Singleton,Mark Wahlberg,United States,45000000.0,92374674.0,Paramount Pictures,109.0,19,1.0527705333333333,18.55210451795584,80.47806095614752
 3114,The Dukes of Hazzard,PG-13,Comedy,2005,5.1,76000.0,Jay Chandrasekhar,Seann William Scott,United States,50000000.0,111069515.0,Warner Bros.,104.0,19,1.2213903,21.652237537251935,57.31629195826918
@@ -3263,7 +3263,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 3262,She's the Man,PG-13,Comedy,2006,6.3,149000.0,Andy Fickman,Amanda Bynes,United States,20000000.0,57194667.0,Dreamworks Pictures,105.0,18,1.85973335,31.264428948722944,75.04371998504386
 3263,Little Children,R,Drama,2006,7.5,107000.0,Todd Field,Kate Winslet,United States,26000000.0,14821658.0,New Line Cinema,137.0,18,-0.42993623076923076,-7.340562280482908,86.85438085083032
 3264,Children of Men,R,Adventure,2006,7.9,474000.0,Alfonso Cuarón,Julianne Moore,United States,76000000.0,70595464.0,Universal Pictures,109.0,18,-0.07111231578947369,-1.2904214264852072,103.24480454535
-3265,The Da Vinci Code,PG-13,Mystery,2006,6.6,410000.0,Ron Howard,Tom Hanks,United States,125000000.0,760006945.0,Columbia Pictures,149.0,18,5.08005556,94.71166327083205,85.29782209529124
+3265,The Da Vinci Code,PG-13,Others,2006,6.6,410000.0,Ron Howard,Tom Hanks,United States,125000000.0,760006945.0,Columbia Pictures,149.0,18,5.08005556,94.71166327083205,85.29782209529124
 3266,The Pursuit of Happyness,PG-13,Biography,2006,8.0,465000.0,Gabriele Muccino,Will Smith,United States,55000000.0,307127625.0,Columbia Pictures,117.0,18,4.584138636363637,81.7023866130601,104.39834147655594
 3267,Little Miss Sunshine,R,Comedy,2006,7.8,450000.0,Jonathan Dayton,Steve Carell,United States,8000000.0,101058954.0,Fox Searchlight Pictures,101.0,18,11.63236925,184.89595203412307,101.53262232162272
 3268,The Last King of Scotland,R,Biography,2006,7.7,179000.0,Kevin Macdonald,James McAvoy,United Kingdom,6000000.0,48618191.0,Fox Searchlight Pictures,123.0,18,7.1030318333333335,110.85893583457633,93.13258635313628
@@ -3703,7 +3703,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 3702,Two Lovers,R,Drama,2008,7.0,39000.0,James Gray,Joaquin Phoenix,United States,9800000.0,16303643.0,2929 Productions,110.0,16,0.6636370408163266,10.683158036495806,73.99921847578248
 3703,Babylon A.D.,PG-13,Action,2008,5.6,94000.0,Mathieu Kassovitz,Vin Diesel,France,70000000.0,72109200.0,Babylon,90.0,16,0.030131428571428573,0.5442943004769822,64.12588034301199
 3704,The Good the Bad the Weird,R,Action,2008,7.3,34000.0,Jee-woon Kim,Kang-ho Song,South Korea,10000000.0,44261209.0,Barunson E&A,130.0,16,3.4261209,55.22254437794741,76.16904536626758
-3705,Passengers,PG-13,Romance,2008,5.9,35000.0,Rodrigo García,Anne Hathaway,United States,25000000.0,5798974.0,TriStar Pictures,93.0,16,-0.76804104,-13.083107833232493,61.73230970878215
+3705,Passengers,PG-13,Others,2008,5.9,35000.0,Rodrigo García,Anne Hathaway,United States,25000000.0,5798974.0,TriStar Pictures,93.0,16,-0.76804104,-13.083107833232493,61.73230970878215
 3706,Shutter,PG-13,Horror,2008,5.2,33000.0,Masayuki Ochiai,Joshua Jackson,United States,8000000.0,48555306.0,New Regency Productions,85.0,16,5.06941325,80.57808078205117,54.10216677033281
 3707,Deception,R,Crime,2008,6.1,38000.0,Marcel Langenegger,Hugh Jackman,United States,25000000.0,18024545.0,Rifkin-Eberts,107.0,16,-0.2790182,-4.752903826642428,64.32658277612198
 3708,The Eye,PG-13,Drama,2008,5.4,52000.0,David Moreau,Jessica Alba,United States,12000000.0,58010320.0,Lionsgate,98.0,16,3.8341933333333333,62.49895098851572,58.63859458684325
@@ -3913,7 +3913,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 3912,[Rec]²,R,Horror,2009,6.5,70000.0,Jaume Balagueró,Jonathan D. Mellor,Spain,5600000.0,18853164.0,Filmax,85.0,15,2.3666364285714288,36.77345275393159,72.51562838670472
 3913,Inception,PG-13,Action,2010,8.8,2100000.0,Christopher Nolan,Leonardo DiCaprio,United States,160000000.0,836836967.0,Warner Bros.,148.0,14,4.23023104375,79.91195947318562,128.10554154370413
 3914,Iron Man 2,PG-13,Action,2010,7.0,746000.0,Jon Favreau,Robert Downey Jr.,United States,200000000.0,623933331.0,Paramount Pictures,124.0,14,2.119666655,40.514943700996604,94.65736615430129
-3915,Shutter Island,R,Mystery,2010,8.2,1200000.0,Martin Scorsese,Leonardo DiCaprio,United States,80000000.0,294805697.0,Paramount Pictures,138.0,14,2.6850712125,48.86168325435078,114.78222334101747
+3915,Shutter Island,R,Others,2010,8.2,1200000.0,Martin Scorsese,Leonardo DiCaprio,United States,80000000.0,294805697.0,Paramount Pictures,138.0,14,2.6850712125,48.86168325435078,114.78222334101747
 3916,Scott Pilgrim vs. the World,PG-13,Action,2010,7.5,394000.0,Edgar Wright,Michael Cera,United States,60000000.0,48917974.0,Universal Pictures,112.0,14,-0.18470043333333333,-3.307958001635642,96.63079641210054
 3917,Grown Ups,PG-13,Comedy,2010,5.9,233000.0,Dennis Dugan,Adam Sandler,United States,80000000.0,271457301.0,Columbia Pictures,102.0,14,2.3932162625,43.55064194687023,72.91688302203225
 3918,She's Out of My League,R,Comedy,2010,6.4,130000.0,Jim Field Smith,Jay Baruchel,United States,20000000.0,49779728.0,Dreamworks Pictures,104.0,14,1.4889864,25.031711943228185,75.36185426840142
@@ -4105,7 +4105,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 4104,Scream 4,R,Horror,2011,6.1,131000.0,Wes Craven,Neve Campbell,United States,40000000.0,97231420.0,Dimension Films,111.0,13,1.4307855,25.04502741562633,71.87601087331805
 4105,Shame,NC-17,Drama,2011,7.2,187000.0,Steve McQueen,Michael Fassbender,United Kingdom,6500000.0,19123767.0,Fox Searchlight Pictures,101.0,13,1.942118,30.466612434012227,87.39982005002442
 4106,Mission: Impossible - Ghost Protocol,PG-13,Action,2011,7.4,466000.0,Brad Bird,Tom Cruise,United States,145000000.0,694713380.0,Paramount Pictures,132.0,13,3.7911267586206896,71.24378022172614,96.5843627569976
-4107,Super 8,PG-13,Mystery,2011,7.0,343000.0,J.J. Abrams,Elle Fanning,United States,50000000.0,260095986.0,Paramount Pictures,112.0,13,4.20191972,74.48967286698048,89.21840008303654
+4107,Super 8,PG-13,Others,2011,7.0,343000.0,J.J. Abrams,Elle Fanning,United States,50000000.0,260095986.0,Paramount Pictures,112.0,13,4.20191972,74.48967286698048,89.21840008303654
 4108,We Need to Talk About Kevin,R,Drama,2011,7.5,142000.0,Lynne Ramsay,Tilda Swinton,United Kingdom,7000000.0,9232318.0,BBC Films,112.0,13,0.3189025714285714,5.026357592836079,88.97686752437549
 4109,Limitless,PG-13,Sci-Fi,2011,7.4,538000.0,Neil Burger,Bradley Cooper,United States,27000000.0,161849455.0,Relativity Media,105.0,13,4.994424259259259,85.46132868288221,97.64754240966504
 4110,Unknown,PG-13,Action,2011,6.8,253000.0,Jaume Collet-Serra,Liam Neeson,United Kingdom,30000000.0,135710029.0,Dark Castle Entertainment,113.0,13,3.5236676333333334,60.665956519414664,84.59978442042566
@@ -4133,7 +4133,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 4132,Abduction,PG-13,Action,2011,5.1,78000.0,John Singleton,Taylor Lautner,United States,35000000.0,82087155.0,Lionsgate,106.0,13,1.3453472857142856,23.36983749420862,57.448766938925814
 4133,A Separation,PG-13,Drama,2011,8.3,227000.0,Asghar Farhadi,Payman Maadi,Iran,500000.0,22926076.0,Asghar Farhadi Productions,123.0,13,44.852152,588.5662368025722,102.36145396064738
 4134,Hugo,PG,Drama,2011,7.5,310000.0,Martin Scorsese,Asa Butterfield,United Kingdom,150000000.0,185770310.0,Paramount Pictures,126.0,13,0.23846873333333332,4.489447154889462,94.83245682345996
-4135,The Adjustment Bureau,PG-13,Romance,2011,7.0,248000.0,George Nolfi,Matt Damon,United States,50200000.0,127869379.0,Universal Pictures,106.0,13,1.5471987848605577,27.434194838312873,86.94828817602983
+4135,The Adjustment Bureau,PG-13,Others,2011,7.0,248000.0,George Nolfi,Matt Damon,United States,50200000.0,127869379.0,Universal Pictures,106.0,13,1.5471987848605577,27.434194838312873,86.94828817602983
 4136,The Tree of Life,PG-13,Drama,2011,6.8,171000.0,Terrence Malick,Brad Pitt,United States,32000000.0,58409247.0,Cottonwood Pictures,139.0,13,0.82528896875,14.262022070318512,81.93604808129662
 4137,Killer Joe,Unrated,Crime,2011,6.7,75000.0,William Friedkin,Matthew McConaughey,United States,11000000.0,4633668.0,Voltage Pictures,102.0,13,-0.5787574545454546,-9.38362948812462,75.20913072987359
 4138,Kill the Irishman,R,Biography,2011,7.1,47000.0,Jonathan Hensleigh,Ray Stevenson,United States,12000000.0,1188194.0,Anchor Bay Films,106.0,13,-0.9009838333333333,-14.686412380773275,76.38111045291458
@@ -4665,7 +4665,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 4664,"Men, Women & Children",R,Comedy,2014,6.7,31000.0,Jason Reitman,Kaitlyn Dever,United States,16000000.0,1705908.0,Paramount Pictures,119.0,10,-0.89338075,-14.819488576023158,69.28967463923081
 4665,Let's Be Cops,R,Action,2014,6.4,129000.0,Luke Greenfield,Jake Johnson,United States,17000000.0,138224951.0,Genre Films,104.0,10,7.130879470588235,118.72004348440956,75.31243317340038
 4666,A Most Violent Year,R,Action,2014,7.0,68000.0,J.C. Chandor,Oscar Isaac,United States,20000000.0,12007070.0,Before The Door Pictures,125.0,10,-0.3996465,-6.718554358266364,77.8908408891077
-4667,The Loft,R,Mystery,2014,6.3,53000.0,Erik Van Looy,Karl Urban,Belgium,14000000.0,11020402.0,Open Road Films,108.0,10,-0.21282842857142859,-3.5019998263354433,68.53169731296583
+4667,The Loft,R,Others,2014,6.3,53000.0,Erik Van Looy,Karl Urban,Belgium,14000000.0,11020402.0,Open Road Films,108.0,10,-0.21282842857142859,-3.5019998263354433,68.53169731296583
 4668,A Most Wanted Man,R,Crime,2014,6.8,74000.0,Anton Corbijn,Philip Seymour Hoffman,United Kingdom,15000000.0,36233517.0,Lionsgate,122.0,10,1.4155678,23.390220551878073,76.24037853086688
 4669,Clown,R,Horror,2014,5.7,23000.0,Jon Watts,Andy Powers,United States,1500000.0,4381603.0,Cross Creek Pictures,100.0,10,1.9210686666666668,27.319470761520893,57.246522120994335
 4670,The Signal,PG-13,Drama,2014,6.1,64000.0,William Eubank,Brenton Thwaites,United States,4000000.0,2595622.0,Automatik Entertainment,97.0,10,-0.3510945,-5.337270097163395,67.50649401028504
@@ -4707,7 +4707,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 4706,Magic in the Moonlight,PG-13,Comedy,2014,6.5,66000.0,Woody Allen,Colin Firth,United States,16800000.0,51029361.0,Gravier Productions,97.0,10,2.0374619642857144,33.89702944693747,72.13316513655565
 4707,The Quiet Ones,PG-13,Horror,2014,5.1,20000.0,John Pogue,Jared Harris,United Kingdom,200000.0,17835162.0,Exclusive Media Group,98.0,10,88.17581,1076.280342438466,50.50778651793424
 4708,Barefoot,PG-13,Comedy,2014,6.6,24000.0,Andrew Fleming,Evan Rachel Wood,United States,6000000.0,15071.0,WhiteFlame Productions,90.0,10,-0.9974881666666666,-15.568067166095693,66.56634012157853
-4709,No Good Deed,PG-13,Thriller,2014,5.6,20000.0,Sam Miller,Taraji P. Henson,United States,13200000.0,54323210.0,Screen Gems,84.0,10,3.115394696969697,51.07916215615466,55.45953029420231
+4709,No Good Deed,PG-13,Others,2014,5.6,20000.0,Sam Miller,Taraji P. Henson,United States,13200000.0,54323210.0,Screen Gems,84.0,10,3.115394696969697,51.07916215615466,55.45953029420231
 4710,Serena,R,Drama,2014,5.4,28000.0,Susanne Bier,Bradley Cooper,Czech Republic,30000000.0,5092129.0,2929 Productions,109.0,10,-0.8302623666666666,-14.294384680163027,55.295782861449645
 4711,The Duke of Burgundy,Unrated,Drama,2014,6.5,12000.0,Peter Strickland,Sidse Babett Knudsen,United Kingdom,1000000.0,185147.0,Rook Films,104.0,10,-0.814853,-11.257610224688863,61.052302537005886
 4712,Wish I Was Here,R,Comedy,2014,6.7,37000.0,Zach Braff,Zach Braff,United States,6000000.0,5670776.0,Worldview Entertainment,106.0,10,-0.054870666666666665,-0.856381311238728,70.47511038389662
@@ -4776,7 +4776,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 4775,Straight Outta Compton,R,Biography,2015,7.8,185000.0,F. Gary Gray,O'Shea Jackson Jr.,United States,28000000.0,201634991.0,Universal Pictures,147.0,9,6.201249678571428,106.33726255453439,94.5992666116716
 4776,Carol,R,Drama,2015,7.2,120000.0,Todd Haynes,Cate Blanchett,United Kingdom,11800000.0,40272135.0,The Weinstein Company,118.0,9,2.4128927966101696,39.290605487608545,84.20577855670213
 4777,No Escape,R,Action,2015,6.8,81000.0,John Erick Dowdle,Lake Bell,United States,16200000.0,54418872.0,Bold Films,103.0,9,2.3591896296296295,39.1637788774786,76.85499014885112
-4778,The Boy Next Door,R,Thriller,2015,4.7,40000.0,Rob Cohen,Jennifer Lopez,United States,4000000.0,52425855.0,Universal Pictures,91.0,9,12.10646375,184.0401001874641,49.80418324555154
+4778,The Boy Next Door,R,Others,2015,4.7,40000.0,Rob Cohen,Jennifer Lopez,United States,4000000.0,52425855.0,Universal Pictures,91.0,9,12.10646375,184.0401001874641,49.80418324555154
 4779,Southpaw,R,Action,2015,7.4,223000.0,Antoine Fuqua,Jake Gyllenhaal,Hong Kong,30000000.0,91970827.0,Escape Artists,124.0,9,2.0656942333333332,35.56445430787053,91.1304601732727
 4780,Maze Runner: The Scorch Trials,PG-13,Action,2015,6.3,230000.0,Wes Ball,Dylan O'Brien,United States,61000000.0,312296056.0,Gotham Group,131.0,9,4.119607475409836,73.84966727250843,77.7787579038036
 4781,The Last Witch Hunter,PG-13,Action,2015,6.0,98000.0,Breck Eisner,Vin Diesel,United States,90000000.0,146936910.0,Summit Entertainment,106.0,9,0.6326323333333334,11.586863771773174,68.95633654591626
@@ -5065,7 +5065,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 5064,The Shape of Water,R,Adventure,2017,7.3,386000.0,Guillermo del Toro,Sally Hawkins,United States,19400000.0,195333312.0,Double Dare You (DDY),123.0,7,9.068727422680412,152.1803526253395,93.90422633366286
 5065,Disobedience,R,Drama,2017,6.6,27000.0,Sebastián Lelio,Rachel Weisz,Ireland,6000000.0,8003180.0,Braven Films,114.0,7,0.33386333333333335,5.210695195511855,67.34370815691067
 5066,Kong: Skull Island,PG-13,Action,2017,6.6,293000.0,Jordan Vogt-Roberts,Tom Hiddleston,United States,185000000.0,566652812.0,Warner Bros.,118.0,7,2.062988172972973,39.27076721051069,83.08032406079474
-5067,Beauty and the Beast,PG,Family,2017,7.1,283000.0,Bill Condon,Emma Watson,United States,160000000.0,1264434525.0,Mandeville Films,129.0,7,6.90271578125,130.39702514148732,89.12773545404015
+5067,Beauty and the Beast,PG,Others,2017,7.1,283000.0,Bill Condon,Emma Watson,United States,160000000.0,1264434525.0,Mandeville Films,129.0,7,6.90271578125,130.39702514148732,89.12773545404015
 5068,Kingsman: The Golden Circle,R,Action,2017,6.7,286000.0,Matthew Vaughn,Taron Egerton,United Kingdom,104000000.0,410902662.0,Twentieth Century Fox,141.0,7,2.9509871346153846,54.47493170618656,84.17710550167332
 5069,"Three Billboards Outside Ebbing, Missouri",R,Comedy,2017,8.1,456000.0,Martin McDonagh,Frances McDormand,United Kingdom,15000000.0,160192267.0,Blueprint Pictures,115.0,7,9.679484466666667,159.93954970140692,105.54500951682182
 5070,Star Wars: Episode VIII - The Last Jedi,PG-13,Action,2017,7.0,581000.0,Rian Johnson,Daisy Ridley,United States,317000000.0,1332698830.0,Walt Disney Pictures,152.0,7,3.2040972555205047,62.718320830880245,92.90754225083833
@@ -5382,7 +5382,7 @@ id,title,rating,genre,year,score,votes,director,star,country,budget,gross,compan
 5381,The Curse of la Llorona,R,Horror,2019,5.3,43000.0,Michael Chaves,Linda Cardellini,United States,9000000.0,123133739.0,New Line Cinema,93.0,5,12.681526555555555,203.06592584539067,56.5454635917812
 5382,Captive State,PG-13,Action,2019,6.0,51000.0,Rupert Wyatt,John Goodman,United States,25000000.0,8808611.0,Participant,109.0,5,-0.64765556,-11.032415052029743,65.03748547023878
 5383,Scary Stories to Tell in the Dark,PG-13,Adventure,2019,6.2,66000.0,André Øvredal,Zoe Margaret Colletti,United States,25000000.0,104545505.0,CBS Films,108.0,5,3.1818202,54.20035468750131,68.80394213025309
-5384,The Intruder,PG-13,Thriller,2019,5.6,15000.0,Deon Taylor,Michael Ealy,United States,8000000.0,36599361.0,Screen Gems,102.0,5,3.574920125,56.82318414692873,53.848510688472345
+5384,The Intruder,PG-13,Others,2019,5.6,15000.0,Deon Taylor,Michael Ealy,United States,8000000.0,36599361.0,Screen Gems,102.0,5,3.574920125,56.82318414692873,53.848510688472345
 5385,The Angry Birds Movie 2,PG,Animation,2019,6.4,24000.0,Thurop Van Orman,Jason Sudeikis,Finland,65000000.0,147792047.0,Sony Pictures Animation,97.0,5,1.2737238,22.91416102291347,64.54917829971252
 5386,What Men Want,R,Comedy,2019,5.3,26000.0,Adam Shankman,Taraji P. Henson,United States,20000000.0,72216294.0,BET Films,117.0,5,2.6108147,43.89103990979751,53.87901463011918
 5387,Pet Sematary,R,Horror,2019,5.7,86000.0,Kevin Kölsch,Jason Clarke,United States,21000000.0,113118226.0,Paramount Pictures,101.0,5,4.38658219047619,73.95792046972457,64.76398467884317
