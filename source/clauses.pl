@@ -82,29 +82,6 @@ std_dev_score_by_director(Director, StdDev) :-
     Variance is SumSq / (N - 1),
     StdDev is sqrt(Variance).
 
-% clausola per il director_score_index
-director_score_index(Director, Index) :-
-    std_dev_score_by_director(Director, StdDev),
-    avg_score_by_director(Director, AvgScore),
-    Index is AvgScore / StdDev.
-
-% clausola per il star_score_index
-star_score_index(Star, Index) :-
-    std_dev_score_by_star(Star, StdDev),
-    avg_score_by_star(Star, AvgScore),
-    Index is AvgScore / StdDev.
-
-% clausola per il director_profit_index
-director_profit_index(Director, Index) :-
-    std_dev_profit_by_director(Director, StdDev),
-    avg_profit_by_director(Director, AvgProfit),
-    Index is AvgProfit / StdDev.
-
-% clausola per il star_profit_index
-star_profit_index(Star, Index) :-
-    std_dev_profit_by_star(Star, StdDev),
-    avg_profit_by_star(Star, AvgProfit),
-    Index is AvgProfit / StdDev.
 
 % clausola per il movie_profit_index
 movie_profit_index(Movie, Index) :-
