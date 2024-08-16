@@ -148,11 +148,17 @@ def get_cv_params(grid_best_params):
     params_dict = {}
 
     if 'max_depth' in grid_best_params.keys():
-        params_dict['max_depth'] = [v for v in range(grid_best_params['max_depth'] - 5, grid_best_params['max_depth'] + 6)]
+        if grid_best_params['max_depth'] <= 5:
+            params_dict['max_depth'] = [v for v in range(grid_best_params['max_depth'], grid_best_params['max_depth'] + 11)]
+        else:
+            params_dict['max_depth'] = [v for v in range(grid_best_params['max_depth'] - 5, grid_best_params['max_depth'] + 6)]
     
     if 'n_estimators' in grid_best_params.keys():
-        params_dict['n_estimators'] = [v for v in range(grid_best_params['n_estimators'] - 50, grid_best_params['n_estimators'] + 51, 10)]
-    
+        if grid_best_params['n_estimators'] <= 50:
+            params_dict['n_estimators'] = [v for v in range(grid_best_params['n_estimators'], grid_best_params['n_estimators'] + 101, 10)]
+        else:
+            params_dict['n_estimators'] = [v for v in range(grid_best_params['n_estimators'] - 50, grid_best_params['n_estimators'] + 51, 10)]
+
     return params_dict
 
 
