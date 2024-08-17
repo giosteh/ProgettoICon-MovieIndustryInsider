@@ -131,3 +131,4 @@ def derive_actors_data(df, prolog_kb):
         new_data.append(features)
 
     return pd.DataFrame(new_data)
+

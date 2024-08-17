@@ -334,3 +334,188 @@ movie_runtime_binned(Movie, Bin) :-
     (Runtime < 90 -> Bin = 'short';
     Runtime > 150 -> Bin = 'long';
     Bin = 'mid').
+
+quartile_limits_profit_index(Q1_Limit, Q2_Limit, Q3_Limit, Q4_Limit) :-
+    findall(Value, movie_profit_index(_, Value), ProfitValues),
+
+    sort(ProfitValues, SortedValues),
+
+    length(SortedValues, Len),
+
+    Q1_Index is Len // 4,
+    Q2_Index is Len // 2,
+    Q3_Index is 3 * Len // 4,
+    Q4_Index is Len,
+
+    nth1(Q1_Index, SortedValues, Q1_Limit),
+    nth1(Q2_Index, SortedValues, Q2_Limit),
+    nth1(Q3_Index, SortedValues, Q3_Limit),
+    nth1(Q4_Index, SortedValues, Q4_Limit).
+
+quartile_limits_cult_index(Q1_Limit, Q2_Limit, Q3_Limit, Q4_Limit) :-
+    findall(Value, movie_cult_index(_, Value), CultValues),
+
+    sort(CultValues, SortedValues),
+
+    length(SortedValues, Len),
+
+    Q1_Index is Len // 4,
+    Q2_Index is Len // 2,
+    Q3_Index is 3 * Len // 4,
+    Q4_Index is Len,
+
+    nth1(Q1_Index, SortedValues, Q1_Limit),
+    nth1(Q2_Index, SortedValues, Q2_Limit),
+    nth1(Q3_Index, SortedValues, Q3_Limit),
+    nth1(Q4_Index, SortedValues, Q4_Limit).
+
+quartile_limits_gross_log(Q1_Limit, Q2_Limit, Q3_Limit, Q4_Limit) :-
+    findall(Value, movie_gross_log(_, Value), GrossValues),
+
+    sort(GrossValues, SortedValues),
+
+    length(SortedValues, Len),
+
+    Q1_Index is Len // 4,
+    Q2_Index is Len // 2,
+    Q3_Index is 3 * Len // 4,
+    Q4_Index is Len,
+
+    nth1(Q1_Index, SortedValues, Q1_Limit),
+    nth1(Q2_Index, SortedValues, Q2_Limit),
+    nth1(Q3_Index, SortedValues, Q3_Limit),
+    nth1(Q4_Index, SortedValues, Q4_Limit).
+
+quartile_limits_budget_log(Q1_Limit, Q2_Limit, Q3_Limit, Q4_Limit) :-
+    findall(Value, movie_budget_log(_, Value), BudgetValues),
+
+    sort(BudgetValues, SortedValues),
+
+    length(SortedValues, Len),
+
+    Q1_Index is Len // 4,
+    Q2_Index is Len // 2,
+    Q3_Index is 3 * Len // 4,
+    Q4_Index is Len,
+
+    nth1(Q1_Index, SortedValues, Q1_Limit),
+    nth1(Q2_Index, SortedValues, Q2_Limit),
+    nth1(Q3_Index, SortedValues, Q3_Limit),
+    nth1(Q4_Index, SortedValues, Q4_Limit).
+
+quartile_limits_votes_log(Q1_Limit, Q2_Limit, Q3_Limit, Q4_Limit) :-
+    findall(Value, movie_votes_log(_, Value), VotesValues),
+
+    sort(VotesValues, SortedValues),
+
+    length(SortedValues, Len),
+
+    Q1_Index is Len // 4,
+    Q2_Index is Len // 2,
+    Q3_Index is 3 * Len // 4,
+    Q4_Index is Len,
+
+    nth1(Q1_Index, SortedValues, Q1_Limit),
+    nth1(Q2_Index, SortedValues, Q2_Limit),
+    nth1(Q3_Index, SortedValues, Q3_Limit),
+    nth1(Q4_Index, SortedValues, Q4_Limit).
+
+profit_bin(Movie, 'low') :-
+    movie_profit_index(Movie, Value),
+    quartile_limits(Q1_Limit, _, _, _),
+    Value < Q1_Limit.
+
+profit_bin(Movie, 'mid-low') :-
+    movie_profit_index(Movie, Value),
+    quartile_limits(Q1_Limit, Q2_Limit, _, _),
+    Value >= Q1_Limit, Value < Q2_Limit.
+
+profit_bin(Movie, 'mid-high') :-
+    movie_profit_index(Movie, Value),
+    quartile_limits(_, Q2_Limit, Q3_Limit, _),
+    Value >= Q2_Limit, Value < Q3_Limit.
+
+profit_bin(Movie, 'high') :-
+    movie_profit_index(Movie, Value),
+    quartile_limits(_, _, Q3_Limit, Q4_Limit),
+    Value >= Q3_Limit, Value =< Q4_Limit.
+
+cult_bin(Movie, 'low') :-
+    movie_cult_index(Movie, Value),
+    quartile_limits_cult_index(Q1_Limit, _, _, _),
+    Value < Q1_Limit.
+
+cult_bin(Movie, 'mid-low') :-
+    movie_cult_index(Movie, Value),
+    quartile_limits_cult_index(Q1_Limit, Q2_Limit, _, _),
+    Value >= Q1_Limit, Value < Q2_Limit.
+
+cult_bin(Movie, 'mid-high') :-
+    movie_cult_index(Movie, Value),
+    quartile_limits_cult_index(_, Q2_Limit, Q3_Limit, _),
+    Value >= Q2_Limit, Value < Q3_Limit.
+
+cult_bin(Movie, 'high') :-
+    movie_cult_index(Movie, Value),
+    quartile_limits_cult_index(_, _, Q3_Limit, Q4_Limit),
+    Value >= Q3_Limit, Value =< Q4_Limit.
+
+gross_bin(Movie, 'low') :-
+    movie_gross_log(Movie, Value),
+    quartile_limits_gross_log(Q1_Limit, _, _, _),
+    Value < Q1_Limit.
+
+gross_bin(Movie, 'mid-low') :-
+    movie_gross_log(Movie, Value),
+    quartile_limits_gross_log(Q1_Limit, Q2_Limit, _, _),
+    Value >= Q1_Limit, Value < Q2_Limit.
+
+gross_bin(Movie, 'mid-high') :-
+    movie_gross_log(Movie, Value),
+    quartile_limits_gross_log(_, Q2_Limit, Q3_Limit, _),
+    Value >= Q2_Limit, Value < Q3_Limit.
+
+gross_bin(Movie, 'high') :-
+    movie_gross_log(Movie, Value),
+    quartile_limits_gross_log(_, _, Q3_Limit, Q4_Limit),
+    Value >= Q3_Limit, Value =< Q4_Limit.
+
+budget_bin(Movie, 'low') :-
+    movie_budget_log(Movie, Value),
+    quartile_limits_budget_log(Q1_Limit, _, _, _),
+    Value < Q1_Limit.
+
+budget_bin(Movie, 'mid-low') :-
+    movie_budget_log(Movie, Value),
+    quartile_limits_budget_log(Q1_Limit, Q2_Limit, _, _),
+    Value >= Q1_Limit, Value < Q2_Limit.
+
+budget_bin(Movie, 'mid-high') :-
+    movie_budget_log(Movie, Value),
+    quartile_limits_budget_log(_, Q2_Limit, Q3_Limit, _),
+    Value >= Q2_Limit, Value < Q3_Limit.
+
+budget_bin(Movie, 'high') :-
+    movie_budget_log(Movie, Value),
+    quartile_limits_budget_log(_, _, Q3_Limit, Q4_Limit),
+    Value >= Q3_Limit, Value =< Q4_Limit.
+
+votes_bin(Movie, 'low') :-
+    movie_votes_log(Movie, Value),
+    quartile_limits_votes_log(Q1_Limit, _, _, _),
+    Value < Q1_Limit.
+
+votes_bin(Movie, 'mid-low') :-
+    movie_votes_log(Movie, Value),
+    quartile_limits_votes_log(Q1_Limit, Q2_Limit, _, _),
+    Value >= Q1_Limit, Value < Q2_Limit.
+
+votes_bin(Movie, 'mid-high') :-
+    movie_votes_log(Movie, Value),
+    quartile_limits_votes_log(_, Q2_Limit, Q3_Limit, _),
+    Value >= Q2_Limit, Value < Q3_Limit.
+
+votes_bin(Movie, 'high') :-
+    movie_votes_log(Movie, Value),
+    quartile_limits_votes_log(_, _, Q3_Limit, Q4_Limit),
+    Value >= Q3_Limit, Value =< Q4_Limit.
