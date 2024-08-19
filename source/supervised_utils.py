@@ -3,13 +3,13 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from sklearn.linear_model import LinearRegression, Ridge
-from sklearn.tree import DecisionTreeRegressor
-from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
-from sklearn.metrics import mean_squared_error, mean_absolute_error
+from sklearn.linear_model import LinearRegression, Ridge, LogisticRegression
+from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
+from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier, GradientBoostingRegressor, GradientBoostingClassifier
+from sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
 from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate
-from sklearn.externals import joblib
+import joblib
 
 sns.set_style('whitegrid')
 
@@ -169,28 +169,28 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
                                                     cols['minmax_standardize_cols'])
 
     models = {
-        'Linear Regressor': LinearRegression(),
-        'Ridge Regressor': Ridge(),
-        'Decision Tree Regressor': DecisionTreeRegressor(),
-        'Random Forest Regressor': RandomForestRegressor(),
-        'Gradient Boosting Regressor': GradientBoostingRegressor()
+        'Linear_Regressor': LinearRegression(),
+        'Ridge_Regressor': Ridge(),
+        'Decision_Tree_Regressor': DecisionTreeRegressor(),
+        'Random_Forest_Regressor': RandomForestRegressor(),
+        'Gradient_Boosting_Regressor': GradientBoostingRegressor()
     }
 
     grid_params = {
-        'Linear Regressor': {},
+        'Linear_Regressor': {},
 
-        'Ridge Regressor': {
+        'Ridge_Regressor': {
             'alpha': [.001, .01, .05, .1, .5, 1]
         },
 
-        'Decision Tree Regressor': {
+        'Decision_Tree_Regressor': {
             'criterion': ['squared_error', 'friedman_mse'], 
             'max_depth': [5, 10, 15, 20],
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [1, 2, 4, 8]
         },
 
-        'Random Forest Regressor': {
+        'Random_Forest_Regressor': {
             'criterion': ['squared_error', 'friedman_mse'],
             'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10, 15],
@@ -198,7 +198,7 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
             'min_samples_leaf': [1, 2, 4]
         },
 
-        'Gradient Boosting Regressor': {
+        'Gradient_Boosting_Regressor': {
             'loss': ['squared_error', 'huber'],
             'learning_rate': [.001, .01, .05, .1, .5],
             'n_estimators': [100, 200, 300],
@@ -222,3 +222,66 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
         print(f'\nTest score for [{model_name}]:')
         print(f'MSE: {mean_squared_error(y_test, y_pred)}')
         print(f'MAE: {mean_absolute_error(y_test, y_pred)}')
+
+
+# funzione che esegue tuning e test dei modelli per il task di classificazione
+def tune_and_test_models_for_classification(df, cols, cv=5):
+
+    X_train, X_test, y_train, y_test = prepare_data(df, cols['target_col'], cols['drop_cols'],
+                                                    cols['dummies_cols'], cols['labels_cols'],
+                                                    cols['standardize_cols'], cols['log_standardize_cols'],
+                                                    cols['minmax_standardize_cols'])
+
+    models = {
+        'Logistic_Classifier': LogisticRegression(),
+        'Decision_Tree_Classifier': DecisionTreeClassifier(),
+        'Random_Forest_Classifier': RandomForestClassifier(),
+        'Gradient_Boosting_Classifier': GradientBoostingClassifier(),
+    }
+
+    grid_params = {
+        'Logistic_Classifier': {
+            'penalty': ['l1', 'l2'],
+        },
+
+        'Decision_Tree_Classifier': {
+            'criterion': ['gini', 'entropy', 'log_loss'], 
+            'max_depth': [5, 10, 15, 20],
+            'min_samples_split': [2, 5, 10],
+            'min_samples_leaf': [1, 2, 4, 8]
+        },
+
+        'Random_Forest_Classifier': {
+            'criterion': ['gini', 'entropy', 'log_loss'],
+            'n_estimators': [100, 200, 300],
+            'max_depth': [5, 7, 10, 15],
+            'min_samples_split': [2, 5, 10],
+            'min_samples_leaf': [1, 2, 4]
+        },
+
+        'Gradient_Boosting_Classifier': {
+            'loss': ['log_loss', 'exponential'],
+            'learning_rate': [.001, .01, .05, .1, .5],
+            'n_estimators': [100, 200, 300],
+            'max_depth': [5, 7, 9],
+            'min_samples_split': [2, 5, 10],
+            'min_samples_leaf': [1, 2, 4]
+        }
+    }
+
+    for model_name, model in models.items():
+        print(f'\nTraining and tuning [{model_name}]...\n')
+
+        best_model = tune_model(model, model_name, X_train, y_train, cv=cv,
+                                grid_params=grid_params[model_name], grid_metrics=['neg_mean_squared_error'], ylabel='MSE')
+        
+        best_model.fit(X_train, y_train)
+        y_pred = best_model.predict(X_test)
+
+        joblib.dump(best_model, f'models/{model_name}.joblib')
+
+        print(f'\nTest score for [{model_name}]:')
+        print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
+        print(f'F1: {f1_score(y_test, y_pred)}')
+        print(f'Precision: {precision_score(y_test, y_pred)}')
+        print(f'Recall: {recall_score(y_test, y_pred)}')
