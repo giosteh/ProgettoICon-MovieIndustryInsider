@@ -9,6 +9,7 @@ from sklearn.ensemble import RandomForestRegressor, GradientBoostingRegressor
 from sklearn.metrics import mean_squared_error, mean_absolute_error
 from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate
+from sklearn.externals import joblib
 
 sns.set_style('whitegrid')
 
@@ -52,7 +53,7 @@ def prepare_data(df, target_col, drop_cols=[],
 # funzione che visualizza in un grafico i risultati della cross validation
 def plot_cv_results(param_range, scores,
                     xlabel, ylabel, title=''):
-    plt.figure(figsize=(10, 6))
+    plt.figure(figsize=(8, 5))
     plt.plot(param_range, scores['train'], label='Train score', linestyle='dashed', linewidth=2)
     plt.plot(param_range, scores['val'], label='Validation score', linewidth=2)
     plt.legend()
@@ -90,10 +91,7 @@ def find_best_model(model, X, y, param, param_range, cv=5, metric='neg_mean_squa
             best_param = val
             best_score = test_score
     
-    scores = {
-        'train': train_scores,
-        'val': test_scores
-    }
+    scores = {'train': train_scores, 'val': test_scores}
 
     return best_model, best_param, best_score, scores
 
@@ -121,7 +119,7 @@ def tune_model(model, model_name, X, y, cv=5,
             grid_score = -grid_search.best_score_ if regression else grid_search.best_score_
             print(f'Results after GridSearchCV:')
             print(f'Best parameters: {grid_search.best_params_}')
-            print(f'Best score: {{\'{grid_metric_name}\': {grid_score}}}')
+            print(f'Best score: {{\'{grid_metric_name}\': {grid_score}}}\n')
     
     if do_cv and grid_params:
         cv_params = get_cv_params(grid_search.best_params_)
@@ -171,28 +169,28 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
                                                     cols['minmax_standardize_cols'])
 
     models = {
-        'Linear Regression': LinearRegression(),
-        'Ridge Regression': Ridge(),
-        'Decision Tree Regression': DecisionTreeRegressor(),
-        'Random Forest Regression': RandomForestRegressor(),
-        'Gradient Boosting Regression': GradientBoostingRegressor()
+        'Linear Regressor': LinearRegression(),
+        'Ridge Regressor': Ridge(),
+        'Decision Tree Regressor': DecisionTreeRegressor(),
+        'Random Forest Regressor': RandomForestRegressor(),
+        'Gradient Boosting Regressor': GradientBoostingRegressor()
     }
 
     grid_params = {
-        'Linear Regression': {},
+        'Linear Regressor': {},
 
-        'Ridge Regression': {
+        'Ridge Regressor': {
             'alpha': [.001, .01, .05, .1, .5, 1]
         },
 
-        'Decision Tree Regression': {
+        'Decision Tree Regressor': {
             'criterion': ['squared_error', 'friedman_mse'], 
             'max_depth': [5, 10, 15, 20],
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [1, 2, 4, 8]
         },
 
-        'Random Forest Regression': {
+        'Random Forest Regressor': {
             'criterion': ['squared_error', 'friedman_mse'],
             'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10, 15],
@@ -200,7 +198,7 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
             'min_samples_leaf': [1, 2, 4]
         },
 
-        'Gradient Boosting Regression': {
+        'Gradient Boosting Regressor': {
             'loss': ['squared_error', 'huber'],
             'learning_rate': [.001, .01, .05, .1, .5],
             'n_estimators': [100, 200, 300],
@@ -211,7 +209,7 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
     }
 
     for model_name, model in models.items():
-        print(f'\nTraining and tuning [{model_name}]...')
+        print(f'\nTraining and tuning [{model_name}]...\n')
 
         best_model = tune_model(model, model_name, X_train, y_train, cv=cv,
                                 grid_params=grid_params[model_name], grid_metrics=['neg_mean_squared_error'], ylabel='MSE')
@@ -219,10 +217,8 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
         best_model.fit(X_train, y_train)
         y_pred = best_model.predict(X_test)
 
-        print(f'\n\nTest score:')
+        joblib.dump(best_model, f'models/{model_name}.joblib')
+
+        print(f'\nTest score for [{model_name}]:')
         print(f'MSE: {mean_squared_error(y_test, y_pred)}')
         print(f'MAE: {mean_absolute_error(y_test, y_pred)}')
-
-
-
-
