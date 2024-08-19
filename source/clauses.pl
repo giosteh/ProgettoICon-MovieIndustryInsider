@@ -127,11 +127,11 @@ movie_runtime_binned(Movie, "short") :-
 movie_runtime_binned(Movie, "mid") :-
     runtime(Movie, Runtime),
     Runtime >= 90,
-    Runtime < 150.
+    Runtime < 135.
 
 movie_runtime_binned(Movie, "long") :-
     runtime(Movie, Runtime),
-    Runtime >= 150.
+    Runtime >= 135.
 
 % clausole per il binning di age
 movie_age_binned(Movie, "new") :-
@@ -171,18 +171,25 @@ movie_score_binned(Movie, "low") :-
     movie_score_std(Movie, StdDev),
     Score < AvgScore - StdDev.
 
-movie_score_binned(Movie, "mid") :-
+movie_score_binned(Movie, "mid-low") :-
     score(Movie, Score),
     movie_score_mean(Movie, AvgScore),
     movie_score_std(Movie, StdDev),
     Score >= AvgScore - StdDev,
-    Score <= AvgScore + StdDev.
+    Score < AvgScore.
+
+movie_score_binned(Movie, "mid-high") :-
+    score(Movie, Score),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Score >= AvgScore,
+    Score < AvgScore + StdDev.
 
 movie_score_binned(Movie, "high") :-
     score(Movie, Score),
     movie_score_mean(Movie, AvgScore),
     movie_score_std(Movie, StdDev),
-    Score > AvgScore + StdDev.
+    Score >= AvgScore + StdDev.
 
 % clausole per il binning di profit_index
 movie_profit_index_binned(Movie, "not-profitable") :-

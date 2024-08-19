@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from sklearn.linear_model import LinearRegression, Ridge, LogisticRegression
+from sklearn.linear_model import Ridge, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier, GradientBoostingRegressor, GradientBoostingClassifier
 from sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_score, f1_score, precision_score, recall_score, confusion_matrix
@@ -16,9 +16,9 @@ sns.set_style('whitegrid')
 
 # funzione che prepara i dati per il modello
 def prepare_data(df, target_col, drop_cols=[],
-                dummies_cols=[], labels_cols=[],
-                standardize_cols=[], log_standardize_cols=[],
-                minmax_standardize_cols=[], seed=42):
+                 dummies_cols=[], labels_cols=[], round_cols=[],
+                 standardize_cols=[], log_standardize_cols=[],
+                 minmax_cols=[], seed=42):
     X = df.drop(columns=[target_col] + drop_cols, axis=1)
     y = df[target_col]
 
@@ -42,10 +42,14 @@ def prepare_data(df, target_col, drop_cols=[],
         X_train[log_standardize_cols] = np.round(scaler.fit_transform(np.log(X_train[log_standardize_cols] + 1)), 2)
         X_test[log_standardize_cols] = np.round(scaler.transform(np.log(X_test[log_standardize_cols] + 1)), 2)
     
-    if minmax_standardize_cols:
+    if minmax_cols:
         scaler = MinMaxScaler()
-        X_train[minmax_standardize_cols] = np.round(scaler.fit_transform(X_train[minmax_standardize_cols]), 2)
-        X_test[minmax_standardize_cols] = np.round(scaler.transform(X_test[minmax_standardize_cols]), 2)
+        X_train[minmax_cols] = np.round(scaler.fit_transform(X_train[minmax_cols]), 2)
+        X_test[minmax_cols] = np.round(scaler.transform(X_test[minmax_cols]), 2)
+    
+    if round_cols:
+        X_train[round_cols] = np.round(X_train[round_cols], 2)
+        X_test[round_cols] = np.round(X_test[round_cols], 2)
     
     return X_train.to_numpy(), X_test.to_numpy(), y_train.to_numpy(), y_test.to_numpy()
 
@@ -55,7 +59,7 @@ def plot_cv_results(param_range, scores,
                     xlabel, ylabel, title=''):
     plt.figure(figsize=(8, 5))
     plt.plot(param_range, scores['train'], label='Train score', linestyle='dashed', linewidth=2)
-    plt.plot(param_range, scores['val'], label='Validation score', linewidth=2)
+    plt.plot(param_range, scores['val'], label='Validation score', linewidth=2.3)
     plt.legend()
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -146,30 +150,27 @@ def get_cv_params(grid_best_params):
     params_dict = {}
 
     if 'max_depth' in grid_best_params.keys():
-        if grid_best_params['max_depth'] <= 5:
-            params_dict['max_depth'] = [v for v in range(grid_best_params['max_depth'], grid_best_params['max_depth'] + 11)]
+        if grid_best_params['max_depth'] < 12:
+            params_dict['max_depth'] = [v for v in range(2, 23)]
         else:
-            params_dict['max_depth'] = [v for v in range(grid_best_params['max_depth'] - 5, grid_best_params['max_depth'] + 6)]
+            params_dict['max_depth'] = [v for v in range(grid_best_params['max_depth'] - 10, grid_best_params['max_depth'] + 11)]
     
     if 'n_estimators' in grid_best_params.keys():
-        if grid_best_params['n_estimators'] <= 50:
-            params_dict['n_estimators'] = [v for v in range(grid_best_params['n_estimators'], grid_best_params['n_estimators'] + 101, 10)]
+        if grid_best_params['n_estimators'] < 120:
+            params_dict['n_estimators'] = [v for v in range(20, 221, 10)]
         else:
-            params_dict['n_estimators'] = [v for v in range(grid_best_params['n_estimators'] - 50, grid_best_params['n_estimators'] + 51, 10)]
+            params_dict['n_estimators'] = [v for v in range(grid_best_params['n_estimators'] - 100, grid_best_params['n_estimators'] + 101, 10)]
 
     return params_dict
 
 
 # funzione che esegue tuning e test dei modelli per il task di regressione
-def tune_and_test_models_for_regression(df, cols, cv=5):
+def tune_and_test_models_for_regression(df, cols, cv=5, session_name=''):
 
-    X_train, X_test, y_train, y_test = prepare_data(df, cols['target_col'], cols['drop_cols'],
-                                                    cols['dummies_cols'], cols['labels_cols'],
-                                                    cols['standardize_cols'], cols['log_standardize_cols'],
-                                                    cols['minmax_standardize_cols'])
-
+    X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'],
+                                                    cols['round'], cols['standardize'], cols['log_standardize'], cols['minmax'], seed=42)
+    
     models = {
-        'Linear_Regressor': LinearRegression(),
         'Ridge_Regressor': Ridge(),
         'Decision_Tree_Regressor': DecisionTreeRegressor(),
         'Random_Forest_Regressor': RandomForestRegressor(),
@@ -177,8 +178,6 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
     }
 
     grid_params = {
-        'Linear_Regressor': {},
-
         'Ridge_Regressor': {
             'alpha': [.001, .01, .05, .1, .5, 1]
         },
@@ -209,79 +208,19 @@ def tune_and_test_models_for_regression(df, cols, cv=5):
     }
 
     for model_name, model in models.items():
+        print('-' * 80)
         print(f'\nTraining and tuning [{model_name}]...\n')
 
         best_model = tune_model(model, model_name, X_train, y_train, cv=cv,
                                 grid_params=grid_params[model_name], grid_metrics=['neg_mean_squared_error'], ylabel='MSE')
         
+        # il miglior modello viene riaddestrato, testato e salvato
         best_model.fit(X_train, y_train)
         y_pred = best_model.predict(X_test)
 
-        joblib.dump(best_model, f'models/{model_name}.joblib')
+        joblib.dump(best_model, f'models/{model_name + '-' + session_name}.joblib')
 
         print(f'\nTest score for [{model_name}]:')
-        print(f'MSE: {mean_squared_error(y_test, y_pred)}')
-        print(f'MAE: {mean_absolute_error(y_test, y_pred)}')
-
-
-# funzione che esegue tuning e test dei modelli per il task di classificazione
-def tune_and_test_models_for_classification(df, cols, cv=5):
-
-    X_train, X_test, y_train, y_test = prepare_data(df, cols['target_col'], cols['drop_cols'],
-                                                    cols['dummies_cols'], cols['labels_cols'],
-                                                    cols['standardize_cols'], cols['log_standardize_cols'],
-                                                    cols['minmax_standardize_cols'])
-
-    models = {
-        'Logistic_Classifier': LogisticRegression(),
-        'Decision_Tree_Classifier': DecisionTreeClassifier(),
-        'Random_Forest_Classifier': RandomForestClassifier(),
-        'Gradient_Boosting_Classifier': GradientBoostingClassifier(),
-    }
-
-    grid_params = {
-        'Logistic_Classifier': {
-            'penalty': ['l1', 'l2'],
-        },
-
-        'Decision_Tree_Classifier': {
-            'criterion': ['gini', 'entropy', 'log_loss'], 
-            'max_depth': [5, 10, 15, 20],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4, 8]
-        },
-
-        'Random_Forest_Classifier': {
-            'criterion': ['gini', 'entropy', 'log_loss'],
-            'n_estimators': [100, 200, 300],
-            'max_depth': [5, 7, 10, 15],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4]
-        },
-
-        'Gradient_Boosting_Classifier': {
-            'loss': ['log_loss', 'exponential'],
-            'learning_rate': [.001, .01, .05, .1, .5],
-            'n_estimators': [100, 200, 300],
-            'max_depth': [5, 7, 9],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4]
-        }
-    }
-
-    for model_name, model in models.items():
-        print(f'\nTraining and tuning [{model_name}]...\n')
-
-        best_model = tune_model(model, model_name, X_train, y_train, cv=cv,
-                                grid_params=grid_params[model_name], grid_metrics=['neg_mean_squared_error'], ylabel='MSE')
-        
-        best_model.fit(X_train, y_train)
-        y_pred = best_model.predict(X_test)
-
-        joblib.dump(best_model, f'models/{model_name}.joblib')
-
-        print(f'\nTest score for [{model_name}]:')
-        print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
-        print(f'F1: {f1_score(y_test, y_pred)}')
-        print(f'Precision: {precision_score(y_test, y_pred)}')
-        print(f'Recall: {recall_score(y_test, y_pred)}')
+        print(f'MSE: {round(mean_squared_error(y_test, y_pred), 5)}')
+        print(f'MAE: {round(mean_absolute_error(y_test, y_pred), 5)}')
+        print('\n\n')
