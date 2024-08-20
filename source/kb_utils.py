@@ -97,19 +97,26 @@ def derive_movies_data(df, prolog_kb, binning=False, task='regression'):
 
 
 # funzione che deriva il nuovo dataframe dei registi dalla kb
-def derive_directors_data(df, prolog_kb):
+def derive_directors_data(df, prolog_kb, binning=False):
     new_data = []
 
     for director in df:
         features = {}
 
-        features['director'] = director
+        features['director_name'] = director
 
-        features['director_num_movies'] = query_kb(prolog_kb, f'director_num_movies("{director}", X).')
-        features['director_profit_mean'] = query_kb(prolog_kb, f'director_profit_mean("{director}", X).')
-        features['director_profit_std'] = query_kb(prolog_kb, f'director_profit_std("{director}", X).')
-        features['director_score_mean'] = query_kb(prolog_kb, f'director_score_mean("{director}", X).')
-        features['director_score_std'] = query_kb(prolog_kb, f'director_score_std("{director}", X).')
+        if not binning:
+            features['director_num_movies'] = query_kb(prolog_kb, f'director_num_movies("{director}", X).')
+            features['director_profit_mean'] = query_kb(prolog_kb, f'director_profit_mean("{director}", X).')
+            features['director_profit_std'] = query_kb(prolog_kb, f'director_profit_std("{director}", X).')
+            features['director_score_mean'] = query_kb(prolog_kb, f'director_score_mean("{director}", X).')
+            features['director_score_std'] = query_kb(prolog_kb, f'director_score_std("{director}", X).')
+        else:
+            features['director_num_movies'] = query_kb(prolog_kb, f'director_num_movies_binned("{director}", X).')
+            features['director_profit_mean'] = query_kb(prolog_kb, f'director_profit_mean_binned("{director}", X).')
+            features['director_profit_std'] = query_kb(prolog_kb, f'director_profit_std_binned("{director}", X).')
+            features['director_score_mean'] = query_kb(prolog_kb, f'director_score_mean_binned("{director}", X).')
+            features['director_score_std'] = query_kb(prolog_kb, f'director_score_std_binned("{director}", X).')
 
         new_data.append(features)
     
@@ -117,19 +124,26 @@ def derive_directors_data(df, prolog_kb):
 
 
 # funzione che deriva il nuovo dataframe degli attori dalla kb
-def derive_actors_data(df, prolog_kb):
+def derive_actors_data(df, prolog_kb, binning=False):
     new_data = []
 
     for actor in df:
         features = {}
 
-        features['actor'] = actor
+        features['actor_name'] = actor
 
-        features['actor_num_movies'] = query_kb(prolog_kb, f'actor_num_movies("{actor}", X).')
-        features['actor_profit_mean'] = query_kb(prolog_kb, f'actor_profit_mean("{actor}", X).')
-        features['actor_profit_std'] = query_kb(prolog_kb, f'actor_profit_std("{actor}", X).')
-        features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean("{actor}", X).')
-        features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std("{actor}", X).')
+        if not binning:
+            features['actor_num_movies'] = query_kb(prolog_kb, f'actor_num_movies("{actor}", X).')
+            features['actor_profit_mean'] = query_kb(prolog_kb, f'actor_profit_mean("{actor}", X).')
+            features['actor_profit_std'] = query_kb(prolog_kb, f'actor_profit_std("{actor}", X).')
+            features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean("{actor}", X).')
+            features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std("{actor}", X).')
+        else:
+            features['actor_num_movies'] = query_kb(prolog_kb, f'actor_num_movies_binned("{actor}", X).')
+            features['actor_profit_mean'] = query_kb(prolog_kb, f'actor_profit_mean_binned("{actor}", X).')
+            features['actor_profit_std'] = query_kb(prolog_kb, f'actor_profit_std_binned("{actor}", X).')
+            features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean_binned("{actor}", X).')
+            features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std_binned("{actor}", X).')
 
         new_data.append(features)
 

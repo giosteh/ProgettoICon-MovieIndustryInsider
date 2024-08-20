@@ -104,11 +104,11 @@ movie_age(Movie, Age) :-
 % clausole per rimappare il genere
 genre_regrouped(Movie, "Other") :-
     genre(Movie, Genre),
-    member(Genre, ["Mystery", "Thriller", "Sci-Fy", "Family", "Romance", "Western"]).
+    member(Genre, ["Fantasy", "Mystery", "Thriller", "Sci-Fi", "Family", "Romance", "Western"]).
 
 genre_regrouped(Movie, Genre) :-
     genre(Movie, Genre),
-    \+ member(Genre, ["Mystery", "Thriller", "Sci-Fy", "Family", "Romance", "Western"]).
+    \+ member(Genre, ["Fantasy", "Mystery", "Thriller", "Sci-Fi", "Family", "Romance", "Western"]).
 
 % clausole per rimappare il rating
 rating_regrouped(Movie, "Other") :-
@@ -352,3 +352,160 @@ movie_votes_binned(Movie, "high") :-
     quartile_limits_votes(_, _, Q3, Q4),
     Value > Q3, Value <= Q4.
 
+% clausola per il binning della media di profit_index per registi
+director_profit_mean_binned(Movie, "not-profitable") :-
+    director_profit_mean(Movie, Value),
+    Value < 1.
+
+director_profit_mean_binned(Movie, "profitable") :-
+    director_profit_mean(Movie, Value),
+    Value >= 1, Value < 3.
+
+director_profit_mean_binned(Movie, "very-profitable") :-
+    director_profit_mean(Movie, Value),
+    Value >= 3.
+
+% clausola per il binning della media di profit_index per attori
+actor_profit_mean_binned(Movie, "not-profitable") :-
+    actor_profit_mean(Movie, Value),
+    Value < 1.
+
+actor_profit_mean_binned(Movie, "profitable") :-
+    actor_profit_mean(Movie, Value),
+    Value >= 1, Value < 3.
+
+actor_profit_mean_binned(Movie, "very-profitable") :-
+    actor_profit_mean(Movie, Value),
+    Value >= 3.
+
+% clausola per il binning della deviazione standard di profit_index per registi
+director_profit_std_binned(Movie, "low") :-
+    director_profit_std(Movie, Value),
+    Value < 1.
+
+director_profit_std_binned(Movie, "mid") :-
+    director_profit_std(Movie, Value),
+    Value >= 1, Value < 3.
+
+director_profit_std_binned(Movie, "high") :-
+    director_profit_std(Movie, Value),
+    Value >= 3.
+
+% clausola per il binning della deviazione standard di profit_index per attori
+actor_profit_std_binned(Movie, "low") :-
+    actor_profit_std(Movie, Value),
+    Value < 1.
+
+actor_profit_std_binned(Movie, "mid") :-
+    actor_profit_std(Movie, Value),
+    Value >= 1, Value < 3.
+
+actor_profit_std_binned(Movie, "high") :-
+    actor_profit_std(Movie, Value),
+    Value >= 3.
+
+% causola per il binning della media di score per registi
+director_score_mean_binned(Movie, "low") :-
+    director_score_mean(Movie, Value), 
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value < AvgScore - StdDev.
+
+director_score_mean_binned(Movie, "mid-low") :-
+    director_score_mean(Movie, Value),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value >= AvgScore - StdDev,
+    Value < AvgScore.
+
+director_score_mean_binned(Movie, "mid-high") :-
+    director_score_mean(Movie, Value),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value >= AvgScore,
+    Value < AvgScore + StdDev.
+
+director_score_mean_binned(Movie, "high") :-
+    director_score_mean(Movie, Value),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value >= AvgScore + StdDev.
+
+% clausola per il binning della media di score per attori
+actor_score_mean_binned(Movie, "low") :-
+    actor_score_mean(Movie, Value),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value < AvgScore - StdDev.
+
+actor_score_mean_binned(Movie, "mid-low") :-
+    actor_score_mean(Movie, Value),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value >= AvgScore - StdDev,
+    Value < AvgScore.
+
+actor_score_mean_binned(Movie, "mid-high") :-
+    actor_score_mean(Movie, Value),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value >= AvgScore,
+    Value < AvgScore + StdDev.
+
+actor_score_mean_binned(Movie, "high") :-
+    actor_score_mean(Movie, Value),
+    movie_score_mean(Movie, AvgScore),
+    movie_score_std(Movie, StdDev),
+    Value >= AvgScore + StdDev.
+
+% clausola per il binning della deviazione standard di score per registi
+director_score_std_binned(Movie, "low") :-
+    director_score_std(Movie, Value),
+    Value < 0.35.
+
+director_score_std_binned(Movie, "mid") :-
+    director_score_std(Movie, Value),
+    Value >= 0.35, Value < 0.7.
+
+director_score_std_binned(Movie, "high") :-
+    director_score_std(Movie, Value),
+    Value >= 0.7.
+
+% clausola per il binning della deviazione standard di score per attori
+actor_score_std_binned(Movie, "low") :-
+    actor_score_std(Movie, Value),
+    Value < 0.35.
+
+actor_score_std_binned(Movie, "mid") :-
+    actor_score_std(Movie, Value),
+    Value >= 0.35, Value < 0.7.
+
+actor_score_std_binned(Movie, "high") :-
+    actor_score_std(Movie, Value),
+    Value >= 0.7.
+
+% clausola per il binning di num_movies per registi
+director_num_movies_binned(Movie, "low") :-
+    director_num_movies(Movie, Value),
+    Value < 3.
+
+director_num_movies_binned(Movie, "mid") :-
+    director_num_movies(Movie, Value),
+    Value >= 3, Value < 8.
+
+director_num_movies_binned(Movie, "high") :-
+    director_num_movies(Movie, Value),
+    Value >= 8.
+
+% clausola per il binning di num_movies per attori
+actor_num_movies_binned(Movie, "low") :-
+    actor_num_movies(Movie, Value),
+    Value < 3.
+
+actor_num_movies_binned(Movie, "mid") :-
+    actor_num_movies(Movie, Value),
+    Value >= 3, Value < 8.
+
+actor_num_movies_binned(Movie, "high") :-
+    actor_num_movies(Movie, Value),
+    Value >= 8.
