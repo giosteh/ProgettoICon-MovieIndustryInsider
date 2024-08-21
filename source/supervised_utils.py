@@ -9,19 +9,22 @@ from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier, Grad
 from sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_score, classification_report
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate
+
+from imblearn.over_sampling import SMOTE
 import joblib
 
 sns.set_style('whitegrid')
 
 
 # funzione che prepara i dati per il modello
-def prepare_data(df, target_col, drop_cols=[],
-                 dummies_cols=[], labels_cols=[], round_cols=[],
-                 standardize_cols=[], log_standardize_cols=[],
-                 minmax_cols=[], task='regression', seed=42):
+def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
+                 round_cols=[], standardize_cols=[], log_standardize_cols=[],
+                 minmax_cols=[], task='regression', resample=True, seed=42):
+    # separazione tra features e target
     X = df.drop(columns=[target_col] + drop_cols, axis=1)
-    y = np.round(df[target_col].to_numpy(), 2) if task == 'regression' else OneHotEncoder().fit_transform(df[[target_col]]).toarray()
+    y = df[target_col]
 
+    # encoding
     if dummies_cols:
         X = pd.get_dummies(X, columns=dummies_cols, drop_first=True)
 
@@ -30,8 +33,15 @@ def prepare_data(df, target_col, drop_cols=[],
         for col in labels_cols:
             X[col] = encoder.fit_transform(X[col])
     
+    # train test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_state=seed)
 
+    # resampling
+    if task == 'classification' and resample:
+        smote = SMOTE(sampling_strategy='not majority', random_state=seed)
+        X_train, y_train = smote.fit_resample(X_train, y_train)
+
+    # normalizzazione
     if standardize_cols:
         scaler = StandardScaler()
         X_train[standardize_cols] = np.round(scaler.fit_transform(X_train[standardize_cols]), 2)
@@ -50,13 +60,23 @@ def prepare_data(df, target_col, drop_cols=[],
     if round_cols:
         X_train[round_cols] = np.round(X_train[round_cols], 2)
         X_test[round_cols] = np.round(X_test[round_cols], 2)
+
+    X_train, X_test = X_train.to_numpy(), X_test.to_numpy()
+
+    # gestione della target
+    if task == 'regression':
+        y_train = np.round(y_train.to_numpy(), 2)
+        y_test = np.round(y_test.to_numpy(), 2)
+    else:
+        encoder = OneHotEncoder()
+        y_train = encoder.fit_transform(y_train.values.reshape(-1, 1)).toarray()
+        y_test = encoder.transform(y_test.values.reshape(-1, 1)).toarray()
     
-    return X_train.to_numpy(), X_test.to_numpy(), y_train, y_test
+    return X_train, X_test, y_train, y_test
 
 
 # funzione che visualizza in un grafico i risultati della cross validation
-def plot_cv_results(param_range, scores,
-                    xlabel, ylabel, title=''):
+def plot_cv_results(param_range, scores, xlabel, ylabel, title):
     plt.figure(figsize=(8, 5))
     plt.plot(param_range, scores['train'], label='Train score', linestyle='dashed', linewidth=2)
     plt.plot(param_range, scores['val'], label='Validation score', linewidth=2.3)
@@ -113,8 +133,7 @@ def tune_model(model, model_name, X, y, cv=5,
     if grid_params:
         grid_search = GridSearchCV(model, grid_params, cv=cv,
                                    scoring={m: m for m in grid_metrics},
-                                   refit=grid_metrics[0],
-                                   n_jobs=-1)
+                                   refit=grid_metrics[0], n_jobs=-1)
         grid_search.fit(X, y)
 
         best_model = grid_search.best_estimator_
@@ -123,7 +142,7 @@ def tune_model(model, model_name, X, y, cv=5,
             grid_score = -grid_search.best_score_ if regression else grid_search.best_score_
             print(f'Results after GridSearchCV:')
             print(f'Best parameters: {grid_search.best_params_}')
-            print(f'Best score: {{\'{grid_metric_name}\': {round(grid_score, 4)}}}\n')
+            print(f'Best score: {{\'{grid_metric_name}\': {grid_score:.4f}}}\n')
     
     if do_cv and grid_params:
         cv_params = get_cv_params(grid_search.best_params_)
@@ -137,7 +156,7 @@ def tune_model(model, model_name, X, y, cv=5,
             if verbose:
                 print(f'Results after {param} tuning:')
                 print(f'Best parameters: {{\'{param}\': {best_param}}}')
-                print(f'Best score: {{\'{grid_metric_name}\': {round(best_score, 4)}}}')
+                print(f'Best score: {{\'{grid_metric_name}\': {best_score:.4f}}}\n')
 
             if plot:
                 plot_cv_results(cv_params[param], scores, param, ylabel, title=f'{model_name} - {param}')
@@ -185,25 +204,25 @@ def tune_and_test_models_for_regression(df, cols, cv=5, session_name=''):
         'Decision_Tree_Regressor': {
             'criterion': ['squared_error', 'friedman_mse'], 
             'max_depth': [5, 10, 15, 20],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4, 8, 10]
+            'min_samples_split': [2, 5, 10, 15],
+            'min_samples_leaf': [2, 4, 8, 10, 12]
         },
 
         'Random_Forest_Regressor': {
             'criterion': ['squared_error', 'friedman_mse'],
-            'n_estimators': [100, 200, 300],
+            'n_estimators': [100, 250, 500],
             'max_depth': [5, 7, 10, 15],
             'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4, 8]
+            'min_samples_leaf': [2, 4, 8, 10]
         },
 
         'Gradient_Boosting_Regressor': {
             'loss': ['squared_error', 'huber'],
-            'learning_rate': [.001, .01, .05, .1, .5],
-            'n_estimators': [100, 200, 300],
+            'learning_rate': [.01, .05, .1],
+            'n_estimators': [100, 250, 500],
             'max_depth': [5, 7, 10],
             'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4, 8]
+            'min_samples_leaf': [2, 4, 8, 10]
         }
     }
 
@@ -221,8 +240,8 @@ def tune_and_test_models_for_regression(df, cols, cv=5, session_name=''):
         joblib.dump(best_model, f'models/{model_name + '-' + session_name}.joblib')
 
         print(f'\nTest score for [{model_name}]:')
-        print(f'MSE: {round(mean_squared_error(y_test, y_pred), 4)}')
-        print(f'MAE: {round(mean_absolute_error(y_test, y_pred), 4)}')
+        print(f'MSE: {mean_squared_error(y_test, y_pred):.4f}')
+        print(f'MAE: {mean_absolute_error(y_test, y_pred):.4f}')
         print('\n\n')
 
 
@@ -233,7 +252,7 @@ def tune_and_test_models_for_classification(df, cols, cv=5, session_name=''):
                                                     cols['round'], cols['standardize'], cols['log_standardize'], cols['minmax'], task='classification')
     
     models = {
-        'Logistic_Classifier': LogisticRegression(multi_class='multinomial'),
+        'Logistic_Classifier': LogisticRegression(solver='lbfgs', max_iter=1000, multi_class='multinomial'),
         'Decision_Tree_Classifier': DecisionTreeClassifier(),
         'Random_Forest_Classifier': RandomForestClassifier(),
         'Gradient_Boosting_Classifier': GradientBoostingClassifier()
@@ -241,31 +260,32 @@ def tune_and_test_models_for_classification(df, cols, cv=5, session_name=''):
 
     grid_params = {
         'Logistic_Classifier': {
-            'C': [.05, .1, .5, 1, 2, 5]
+            'C': [.05, .1, .5, 1, 2, 5],
+            'penalty': ['l1', 'l2', 'none']
         },
 
         'Decision_Tree_Classifier': {
-            'criterion': ['gini', 'entropy'], 
+            'criterion': ['gini', 'entropy'],
             'max_depth': [5, 10, 15, 20],
-            'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4, 8, 10]
+            'min_samples_split': [2, 5, 10, 15],
+            'min_samples_leaf': [2, 4, 8, 10, 12]
         },
 
         'Random_Forest_Classifier': {
             'criterion': ['gini', 'entropy'],
-            'n_estimators': [100, 200, 300],
+            'n_estimators': [100, 250, 500],
             'max_depth': [5, 7, 10, 15],
             'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4, 8]
+            'min_samples_leaf': [2, 4, 8, 10]
         },
 
         'Gradient_Boosting_Classifier': {
             'loss': ['log_loss', 'exponential'],
-            'learning_rate': [.001, .01, .05, .1, .5],
-            'n_estimators': [100, 200, 300],
+            'learning_rate': [.01, .05, .1],
+            'n_estimators': [100, 250, 500],
             'max_depth': [5, 7, 10],
             'min_samples_split': [2, 5, 10],
-            'min_samples_leaf': [1, 2, 4, 8]
+            'min_samples_leaf': [2, 4, 8, 10]
         }
     }
 
@@ -283,10 +303,13 @@ def tune_and_test_models_for_classification(df, cols, cv=5, session_name=''):
         joblib.dump(best_model, f'models/{model_name + '-' + session_name}.joblib')
 
         print(f'\nTest score for [{model_name}]:')
-        print(f'Accuracy: {round(accuracy_score(y_test, y_pred), 4)}')
+        print(f'Accuracy: {accuracy_score(y_test, y_pred):.4f}\n')
+
+        # visualizza il report
         report = classification_report(y_test, y_pred, output_dict=True, target_names=['Classe 0', 'Classe 1', 'Classe 2'])
         report_df = pd.DataFrame(report).transpose()
-        plt.figure(figsize=(10, 6))
+
+        plt.figure(figsize=(8, 5))
         sns.heatmap(report_df.iloc[:-1, :-1], annot=True, cmap='Blues', fmt='.2f')
         plt.title('Classification Report')
         plt.show()
