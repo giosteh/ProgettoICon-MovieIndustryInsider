@@ -34,15 +34,23 @@ def create_kb():
     save_to_file(facts, 'facts.pl')
 
     # fatti per i registi e gli attori
-    df_directors = df['director'].unique()
-    df_actors = df['star'].unique()
+    df_directors = pd.read_csv('../dataset/directors.csv')
+    df_actors = pd.read_csv('../dataset/actors.csv')
 
     facts = []
-    for director in df_directors:
-        facts.append(f'director("{director}").')
+    for row in df_directors.iterrows():
+        facts.append(f'director("{row.director}").'
+                     f'birth_Year("{row.director}", {row.birthYear}).'
+                     f'death_Year("{row.director}", {row.deathYear}).'
+                     f'profession_1("{row.director}", "{row.profession_1}").'
+                     f'profession_2("{row.director}", "{row.profession_2}").')
 
-    for actor in df_actors:
-        facts.append(f'actor("{actor}").')
+    for row in df_actors.iterrows():
+        facts.append(f'actor("{row.actor}").'
+                     f'birth_Year("{row.actor}", {row.birthYear}).'
+                     f'death_Year("{row.actor}", {row.deathYear}).'
+                     f'profession_1("{row.actor}", "{row.profession_1}").'
+                     f'profession_2("{row.actor}", "{row.profession_2}").')
 
     save_to_file(facts, 'facts.pl')
 

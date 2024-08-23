@@ -1,0 +1,2011 @@
+actor,primaryName,birthYear,deathYear,knownForTitle,profession_1,profession_2
+Jack Nicholson,Jack Nicholson,1937.0,0.0,Chinatown,actor,producer
+Brooke Shields,Brooke Shields,1965.0,0.0,The Blue Lagoon,actress,producer
+Mark Hamill,Mark Hamill,1951.0,0.0,Star Wars: Episode IV - A New Hope,actor,producer
+Robert Hays,Robert Hays,1947.0,0.0,Airplane!,actor,producer
+Chevy Chase,Chevy Chase,1943.0,0.0,Memoirs of an Invisible Man,actor,writer
+Betsy Palmer,Betsy Palmer,1926.0,2015.0,Friday the 13th,actress,miscellaneous
+John Belushi,John Belushi,1949.0,1982.0,Saturday Night Live,actor,writer
+Robert De Niro,Robert De Niro,1943.0,0.0,Cape Fear,actor,producer
+Gene Hackman,Gene Hackman,1930.0,0.0,The French Connection,actor,producer
+David Carradine,David Carradine,1936.0,2009.0,Kill Bill: Vol. 2,actor,producer
+Clint Eastwood,Clint Eastwood,1930.0,0.0,Million Dollar Baby,actor,producer
+N!xau,N!xau,1944.0,2003.0,The Gods Must Be Crazy,actor,archive_footage
+Robin Williams,Robin Williams,1951.0,2014.0,Mrs. Doubtfire,actor,writer
+Robin Williams,Robin Williams,1982.0,0.0,Star Trek,miscellaneous,visual_effects
+Robin Williams,Robin Williams,1988.0,0.0,Stiffs,editor,cinematographer
+Donald Sutherland,Donald Sutherland,1935.0,0.0,The Hunger Games: Catching Fire,actor,producer
+Michael Caine,Michael Caine,1933.0,0.0,The Dark Knight,actor,producer
+Christopher Reeve,Christopher Reeve,1952.0,2004.0,Superman,actor,producer
+Jane Fonda,Jane Fonda,1937.0,0.0,Klute,actress,producer
+Adrienne Barbeau,Adrienne Barbeau,1945.0,0.0,Escape from New York,actress,soundtrack
+Al Pacino,Al Pacino,1940.0,0.0,Serpico,actor,director
+Kris Kristofferson,Kris Kristofferson,1936.0,0.0,Blade,music_artist,actor
+Kirk Douglas,Kirk Douglas,1916.0,2020.0,The Final Countdown,actor,producer
+Kirk Douglas,Kirk Douglas,1967.0,0.0,Catwoman,special_effects,music_department
+Olivia Newton-John,Olivia Newton-John,1948.0,2022.0,Grease,music_artist,actress
+Robert Redford,Robert Redford,1936.0,0.0,The Natural,producer,actor
+Richard Gere,Richard Gere,1949.0,0.0,Chicago,actor,producer
+Scott Glenn,Scott Glenn,1939.0,0.0,The Hunt for Red October,actor,producer
+Goldie Hawn,Goldie Hawn,1945.0,0.0,Private Benjamin,actress,producer
+Tony Danza,Tony Danza,1951.0,0.0,Don Jon,actor,producer
+Rory Calhoun,Rory Calhoun,1922.0,1999.0,Motel Hell,actor,producer
+Rory Calhoun,Rory Calhoun,1934.0,1988.0,Mannix,actor,
+Peter O'Toole,Peter O'Toole,1932.0,2013.0,Lawrence of Arabia,actor,producer
+Peter O'Toole,Peter O'Toole,1965.0,0.0,The Boxer,actor,music_department
+Don Adams,Don Adams,1923.0,2005.0,Get Smart,actor,director
+Don Adams,Don Adams,1942.0,2014.0,Von uns für Sie,actor,
+Woody Allen,Woody Allen,1935.0,0.0,Annie Hall,writer,director
+Paul Le Mat,Paul Le Mat,1945.0,0.0,American Graffiti,actor,cinematographer
+Paul Newman,Paul Newman,1925.0,2008.0,The Hustler,actor,producer
+Paul Newman,Paul Newman,1962.0,0.0,Prisoner,actor,
+Chuck Norris,Chuck Norris,1940.0,0.0,"Walker, Texas Ranger",actor,music_department
+Elliott Gould,Elliott Gould,1938.0,0.0,M*A*S*H,actor,producer
+Michael Ontkean,Michael Ontkean,1946.0,0.0,Slap Shot,actor,archive_footage
+Paul Michael Glaser,Paul Michael Glaser,1943.0,0.0,Starsky and Hutch,actor,producer
+Harrison Ford,Harrison Ford,1942.0,0.0,Raiders of the Lost Ark,actor,writer
+Harrison Ford,Harrison Ford,1884.0,1957.0,Proud Flesh,actor,archive_footage
+David Naughton,David Naughton,1951.0,0.0,An American Werewolf in London,actor,music_department
+Kurt Russell,Kurt Russell,1951.0,0.0,Escape from New York,actor,producer
+Bruce Campbell,Bruce Campbell,1958.0,0.0,Bubba Ho-Tep,actor,producer
+Bruce Campbell,Bruce Campbell,1932.0,1996.0,Monkey House,producer,director
+Dan Monahan,Dan Monahan,1955.0,0.0,Porky's,actor,
+John Travolta,John Travolta,1954.0,0.0,Pulp Fiction,actor,producer
+Laurence Olivier,Laurence Olivier,1907.0,1989.0,Sleuth,actor,producer
+Nigel Terry,Nigel Terry,1945.0,2015.0,Excalibur,actor,archive_footage
+Mel Gibson,Mel Gibson,1956.0,0.0,Braveheart,actor,producer
+Bill Murray,Bill Murray,1950.0,0.0,Lost in Translation,actor,writer
+Burt Reynolds,Burt Reynolds,1936.0,2018.0,Boogie Nights,actor,director
+James Caan,James Caan,1940.0,2022.0,Thief,actor,director
+Sean Connery,Sean Connery,1930.0,2020.0,The Rock,actor,producer
+Roger Moore,Roger Moore,1927.0,2017.0,Moonraker,actor,miscellaneous
+Roger Moore,Roger Moore,1900.0,1999.0,The Shadow,actor,archive_footage
+Roger Moore,Roger Moore,1965.0,0.0,Get Rich or Die Tryin',actor,
+Jamie Lee Curtis,Jamie Lee Curtis,1958.0,0.0,Halloween,actress,producer
+George C. Scott,George C. Scott,1927.0,1999.0,Patton,actor,director
+Warren Beatty,Warren Beatty,1937.0,0.0,Reds,actor,producer
+Mickey Rooney,Mickey Rooney,1920.0,2014.0,It's a Mad Mad Mad Mad World,actor,producer
+Ben Cross,Ben Cross,1947.0,2020.0,Star Trek,actor,producer
+Bo Derek,Bo Derek,1956.0,0.0,Bolero,actress,producer
+Dudley Moore,Dudley Moore,1935.0,2002.0,Arthur,actor,writer
+Mel Brooks,Mel Brooks,1926.0,0.0,Spaceballs,actor,writer
+Dee Wallace,Dee Wallace,1948.0,0.0,E.T. the Extra-Terrestrial,actress,producer
+Peter MacNicol,Peter MacNicol,1954.0,0.0,Sophie's Choice,actor,director
+Jeff Bridges,Jeff Bridges,1949.0,0.0,The Big Lebowski,actor,producer
+Everett McGill,Everett McGill,1945.0,0.0,Twin Peaks,actor,soundtrack
+Sam Neill,Sam Neill,1947.0,0.0,Jurassic Park,actor,producer
+Faye Dunaway,Faye Dunaway,1941.0,0.0,Network,actress,producer
+Sylvia Kristel,Sylvia Kristel,1952.0,2012.0,The Concorde... Airport '79,actress,director
+Maren Jensen,Maren Jensen,1956.0,0.0,Battlestar Galactica,actress,production_designer
+William Hurt,William Hurt,1950.0,2022.0,A History of Violence,actor,producer
+Julie Andrews,Julie Andrews,1935.0,0.0,The Sound of Music,actress,writer
+Catriona MacColl,Catriona MacColl,1954.0,0.0,A Good Year,actress,archive_footage
+Frederic Forrest,Frederic Forrest,1936.0,2023.0,Apocalypse Now,actor,soundtrack
+Sylvester Stallone,Sylvester Stallone,1946.0,0.0,Rocky,actor,writer
+Albert Finney,Albert Finney,1936.0,2019.0,Murder on the Orient Express,actor,producer
+Treat Williams,Treat Williams,1951.0,2023.0,Deep Rising,actor,director
+Lauren Tewes,Lauren Tewes,1953.0,0.0,The Love Boat,actress,soundtrack
+George Segal,George Segal,1934.0,2021.0,Who's Afraid of Virginia Woolf?,actor,producer
+George Segal,George Segal,1924.0,2000.0,Unstrap Me,actor,
+Steve Martin,Steve Martin,1945.0,0.0,Roxanne,writer,actor
+Steve Martin,Steve Martin,1915.0,1991.0,The Dude Martin Show,actor,
+Steve Martin,Steve Martin,1947.0,0.0,12 Monkeys,miscellaneous,stunts
+Steve Martin,Steve Martin,1964.0,0.0,9-1-1,miscellaneous,writer
+Steve Martin,Steve Martin,1948.0,2020.0,La case de l'oncle Doc,music_department,soundtrack
+Steve Martin,Steve Martin,1960.0,0.0,The 7.30 Report,archive_footage,
+Klinton Spilsbury,Klinton Spilsbury,1950.0,0.0,The Legend of the Lone Ranger,actor,archive_footage
+Lesley-Anne Down,Lesley-Anne Down,1954.0,0.0,"North & South: Book 1, North & South",actress,writer
+Daniel Valdez,Daniel Valdez,1949.0,0.0,La Bamba,actor,composer
+Jack Lemmon,Jack Lemmon,1925.0,2001.0,The Apartment,actor,producer
+Richard Pryor,Richard Pryor,1940.0,2005.0,Superman III,actor,writer
+Andy Kaufman,Andy Kaufman,1949.0,1984.0,Taxi,actor,writer
+Richard Dreyfuss,Richard Dreyfuss,1947.0,0.0,The Goodbye Girl,actor,producer
+Robert Duvall,Robert Duvall,1931.0,0.0,The Apostle,actor,producer
+David Rasche,David Rasche,1944.0,0.0,In the Loop,actor,soundtrack
+Harry Hamlin,Harry Hamlin,1951.0,0.0,Clash of the Titans,actor,producer
+Sean Penn,Sean Penn,1960.0,0.0,Mystic River,actor,producer
+Arnold Schwarzenegger,Arnold Schwarzenegger,1947.0,0.0,Terminator 2: Judgment Day,actor,producer
+Henry Thomas,Henry Thomas,1971.0,0.0,E.T. the Extra-Terrestrial,actor,producer
+Michelle Pfeiffer,Michelle Pfeiffer,1958.0,0.0,The Fabulous Baker Boys,actress,producer
+Aileen Quinn,Aileen Quinn,1971.0,0.0,Annie,actress,soundtrack
+JoBeth Williams,JoBeth Williams,1948.0,0.0,Poltergeist,actress,producer
+Nick Nolte,Nick Nolte,1941.0,0.0,Warrior,actor,producer
+William Shatner,William Shatner,1931.0,0.0,Star Trek V: The Final Frontier,actor,producer
+Meryl Streep,Meryl Streep,1949.0,0.0,Out of Africa,actress,writer
+Ben Kingsley,Ben Kingsley,1943.0,0.0,Sexy Beast,actor,producer
+Dustin Hoffman,Dustin Hoffman,1937.0,0.0,Tootsie,actor,producer
+Elizabeth Hartman,Elizabeth Hartman,1943.0,1987.0,A Patch of Blue,actress,writer
+Marc Singer,Marc Singer,1948.0,0.0,The Beastmaster,actor,director
+Hal Holbrook,Hal Holbrook,1925.0,2021.0,Into the Wild,actor,director
+Bob Geldof,Bob Geldof,1951.0,0.0,Pink Floyd: The Wall,actor,composer
+Nastassja Kinski,Nastassja Kinski,1961.0,0.0,Tess,actress,producer
+Bertil Guve,Bertil Guve,1970.0,0.0,Fanny and Alexander,actor,archive_footage
+Dana Kimmell,Dana Kimmell,1959.0,0.0,Friday the 13th: Part 3,actress,miscellaneous
+Tom Atkins,Tom Atkins,1935.0,0.0,Halloween III: Season of the Witch,actor,archive_footage
+Jim Henson,Jim Henson,1936.0,1990.0,The Muppet Show,actor,writer
+Christopher George,Christopher George,1931.0,1983.0,El Dorado,actor,archive_footage
+Steve Guttenberg,Steve Guttenberg,1958.0,0.0,Three Men and a Baby,actor,producer
+Barbara Hershey,Barbara Hershey,1948.0,0.0,Black Swan,actress,soundtrack
+Kate McNeil,Kate McNeil,1959.0,0.0,Monkey Shines,actress,archive_footage
+Peter Ustinov,Peter Ustinov,1921.0,2004.0,Spartacus,actor,writer
+Charles Bronson,Charles Bronson,1921.0,2003.0,Death Wish,actor,archive_footage
+Charles Bronson,Charles Bronson,1952.0,0.0,Mob Handed,actor,archive_sound
+Barry Bostwick,Barry Bostwick,1945.0,0.0,The Rocky Horror Picture Show,actor,producer
+Mariel Hemingway,Mariel Hemingway,1961.0,0.0,Manhattan,actress,producer
+James Olson,James Olson,1930.0,2022.0,The Andromeda Strain,actor,soundtrack
+John Cassavetes,John Cassavetes,1929.0,1989.0,Rosemary's Baby,actor,director
+Roy Scheider,Roy Scheider,1932.0,2008.0,Jaws,actor,producer
+Robert Glaudini,,,,,,
+Cher,Cher,1946.0,0.0,Moonstruck,music_artist,actress
+Lewis Collins,Lewis Collins,1946.0,2013.0,Jack the Ripper,actor,archive_footage
+Peter Sellers,Peter Sellers,1925.0,1980.0,Being There,actor,writer
+Jon Voight,Jon Voight,1938.0,0.0,Midnight Cowboy,actor,producer
+Willie Nelson,Willie Nelson,1933.0,0.0,The Dukes of Hazzard,music_artist,actor
+Ken Wahl,Ken Wahl,1954.0,0.0,Wiseguy,actor,producer
+Mark Blankfield,Mark Blankfield,1950.0,0.0,Robin Hood: Men in Tights,actor,writer
+John Hurt,John Hurt,1940.0,2017.0,1984,actor,soundtrack
+Toni Attell,Toni Attell,1948.0,0.0,Babylon 5,actress,
+Bette Midler,Bette Midler,1945.0,0.0,Beaches,actress,producer
+Ryan O'Neal,Ryan O'Neal,1941.0,2023.0,Love Story,actor,producer
+Luciano Pavarotti,Luciano Pavarotti,1935.0,2007.0,"Yes, Giorgio",actor,director
+C. Thomas Howell,C. Thomas Howell,1966.0,0.0,The Outsiders,actor,producer
+Tom Cruise,Tom Cruise,1962.0,0.0,Top Gun,actor,producer
+Eddie Murphy,Eddie Murphy,1961.0,0.0,The Nutty Professor,actor,writer
+Tom Berenger,Tom Berenger,1949.0,0.0,Inception,actor,producer
+Dennis Quaid,Dennis Quaid,1954.0,0.0,Far from Heaven,actor,producer
+Keith Gordon,Keith Gordon,1961.0,0.0,A Midnight Clear,director,actor
+Jennifer Beals,Jennifer Beals,1963.0,0.0,Flashdance,actress,producer
+Matthew Broderick,Matthew Broderick,1962.0,0.0,The Producers,actor,director
+Sam Shepard,Sam Shepard,1943.0,2017.0,August: Osage County,actor,writer
+Ken Marshall,Ken Marshall,1950.0,0.0,Krull,actor,archive_footage
+Ken Marshall,Ken Marshall,1922.0,1997.0,The Gods Must Be Crazy II,actor,
+Christopher Walken,Christopher Walken,1943.0,0.0,The Deer Hunter,actor,producer
+Phoebe Cates,Phoebe Cates,1963.0,0.0,Fast Times at Ridgemont High,actress,soundtrack
+Nicolas Cage,Nicolas Cage,1964.0,0.0,Face/Off,actor,producer
+Matt Dillon,Matt Dillon,1964.0,0.0,There's Something About Mary,actor,director
+James Woods,James Woods,1947.0,0.0,Vampires,actor,producer
+Shirley MacLaine,Shirley MacLaine,1934.0,0.0,Terms of Endearment,actress,writer
+Dan Aykroyd,Dan Aykroyd,1952.0,0.0,Ghostbusters,writer,actor
+Peter Billingsley,Peter Billingsley,1971.0,0.0,A Christmas Story,producer,actor
+Anthony Perkins,Anthony Perkins,1932.0,1992.0,Psycho,actor,director
+Barbra Streisand,Barbra Streisand,1942.0,0.0,Yentl,music_artist,actress
+Randy Norton,,,,,,
+Graham Chapman,Graham Chapman,1941.0,1989.0,Monty Python and the Holy Grail,writer,actor
+John Cleese,John Cleese,1939.0,0.0,A Fish Called Wanda,actor,writer
+Rick Hill,Rick Hill,1953.0,0.0,Cheers,actor,director
+Jason Robards,Jason Robards,1922.0,2000.0,All the President's Men,actor,soundtrack
+Peter Keleghan,Peter Keleghan,1959.0,0.0,Ginger Snaps,actor,writer
+Cliff Gorman,Cliff Gorman,1936.0,2002.0,All That Jazz,actor,archive_footage
+Mary Beth McDonough,Mary Beth McDonough,1961.0,0.0,The Waltons,actress,writer
+Linda Blair,Linda Blair,1959.0,0.0,The Exorcist,actress,producer
+Peter Strauss,Peter Strauss,1947.0,0.0,xXx: State of the Union,actor,producer
+Peter Strauss,Peter Strauss,1923.0,2012.0,The Century of the Self,archive_footage,
+Tom Selleck,Tom Selleck,1945.0,0.0,Blue Bloods,actor,producer
+Don Francks,Don Francks,1932.0,2016.0,Heavy Metal,actor,writer
+Lou Ferrigno,Lou Ferrigno,1951.0,0.0,The Incredible Hulk,actor,producer
+Tony Roberts,Tony Roberts,1939.0,0.0,"Play It Again, Sam",actor,soundtrack
+Rutger Hauer,Rutger Hauer,1944.0,2019.0,Hobo with a Shotgun,actor,producer
+Shô Kosugi,Shô Kosugi,1948.0,0.0,Ninja Assassin,actor,miscellaneous
+Peter Weller,Peter Weller,1947.0,0.0,RoboCop,actor,director
+David Niven,David Niven,1910.0,1983.0,Murder by Death,actor,producer
+Max Gail,Max Gail,1943.0,0.0,42,actor,director
+Walter Matthau,Walter Matthau,1920.0,2000.0,The Odd Couple,actor,director
+Pia Zadora,Pia Zadora,1954.0,0.0,The Lonely Lady,actress,soundtrack
+Cristina Raines,Cristina Raines,1952.0,0.0,Nashville,actress,producer
+Rosanna Arquette,Rosanna Arquette,1959.0,0.0,Pulp Fiction,actress,producer
+Malcolm McDowell,Malcolm McDowell,1943.0,0.0,A Clockwork Orange,actor,producer
+Tommy Lee Jones,Tommy Lee Jones,1946.0,0.0,The Fugitive,actor,director
+Martin Yost,,,,,,
+Linda Griffiths,Linda Griffiths,1953.0,2014.0,Lianna,actress,writer
+Robby Benson,Robby Benson,1956.0,0.0,Beauty and the Beast,actor,director
+Margot Kidder,Margot Kidder,1948.0,2018.0,Superman,actress,producer
+Everett Silas,,,,,,
+Kyle MacLachlan,Kyle MacLachlan,1959.0,0.0,Twin Peaks,actor,director
+Ralph Macchio,Ralph Macchio,1961.0,0.0,The Karate Kid Part III,actor,producer
+Craig Wasson,Craig Wasson,1954.0,0.0,A Nightmare on Elm Street 3: Dream Warriors,actor,writer
+Heather Langenkamp,Heather Langenkamp,1964.0,0.0,A Nightmare on Elm Street,actress,writer
+F. Murray Abraham,F. Murray Abraham,1939.0,0.0,Amadeus,actor,soundtrack
+Patrick Swayze,Patrick Swayze,1952.0,2009.0,Dirty Dancing,actor,producer
+Noah Hathaway,Noah Hathaway,1971.0,0.0,The NeverEnding Story,actor,miscellaneous
+Kevin Bacon,Kevin Bacon,1958.0,0.0,Footloose,actor,producer
+Robert Carradine,Robert Carradine,1954.0,0.0,Revenge of the Nerds,actor,producer
+Zach Galligan,Zach Galligan,1964.0,0.0,Gremlins,actor,director
+Michael Douglas,Michael Douglas,1944.0,0.0,Wall Street,actor,producer
+Michael Paré,Michael Paré,1958.0,0.0,The Virgin Suicides,actor,director
+Molly Ringwald,Molly Ringwald,1968.0,0.0,Sixteen Candles,actress,music_department
+Rob Reiner,Rob Reiner,1947.0,0.0,All in the Family,actor,writer
+Val Kilmer,Val Kilmer,1959.0,0.0,The Doors,actor,producer
+Peter Horton,Peter Horton,1953.0,0.0,New Amsterdam,producer,actor
+Peter Horton,Peter Horton,1941.0,2023.0,The Old Fox,actor,composer
+Lance Guest,Lance Guest,1960.0,0.0,The Last Starfighter,actor,soundtrack
+Tom Hanks,Tom Hanks,1956.0,0.0,Cast Away,producer,actor
+John Getz,John Getz,1946.0,0.0,The Social Network,actor,soundtrack
+Sumi Shimamoto,Sumi Shimamoto,1954.0,0.0,Nausicaä of the Valley of the Wind,actress,
+Erich Anderson,,,,,,
+Rachel Ward,Rachel Ward,1957.0,0.0,The Thorn Birds,actress,director
+Helen Slater,Helen Slater,1963.0,0.0,Supergirl,actress,writer
+Drew Barrymore,Drew Barrymore,1975.0,0.0,Charlie's Angels,producer,actress
+John Heard,John Heard,1946.0,2017.0,The Guardian,actor,producer
+John Heard,John Heard,1978.0,0.0,The Whole Ten Yards,editorial_department,producer
+Gene Wilder,Gene Wilder,1933.0,2016.0,Willy Wonka & the Chocolate Factory,actor,writer
+Harry Dean Stanton,Harry Dean Stanton,1926.0,2017.0,Lucky,actor,soundtrack
+Sam Waterston,Sam Waterston,1940.0,0.0,The Killing Fields,actor,producer
+Catherine Mary Stewart,Catherine Mary Stewart,1959.0,0.0,The Last Starfighter,actress,stunts
+John Lurie,John Lurie,1952.0,0.0,Stranger Than Paradise,music_department,actor
+Robert Urich,Robert Urich,1946.0,2002.0,Lonesome Dove,actor,producer
+Judy Davis,Judy Davis,1955.0,0.0,Husbands and Wives,actress,producer
+Prince,Prince,1958.0,2016.0,Under the Cherry Moon,music_artist,composer
+Rob Lowe,Rob Lowe,1964.0,0.0,St. Elmo's Fire,actor,producer
+Tanya Roberts,Tanya Roberts,1949.0,2021.0,A View to a Kill,actress,producer
+Christopher Lambert,Christopher Lambert,1957.0,0.0,Highlander,actor,producer
+Matthew Modine,Matthew Modine,1959.0,0.0,Full Metal Jacket,actor,producer
+Sarah Patterson,Sarah Patterson,1972.0,0.0,Snow White,actress,
+Lilyan Chauvin,Lilyan Chauvin,1925.0,2008.0,Predator 2,actress,director
+Eric Roberts,Eric Roberts,1956.0,0.0,Runaway Train,actor,producer
+Eric Roberts,Eric Roberts,1944.0,0.0,The Mikado,actor,writer
+Eric Roberts,Eric Roberts,1914.0,2010.0,The Tomorrow People,actor,
+Rae Dawn Chong,Rae Dawn Chong,1961.0,0.0,Commando,actress,director
+Teri Garr,Teri Garr,1947.0,0.0,Tootsie,actress,miscellaneous
+Howard E. Rollins Jr.,Howard E. Rollins Jr.,1950.0,1996.0,Ragtime,actor,archive_footage
+Tab Hunter,Tab Hunter,1931.0,2018.0,Damn Yankees,actor,producer
+Steven Bauer,Steven Bauer,1956.0,0.0,Scarface,actor,producer
+Joe Morton,Joe Morton,1947.0,0.0,Terminator 2: Judgment Day,actor,producer
+Geneviève Bujold,Geneviève Bujold,1942.0,0.0,Dead Ringers,actress,writer
+Tim Matheson,Tim Matheson,1947.0,0.0,National Lampoon's Animal House,actor,director
+Diane Keaton,Diane Keaton,1946.0,0.0,Annie Hall,actress,producer
+Paul McCartney,Paul McCartney,1942.0,0.0,Sgt. Pepper's Lonely Hearts Club Band,music_artist,composer
+Michael O'Keefe,Michael O'Keefe,1955.0,0.0,Caddyshack,actor,director
+Debra Winger,Debra Winger,1955.0,0.0,Terms of Endearment,actress,producer
+Gary Busey,Gary Busey,1944.0,0.0,The Buddy Holly Story,actor,producer
+Brooke Adams,Brooke Adams,1949.0,0.0,Invasion of the Body Snatchers,actress,producer
+Brooke Adams,Brooke Adams,1986.0,0.0,My Boyfriend's Back,actress,music_department
+Brooke Adams,Brooke Adams,1969.0,0.0,Glory Hole,actress,
+Brooke Adams,Brooke Adams,1984.0,0.0,TNA iMPACT! Wrestling,actress,archive_footage
+Anthony Michael Hall,Anthony Michael Hall,1968.0,0.0,War Machine,actor,producer
+Sean Astin,Sean Astin,1971.0,0.0,The Lord of the Rings: The Two Towers,actor,producer
+Michael J. Fox,Michael J. Fox,1961.0,0.0,Back to the Future,actor,producer
+Michael J. Fox,Michael J. Fox,1969.0,0.0,The Host,sound_department,miscellaneous
+William Petersen,William Petersen,1953.0,0.0,CSI: Crime Scene Investigation,producer,actor
+Eileen Brennan,Eileen Brennan,1932.0,2013.0,Clue,actress,writer
+Emilio Estevez,Emilio Estevez,1962.0,0.0,The Way,actor,director
+Don Ameche,Don Ameche,1908.0,1993.0,Cocoon,actor,director
+Clu Gulager,Clu Gulager,1928.0,2022.0,The Return of the Living Dead,actor,director
+Demi Moore,Demi Moore,1962.0,0.0,G.I. Jane,actress,producer
+Jonathan Pryce,Jonathan Pryce,1947.0,0.0,The Two Popes,actor,producer
+Danny Glover,Danny Glover,1946.0,0.0,Lethal Weapon,actor,producer
+Kevin Kline,Kevin Kline,1947.0,0.0,Wild Wild West,actor,director
+Tatsuya Nakadai,Tatsuya Nakadai,1932.0,0.0,Harakiri,actor,soundtrack
+Maggie Smith,Maggie Smith,1934.0,0.0,Gosford Park,actress,soundtrack
+Chris Sarandon,Chris Sarandon,1942.0,0.0,The Nightmare Before Christmas,actor,soundtrack
+Ethan Hawke,Ethan Hawke,1970.0,0.0,Training Day,actor,producer
+Griffin Dunne,Griffin Dunne,1955.0,0.0,After Hours,actor,director
+Robert Englund,Robert Englund,1947.0,0.0,A Nightmare on Elm Street,actor,miscellaneous
+Steve Railsback,Steve Railsback,1945.0,0.0,Lifeforce,actor,producer
+Paul Reubens,Paul Reubens,1952.0,2023.0,Pee-wee's Playhouse,actor,writer
+Lori Cardille,Lori Cardille,1954.0,0.0,Day of the Dead,actress,producer
+William Katt,William Katt,1951.0,0.0,The Man from Earth,actor,director
+Grant Bardsley,,,,,,
+Melanie Kinnaman,Melanie Kinnaman,1953.0,0.0,Friday the 13th: A New Beginning,actress,archive_footage
+Jeffrey Combs,Jeffrey Combs,1954.0,0.0,Re-Animator,actor,miscellaneous
+Taimak,Taimak,1964.0,0.0,The Last Dragon,actor,stunts
+Lauren Hutton,Lauren Hutton,1943.0,0.0,American Gigolo,producer,actress
+Jeff Goldblum,Jeff Goldblum,1952.0,0.0,Jurassic Park,actor,producer
+John Cusack,John Cusack,1966.0,0.0,Grosse Pointe Blank,actor,producer
+Mikhail Baryshnikov,Mikhail Baryshnikov,1948.0,0.0,The Turning Point,actor,producer
+Nicholas Rowe,Nicholas Rowe,1966.0,0.0,Young Sherlock Holmes,actor,archive_footage
+Nicholas Rowe,Nicholas Rowe,1674.0,1718.0,Jane Shore,writer,
+Mickey Rourke,Mickey Rourke,1952.0,0.0,Sin City,actor,writer
+Bruno Lawrence,Bruno Lawrence,1941.0,1995.0,The Quiet Earth,actor,writer
+Ken Ogata,Ken Ogata,1937.0,2008.0,Edo Porn,actor,miscellaneous
+Sally Field,Sally Field,1946.0,0.0,Forrest Gump,actress,producer
+Kevin Costner,Kevin Costner,1955.0,0.0,The Postman,actor,producer
+Richard Chamberlain,Richard Chamberlain,1934.0,0.0,The Towering Inferno,actor,producer
+Michael Dudikoff,Michael Dudikoff,1954.0,0.0,Platoon Leader,actor,assistant_director
+Timothy Hutton,Timothy Hutton,1960.0,0.0,Ordinary People,actor,producer
+Helen Shaver,Helen Shaver,1951.0,0.0,Desert Hearts,actress,director
+Mia Farrow,Mia Farrow,1945.0,0.0,Rosemary's Baby,actress,soundtrack
+Louise Lasser,Louise Lasser,1939.0,0.0,Happiness,actress,writer
+Sting,Sting,1951.0,0.0,Dune,music_artist,actor
+Raymond Burr,Raymond Burr,1917.0,1993.0,Rear Window,actor,production_manager
+Jackie Chan,Jackie Chan,1954.0,0.0,Who Am I?,producer,actor
+Sheila E.,Sheila E.,1957.0,0.0,Man of Steel,music_department,actress
+John Erwin,John Erwin,1936.0,0.0,He-Man and the Masters of the Universe,actor,special_effects
+Joe Colligan,Joe Colligan,1956.0,0.0,Friends,actor,archive_footage
+Georgia Engel,Georgia Engel,1948.0,2019.0,Everybody Loves Raymond,actress,soundtrack
+Daniel Jenkins,,,,,,
+Mario Van Peebles,Mario Van Peebles,1957.0,0.0,Baadasssss!,actor,director
+Sigourney Weaver,Sigourney Weaver,1949.0,0.0,Alien Resurrection,actress,producer
+Wil Wheaton,Wil Wheaton,1972.0,0.0,Stand by Me,actor,writer
+Paul Hogan,Paul Hogan,1939.0,0.0,Crocodile Dundee,actor,writer
+Paul Hogan,Paul Hogan,1919.0,1980.0,Captain China,actor,
+Paul Hogan,Paul Hogan,1974.0,0.0,Bad Company,assistant_director,producer
+Paul Hogan,Paul Hogan,1975.0,0.0,Ricky! The Movie,actor,writer
+David Bowie,David Bowie,1947.0,2016.0,Labyrinth,music_artist,actor
+Charlie Sheen,Charlie Sheen,1965.0,0.0,Two and a Half Men,actor,producer
+Isabella Rossellini,Isabella Rossellini,1952.0,0.0,Blue Velvet,actress,director
+Lea Thompson,Lea Thompson,1961.0,0.0,Back to the Future,actress,director
+Rick Moranis,Rick Moranis,1953.0,0.0,Parenthood,actor,writer
+Crispin Glover,Crispin Glover,1964.0,0.0,What Is It?,actor,director
+Ally Sheedy,Ally Sheedy,1962.0,0.0,WarGames,actress,producer
+Joey Cramer,Joey Cramer,1973.0,0.0,Flight of the Navigator,actor,writer
+Kathleen Turner,Kathleen Turner,1954.0,0.0,Romancing the Stone,actress,producer
+Kathleen Turner,Kathleen Turner,1995.0,0.0,Brave Little Army,animation_department,casting_department
+Corey Haim,Corey Haim,1971.0,2010.0,The Lost Boys,actor,producer
+Thom Mathews,Thom Mathews,1958.0,0.0,The Return of the Living Dead,actor,producer
+Rodney Dangerfield,Rodney Dangerfield,1921.0,2004.0,Back to School,actor,writer
+Dennis Hopper,Dennis Hopper,1936.0,2010.0,Easy Rider,actor,director
+Gary Oldman,Gary Oldman,1958.0,0.0,The Dark Knight,actor,producer
+Michael Rooker,Michael Rooker,1955.0,0.0,Guardians of the Galaxy,actor,producer
+Jason Lively,Jason Lively,1968.0,0.0,National Lampoon's European Vacation,actor,director
+Kate Capshaw,Kate Capshaw,1953.0,0.0,Indiana Jones and the Temple of Doom,actress,producer
+Vincent Price,Vincent Price,1911.0,1993.0,The Abominable Dr. Phibes,actor,miscellaneous
+Orson Welles,Orson Welles,1915.0,1985.0,Citizen Kane,actor,writer
+Michael Moriarty,Michael Moriarty,1941.0,0.0,Courage Under Fire,actor,writer
+Jeff Daniels,Jeff Daniels,1955.0,0.0,The Squid and the Whale,actor,producer
+Jeff Daniels,Jeff Daniels,1981.0,0.0,Czech Tales 1,actor,editor
+Daryl Hannah,Daryl Hannah,1960.0,0.0,Wall Street,actress,producer
+Tracy Camilla Johns,Tracy Camilla Johns,1963.0,0.0,She's Gotta Have It,actress,archive_footage
+Tom Waits,Tom Waits,1949.0,0.0,Seven Psychopaths,music_artist,actor
+Karen Black,Karen Black,1939.0,2013.0,Five Easy Pieces,actress,writer
+Deborah Foreman,Deborah Foreman,1962.0,0.0,Real Genius,actress,archive_footage
+Helena Bonham Carter,Helena Bonham Carter,1966.0,0.0,Sweeney Todd: The Demon Barber of Fleet Street,actress,director
+John Candy,John Candy,1950.0,1994.0,"Planes, Trains & Automobiles",actor,writer
+Bryan Brown,Bryan Brown,1947.0,0.0,Cocktail,actor,producer
+Brian Kerwin,Brian Kerwin,1949.0,0.0,Jack,actor,producer
+Danny DeVito,Danny DeVito,1944.0,0.0,Matilda,actor,producer
+Richard Jordan,Richard Jordan,1937.0,1993.0,The Hunt for Red October,actor,producer
+Richard Jordan,Richard Jordan,1965.0,0.0,Father and Daughter,director,writer
+John Lithgow,John Lithgow,1945.0,0.0,The World According to Garp,actor,producer
+Michael Keaton,Michael Keaton,1951.0,0.0,Birdman or (The Unexpected Virtue of Ignorance),actor,miscellaneous
+Stephen Lang,Stephen Lang,1952.0,0.0,Avatar,actor,producer
+Chris Makepeace,Chris Makepeace,1964.0,0.0,Meatballs,actor,assistant_director
+Burt Lancaster,Burt Lancaster,1913.0,1994.0,From Here to Eternity,actor,producer
+Todd Allen,Todd Allen,1960.0,0.0,Django Unchained,actor,producer
+Blythe Danner,Blythe Danner,1943.0,0.0,Meet the Parents,actress,soundtrack
+Sissy Spacek,Sissy Spacek,1949.0,0.0,In the Bedroom,actress,art_department
+Judd Nelson,Judd Nelson,1959.0,0.0,The Breakfast Club,actor,writer
+Scott McGinnis,Scott McGinnis,1958.0,0.0,Star Trek III: The Search for Spock,actor,director
+Mike Norris,Mike Norris,1962.0,0.0,Rush Hour 3,actor,stunts
+Victor Love,Victor Love,1957.0,0.0,Red All Over,actor,director
+Cary Elwes,Cary Elwes,1962.0,0.0,Saw,actor,producer
+Elisabeth Shue,Elisabeth Shue,1963.0,0.0,Leaving Las Vegas,actress,producer
+Adrian Pasdar,Adrian Pasdar,1965.0,0.0,Carlito's Way,actor,director
+Andrew McCarthy,Andrew McCarthy,1962.0,0.0,Orange Is the New Black,actor,director
+Dolph Lundgren,Dolph Lundgren,1957.0,0.0,Rocky IV,actor,producer
+Christian Bale,Christian Bale,1974.0,0.0,The Dark Knight,actor,producer
+Lorraine Gary,Lorraine Gary,1937.0,0.0,Jaws: The Revenge,actress,archive_footage
+Timothy Dalton,Timothy Dalton,1946.0,0.0,The Living Daylights,actor,soundtrack
+Lou Diamond Phillips,Lou Diamond Phillips,1962.0,0.0,Courage Under Fire,actor,director
+Andre Gower,Andre Gower,1973.0,0.0,The Monster Squad,actor,writer
+Donald Pleasence,Donald Pleasence,1919.0,1995.0,Halloween II,actor,writer
+George Kennedy,George Kennedy,1925.0,2016.0,Cool Hand Luke,actor,miscellaneous
+Hume Cronyn,Hume Cronyn,1911.0,2003.0,Cocoon,actor,producer
+Jason Bateman,Jason Bateman,1969.0,0.0,Arrested Development,actor,producer
+Jim Varney,Jim Varney,1949.0,2000.0,Ernest Goes to Camp,actor,writer
+Kim Basinger,Kim Basinger,1953.0,0.0,L.A. Confidential,actress,producer
+Anthony Newley,Anthony Newley,1931.0,1999.0,Can Heironymus Merkin Ever Forget Mercy Humppe and Find True Happiness?,actor,writer
+Casey Siemaszko,Casey Siemaszko,1961.0,0.0,Stand by Me,actor,soundtrack
+David Paul,David Paul,1957.0,2020.0,The Barbarians,actor,director
+Martin Sheen,Martin Sheen,1940.0,0.0,The Departed,actor,producer
+Denzel Washington,Denzel Washington,1954.0,0.0,Fences,actor,producer
+Madonna,Madonna,1958.0,0.0,A League of Their Own,music_artist,actress
+Chris Cooper,Chris Cooper,1951.0,0.0,Adaptation.,actor,director
+Chris Cooper,Chris Cooper,1985.0,0.0,Priest,visual_effects,
+Jon Cryer,Jon Cryer,1965.0,0.0,Two and a Half Men,actor,producer
+Michael E. Knight,Michael E. Knight,1959.0,0.0,All My Children,actor,art_department
+Lane Smith,Lane Smith,1936.0,2005.0,My Cousin Vinny,actor,soundtrack
+Kelly McGillis,Kelly McGillis,1957.0,0.0,Top Gun,actress,producer
+Jim Belushi,Jim Belushi,1954.0,0.0,Red Heat,actor,music_department
+Tom Hulce,Tom Hulce,1953.0,0.0,Amadeus,actor,producer
+Michael Biehn,Michael Biehn,1956.0,0.0,Aliens,actor,producer
+Deborah Winters,Deborah Winters,1953.0,0.0,The Winds of War,actress,casting_director
+Bill Cosby,Bill Cosby,1937.0,0.0,The Cosby Show,actor,writer
+Sarah Miles,Sarah Miles,1941.0,0.0,Ryan's Daughter,actress,soundtrack
+Robert Townsend,Robert Townsend,1957.0,0.0,Hollywood Shuffle,director,actor
+Sy Richardson,Sy Richardson,1941.0,0.0,Repo Man,actor,director
+Jodie Foster,Jodie Foster,1962.0,0.0,The Silence of the Lambs,actress,producer
+Julie Walters,Julie Walters,1950.0,0.0,Billy Elliot,actress,soundtrack
+Patrick Dempsey,Patrick Dempsey,1966.0,0.0,Grey's Anatomy,actor,production_manager
+Elaine Stritch,Elaine Stritch,1925.0,2014.0,30 Rock,actress,music_department
+Eric Stoltz,Eric Stoltz,1961.0,0.0,Pulp Fiction,actor,producer
+Eddie Deezen,Eddie Deezen,1957.0,0.0,WarGames,actor,writer
+Bruce Willis,Bruce Willis,1955.0,0.0,Die Hard,actor,producer
+Alec Baldwin,Alec Baldwin,1958.0,0.0,The Departed,actor,producer
+River Phoenix,River Phoenix,1970.0,1993.0,My Own Private Idaho,actor,soundtrack
+Roddy Piper,Roddy Piper,1954.0,2015.0,They Live,actor,producer
+Winona Ryder,Winona Ryder,1971.0,0.0,Little Women,actress,producer
+Bob Hoskins,Bob Hoskins,1942.0,2014.0,The Long Good Friday,actor,director
+Annabeth Gish,Annabeth Gish,1971.0,0.0,Mystic Pizza,actress,archive_footage
+Philippe Noiret,Philippe Noiret,1930.0,2006.0,Cinema Paradiso,actor,miscellaneous
+Catherine Hicks,Catherine Hicks,1951.0,0.0,Star Trek IV: The Voyage Home,actress,soundtrack
+Leslie Nielsen,Leslie Nielsen,1926.0,2010.0,Airplane!,actor,producer
+Hitoshi Takagi,Hitoshi Takagi,1925.0,2004.0,Throne of Blood,actor,
+Melanie Griffith,Melanie Griffith,1957.0,0.0,Working Girl,actress,producer
+Jean-Claude Van Damme,Jean-Claude Van Damme,1960.0,0.0,Double Impact,actor,writer
+Willem Dafoe,Willem Dafoe,1955.0,0.0,Spider-Man,actor,producer
+Pat Hingle,Pat Hingle,1924.0,2009.0,The Quick and the Dead,actor,producer
+Glenn Close,Glenn Close,1947.0,0.0,Fatal Attraction,actress,producer
+Geena Davis,Geena Davis,1956.0,0.0,Thelma & Louise,actress,producer
+Sonny Bono,Sonny Bono,1935.0,1998.0,The Sonny and Cher Show,actor,composer
+Jeremy Irons,Jeremy Irons,1948.0,0.0,Dead Ringers,actor,producer
+Daniel Day-Lewis,Daniel Day-Lewis,1957.0,0.0,There Will Be Blood,actor,music_department
+Shawnee Smith,Shawnee Smith,1969.0,0.0,The Blob,actress,producer
+Joey Lawrence,Joey Lawrence,1976.0,0.0,Blossom,actor,music_department
+John Neville,John Neville,1925.0,2011.0,The Adventures of Baron Munchausen,actor,miscellaneous
+Cassandra Peterson,Cassandra Peterson,1951.0,0.0,Elvira: Mistress of the Dark,actress,producer
+Christine Ebersole,Christine Ebersole,1953.0,0.0,The Wolf of Wall Street,actress,soundtrack
+Steven Seagal,Steven Seagal,1952.0,0.0,On Deadly Ground,actor,producer
+Keenen Ivory Wayans,Keenen Ivory Wayans,1958.0,0.0,White Chicks,writer,producer
+Lance Henriksen,Lance Henriksen,1940.0,0.0,Aliens,actor,producer
+Terry Kiser,Terry Kiser,1939.0,0.0,Friday the 13th: The New Blood,actor,director
+Doug Bradley,Doug Bradley,1954.0,0.0,Hellraiser III: Hell on Earth,actor,make_up_department
+Amanda Donohoe,Amanda Donohoe,1962.0,0.0,Liar Liar,actress,producer
+James Karen,James Karen,1923.0,2018.0,The Return of the Living Dead,actor,writer
+Tami Erin,Tami Erin,1974.0,0.0,The New Adventures of Pippi Longstocking,actress,casting_director
+Carmen Maura,Carmen Maura,1945.0,0.0,Women on the Verge of a Nervous Breakdown,actress,soundtrack
+Cathy Podewell,Cathy Podewell,1964.0,0.0,Night of the Demons,actress,producer
+Heather O'Rourke,Heather O'Rourke,1975.0,1988.0,Poltergeist,actress,archive_footage
+William Ragsdale,William Ragsdale,1961.0,0.0,Fright Night,actor,archive_footage
+Jackie Mason,Jackie Mason,1928.0,2021.0,The Jerk,actor,writer
+Laurence Fishburne,Laurence Fishburne,1961.0,0.0,The Matrix,actor,producer
+Fisher Stevens,Fisher Stevens,1963.0,0.0,Short Circuit,actor,producer
+Bill Pullman,Bill Pullman,1953.0,0.0,Independence Day,actor,director
+Jason Beghe,Jason Beghe,1960.0,0.0,The Next Three Days,actor,producer
+James Le Gros,James Le Gros,1962.0,0.0,Drugstore Cowboy,actor,producer
+Carl Weathers,Carl Weathers,1948.0,2024.0,Predator,actor,director
+Sidney Poitier,Sidney Poitier,1927.0,2022.0,In the Heat of the Night,actor,director
+George Dzundza,George Dzundza,1945.0,0.0,Crimson Tide,actor,assistant_director
+Lukas Haas,Lukas Haas,1976.0,0.0,Inception,actor,music_department
+Anthony Edwards,Anthony Edwards,1962.0,0.0,ER,actor,producer
+Anthony Edwards,Anthony Edwards,2001.0,0.0,Hustle,actor,archive_footage
+Anthony Edwards,Anthony Edwards,1938.0,2012.0,Doomwatch,actor,
+Scott Grimes,Scott Grimes,1971.0,0.0,American Dad!,actor,composer
+Eric Bogosian,Eric Bogosian,1953.0,0.0,Talk Radio,actor,writer
+Rubén Blades,Rubén Blades,1948.0,0.0,Once Upon a Time in Mexico,actor,composer
+Forest Whitaker,Forest Whitaker,1961.0,0.0,The Last King of Scotland,actor,producer
+Cyndi Lauper,Cyndi Lauper,1953.0,0.0,Vibes,music_artist,actress
+Robert Downey Jr.,Robert Downey Jr.,1965.0,0.0,Iron Man,actor,producer
+Billy Crystal,Billy Crystal,1948.0,0.0,Forget Paris,actor,writer
+Jennifer Rubin,Jennifer Rubin,1962.0,0.0,A Nightmare on Elm Street 3: Dream Warriors,actress,producer
+Gena Rowlands,Gena Rowlands,1930.0,0.0,The Notebook,actress,miscellaneous
+Cliff De Young,Cliff De Young,1945.0,0.0,The Craft,actor,soundtrack
+Amy Irving,Amy Irving,1953.0,0.0,Traffic,actress,producer
+Jessica Lange,Jessica Lange,1949.0,0.0,Tootsie,actress,producer
+David Keith,David Keith,1954.0,0.0,An Officer and a Gentleman,actor,music_department
+Joanna Pacula,Joanna Pacula,1957.0,0.0,Tombstone,actress,
+Tim Daly,Tim Daly,1956.0,0.0,Basic,actor,producer
+Alan Boyce,Alan Boyce,1961.0,0.0,Nowhere,actor,
+Theresa Russell,Theresa Russell,1957.0,0.0,Spider-Man 3,actress,miscellaneous
+Hart Bochner,Hart Bochner,1956.0,0.0,Die Hard,actor,director
+Keanu Reeves,Keanu Reeves,1964.0,0.0,The Matrix,actor,producer
+Jodi Benson,Jodi Benson,1961.0,0.0,Toy Story 3,actress,producer
+Ed Harris,Ed Harris,1950.0,0.0,Appaloosa,actor,producer
+Ed Harris,Ed Harris,1944.0,2012.0,I'm in Love with a Church Girl,actor,
+Danny Aiello,Danny Aiello,1933.0,2019.0,Do the Right Thing,actor,producer
+James Spader,James Spader,1960.0,0.0,The Blacklist,actor,producer
+Dale Midkiff,Dale Midkiff,1959.0,0.0,Pet Sematary,actor,producer
+Julian Sands,Julian Sands,1958.0,2023.0,A Room with a View,actor,assistant_director
+Fred Savage,Fred Savage,1976.0,0.0,The Wonder Years,actor,director
+'Weird Al' Yankovic,'Weird Al' Yankovic,1959.0,0.0,UHF,music_artist,actor
+Dom DeLuise,Dom DeLuise,1933.0,2009.0,The Cannonball Run,actor,director
+Nicole Kidman,Nicole Kidman,1967.0,0.0,Moulin Rouge!,actress,producer
+Shelley Long,Shelley Long,1949.0,0.0,Cheers,actress,producer
+Morgan Freeman,Morgan Freeman,1937.0,0.0,Se7en,actor,producer
+Greg Evigan,Greg Evigan,1953.0,0.0,DeepStar Six,actor,music_department
+John Ritter,John Ritter,1948.0,2003.0,Sling Blade,actor,producer
+Kenneth Branagh,Kenneth Branagh,1960.0,0.0,Henry V,actor,producer
+Jensen Daggett,Jensen Daggett,1969.0,0.0,Friday the 13th Part VIII: Jason Takes Manhattan,actress,miscellaneous
+Colin Firth,Colin Firth,1960.0,0.0,A Single Man,actor,producer
+Michael Murphy,Michael Murphy,1938.0,0.0,Manhattan,actor,archive_footage
+Michael Murphy,Michael Murphy,1986.0,0.0,New Zealand Idol,soundtrack,
+Michael Murphy,Michael Murphy,1979.0,0.0,A 2nd Opinion,producer,
+Masatoshi Nagase,Masatoshi Nagase,1966.0,0.0,Mystery Train,actor,director
+Sammi Davis,Sammi Davis,1964.0,0.0,Four Rooms,actress,camera_department
+Christian Slater,Christian Slater,1969.0,0.0,True Romance,actor,producer
+Martin Landau,Martin Landau,1928.0,2017.0,Ed Wood,actor,producer
+Cybill Shepherd,Cybill Shepherd,1950.0,0.0,Cybill,actress,producer
+Gabriel Damon,Gabriel Damon,1976.0,0.0,RoboCop 2,actor,producer
+Ted Danson,Ted Danson,1947.0,0.0,Cheers,actor,producer
+Dick Durock,Dick Durock,1937.0,2009.0,Stand by Me,actor,stunts
+Bubba Smith,Bubba Smith,1945.0,2011.0,Police Academy,actor,producer
+Gary Graham,Gary Graham,1950.0,2024.0,Robot Jox,actor,producer
+Hulk Hogan,Hulk Hogan,1953.0,0.0,No Holds Barred,actor,producer
+Terry O'Quinn,Terry O'Quinn,1952.0,0.0,Lost,actor,soundtrack
+Randy Quaid,Randy Quaid,1950.0,0.0,Independence Day,actor,producer
+Peter Boyle,Peter Boyle,1935.0,2006.0,Everybody Loves Raymond,actor,soundtrack
+Peter Boyle,Peter Boyle,1946.0,0.0,The Hours,editor,editorial_department
+Stephen Caffrey,Stephen Caffrey,1959.0,0.0,Tour of Duty,actor,director
+Ron Fazio,,,,,,
+Don Johnson,Don Johnson,1949.0,0.0,Miami Vice,actor,producer
+Don Johnson,Don Johnson,1896.0,1969.0,Beyond the Blue Horizon,sound_department,
+Don Johnson,Don Johnson,1911.0,2000.0,Shomuni,actor,archive_footage
+Kiefer Sutherland,Kiefer Sutherland,1966.0,0.0,24,actor,producer
+Lorraine Bracco,Lorraine Bracco,1954.0,0.0,Goodfellas,actress,producer
+Jillian McWhirter,Jillian McWhirter,1962.0,0.0,Progeny,actress,writer
+Emily Lloyd,Emily Lloyd,1970.0,0.0,Wish You Were Here,actress,archive_footage
+Ron Silver,Ron Silver,1946.0,2009.0,Timecop,actor,director
+Keith Coogan,Keith Coogan,1970.0,0.0,Adventures in Babysitting,actor,set_decorator
+Cheech Marin,Cheech Marin,1946.0,0.0,Born in East L.A.,actor,writer
+Josef Sommer,Josef Sommer,1934.0,0.0,Dirty Harry,actor,archive_footage
+Macaulay Culkin,Macaulay Culkin,1980.0,0.0,Home Alone,actor,producer
+Judith Hoag,Judith Hoag,1963.0,0.0,Armageddon,actress,
+Johnny Depp,Johnny Depp,1963.0,0.0,Pirates of the Caribbean: The Curse of the Black Pearl,actor,producer
+Tim Robbins,Tim Robbins,1958.0,0.0,Mystic River,actor,producer
+Liam Neeson,Liam Neeson,1952.0,0.0,Kinsey,actor,producer
+Gabriel Byrne,Gabriel Byrne,1950.0,0.0,The Usual Suspects,actor,producer
+Alex Vincent,Alex Vincent,1981.0,0.0,Child's Play,actor,sound_department
+Richard Linklater,Richard Linklater,1960.0,0.0,Waking Life,producer,director
+Craig Sheffer,Craig Sheffer,1960.0,0.0,A River Runs Through It,actor,producer
+Michael Oliver,Michael Oliver,1981.0,0.0,Problem Child,actor,
+Michael Oliver,Michael Oliver,1992.0,0.0,Douglas,actor,
+Michael Oliver,Michael Oliver,1934.0,2009.0,"Look, Stranger",writer,
+Bob Newhart,Bob Newhart,1929.0,0.0,The Rescuers,actor,writer
+Christopher Reid,Christopher Reid,1964.0,0.0,House Party,music_artist,actor
+Tony Todd,Tony Todd,1954.0,0.0,Candyman,actor,producer
+Jonathan Brandis,Jonathan Brandis,1976.0,2003.0,The NeverEnding Story II: The Next Chapter,actor,miscellaneous
+Kate Hodge,Kate Hodge,1966.0,0.0,Rapid Fire,actress,producer
+James Lorinz,James Lorinz,1964.0,0.0,Frankenhooker,actor,writer
+Andrew Dice Clay,Andrew Dice Clay,1957.0,0.0,The Adventures of Ford Fairlane,actor,producer
+Keely Christian,Keely Christian,1966.0,0.0,Slumber Party Massacre III,actress,
+Akira Terao,Akira Terao,1947.0,0.0,Ran,actor,producer
+Bradley Gregg,Bradley Gregg,1966.0,0.0,Stand by Me,actor,producer
+Dylan McDermott,Dylan McDermott,1961.0,0.0,The Practice,actor,producer
+Marlon Brando,Marlon Brando,1924.0,2004.0,Apocalypse Now,actor,director
+David Andrews,David Andrews,1952.0,0.0,Terminator 3: Rise of the Machines,actor,archive_footage
+David Andrews,David Andrews,1935.0,0.0,Six,director,actor
+David Andrews,David Andrews,1933.0,1964.0,Seven Keys to Baldpate,actor,
+Debbie Harry,Debbie Harry,1945.0,0.0,Videodrome,actress,composer
+Gérard Depardieu,Gérard Depardieu,1948.0,0.0,Cyrano de Bergerac,actor,producer
+Carolyn Farina,,,,,,
+Aidan Quinn,Aidan Quinn,1959.0,0.0,Benny & Joon,actor,producer
+Patrick Bergin,Patrick Bergin,1951.0,0.0,Sleeping with the Enemy,actor,producer
+Adrienne Shelly,Adrienne Shelly,1966.0,2006.0,Waitress,actress,writer
+Douglas Barr,Douglas Barr,1930.0,2015.0,Fortune Lane,actor,
+Douglas Barr,Douglas Barr,1949.0,0.0,Dead Badge,actor,director
+Ed Begley Jr.,Ed Begley Jr.,1949.0,0.0,A Mighty Wind,actor,producer
+Dabney Coleman,Dabney Coleman,1932.0,0.0,WarGames,actor,miscellaneous
+Louis Tripp,Louis Tripp,1973.0,0.0,The Gate,actor,archive_footage
+Brian Dennehy,Brian Dennehy,1938.0,2020.0,First Blood,actor,producer
+Kirstie Alley,Kirstie Alley,1951.0,2022.0,Star Trek II: The Wrath of Khan,actress,producer
+Cuba Gooding Jr.,Cuba Gooding Jr.,1968.0,0.0,Jerry Maguire,actor,writer
+Anjelica Huston,Anjelica Huston,1951.0,0.0,The Grifters,actress,producer
+Susan Sarandon,Susan Sarandon,1946.0,0.0,Thelma & Louise,actress,producer
+Maribel Verdú,Maribel Verdú,1970.0,0.0,Pan's Labyrinth,actress,soundtrack
+Paige O'Hara,Paige O'Hara,1956.0,0.0,Beauty and the Beast,actress,soundtrack
+Kathy Bates,Kathy Bates,1948.0,0.0,Misery,actress,director
+Billy Campbell,Billy Campbell,1959.0,0.0,The Rocketeer,actor,camera_department
+Anna Chlumsky,Anna Chlumsky,1980.0,0.0,My Girl,actress,soundtrack
+Julia Roberts,Julia Roberts,1967.0,0.0,Pretty Woman,actress,producer
+Brian Krause,Brian Krause,1969.0,0.0,Charmed,actor,producer
+John Turturro,John Turturro,1957.0,0.0,Fading Gigolo,actor,writer
+Paige Turco,Paige Turco,1965.0,0.0,Teenage Mutant Ninja Turtles II: The Secret of the Ooze,actress,
+Robert Arkins,,,,,,
+Wesley Snipes,Wesley Snipes,1962.0,0.0,Blade,actor,producer
+Brandon Quintin Adams,Brandon Quintin Adams,1979.0,0.0,The Sandlot,actor,producer
+Justin Whalin,Justin Whalin,1974.0,0.0,Child's Play 3,actor,archive_footage
+Juliette Binoche,Juliette Binoche,1964.0,0.0,The English Patient,actress,art_department
+Brian Bosworth,Brian Bosworth,1965.0,0.0,Stone Cold,actor,producer
+Jason Patric,Jason Patric,1966.0,0.0,The Lost Boys,actor,producer
+David Morse,David Morse,1953.0,0.0,The Green Mile,actor,producer
+David Morse,David Morse,1975.0,0.0,The Screening,actor,stunts
+Kristy Swanson,Kristy Swanson,1969.0,0.0,Buffy the Vampire Slayer,actress,producer
+Glen Campbell,Glen Campbell,1936.0,2017.0,True Grit,music_artist,actor
+Scott Bakula,Scott Bakula,1954.0,0.0,Quantum Leap,actor,producer
+Vanilla Ice,Vanilla Ice,1967.0,0.0,Cool as Ice,actor,composer
+Ellen Barkin,Ellen Barkin,1954.0,0.0,The Fan,actress,producer
+Ed O'Neill,Ed O'Neill,1946.0,0.0,Married... with Children,actor,soundtrack
+Bobcat Goldthwait,Bobcat Goldthwait,1962.0,0.0,God Bless America,director,actor
+Brad Pitt,Brad Pitt,1963.0,0.0,Fight Club,producer,actor
+Edith Meeks,,,,,,
+John Goodman,John Goodman,1952.0,0.0,10 Cloverfield Lane,actor,producer
+Jeff Speakman,Jeff Speakman,1958.0,0.0,The Perfect Weapon,actor,producer
+Claire Bloom,Claire Bloom,1931.0,0.0,Clash of the Titans,actress,archive_footage
+Laura Dern,Laura Dern,1967.0,0.0,Jurassic Park,actress,producer
+Martin Short,Martin Short,1950.0,0.0,Innerspace,actor,writer
+Martin Short,Martin Short,1943.0,2020.0,Inside the Brotherhood,writer,producer
+Gregory Hines,Gregory Hines,1946.0,2003.0,History of the World: Part I,actor,miscellaneous
+Joe Pesci,Joe Pesci,1943.0,0.0,Goodfellas,actor,soundtrack
+Cindy Williams,Cindy Williams,1947.0,2023.0,Laverne & Shirley,actress,producer
+Jeff Fahey,Jeff Fahey,1952.0,0.0,Lost,actor,producer
+Vincent Spano,Vincent Spano,1962.0,0.0,Baby It's You,actor,director
+Kevin Anderson,Kevin Anderson,1960.0,0.0,Orphans,actor,soundtrack
+Kevin Anderson,Kevin Anderson,1986.0,0.0,Wimbledon,archive_footage,
+Kevin Anderson,Kevin Anderson,1992.0,0.0,Inside Mind,writer,director
+Madeleine Stowe,Madeleine Stowe,1958.0,0.0,12 Monkeys,actress,director
+Peter Berg,Peter Berg,1964.0,0.0,Chicago Hope,producer,actor
+Harvey Keitel,Harvey Keitel,1939.0,0.0,Reservoir Dogs,actor,producer
+Virginia Madsen,Virginia Madsen,1961.0,0.0,Sideways,actress,producer
+Scott Weinger,Scott Weinger,1975.0,0.0,Fuller House,actor,producer
+Whoopi Goldberg,Whoopi Goldberg,1955.0,0.0,Ghost,actress,producer
+Bridget Fonda,Bridget Fonda,1964.0,0.0,A Simple Plan,actress,soundtrack
+Mike Myers,Mike Myers,1963.0,0.0,Austin Powers in Goldmember,actor,writer
+Sheryl Lee,Sheryl Lee,1967.0,0.0,Twin Peaks: Fire Walk with Me,actress,miscellaneous
+Annabella Sciorra,Annabella Sciorra,1960.0,0.0,The Hand That Rocks the Cradle,actress,producer
+Timothy Balme,Timothy Balme,1967.0,0.0,Dead Alive,actor,writer
+Edward James Olmos,Edward James Olmos,1947.0,0.0,Battlestar Galactica,actor,producer
+Carlos Gallardo,,,,,,
+Hugh Grant,Hugh Grant,1960.0,0.0,Love Actually,actor,soundtrack
+Edward Furlong,Edward Furlong,1977.0,0.0,Terminator 2: Judgment Day,actor,producer
+Samantha Mathis,Samantha Mathis,1970.0,0.0,Broken Arrow,actress,executive
+Brendan Fraser,Brendan Fraser,1968.0,0.0,The Mummy,actor,producer
+Omar Epps,Omar Epps,1973.0,0.0,House,actor,music_department
+Victor Wong,Victor Wong,1906.0,1972.0,Son of Kong,actor,archive_footage
+Victor Wong,Victor Wong,1927.0,2001.0,Big Trouble in Little China,actor,archive_footage
+Victor Wong,Victor Wong,1972.0,0.0,Ice Kacang Puppy Love,actor,soundtrack
+Terry Farrell,Terry Farrell,1963.0,0.0,Star Trek: Deep Space Nine,actress,soundtrack
+Terence Knox,Terence Knox,1946.0,0.0,Tour of Duty,actor,archive_footage
+Tilda Swinton,Tilda Swinton,1960.0,0.0,We Need to Talk About Kevin,actress,producer
+James Marshall,James Marshall,1967.0,0.0,A Few Good Men,actor,producer
+Richard Kind,Richard Kind,1956.0,0.0,Argo,actor,writer
+George Strait,George Strait,1952.0,0.0,Pure Country,music_artist,actor
+Stephen Dorff,Stephen Dorff,1973.0,0.0,Blade,actor,producer
+Anne Parillaud,Anne Parillaud,1960.0,0.0,La Femme Nikita,actress,director
+Andy Garcia,Andy Garcia,1956.0,0.0,Ocean's Eleven,actor,producer
+Hugh Laurie,Hugh Laurie,1959.0,0.0,House,actor,producer
+Marco Leonardi,Marco Leonardi,1971.0,0.0,Cinema Paradiso,actor,soundtrack
+Damon Wayans,Damon Wayans,1960.0,0.0,My Wife and Kids,writer,actor
+Bill Paxton,Bill Paxton,1955.0,2017.0,Aliens,actor,producer
+Brandon Lee,Brandon Lee,1965.0,1993.0,The Crow,actor,miscellaneous
+Brandon Lee,Brandon Lee,1979.0,0.0,Captured,actor,composer
+Brandon Lee,Brandon Lee,1992.0,0.0,Simplicity,writer,director
+Glenn Plummer,Glenn Plummer,1961.0,0.0,Strange Days,actor,director
+Dermot Mulroney,Dermot Mulroney,1963.0,0.0,My Best Friend's Wedding,actor,music_department
+Mary McDonnell,Mary McDonnell,1952.0,0.0,Battlestar Galactica,actress,soundtrack
+Ray Liotta,Ray Liotta,1954.0,2022.0,Narc,actor,producer
+Armand Assante,Armand Assante,1949.0,0.0,Gotti,actor,producer
+Mike Dytri,,,,,,
+Robert John Burke,Robert John Burke,1960.0,0.0,RoboCop 3,actor,archive_footage
+Andie MacDowell,Andie MacDowell,1958.0,0.0,Groundhog Day,actress,producer
+Penelope Ann Miller,Penelope Ann Miller,1964.0,0.0,Carlito's Way,actress,soundtrack
+Jason London,Jason London,1972.0,0.0,Dazed and Confused,actor,producer
+Holly Hunter,Holly Hunter,1958.0,0.0,Broadcast News,actress,producer
+Danny Elfman,Danny Elfman,1953.0,0.0,The Nightmare Before Christmas,music_department,composer
+Thomas Ian Nicholas,Thomas Ian Nicholas,1980.0,0.0,Adverse,actor,producer
+Damian Chapa,Damian Chapa,1963.0,0.0,"Blood In, Blood Out",actor,director
+Tyrin Turner,Tyrin Turner,1972.0,0.0,Menace II Society,actor,producer
+Kate Maberly,Kate Maberly,1982.0,0.0,The Secret Garden,actress,writer
+Jason James Richter,Jason James Richter,1980.0,0.0,The Little Things,actor,producer
+Anthony Hopkins,Anthony Hopkins,1937.0,0.0,The Silence of the Lambs,actor,composer
+D.B. Sweeney,D.B. Sweeney,1961.0,0.0,The Cutting Edge,actor,writer
+Sharon Stone,Sharon Stone,1958.0,0.0,Basic Instinct,actress,producer
+Sharon Stone,Sharon Stone,1953.0,0.0,Parting Glances,music_department,soundtrack
+Warwick Davis,Warwick Davis,1970.0,0.0,Willow,actor,writer
+Angela Bassett,Angela Bassett,1958.0,0.0,Strange Days,actress,producer
+Kent McCord,Kent McCord,1942.0,0.0,Predator 2,actor,writer
+Joe Mantegna,Joe Mantegna,1947.0,0.0,The Godfather Part III,actor,producer
+John D. LeMay,John D. LeMay,1962.0,0.0,Jason Goes to Hell,actor,director
+Diedrich Bader,Diedrich Bader,1966.0,0.0,Office Space,actor,producer
+Charles Grodin,Charles Grodin,1935.0,2021.0,Midnight Run,actor,writer
+Federico Luppi,Federico Luppi,1934.0,2017.0,Cronos,actor,director
+Elias Koteas,Elias Koteas,1961.0,0.0,The Thin Red Line,actor,producer
+Gabrielle Anwar,Gabrielle Anwar,1970.0,0.0,The Three Musketeers,actress,producer
+Shane McDermott,Shane McDermott,1976.0,0.0,Airborne,actor,
+Jason Scott Lee,Jason Scott Lee,1966.0,0.0,Dragon: The Bruce Lee Story,actor,archive_footage
+Janet Jackson,Janet Jackson,1966.0,0.0,Poetic Justice,music_artist,actress
+Tamlyn Tomita,Tamlyn Tomita,1966.0,0.0,The Day After Tomorrow,actress,writer
+Kevin Conroy,Kevin Conroy,1955.0,2022.0,Batman: The Killing Joke,actor,producer
+Ashley Judd,Ashley Judd,1968.0,0.0,Double Jeopardy,actress,producer
+Will Smith,Will Smith,1968.0,0.0,The Fresh Prince of Bel-Air,producer,actor
+Will Smith,Will Smith,1971.0,0.0,Veep,writer,producer
+Will Smith,Will Smith,1973.0,0.0,Wormwood,actor,
+Will Smith,Will Smith,1981.0,2016.0,The NFL on CBS,archive_footage,
+Leslie Cheung,Leslie Cheung,1956.0,2003.0,Days of Being Wild,actor,music_department
+Jesse Bradford,Jesse Bradford,1979.0,0.0,Bring It On,actor,producer
+Karen Allen,Karen Allen,1951.0,0.0,Raiders of the Lost Ark,actress,director
+Elijah Wood,Elijah Wood,1981.0,0.0,The Lord of the Rings: The Fellowship of the Ring,actor,producer
+Mark Dacascos,Mark Dacascos,1964.0,0.0,Brotherhood of the Wolf,actor,stunts
+Chris Rock,Chris Rock,1965.0,0.0,Top Five,producer,actor
+Jason Priestley,Jason Priestley,1969.0,0.0,"Beverly Hills, 90210",actor,producer
+Hiep Thi Le,Hiep Thi Le,1971.0,2017.0,Heaven & Earth,actress,soundtrack
+Alan Arkin,Alan Arkin,1934.0,2023.0,Argo,actor,director
+Michael Crawford,Michael Crawford,1942.0,0.0,The Knack... and How to Get It,actor,writer
+Michael Crawford,Michael Crawford,1969.0,0.0,Batman: The Birth of the Modern Blockbuster,producer,production_manager
+Michael Crawford,Michael Crawford,1958.0,2006.0,"Cableville, USA",actor,writer
+Uma Thurman,Uma Thurman,1970.0,0.0,Kill Bill: Vol. 1,actress,producer
+Andrew Lowery,Andrew Lowery,1970.0,0.0,Buffy the Vampire Slayer,actor,writer
+Rongguang Yu,Rongguang Yu,1958.0,0.0,Shanghai Noon,actor,director
+Otto Sander,Otto Sander,1941.0,2013.0,Wings of Desire,actor,director
+Rebecca De Mornay,Rebecca De Mornay,1959.0,0.0,The Hand That Rocks the Cradle,actress,producer
+Winston Chao,Winston Chao,1960.0,0.0,The Meg,actor,talent_agent
+Paul Gross,Paul Gross,1959.0,0.0,Due South,actor,producer
+Diane Ladd,Diane Ladd,1935.0,0.0,Wild at Heart,actress,producer
+Tatsuo Matsumura,Tatsuo Matsumura,1914.0,2005.0,Harakiri,actor,soundtrack
+Roberto Benigni,Roberto Benigni,1952.0,0.0,Life Is Beautiful,actor,writer
+Darci Kistler,,,,,,
+Brad Johnson,Brad Johnson,1924.0,1981.0,Bedtime for Bonzo,actor,archive_footage
+Brad Johnson,Brad Johnson,1959.0,2022.0,Always,actor,soundtrack
+Larry B. Scott,Larry B. Scott,1961.0,0.0,Revenge of the Nerds,actor,director
+Jacob Tierney,Jacob Tierney,1979.0,0.0,Letterkenny,actor,producer
+Jim Carrey,Jim Carrey,1962.0,0.0,Ace Ventura: Pet Detective,actor,writer
+Travis Tedford,Travis Tedford,1988.0,0.0,The Little Rascals,actor,
+Woody Harrelson,Woody Harrelson,1961.0,0.0,True Detective,actor,producer
+Melanie Lynskey,Melanie Lynskey,1977.0,0.0,Togetherness,actress,soundtrack
+Brian O'Halloran,Brian O'Halloran,1969.0,0.0,Clerks,actor,producer
+Linda Fiorentino,Linda Fiorentino,1958.0,0.0,The Last Seduction,actress,soundtrack
+Patrick Stewart,Patrick Stewart,1940.0,0.0,Logan,actor,producer
+Lara Flynn Boyle,Lara Flynn Boyle,1970.0,0.0,Happiness,actress,producer
+Renée Zellweger,Renée Zellweger,1969.0,0.0,Chicago,actress,producer
+Pat Morita,Pat Morita,1932.0,2005.0,The Karate Kid,actor,writer
+Toni Collette,Toni Collette,1972.0,0.0,The Sixth Sense,actress,producer
+Dana Delany,Dana Delany,1956.0,0.0,China Beach,actress,producer
+Tim Allen,Tim Allen,1953.0,0.0,Toy Story,actor,producer
+Kerry Fox,Kerry Fox,1966.0,0.0,Shallow Grave,actress,writer
+Ralph Fiennes,Ralph Fiennes,1962.0,0.0,The Constant Gardener,actor,director
+Robert Patrick,Robert Patrick,1958.0,0.0,Terminator 2: Judgment Day,actor,producer
+Robert Patrick,Robert Patrick,1920.0,1989.0,From Nashville with Music,producer,director
+Robert Patrick,Robert Patrick,1937.0,2023.0,High Tide,actor,writer
+Jeremy Piven,Jeremy Piven,1965.0,0.0,Serendipity,actor,producer
+Massimo Troisi,Massimo Troisi,1953.0,1994.0,The Postman,actor,writer
+Luke Perry,Luke Perry,1966.0,2019.0,"Beverly Hills, 90210",actor,producer
+Nigel Hawthorne,Nigel Hawthorne,1929.0,2001.0,The Madness of King George,actor,producer
+Jeni Courtney,,,,,,
+Duane Martin,Duane Martin,1965.0,0.0,Scream 2,actor,producer
+G.W. Bailey,G.W. Bailey,1944.0,0.0,Police Academy,actor,soundtrack
+Sophia Loren,Sophia Loren,1934.0,0.0,Two Women,actress,soundtrack
+Alfre Woodard,Alfre Woodard,1952.0,0.0,Star Trek: First Contact,actress,producer
+Jeremy Davies,Jeremy Davies,1969.0,0.0,Saving Private Ryan,actor,archive_footage
+Jeremy Davies,Jeremy Davies,1935.0,2022.0,Miss Marple: Nemesis,actor,
+Jack Palance,Jack Palance,1919.0,2006.0,City Slickers,actor,director
+Allen Payne,Allen Payne,1968.0,0.0,New Jack City,actor,archive_footage
+Allen Payne,Allen Payne,1938.0,2021.0,The Golden Child,make_up_department,actor
+Rupert Everett,Rupert Everett,1959.0,0.0,My Best Friend's Wedding,actor,producer
+Chris Elliott,Chris Elliott,1960.0,0.0,Groundhog Day,actor,writer
+Denis Leary,Denis Leary,1957.0,0.0,Rescue Me,writer,actor
+Harley Jane Kozak,Harley Jane Kozak,1957.0,0.0,Arachnophobia,actress,soundtrack
+Tim Roth,Tim Roth,1961.0,0.0,Rob Roy,actor,producer
+Sean Nelson,Sean Nelson,1980.0,0.0,Fresh,actor,producer
+Sean Nelson,Sean Nelson,1973.0,0.0,"Dude, Where's My Car?",music_department,actor
+Kevin Spacey,Kevin Spacey,1959.0,0.0,L.A. Confidential,actor,producer
+Jennifer Jason Leigh,Jennifer Jason Leigh,1962.0,0.0,The Hateful Eight,actress,producer
+Taylor Nichols,Taylor Nichols,1959.0,0.0,Metropolitan,actor,producer
+Katrin Cartlidge,Katrin Cartlidge,1961.0,2002.0,Breaking the Waves,actress,archive_footage
+Nikita Mikhalkov,Nikita Mikhalkov,1945.0,0.0,12,actor,director
+Brian Benben,Brian Benben,1956.0,0.0,Dream On,actor,producer
+Adam Beach,Adam Beach,1972.0,0.0,Windtalkers,actor,producer
+Alicia Silverstone,Alicia Silverstone,1976.0,0.0,Clueless,actress,producer
+Laura Linney,Laura Linney,1964.0,0.0,The Big C,actress,producer
+Leo Fitzpatrick,Leo Fitzpatrick,1978.0,0.0,Kids,actor,archive_footage
+Antonio Banderas,Antonio Banderas,1960.0,0.0,The Mask of Zorro,actor,producer
+Shannen Doherty,Shannen Doherty,1971.0,0.0,"Beverly Hills, 90210",actress,producer
+Elizabeth Berkley,Elizabeth Berkley,1972.0,0.0,Showgirls,actress,producer
+Ice Cube,Ice Cube,1969.0,0.0,Friday,music_artist,actor
+Emma Thompson,Emma Thompson,1959.0,0.0,Sense and Sensibility,actress,writer
+Leonardo DiCaprio,Leonardo DiCaprio,1974.0,0.0,Inception,producer,actor
+Adam Sandler,Adam Sandler,1966.0,0.0,The Waterboy,actor,producer
+Karan Ashley,Karan Ashley,1975.0,0.0,Mighty Morphin Power Rangers,actress,producer
+Pierce Brosnan,Pierce Brosnan,1953.0,0.0,Mamma Mia!,actor,producer
+Natasha Henstridge,Natasha Henstridge,1974.0,0.0,Species,actress,producer
+Jonny Lee Miller,Jonny Lee Miller,1972.0,0.0,Mindhunters,actor,director
+Lori Petty,Lori Petty,1963.0,0.0,Tank Girl,actress,writer
+Bill Farmer,Bill Farmer,1952.0,0.0,A Goofy Movie,actor,miscellaneous
+Sandra Bullock,Sandra Bullock,1964.0,0.0,The Proposal,producer,actress
+James Cromwell,James Cromwell,1940.0,0.0,L.A. Confidential,actor,producer
+Ron Perlman,Ron Perlman,1950.0,0.0,Hand of God,actor,producer
+Mary Steenburgen,Mary Steenburgen,1953.0,0.0,Last Vegas,actress,producer
+Liesel Matthews,Liesel Matthews,1984.0,0.0,A Little Princess,actress,soundtrack
+David Caruso,David Caruso,1956.0,0.0,First Blood,actor,producer
+Larenz Tate,Larenz Tate,1975.0,0.0,Crash,actor,producer
+Schuyler Fisk,Schuyler Fisk,1982.0,0.0,Orange County,actress,soundtrack
+Whitney Houston,Whitney Houston,1963.0,2012.0,The Bodyguard,music_artist,actress
+Heather Matarazzo,Heather Matarazzo,1982.0,0.0,Welcome to the Dollhouse,actress,producer
+Hal Scardino,Hal Scardino,1984.0,0.0,The Indian in the Cupboard,actor,producer
+Billy Zane,Billy Zane,1966.0,0.0,Titanic,actor,producer
+Steve Buscemi,Steve Buscemi,1957.0,0.0,Fargo,actor,director
+Clarence Williams III,Clarence Williams III,1939.0,2021.0,The General's Daughter,actor,archive_footage
+Predrag 'Miki' Manojlovic,Predrag 'Miki' Manojlovic,1950.0,0.0,Underground,actor,director
+William Baldwin,William Baldwin,1963.0,0.0,Backdraft,actor,producer
+Julianne Moore,Julianne Moore,1960.0,0.0,Far from Heaven,actress,producer
+Mark Rylance,Mark Rylance,1960.0,0.0,Bridge of Spies,actor,producer
+Jimmy Smits,Jimmy Smits,1955.0,0.0,Star Wars: Episode III - Revenge of the Sith,actor,producer
+Jack Mulcahy,Jack Mulcahy,1954.0,0.0,Blue Bloods,actor,producer
+Parker Posey,Parker Posey,1968.0,0.0,Scream 3,actress,producer
+Peter Gallagher,Peter Gallagher,1955.0,0.0,American Beauty,actor,writer
+Sinbad,Sinbad,1956.0,0.0,Jingle All the Way,actor,writer
+Aida Mohammadkhani,,,,,,
+Laurel Holloman,Laurel Holloman,1971.0,0.0,The Incredibly True Adventure of Two Girls in Love,actress,archive_footage
+Sean Young,Sean Young,1959.0,0.0,Blade Runner,actress,miscellaneous
+Shar-Ron Corley,Shar-Ron Corley,1973.0,0.0,New Jersey Drive,actor,
+Patricia Arquette,Patricia Arquette,1968.0,0.0,True Romance,actress,producer
+Michael Jordan,Michael Jordan,1963.0,0.0,Space Jam,actor,executive
+Michael Jordan,Michael Jordan,1945.0,0.0,Dreams Come True,sound_department,
+Michael Jordan,Michael Jordan,1985.0,0.0,John Wick: Chapter 4,miscellaneous,camera_department
+Neve Campbell,Neve Campbell,1973.0,0.0,Scream,actress,producer
+William H. Macy,William H. Macy,1950.0,0.0,Fargo,actor,writer
+Helen Hunt,Helen Hunt,1963.0,0.0,As Good as It Gets,actress,producer
+Helen Hunt,Helen Hunt,1902.0,1996.0,In a Lonely Place,make_up_department,
+Matthew McConaughey,Matthew McConaughey,1969.0,0.0,Interstellar,actor,producer
+Robin Tunney,Robin Tunney,1972.0,0.0,The Craft,actress,soundtrack
+Luke Wilson,Luke Wilson,1971.0,0.0,The Royal Tenenbaums,actor,producer
+Jennifer Tilly,Jennifer Tilly,1958.0,0.0,Bound,actress,writer
+Billy Bob Thornton,Billy Bob Thornton,1955.0,0.0,Sling Blade,actor,writer
+David Thewlis,David Thewlis,1963.0,0.0,Naked,actor,writer
+Vince Vaughn,Vince Vaughn,1970.0,0.0,The Break-Up,producer,actor
+Shawn Wayans,Shawn Wayans,1971.0,0.0,White Chicks,actor,writer
+Philip Baker Hall,Philip Baker Hall,1931.0,2022.0,Magnolia,actor,soundtrack
+Tony Shalhoub,Tony Shalhoub,1953.0,0.0,Monk,actor,producer
+Jada Pinkett Smith,Jada Pinkett Smith,1971.0,0.0,The Matrix Revolutions,producer,actress
+Paul Terry,Paul Terry,1887.0,1971.0,The Bull Fight,producer,writer
+Paul Terry,Paul Terry,1985.0,0.0,James and the Giant Peach,actor,soundtrack
+Pauly Shore,Pauly Shore,1968.0,0.0,Encino Man,actor,writer
+Gwyneth Paltrow,Gwyneth Paltrow,1972.0,0.0,Shakespeare in Love,actress,producer
+Naveen Andrews,Naveen Andrews,1969.0,0.0,The English Patient,actor,archive_footage
+Christopher Guest,Christopher Guest,1948.0,0.0,This Is Spinal Tap,actor,writer
+Christopher Guest,Christopher Guest,1975.0,0.0,Beyond the Chamber of Terror,producer,visual_effects
+Timothy Spall,Timothy Spall,1957.0,0.0,Mr. Turner,actor,producer
+Mike Judge,Mike Judge,1962.0,0.0,Beavis and Butt-Head Do America,producer,writer
+Pamela Anderson,Pamela Anderson,1967.0,0.0,Barb Wire,actress,producer
+Reese Witherspoon,Reese Witherspoon,1976.0,0.0,Wild,producer,actress
+Shaquille O'Neal,Shaquille O'Neal,1972.0,0.0,Steel,actor,producer
+Kelsey Grammer,Kelsey Grammer,1955.0,0.0,Cheers,producer,actor
+Edward Burns,Edward Burns,1968.0,0.0,Saving Private Ryan,writer,actor
+Edward Burns,Edward Burns,1879.0,1954.0,Garragan,actor,stunts
+Geoffrey Rush,Geoffrey Rush,1951.0,0.0,The King's Speech,actor,producer
+Michelle Trachtenberg,Michelle Trachtenberg,1985.0,0.0,Buffy the Vampire Slayer,actress,producer
+Dennis Miller,Dennis Miller,1953.0,0.0,The Net,writer,producer
+Dennis Miller,Dennis Miller,1937.0,0.0,Stir,actor,archive_footage
+Vincent Perez,Vincent Perez,1964.0,0.0,Alone in Berlin,actor,director
+Jeffrey Wright,Jeffrey Wright,1965.0,0.0,American Fiction,actor,producer
+Bruce Ramsay,Bruce Ramsay,1966.0,0.0,Alive,actor,producer
+Scarlett Johansson,Scarlett Johansson,1984.0,0.0,Her,actress,producer
+Chris O'Donnell,Chris O'Donnell,1970.0,0.0,Batman & Robin,actor,producer
+Christopher Eccleston,Christopher Eccleston,1964.0,0.0,Thor: The Dark World,actor,archive_footage
+Michael J. Pollard,Michael J. Pollard,1939.0,2019.0,Bonnie and Clyde,actor,soundtrack
+Ben Stiller,Ben Stiller,1965.0,0.0,Tropic Thunder,producer,actor
+Jerry O'Connell,Jerry O'Connell,1974.0,0.0,Stand by Me,actor,producer
+Sarah Jessica Parker,Sarah Jessica Parker,1965.0,0.0,Sex and the City,actress,producer
+Tom Arnold,Tom Arnold,1959.0,0.0,True Lies,actor,producer
+Martin Lawrence,Martin Lawrence,1965.0,0.0,Martin,actor,writer
+Vincent D'Onofrio,Vincent D'Onofrio,1959.0,0.0,Men in Black,actor,producer
+Greg Kinnear,Greg Kinnear,1963.0,0.0,As Good as It Gets,actor,producer
+David Schwimmer,David Schwimmer,1966.0,0.0,Friends,actor,director
+Theresa Randle,Theresa Randle,1964.0,0.0,Bad Boys,actress,soundtrack
+Steven Soderbergh,Steven Soderbergh,1963.0,0.0,"Sex, Lies, and Videotape",producer,director
+Thora Birch,Thora Birch,1982.0,0.0,Ghost World,actress,producer
+Illeana Douglas,Illeana Douglas,1961.0,0.0,Stir of Echoes,actress,producer
+Matt LeBlanc,Matt LeBlanc,1967.0,0.0,Friends,actor,producer
+Mark Wahlberg,Mark Wahlberg,1971.0,0.0,The Fighter,producer,actor
+Casper Van Dien,Casper Van Dien,1968.0,0.0,Starship Troopers,actor,producer
+Pam Grier,Pam Grier,1949.0,0.0,Jackie Brown,actress,writer
+Alex D. Linz,Alex D. Linz,1989.0,0.0,Home Alone 3,actor,
+Tate Donovan,Tate Donovan,1963.0,0.0,Argo,actor,director
+Matt Damon,Matt Damon,1970.0,0.0,Good Will Hunting,producer,actor
+Jennifer Love Hewitt,Jennifer Love Hewitt,1979.0,0.0,I Know What You Did Last Summer,actress,producer
+Meg Ryan,Meg Ryan,1961.0,0.0,When Harry Met Sally...,actress,producer
+Matthew Perry,Matthew Perry,1969.0,2023.0,Friends,actor,producer
+Kel Mitchell,Kel Mitchell,1978.0,0.0,Good Burger,actor,producer
+Robert Carlyle,Robert Carlyle,1961.0,0.0,The Full Monty,actor,director
+Michael Jai White,Michael Jai White,1967.0,0.0,Black Dynamite,actor,writer
+Nick Sutton,,,,,,
+Stephen Fry,Stephen Fry,1957.0,0.0,Gosford Park,actor,writer
+Ben Affleck,Ben Affleck,1972.0,0.0,Argo,producer,actor
+Djimon Hounsou,Djimon Hounsou,1964.0,0.0,Blood Diamond,actor,producer
+Mira Sorvino,Mira Sorvino,1967.0,0.0,Mighty Aphrodite,actress,producer
+Robin Shou,Robin Shou,1960.0,0.0,Mortal Kombat: Annihilation,actor,director
+Mel B,Mel B,1975.0,0.0,Spice World,actress,composer
+Jennifer Lopez,Jennifer Lopez,1969.0,0.0,Hustlers,music_artist,producer
+Jennifer Lopez,Jennifer Lopez,1983.0,0.0,Dirty Sexy Saint,actress,producer
+George Clooney,George Clooney,1961.0,0.0,The Ides of March,actor,producer
+Nathan Lane,Nathan Lane,1956.0,0.0,The Producers,actor,producer
+Chris Farley,Chris Farley,1964.0,1997.0,Tommy Boy,actor,stunts
+Trey Parker,Trey Parker,1969.0,0.0,South Park,music_department,writer
+Trey Parker,Trey Parker,1972.0,0.0,Newsies,actor,composer
+Vanessa Williams,Vanessa Williams,1963.0,0.0,Ugly Betty,actress,producer
+Mohammad Amir Naji,,,,,,
+Tom Everett Scott,Tom Everett Scott,1970.0,0.0,That Thing You Do!,actor,producer
+Rowan Atkinson,Rowan Atkinson,1955.0,0.0,Johnny English,actor,writer
+Tammy Lauren,Tammy Lauren,1968.0,0.0,Wishmaster,actress,archive_footage
+Howard Stern,Howard Stern,1954.0,0.0,Howard Stern on Demand,producer,actor
+Jennifer Aniston,Jennifer Aniston,1969.0,0.0,Friends,actress,producer
+Samuel L. Jackson,Samuel L. Jackson,1948.0,0.0,Pulp Fiction,actor,producer
+Tenzin Thuthob Tsarong,,,,,,
+Michael Jeter,Michael Jeter,1952.0,2003.0,Open Range,actor,director
+Christina Ricci,Christina Ricci,1980.0,0.0,Speed Racer,actress,producer
+Jason David Frank,Jason David Frank,1973.0,2022.0,Mighty Morphin Power Rangers,actor,producer
+Fran Drescher,Fran Drescher,1957.0,0.0,The Nanny,writer,actress
+Cameron Diaz,Cameron Diaz,1972.0,0.0,Vanilla Sky,actress,producer
+Miguel Ferrer,Miguel Ferrer,1955.0,2017.0,Traffic,actor,director
+Kevin Sorbo,Kevin Sorbo,1958.0,0.0,Let There Be Light,actor,producer
+John Leguizamo,John Leguizamo,1960.0,0.0,Moulin Rouge!,actor,producer
+Angus Macfadyen,Angus Macfadyen,1963.0,0.0,Equilibrium,actor,writer
+Sophie Marceau,Sophie Marceau,1966.0,0.0,The Party,actress,director
+Peter Fonda,Peter Fonda,1940.0,2019.0,Easy Rider,actor,director
+Jared Leto,Jared Leto,1971.0,0.0,Dallas Buyers Club,actor,producer
+Will Friedle,Will Friedle,1976.0,0.0,Transformers: Robots in Disguise,actor,producer
+Sam Rockwell,Sam Rockwell,1968.0,0.0,Moon,actor,producer
+Llyr Ifans,,,,,,
+Christopher McDonald,Christopher McDonald,1955.0,0.0,Thelma & Louise,actor,producer
+Christopher McDonald,Christopher McDonald,1976.0,0.0,8th Period,writer,actor
+Joseph Mazzello,Joseph Mazzello,1983.0,0.0,Jurassic Park,actor,director
+Thomas Jane,Thomas Jane,1969.0,0.0,Boogie Nights,actor,producer
+Marlon Wayans,Marlon Wayans,1972.0,0.0,White Chicks,actor,writer
+Stephen Dillane,Stephen Dillane,1957.0,0.0,The Hours,actor,soundtrack
+David Duchovny,David Duchovny,1960.0,0.0,The X-Files,actor,producer
+Aaron Eckhart,Aaron Eckhart,1968.0,0.0,The Dark Knight,actor,producer
+Julia Ormond,Julia Ormond,1965.0,0.0,My Week with Marilyn,actress,producer
+Edward Norton,Edward Norton,1969.0,0.0,Fight Club,actor,producer
+Jordana Brewster,Jordana Brewster,1980.0,0.0,Furious 7,actress,archive_footage
+Ming-Na Wen,Ming-Na Wen,1963.0,0.0,Mulan,actress,soundtrack
+Jim Caviezel,Jim Caviezel,1968.0,0.0,The Passion of the Christ,actor,producer
+Tobey Maguire,Tobey Maguire,1975.0,0.0,Brothers,actor,producer
+Jason Schwartzman,Jason Schwartzman,1980.0,0.0,Rushmore,actor,music_department
+Rufus Sewell,Rufus Sewell,1967.0,0.0,Dark City,actor,soundtrack
+Kirsten Dunst,Kirsten Dunst,1982.0,0.0,Spider-Man,actress,producer
+Ulrich Thomsen,Ulrich Thomsen,1963.0,0.0,The Celebration,actor,producer
+Sean Gullette,Sean Gullette,1968.0,0.0,Pi,actor,director
+Jane Adams,Jane Adams,1918.0,2014.0,Batman and Robin,actress,archive_footage
+Jane Adams,Jane Adams,1965.0,0.0,Happiness,actress,writer
+Cate Blanchett,Cate Blanchett,1969.0,0.0,Carol,actress,producer
+Ryan Phillippe,Ryan Phillippe,1974.0,0.0,Crash,actor,producer
+Vincent Gallo,Vincent Gallo,1961.0,0.0,Buffalo '66,actor,director
+James Marsden,James Marsden,1973.0,0.0,Hairspray,actor,soundtrack
+Dave Chappelle,Dave Chappelle,1973.0,0.0,Chappelle's Show,writer,producer
+Jeremy Theobald,,,,,,
+Chris Kattan,Chris Kattan,1970.0,0.0,A Night at the Roxbury,actor,writer
+Jeffrey Falcon,Jeffrey Falcon,1962.0,0.0,Six-String Samurai,actor,stunts
+Chow Yun-Fat,Chow Yun-Fat,1955.0,0.0,"Crouching Tiger, Hidden Dragon",actor,writer
+Norm MacDonald,Norm MacDonald,1959.0,2021.0,Dirty Work,actor,writer
+Ian McKellen,Ian McKellen,1939.0,0.0,The Lord of the Rings: The Fellowship of the Ring,actor,writer
+Chloë Sevigny,Chloë Sevigny,1974.0,0.0,We Are Who We Are,actress,director
+Carlo Cecchi,Carlo Cecchi,1939.0,0.0,The Red Violin,actor,director
+Veronica Taylor,Veronica Taylor,1965.0,0.0,Pokémon: The First Movie - Mewtwo Strikes Back,actress,miscellaneous
+Veronica Taylor,Veronica Taylor,1985.0,0.0,The Bold and the Beautiful,actress,
+Nas,Nas,1973.0,0.0,Belly,music_artist,actor
+Ian Bannen,Ian Bannen,1928.0,1999.0,Waking Ned Devine,actor,soundtrack
+Magda Szubanski,Magda Szubanski,1961.0,0.0,Kath & Kim,actress,writer
+Jessalyn Gilsig,Jessalyn Gilsig,1971.0,0.0,The Stepfather,actress,producer
+Ian Michael Smith,Ian Michael Smith,1987.0,0.0,Simon Birch,actor,
+Gillian Anderson,Gillian Anderson,1968.0,0.0,The X-Files,actress,producer
+Gillian Anderson,Gillian Anderson,1984.0,0.0,Father of Nations,actress,
+Elizabeth Daily,Elizabeth Daily,1961.0,0.0,Pee-wee's Big Adventure,actress,producer
+LisaRaye McCoy,LisaRaye McCoy,1966.0,0.0,The Players Club,actress,director
+Catherine McCormack,Catherine McCormack,1972.0,0.0,Braveheart,actress,director
+Fernanda Montenegro,Fernanda Montenegro,1929.0,0.0,Central Station,actress,soundtrack
+Billy Crudup,Billy Crudup,1968.0,0.0,Almost Famous,actor,producer
+Joseph Cross,Joseph Cross,1986.0,0.0,Lincoln,actor,producer
+Jay Mohr,Jay Mohr,1970.0,0.0,Go,actor,writer
+Kate Winslet,Kate Winslet,1975.0,0.0,Titanic,actress,producer
+Oprah Winfrey,Oprah Winfrey,1954.0,0.0,The Oprah Winfrey Show,producer,actress
+Howie Long,Howie Long,1960.0,0.0,Broken Arrow,actor,writer
+Natasha Lyonne,Natasha Lyonne,1979.0,0.0,Orange Is the New Black,actress,producer
+Kevin Gage,Kevin Gage,1959.0,0.0,Heat,actor,producer
+George Hearn,George Hearn,1934.0,0.0,Sweeney Todd: The Demon Barber of Fleet Street,actor,soundtrack
+Paul Walker,Paul Walker,1973.0,2013.0,The Fast and the Furious,actor,producer
+Paul Walker,Paul Walker,1892.0,0.0,Grausige Nächte,actor,
+Paul Walker,Paul Walker,1987.0,0.0,The Men,actor,archive_footage
+Joaquin Phoenix,Joaquin Phoenix,1974.0,0.0,Walk the Line,actor,producer
+Jonathan Taylor Thomas,Jonathan Taylor Thomas,1981.0,0.0,The Lion King,actor,director
+Chris Stafford,Chris Stafford,1977.0,0.0,Edge of Seventeen,actor,
+Chris Stafford,Chris Stafford,1981.0,0.0,Deceitful Storm,actor,
+Jerry Springer,Jerry Springer,1944.0,2023.0,Domino,producer,writer
+Amy Brenneman,Amy Brenneman,1964.0,0.0,Judging Amy,actress,producer
+Jason Biggs,Jason Biggs,1978.0,0.0,American Pie,actor,producer
+Ewan McGregor,Ewan McGregor,1971.0,0.0,Moulin Rouge!,actor,producer
+Heath Ledger,Heath Ledger,1979.0,2008.0,Brokeback Mountain,actor,director
+Ron Livingston,Ron Livingston,1967.0,0.0,The Conjuring,actor,camera_department
+Sarah Michelle Gellar,Sarah Michelle Gellar,1977.0,0.0,Buffy the Vampire Slayer,actress,producer
+Heather Donahue,Heather Donahue,1974.0,0.0,The Blair Witch Project,actress,writer
+James Van Der Beek,James Van Der Beek,1977.0,0.0,Dawson's Creek,actor,music_department
+Freddie Prinze Jr.,Freddie Prinze Jr.,1976.0,0.0,She's All That,actor,producer
+Tony Goldwyn,Tony Goldwyn,1960.0,0.0,Ghost,actor,director
+Eli Marienthal,Eli Marienthal,1986.0,0.0,The Iron Giant,actor,
+Russell Crowe,Russell Crowe,1964.0,0.0,Les Misérables,actor,producer
+Rob Schneider,Rob Schneider,1963.0,0.0,Deuce Bigalow: Male Gigolo,actor,writer
+Hilary Swank,Hilary Swank,1974.0,0.0,Million Dollar Baby,actress,producer
+Rose McGowan,Rose McGowan,1973.0,0.0,Planet Terror,actress,producer
+Diane Lane,Diane Lane,1965.0,0.0,Unfaithful,actress,soundtrack
+Jake Gyllenhaal,Jake Gyllenhaal,1980.0,0.0,Nightcrawler,actor,producer
+Jude Law,Jude Law,1972.0,0.0,The Talented Mr. Ripley,actor,producer
+Sarah Polley,Sarah Polley,1979.0,0.0,My Life Without Me,actress,director
+Richard Farnsworth,Richard Farnsworth,1920.0,2000.0,The Straight Story,actor,stunts
+Devon Sawa,Devon Sawa,1978.0,0.0,Final Destination,actor,producer
+Milla Jovovich,Milla Jovovich,1975.0,0.0,The Fifth Element,actress,producer
+Tommy Flanagan,Tommy Flanagan,1965.0,0.0,Alien vs. Predator,actor,producer
+Tommy Flanagan,Tommy Flanagan,1930.0,2001.0,Fifty Shades Darker,actor,music_department
+Guy Pearce,Guy Pearce,1967.0,0.0,Memento,actor,director
+Guy Pearce,Guy Pearce,1893.0,1979.0,Laura,make_up_department,
+Helen Mirren,Helen Mirren,1945.0,0.0,The Queen,actress,producer
+Craig Bierko,Craig Bierko,1964.0,0.0,The Thirteenth Floor,actor,writer
+Melissa Joan Hart,Melissa Joan Hart,1976.0,0.0,Sabrina the Teenage Witch,actress,producer
+Terence Stamp,Terence Stamp,1938.0,0.0,The Limey,actor,director
+Juliette Lewis,Juliette Lewis,1973.0,0.0,Natural Born Killers,actress,director
+Claire Danes,Claire Danes,1979.0,0.0,My So-Called Life,actress,producer
+Molly Shannon,Molly Shannon,1964.0,0.0,Superstar,actress,writer
+Taye Diggs,Taye Diggs,1971.0,0.0,House on Haunted Hill,actor,producer
+Emily Watson,Emily Watson,1967.0,0.0,Gosford Park,actress,producer
+Christopher Lloyd,Christopher Lloyd,1938.0,0.0,Back to the Future,actor,producer
+Christopher Lloyd,Christopher Lloyd,1960.0,0.0,Modern Family,producer,writer
+James Levine,James Levine,1943.0,2021.0,Fantasia 2000,music_department,miscellaneous
+Emily Bergl,Emily Bergl,1975.0,0.0,The Rage: Carrie 2,actress,producer
+Charlize Theron,Charlize Theron,1975.0,0.0,Monster,producer,actress
+Dave Goelz,Dave Goelz,1946.0,0.0,Fraggle Rock,actor,miscellaneous
+Elayn J. Taylor,,,,,,
+French Stewart,French Stewart,1964.0,0.0,3rd Rock from the Sun,actor,producer
+Kevin Clash,Kevin Clash,1960.0,0.0,Sesame Street,actor,miscellaneous
+Annette Bening,Annette Bening,1958.0,0.0,American Beauty,actress,producer
+Shawn Hatosy,Shawn Hatosy,1975.0,0.0,Animal Kingdom,actor,director
+Takehiro Murata,Takehiro Murata,1960.0,0.0,Godzilla 2000: Millennium,actor,archive_footage
+Loren Dean,Loren Dean,1969.0,0.0,Ad Astra,actor,soundtrack
+David Spade,David Spade,1964.0,0.0,Joe Dirt,actor,writer
+Alessandro Nivola,Alessandro Nivola,1972.0,0.0,The Many Saints of Newark,actor,producer
+Hank Azaria,Hank Azaria,1964.0,0.0,The Simpsons,actor,producer
+Christian Campbell,Christian Campbell,1972.0,0.0,Trick,actor,producer
+Miranda Richardson,Miranda Richardson,1958.0,0.0,The Crying Game,actress,soundtrack
+Jeremy Northam,Jeremy Northam,1961.0,0.0,Gosford Park,actor,soundtrack
+Ellen Burstyn,Ellen Burstyn,1932.0,0.0,Requiem for a Dream,actress,producer
+Anna Faris,Anna Faris,1976.0,0.0,The House Bunny,actress,producer
+Piper Perabo,Piper Perabo,1976.0,0.0,Coyote Ugly,actress,producer
+Breckin Meyer,Breckin Meyer,1974.0,0.0,Rat Race,actor,writer
+Ashton Kutcher,Ashton Kutcher,1978.0,0.0,That '70s Show,actor,producer
+Radha Mitchell,Radha Mitchell,1973.0,0.0,Pitch Black,actress,producer
+Emily Perkins,Emily Perkins,1977.0,0.0,Ginger Snaps,actress,archive_footage
+Emily Perkins,Emily Perkins,1970.0,0.0,Shark in the Park,actress,
+David Arquette,David Arquette,1971.0,0.0,Scream 3,producer,actor
+Fred Willard,Fred Willard,1933.0,2020.0,Best in Show,actor,writer
+Jamie Bell,Jamie Bell,1986.0,0.0,Billy Elliot,actor,producer
+Emilio Echevarría,,,,,,
+Björk,Björk,1965.0,0.0,Dancer in the Dark,music_artist,composer
+Giovanni Ribisi,Giovanni Ribisi,1974.0,0.0,Boiler Room,actor,producer
+Natalie Portman,Natalie Portman,1981.0,0.0,Black Swan,actress,producer
+Sanaa Lathan,Sanaa Lathan,1971.0,0.0,Alien vs. Predator,actress,producer
+Jonathan Lipnicki,Jonathan Lipnicki,1990.0,0.0,The Resident,actor,producer
+Mark Addy,Mark Addy,1964.0,0.0,The Full Monty,actor,soundtrack
+Gerard Butler,Gerard Butler,1969.0,0.0,300,actor,producer
+Joshua Jackson,Joshua Jackson,1978.0,0.0,The Affair,actor,producer
+Jet Li,Jet Li,1963.0,0.0,Fearless,actor,producer
+Amanda Schull,Amanda Schull,1978.0,0.0,12 Monkeys,actress,archive_footage
+Jeffrey Donovan,Jeffrey Donovan,1968.0,0.0,Burn Notice,actor,producer
+Jean Reno,Jean Reno,1948.0,0.0,Léon: The Professional,actor,archive_footage
+Jean Reno,Jean Reno,1908.0,1985.0,The Hunted Men,actress,
+John Malkovich,John Malkovich,1953.0,0.0,Being John Malkovich,actor,producer
+Colin Farrell,Colin Farrell,1976.0,0.0,The Lobster,actor,producer
+Colin Farrell,Colin Farrell,1938.0,0.0,A Bridge Too Far,actor,composer
+Shane West,Shane West,1978.0,0.0,A Walk to Remember,actor,producer
+Mike White,Mike White,1970.0,0.0,School of Rock,writer,producer
+Mike White,Mike White,1936.0,0.0,Jerry Maguire,actor,
+Mike White,Mike White,1961.0,0.0,The Fast and the Furious,actor,miscellaneous
+Kirk Cameron,Kirk Cameron,1970.0,0.0,Growing Pains,actor,writer
+Lauren Ambrose,Lauren Ambrose,1978.0,0.0,Six Feet Under,actress,producer
+Jamie Foxx,Jamie Foxx,1967.0,0.0,Collateral,actor,producer
+Brenda Blethyn,Brenda Blethyn,1946.0,0.0,Pride & Prejudice,actress,writer
+Jung Suh,Jung Suh,1972.0,0.0,The Isle,actress,miscellaneous
+Jennifer Morrison,Jennifer Morrison,1979.0,0.0,House,actress,producer
+Penélope Cruz,Penélope Cruz,1974.0,0.0,Vicky Cristina Barcelona,actress,producer
+Tim Meadows,Tim Meadows,1961.0,0.0,Mean Girls,actor,writer
+Joan Allen,Joan Allen,1956.0,0.0,Room,actress,producer
+Ricardo Darín,Ricardo Darín,1957.0,0.0,Nine Queens,actor,producer
+Timothy Olyphant,Timothy Olyphant,1968.0,0.0,Justified,actor,producer
+Lori Heuring,Lori Heuring,1973.0,0.0,Mulholland Drive,actress,
+Michelle Rodriguez,Michelle Rodriguez,1978.0,0.0,Furious 7,actress,producer
+Frankie Muniz,Frankie Muniz,1985.0,0.0,Agent Cody Banks,actor,producer
+Huey Lewis,Huey Lewis,1950.0,0.0,Back to the Future,actor,composer
+Christine Cavanaugh,Christine Cavanaugh,1963.0,2014.0,Dexter's Laboratory,actress,soundtrack
+Takeshi Kitano,Takeshi Kitano,1947.0,0.0,The Blind Swordsman: Zatoichi,actor,writer
+Minnie Driver,Minnie Driver,1970.0,0.0,Circle of Friends,actress,producer
+Chris Klein,Chris Klein,1979.0,0.0,American Pie,actor,producer
+Chris Klein,Chris Klein,1959.0,0.0,The Day After Tomorrow,art_department,
+Jim Cummings,Jim Cummings,1952.0,0.0,Winnie the Pooh,actor,soundtrack
+Garry Shandling,Garry Shandling,1949.0,2016.0,The Larry Sanders Show,writer,actor
+Heather Graham,Heather Graham,1970.0,0.0,Austin Powers: The Spy Who Shagged Me,actress,producer
+Lara Jill Miller,Lara Jill Miller,1967.0,0.0,Gimme a Break!,actress,miscellaneous
+Daniel Radcliffe,Daniel Radcliffe,1989.0,0.0,Harry Potter and the Order of the Phoenix,actor,producer
+Vin Diesel,Vin Diesel,1967.0,0.0,Guardians of the Galaxy,producer,actor
+Naomi Watts,Naomi Watts,1968.0,0.0,Mulholland Drive,actress,producer
+Daveigh Chase,Daveigh Chase,1990.0,0.0,Lilo & Stitch,actress,soundtrack
+Chyler Leigh,Chyler Leigh,1982.0,0.0,Not Another Teen Movie,actress,producer
+Josh Hartnett,Josh Hartnett,1978.0,0.0,Lucky Number Slevin,actor,producer
+Audrey Tautou,Audrey Tautou,1976.0,0.0,Amélie,actress,make_up_department
+Haley Joel Osment,Haley Joel Osment,1988.0,0.0,The Sixth Sense,actor,producer
+Jay Chandrasekhar,Jay Chandrasekhar,1968.0,0.0,Super Troopers,director,actor
+Janeane Garofalo,Janeane Garofalo,1964.0,0.0,Mystery Men,actress,writer
+Jack Black,Jack Black,1969.0,0.0,School of Rock,actor,producer
+Gina Philips,Gina Philips,1970.0,0.0,Jeepers Creepers,actress,producer
+Alexa PenaVega,Alexa PenaVega,1988.0,0.0,Spy Kids 2: Island of Lost Dreams,actress,music_department
+Angelina Jolie,Angelina Jolie,1975.0,0.0,Maleficent,actress,producer
+Julia Stiles,Julia Stiles,1981.0,0.0,10 Things I Hate About You,actress,producer
+Method Man,Method Man,1971.0,0.0,How High,actor,producer
+Steve Zahn,Steve Zahn,1967.0,0.0,War for the Planet of the Apes,actor,producer
+Kane Hodder,Kane Hodder,1955.0,0.0,Se7en,actor,stunts
+Jason Mewes,Jason Mewes,1974.0,0.0,Clerks,actor,producer
+Samuel Le Bihan,Samuel Le Bihan,1965.0,0.0,Brotherhood of the Wolf,actor,writer
+Flex Alexander,Flex Alexander,1970.0,0.0,Snakes on a Plane,actor,producer
+John Cameron Mitchell,John Cameron Mitchell,1963.0,0.0,Hedwig and the Angry Inch,actor,director
+Alexsandra Wright,Alexsandra Wright,1971.0,0.0,Baby Boy,actress,
+Tom Green,Tom Green,1852.0,1942.0,The X-Ray Fiend,director,actor
+Tom Green,Tom Green,1971.0,0.0,Freddy Got Fingered,producer,actor
+Hayden Christensen,Hayden Christensen,1981.0,0.0,Star Wars: Episode II - Attack of the Clones,actor,producer
+Tadanobu Asano,Tadanobu Asano,1973.0,0.0,Mongol: The Rise of Genghis Khan,actor,director
+Shannon Elizabeth,Shannon Elizabeth,1973.0,0.0,American Pie,actress,producer
+Tom Wilkinson,Tom Wilkinson,1948.0,2023.0,Michael Clayton,actor,soundtrack
+Rachael Leigh Cook,Rachael Leigh Cook,1979.0,0.0,She's All That,actress,producer
+Marisa Paredes,Marisa Paredes,1946.0,0.0,All About My Mother,actress,miscellaneous
+Stephen Chow,Stephen Chow,1962.0,0.0,Kung Fu Hustle,actor,producer
+Debi Derryberry,Debi Derryberry,1960.0,0.0,Jimmy Neutron: Boy Genius,actress,miscellaneous
+Denise Richards,Denise Richards,1971.0,0.0,The World Is Not Enough,actress,producer
+Marla Sokoloff,Marla Sokoloff,1980.0,0.0,The Practice,actress,director
+Ryan Gosling,Ryan Gosling,1980.0,0.0,Blue Valentine,actor,producer
+Judi Dench,Judi Dench,1934.0,0.0,Skyfall,actress,music_department
+Shah Rukh Khan,Shah Rukh Khan,1965.0,0.0,Don 2,actor,producer
+Justin Chambers,Justin Chambers,1970.0,0.0,Grey's Anatomy,actor,soundtrack
+Mekhi Phifer,Mekhi Phifer,1974.0,0.0,ER,actor,producer
+Liv Tyler,Liv Tyler,1977.0,0.0,Armageddon,actress,producer
+Melissa Sagemiller,Melissa Sagemiller,1974.0,0.0,The Guardian,actress,producer
+Jennifer Westfeldt,Jennifer Westfeldt,1970.0,0.0,Kissing Jessica Stein,actress,writer
+Brian Cox,Brian Cox,1946.0,0.0,Succession,actor,producer
+Brian Cox,Brian Cox,1968.0,0.0,Sunshine,actor,writer
+Dr. Dre,Dr. Dre,1965.0,0.0,Training Day,music_artist,actor
+Snoop Dogg,Snoop Dogg,1971.0,0.0,Training Day,music_artist,actor
+Monica Potter,Monica Potter,1971.0,0.0,The Last House on the Left,actress,producer
+Mariah Carey,Mariah Carey,1969.0,0.0,Glitter,music_artist,actress
+Vivica A. Fox,Vivica A. Fox,1964.0,0.0,Independence Day,actress,producer
+Shane Brolly,Shane Brolly,1970.0,0.0,Underworld,actor,writer
+Toshio Furukawa,Toshio Furukawa,1946.0,0.0,Urusei yatsura,actor,archive_footage
+Catherine Keener,Catherine Keener,1959.0,0.0,Being John Malkovich,actress,producer
+Andrew Lawrence,Andrew Lawrence,1988.0,0.0,United States of Tara,actor,director
+Christopher Gorham,Christopher Gorham,1974.0,0.0,The Lincoln Lawyer,actor,director
+Greg Stebner,,,,,,
+Eminem,Eminem,1972.0,0.0,8 Mile,music_artist,actor
+Adrien Brody,Adrien Brody,1973.0,0.0,The Pianist,actor,producer
+Cillian Murphy,Cillian Murphy,1976.0,0.0,28 Days Later,actor,producer
+Franka Potente,Franka Potente,1974.0,0.0,Run Lola Run,actress,director
+Matthew Lillard,Matthew Lillard,1970.0,0.0,Scooby-Doo,actor,producer
+Mandy Moore,Mandy Moore,1984.0,0.0,A Walk to Remember,actress,writer
+Mandy Moore,Mandy Moore,1976.0,0.0,Bubble Boy,miscellaneous,producer
+Joseph Gordon-Levitt,Joseph Gordon-Levitt,1981.0,0.0,Inception,actor,producer
+Nia Vardalos,Nia Vardalos,1962.0,0.0,My Big Fat Greek Wedding,actress,writer
+Dwayne Johnson,Dwayne Johnson,1972.0,0.0,Black Adam,actor,producer
+Jason Statham,Jason Statham,1967.0,0.0,Crank,actor,producer
+Kate Bosworth,Kate Bosworth,1983.0,0.0,Superman Returns,actress,producer
+Julianna Margulies,Julianna Margulies,1966.0,0.0,ER,actress,producer
+Ryan Reynolds,Ryan Reynolds,1976.0,0.0,Deadpool 2,actor,producer
+Ryan Reynolds,Ryan Reynolds,1986.0,0.0,Wolf Children,actress,
+Salma Hayek,Salma Hayek,1966.0,0.0,Frida,actress,producer
+Steve Oedekerk,Steve Oedekerk,1961.0,0.0,Kung Pow: Enter the Fist,writer,director
+Aaliyah,Aaliyah,1979.0,2001.0,Romeo Must Die,music_artist,actress
+Rebecca Romijn,Rebecca Romijn,1972.0,0.0,X-Men,actress,producer
+Jordan Ladd,Jordan Ladd,1975.0,0.0,Death Proof,actress,archive_footage
+DJ Qualls,DJ Qualls,1978.0,0.0,The Core,actor,producer
+Colin Hanks,Colin Hanks,1977.0,0.0,King Kong,actor,director
+Britney Spears,Britney Spears,1981.0,0.0,Crossroads,music_artist,actress
+Andy Lau,Andy Lau,1961.0,0.0,Infernal Affairs,actor,producer
+Shad Moss,Shad Moss,1987.0,0.0,The Fast and the Furious: Tokyo Drift,music_artist,actor
+Kang-ho Song,,,,,,
+Parry Shen,Parry Shen,1973.0,0.0,General Hospital,actor,producer
+Dana Carvey,Dana Carvey,1955.0,0.0,Wayne's World,actor,writer
+Nick Cannon,Nick Cannon,1980.0,0.0,Drumline,producer,writer
+Eddie Griffin,Eddie Griffin,1968.0,0.0,Deuce Bigalow: Male Gigolo,actor,music_department
+Alexis Bledel,Alexis Bledel,1981.0,0.0,Sin City,actress,producer
+Angela Bettis,Angela Bettis,1973.0,0.0,May,actress,producer
+Miguel A. Núñez Jr.,Miguel A. Núñez Jr.,1959.0,0.0,The Family Business,actor,producer
+Chiwetel Ejiofor,Chiwetel Ejiofor,1977.0,0.0,12 Years a Slave,actor,director
+Kieran Culkin,Kieran Culkin,1982.0,0.0,Succession,actor,archive_footage
+Bruce Greenwood,Bruce Greenwood,1956.0,0.0,Star Trek,actor,producer
+Megumi Okina,Megumi Okina,1979.0,0.0,Shutter,actress,
+Keisha Castle-Hughes,Keisha Castle-Hughes,1990.0,0.0,Whale Rider,actress,producer
+Everlyn Sampi,Everlyn Sampi,1988.0,0.0,Rabbit-Proof Fence,actress,
+Jeremy Renner,Jeremy Renner,1971.0,0.0,The Hurt Locker,actor,producer
+Charlie Hunnam,Charlie Hunnam,1980.0,0.0,Sons of Anarchy,actor,producer
+Barry Watson,Barry Watson,1974.0,0.0,7th Heaven,actor,miscellaneous
+Katie Holmes,Katie Holmes,1978.0,0.0,Batman Begins,actress,producer
+Casey Affleck,Casey Affleck,1975.0,0.0,Manchester by the Sea,actor,director
+Blayne Weaver,Blayne Weaver,1976.0,0.0,6 Month Rule,actor,writer
+Mars Callahan,Mars Callahan,1971.0,0.0,Poolhall Junkies,actor,director
+Anna Paquin,Anna Paquin,1982.0,0.0,The Piano,actress,producer
+Tim Curry,Tim Curry,1946.0,0.0,Congo,actor,producer
+Morris Chestnut,Morris Chestnut,1969.0,0.0,Kick-Ass 2,actor,producer
+Michael Reilly Burke,Michael Reilly Burke,1964.0,0.0,Ted Bundy,actor,soundtrack
+America Ferrera,America Ferrera,1984.0,0.0,Barbie,actress,producer
+Steve Irwin,Steve Irwin,1962.0,2006.0,Dr. Dolittle 2,writer,actor
+Kate Beckinsale,Kate Beckinsale,1973.0,0.0,Underworld: Evolution,actress,producer
+Choi Min-sik,Choi Min-sik,1962.0,0.0,Oldboy,actor,archive_footage
+Michael Pitt,Michael Pitt,1969.0,0.0,Dead Man Down,assistant_director,production_manager
+Michael Pitt,Michael Pitt,1981.0,0.0,The Dreamers,actor,producer
+Albert Brooks,Albert Brooks,1947.0,0.0,Drive,actor,writer
+Eric Bana,Eric Bana,1968.0,0.0,Dirty John,actor,writer
+Evan Rachel Wood,Evan Rachel Wood,1987.0,0.0,Thirteen,actress,director
+Eliza Dushku,Eliza Dushku,1980.0,0.0,Bring It On,actress,producer
+Jeremy Sumpter,Jeremy Sumpter,1989.0,0.0,Peter Pan,actor,producer
+Tommy Wiseau,Tommy Wiseau,1955.0,0.0,The Room,writer,actor
+Jessica Biel,Jessica Biel,1982.0,0.0,The Illusionist,actress,producer
+Jessica Biel,Jessica Biel,1990.0,0.0,VIPissy,actress,
+Shia LaBeouf,Shia LaBeouf,1986.0,0.0,Honey Boy,actor,writer
+Sid Haig,Sid Haig,1939.0,2019.0,House of 1000 Corpses,actor,producer
+Kate Hudson,Kate Hudson,1979.0,0.0,Almost Famous,actress,producer
+Amanda Bynes,Amanda Bynes,1986.0,0.0,Hairspray,actress,writer
+Will Ferrell,Will Ferrell,1967.0,0.0,Talladega Nights: The Ballad of Ricky Bobby,producer,actor
+Blanchard Ryan,Blanchard Ryan,1967.0,0.0,Open Water,actress,
+A.J. Cook,A.J. Cook,1978.0,0.0,Criminal Minds,actress,director
+Elias McConnell,,,,,,
+Chaney Kley,Chaney Kley,1972.0,2007.0,Darkness Falls,actor,writer
+Daryl Sabara,Daryl Sabara,1992.0,0.0,Spy Kids 3: Game Over,actor,miscellaneous
+Derek Richardson,Derek Richardson,1976.0,0.0,Hostel,actor,archive_footage
+Jonathan Breck,Jonathan Breck,1965.0,0.0,Jeepers Creepers,actor,producer
+Jessica Alba,Jessica Alba,1981.0,0.0,Fantastic Four,actress,producer
+Jonathan Cherry,Jonathan Cherry,1978.0,0.0,Goon,actor,
+Jennifer Connelly,Jennifer Connelly,1970.0,0.0,A Beautiful Mind,actress,producer
+Peter Dinklage,Peter Dinklage,1969.0,0.0,Game of Thrones,actor,producer
+Adam Brody,Adam Brody,1979.0,0.0,The O.C.,actor,producer
+Halle Berry,Halle Berry,1966.0,0.0,Catwoman,actress,producer
+Hilary Duff,Hilary Duff,1987.0,0.0,A Cinderella Story,actress,music_department
+Brittany Murphy,Brittany Murphy,1977.0,2009.0,Clueless,actress,producer
+Jamie Kennedy,Jamie Kennedy,1970.0,0.0,Son of the Mask,actor,writer
+Anthony Anderson,Anthony Anderson,1970.0,0.0,The Departed,actor,producer
+Anthony Anderson,Anthony Anderson,1956.0,0.0,Fighting Back: The Story of Rocky Bleier,actor,
+Michèle Caucheteux,,,,,,
+Paul Rudd,Paul Rudd,1969.0,0.0,Ant-Man,actor,producer
+Paul Rudd,Paul Rudd,1940.0,2010.0,Once Upon a Classic,actor,
+Wes Ramsey,Wes Ramsey,1977.0,0.0,Latter Days,actor,archive_footage
+Clive Owen,Clive Owen,1964.0,0.0,Children of Men,actor,producer
+Romola Garai,Romola Garai,1982.0,0.0,Atonement,actress,director
+Jason Lee,Jason Lee,1970.0,0.0,Almost Famous,actor,producer
+Jason Lee,Jason Lee,1968.0,0.0,Neon Genesis Evangelion: The End of Evangelion,editor,actor
+Jason Lee,Jason Lee,1978.0,0.0,All Saints,actor,
+Jason Lee,Jason Lee,1973.0,0.0,KO One,actor,
+Zooey Deschanel,Zooey Deschanel,1980.0,0.0,New Girl,actress,producer
+Kelly Clarkson,Kelly Clarkson,1982.0,0.0,The Kelly Clarkson Show,music_artist,producer
+Philip Seymour Hoffman,Philip Seymour Hoffman,1967.0,2014.0,The Master,actor,producer
+Joe Nicolo,Joe Nicolo,1955.0,0.0,Brainscan,producer,music_department
+Anne Reid,Anne Reid,1935.0,0.0,Hot Fuzz,actress,soundtrack
+Jodi Carlisle,Jodi Carlisle,1960.0,0.0,Café Society,actress,sound_department
+Joseph Fiennes,Joseph Fiennes,1970.0,0.0,Shakespeare in Love,actor,producer
+Corbin Allred,Corbin Allred,1979.0,0.0,Teen Angel,actor,writer
+Samy Naceri,Samy Naceri,1961.0,0.0,Taxi,actor,director
+Liam Aiken,Liam Aiken,1990.0,0.0,A Series of Unfortunate Events,actor,camera_department
+Emile Hirsch,Emile Hirsch,1985.0,0.0,Into the Wild,actor,writer
+Scott Mechlowicz,Scott Mechlowicz,1981.0,0.0,Mean Creek,actor,
+Lindsay Lohan,Lindsay Lohan,1986.0,0.0,The Parent Trap,actress,producer
+Hugh Jackman,Hugh Jackman,1968.0,0.0,Les Misérables,actor,producer
+Craig T. Nelson,Craig T. Nelson,1944.0,0.0,Coach,actor,producer
+Chieko Baishô,Chieko Baishô,1941.0,0.0,Howl's Moving Castle,actress,soundtrack
+Jon Heder,Jon Heder,1977.0,0.0,Napoleon Dynamite,actor,producer
+Jennifer Garner,Jennifer Garner,1972.0,0.0,Alias,actress,producer
+Don Cheadle,Don Cheadle,1964.0,0.0,Crash,actor,producer
+John Cho,John Cho,1972.0,0.0,Star Trek,actor,producer
+Paul Giamatti,Paul Giamatti,1967.0,0.0,Sideways,actor,producer
+Anne Hathaway,Anne Hathaway,1982.0,0.0,Les Misérables,actress,producer
+Shane Carruth,Shane Carruth,1972.0,0.0,Upstream Color,composer,actor
+Tom Kenny,Tom Kenny,1962.0,0.0,SpongeBob SquarePants,actor,miscellaneous
+Zach Braff,Zach Braff,1975.0,0.0,Garden State,actor,producer
+Tony Chiu-Wai Leung,,,,,,
+Martin Henderson,Martin Henderson,1974.0,0.0,Smokin' Aces,actor,assistant_director
+Cayden Boyd,Cayden Boyd,1994.0,0.0,The Adventures of Sharkboy and Lavagirl 3-D,actor,
+Queen Latifah,Queen Latifah,1970.0,0.0,Chicago,actress,producer
+Kenan Thompson,Kenan Thompson,1978.0,0.0,Saturday Night Live,actor,producer
+Jena Malone,Jena Malone,1984.0,0.0,The Neon Demon,actress,producer
+Viggo Mortensen,Viggo Mortensen,1958.0,0.0,The Lord of the Rings: The Return of the King,actor,producer
+Rory Culkin,Rory Culkin,1989.0,0.0,Signs,actor,producer
+Diego Luna,Diego Luna,1979.0,0.0,Rogue One: A Star Wars Story,actor,producer
+Sara Foster,Sara Foster,1981.0,0.0,D.E.B.S.,actress,producer
+Gael García Bernal,Gael García Bernal,1978.0,0.0,Mozart in the Jungle,actor,producer
+Dwayne Adway,Dwayne Adway,1969.0,0.0,Bad As I Wanna Be: The Dennis Rodman Story,actor,producer
+Seung-Yun Lee,,,,,,
+Mary-Kate Olsen,Mary-Kate Olsen,1986.0,0.0,It Takes Two,actress,producer
+Stellan Skarsgård,Stellan Skarsgård,1951.0,0.0,Good Will Hunting,actor,producer
+Tracey Ullman,Tracey Ullman,1959.0,0.0,The Tracey Ullman Show,actress,writer
+Cedric the Entertainer,,,,,,
+Konstantin Khabenskiy,Konstantin Khabenskiy,1972.0,0.0,Wanted,actor,director
+Omarion,Omarion,1984.0,0.0,You Got Served,actor,composer
+Ray Romano,Ray Romano,1957.0,0.0,Everybody Loves Raymond,actor,writer
+Owen Wilson,Owen Wilson,1968.0,0.0,The Royal Tenenbaums,actor,producer
+Catalina Sandino Moreno,Catalina Sandino Moreno,1981.0,0.0,Maria Full of Grace,actress,producer
+Imelda Staunton,Imelda Staunton,1956.0,0.0,Vera Drake,actress,soundtrack
+Paul Kaye,Paul Kaye,1913.0,1985.0,Night Life of the Gods,actor,
+Paul Kaye,Paul Kaye,1965.0,0.0,The Stranger,actor,writer
+Kristen Stewart,Kristen Stewart,1990.0,0.0,Snow White and the Huntsman,actress,producer
+Jang Dong-Gun,Jang Dong-Gun,1972.0,0.0,Tae Guk Gi: The Brotherhood of War,actor,
+Anthony Mackie,Anthony Mackie,1978.0,0.0,The Hurt Locker,actor,producer
+Steve Carell,Steve Carell,1962.0,0.0,The Office,actor,producer
+Ziyi Zhang,Ziyi Zhang,1979.0,0.0,The Grandmaster,actress,producer
+Keira Knightley,Keira Knightley,1985.0,0.0,Pirates of the Caribbean: The Curse of the Black Pearl,actress,producer
+Hugo Weaving,Hugo Weaving,1960.0,0.0,The Lord of the Rings: The Return of the King,actor,producer
+Orlando Bloom,Orlando Bloom,1977.0,0.0,The Lord of the Rings: The Fellowship of the Ring,actor,producer
+Martin Freeman,Martin Freeman,1971.0,0.0,Black Panther,actor,writer
+Ioan Gruffudd,Ioan Gruffudd,1973.0,0.0,Fantastic Four,actor,director
+Nathan Fillion,Nathan Fillion,1971.0,0.0,Castle,actor,producer
+Jay Hernandez,Jay Hernandez,1978.0,0.0,Hostel,actor,producer
+Patrick Wilson,Patrick Wilson,1973.0,0.0,The Phantom of the Opera,actor,producer
+Patrick Wilson,Patrick Wilson,1969.0,0.0,Factory Girl,actor,music_department
+Amber Tamblyn,Amber Tamblyn,1983.0,0.0,The Sisterhood of the Traveling Pants,actress,producer
+Rachel McAdams,Rachel McAdams,1978.0,0.0,The Notebook,actress,soundtrack
+Chad Michael Murray,Chad Michael Murray,1981.0,0.0,One Tree Hill,actor,producer
+Seann William Scott,Seann William Scott,1976.0,0.0,American Pie,actor,producer
+Stephanie Leonidas,Stephanie Leonidas,1984.0,0.0,Mirrormask,actress,
+Donnie Wahlberg,Donnie Wahlberg,1969.0,0.0,Saw II,actor,producer
+Josh Hutcherson,Josh Hutcherson,1992.0,0.0,The Hunger Games,actor,producer
+Camilla Belle,Camilla Belle,1986.0,0.0,Practical Magic,actress,producer
+Nathan Phillips,Nathan Phillips,1980.0,0.0,Snakes on a Plane,actor,camera_department
+Karl Urban,Karl Urban,1972.0,0.0,Star Trek,actor,producer
+Owen Kline,Owen Kline,1991.0,0.0,The Squid and the Whale,actor,director
+Kimberly Elise,Kimberly Elise,1967.0,0.0,Diary of a Mad Black Woman,actress,executive
+Peter Sallis,Peter Sallis,1921.0,2017.0,Wallace & Gromit: The Curse of the Were-Rabbit,actor,writer
+50 Cent,50 Cent,1975.0,0.0,Get Rich or Die Tryin',music_artist,actor
+Kristanna Loken,Kristanna Loken,1979.0,0.0,Terminator 3: Rise of the Machines,actress,producer
+Navi Rawat,Navi Rawat,1977.0,0.0,Feast,actress,archive_footage
+Kuno Becker,Kuno Becker,1978.0,0.0,Goal! The Dream Begins,actor,director
+Jack Thompson,Jack Thompson,1940.0,0.0,Breaker Morant,actor,producer
+Jack Thompson,Jack Thompson,1931.0,2008.0,Behind the Badge,producer,writer
+Jack Thompson,Jack Thompson,1951.0,0.0,Playing Columbine,archive_footage,
+David Strathairn,David Strathairn,1949.0,0.0,"Good Night, and Good Luck.",actor,producer
+Julian Morris,Julian Morris,1983.0,0.0,Man in an Orange Shirt,actor,director
+Ray Winstone,Ray Winstone,1957.0,0.0,The Departed,actor,producer
+Josh Lucas,Josh Lucas,1971.0,0.0,Ford v Ferrari,actor,producer
+Terrence Howard,Terrence Howard,1969.0,0.0,Crash,actor,producer
+Tom Welling,Tom Welling,1977.0,0.0,Smallville,actor,producer
+AnnaSophia Robb,AnnaSophia Robb,1993.0,0.0,Bridge to Terabithia,actress,soundtrack
+Benjamin Bratt,Benjamin Bratt,1963.0,0.0,Miss Congeniality,actor,producer
+Steve Howey,Steve Howey,1977.0,0.0,Bride Wars,actor,producer
+Barney Clark,Barney Clark,1993.0,0.0,Oliver Twist,actor,camera_department
+John Hawkes,John Hawkes,1959.0,0.0,The Sessions,actor,music_department
+John Hawkes,John Hawkes,1925.0,1998.0,The Blood Oranges,writer,
+Felicity Huffman,Felicity Huffman,1962.0,0.0,Transamerica,actress,producer
+Bryce Dallas Howard,Bryce Dallas Howard,1981.0,0.0,Jurassic World Dominion,actress,director
+Embeth Davidtz,Embeth Davidtz,1965.0,0.0,Bicentennial Man,actress,archive_footage
+Lou Taylor Pucci,Lou Taylor Pucci,1985.0,0.0,You,actor,producer
+Lucas Black,Lucas Black,1982.0,0.0,Sling Blade,actor,archive_footage
+Daniel Craig,Daniel Craig,1968.0,0.0,Casino Royale,actor,producer
+Ivana Baquero,Ivana Baquero,1994.0,0.0,Pan's Labyrinth,actress,archive_footage
+Gerardo Taracena,Gerardo Taracena,1970.0,0.0,Apocalypto,actor,producer
+James McAvoy,James McAvoy,1979.0,0.0,Filth,actor,director
+Ulrich Mühe,Ulrich Mühe,1953.0,2007.0,The Lives of Others,actor,director
+Justin Long,Justin Long,1978.0,0.0,Live Free or Die Hard,actor,producer
+Justin Long,Justin Long,1970.0,0.0,Cuckold 1,actor,archive_footage
+Brandon Routh,Brandon Routh,1979.0,0.0,Superman Returns,actor,producer
+Steven Strait,Steven Strait,1986.0,0.0,The Expanse,actor,producer
+Ted Levine,Ted Levine,1957.0,0.0,The Silence of the Lambs,actor,soundtrack
+Ben Whishaw,Ben Whishaw,1980.0,0.0,Skyfall,actor,producer
+Carice van Houten,Carice van Houten,1976.0,0.0,Game of Thrones,actress,producer
+Channing Tatum,Channing Tatum,1980.0,0.0,21 Jump Street,actor,producer
+Sacha Baron Cohen,Sacha Baron Cohen,1971.0,0.0,Borat,actor,writer
+Mary Elizabeth Winstead,Mary Elizabeth Winstead,1984.0,0.0,10 Cloverfield Lane,actress,producer
+Emma Roberts,Emma Roberts,1991.0,0.0,We're the Millers,actress,producer
+Lee Pace,Lee Pace,1979.0,0.0,Guardians of the Galaxy,actor,soundtrack
+Jesse Metcalfe,Jesse Metcalfe,1978.0,0.0,Desperate Housewives,actor,producer
+Ed Speleers,Ed Speleers,1988.0,0.0,Star Trek: Picard,actor,producer
+Beyoncé,Beyoncé,1981.0,0.0,Dreamgirls,music_artist,actress
+Tobin Bell,Tobin Bell,1942.0,0.0,Saw,actor,producer
+Mitchel Musso,Mitchel Musso,1991.0,0.0,Monster House,actor,music_department
+Jessica Simpson,Jessica Simpson,1980.0,0.0,The Dukes of Hazzard,actress,producer
+Jaime Pressly,Jaime Pressly,1977.0,0.0,My Name Is Earl,actress,producer
+Sook-Yin Lee,Sook-Yin Lee,1966.0,0.0,Shortbus,actress,writer
+David Alan Basche,David Alan Basche,1968.0,0.0,Egg,actor,producer
+Ken Watanabe,Ken Watanabe,1959.0,0.0,The Last Samurai,actor,producer
+Dakota Fanning,Dakota Fanning,1994.0,0.0,War of the Worlds,actress,producer
+Liev Schreiber,Liev Schreiber,1967.0,0.0,Spotlight,actor,producer
+Jon Foster,Jon Foster,1984.0,0.0,Stay Alive,actor,producer
+Josh Duhamel,Josh Duhamel,1972.0,0.0,Transformers,actor,producer
+Tyler Perry,Tyler Perry,1969.0,0.0,Diary of a Mad Black Woman,writer,director
+John Cena,John Cena,1977.0,0.0,The Suicide Squad,actor,producer
+Sienna Miller,Sienna Miller,1981.0,0.0,G.I. Joe: The Rise of Cobra,actress,miscellaneous
+Kevin James,Kevin James,1954.0,1990.0,Droid,actor,camera_department
+Kevin James,Kevin James,1965.0,0.0,Paul Blart: Mall Cop,actor,producer
+Freddie Highmore,Freddie Highmore,1992.0,0.0,Finding Neverland,actor,producer
+Alyson Hannigan,Alyson Hannigan,1974.0,0.0,Buffy the Vampire Slayer,actress,producer
+James Franco,James Franco,1978.0,0.0,Spring Breakers,actor,producer
+Alison Lohman,Alison Lohman,1979.0,0.0,Drag Me to Hell,actress,archive_footage
+Patrick Fugit,Patrick Fugit,1982.0,0.0,Almost Famous,actor,producer
+Glenn Jacobs,Glenn Jacobs,1967.0,0.0,See No Evil,actor,producer
+T.I.,,,,,,
+Toby Jones,Toby Jones,1966.0,0.0,Tinker Tailor Soldier Spy,actor,writer
+Toby Jones,Toby Jones,1987.0,0.0,OK K.O.! Let's Be Heroes,writer,producer
+Kristen Bell,Kristen Bell,1980.0,0.0,Frozen,actress,producer
+Jake T. Austin,Jake T. Austin,1994.0,0.0,Wizards of Waverly Place,actor,soundtrack
+Daniel London,Daniel London,1973.0,0.0,Minority Report,actor,producer
+Catherine O'Hara,Catherine O'Hara,1954.0,0.0,A Mighty Wind,actress,writer
+Logan Lerman,Logan Lerman,1992.0,0.0,The Perks of Being a Wallflower,actor,producer
+Charlie Cox,Charlie Cox,1982.0,0.0,Daredevil,actor,archive_footage
+Michael Cera,Michael Cera,1988.0,0.0,Scott Pilgrim vs. the World,actor,producer
+Brad Garrett,Brad Garrett,1960.0,0.0,Everybody Loves Raymond,actor,producer
+Elliot Page,Elliot Page,1987.0,0.0,Juno,actor,producer
+Amy Adams,Amy Adams,1974.0,0.0,Arrival,actress,producer
+Amy Adams,Amy Adams,1979.0,0.0,American Idol,soundtrack,
+Seth Rogen,Seth Rogen,1982.0,0.0,This Is the End,producer,actor
+Scout Taylor-Compton,Scout Taylor-Compton,1989.0,0.0,Halloween,actress,miscellaneous
+Ryan Kwanten,Ryan Kwanten,1976.0,0.0,True Blood,actor,producer
+Jerry Seinfeld,Jerry Seinfeld,1954.0,0.0,Seinfeld,producer,writer
+Reiko Aylesworth,Reiko Aylesworth,1972.0,0.0,Aliens vs. Predator: Requiem,actress,director
+Dane Cook,Dane Cook,1972.0,0.0,Good Luck Chuck,actor,writer
+Lauren German,Lauren German,1978.0,0.0,Hostel: Part II,actress,soundtrack
+Karra Elejalde,Karra Elejalde,1960.0,0.0,Timecrimes,actor,writer
+Kal Penn,Kal Penn,1977.0,0.0,Harold & Kumar Go to White Castle,actor,producer
+Daniel Hansen,,,,,,
+Katie Featherston,Katie Featherston,1982.0,0.0,Paranormal Activity,actress,director
+John C. Reilly,John C. Reilly,1965.0,0.0,Chicago,actor,writer
+Gaspard Ulliel,Gaspard Ulliel,1984.0,2022.0,A Very Long Engagement,actor,soundtrack
+Dan Castellaneta,Dan Castellaneta,1957.0,0.0,The Simpsons,actor,producer
+Matthew Macfadyen,Matthew Macfadyen,1974.0,0.0,Succession,actor,producer
+Will Arnett,Will Arnett,1970.0,0.0,The Lego Batman Movie,actor,producer
+Thomas Lennon,Thomas Lennon,1896.0,1963.0,We Go Fast,writer,
+Thomas Lennon,Thomas Lennon,1970.0,0.0,Reno 911!,actor,producer
+Marion Cotillard,Marion Cotillard,1975.0,0.0,La Vie En Rose,actress,producer
+Glen Hansard,Glen Hansard,1970.0,0.0,Once,composer,actor
+Richard Jenkins,Richard Jenkins,1947.0,0.0,The Shape of Water,actor,producer
+Richard Jenkins,Richard Jenkins,1983.0,0.0,Bottomfeeders,actor,
+Keri Russell,Keri Russell,1976.0,0.0,Mission: Impossible III,actress,producer
+Alexander Ludwig,Alexander Ludwig,1992.0,0.0,Vikings,actor,producer
+Catherine Zeta-Jones,Catherine Zeta-Jones,1969.0,0.0,Chicago,actress,soundtrack
+Daniella Alonso,Daniella Alonso,1978.0,0.0,Paul Blart: Mall Cop 2,actress,producer
+Sean Bean,Sean Bean,1959.0,0.0,The Lord of the Rings: The Fellowship of the Ring,actor,producer
+Khalid Abdalla,Khalid Abdalla,1980.0,0.0,The Kite Runner,actor,producer
+Skyler Shaye,Skyler Shaye,1986.0,0.0,Grey's Anatomy,actress,soundtrack
+Gabrielle Union,Gabrielle Union,1972.0,0.0,Bring It On,actress,producer
+David Koechner,David Koechner,1962.0,0.0,Anchorman: The Legend of Ron Burgundy,actor,writer
+Wagner Moura,Wagner Moura,1976.0,0.0,Elite Squad,actor,producer
+Norah Jones,Norah Jones,1979.0,0.0,Ted,music_artist,actress
+Javier Bardem,Javier Bardem,1969.0,0.0,Skyfall,actor,producer
+Rachel Nichols,Rachel Nichols,1980.0,0.0,G.I. Joe: The Rise of Cobra,actress,producer
+Rachel Nichols,Rachel Nichols,1973.0,0.0,NBA on ESPN,writer,producer
+Patrick Carroll,Patrick Carroll,1982.0,0.0,"Hail, Caesar!",actor,miscellaneous
+Big Boi,Big Boi,1975.0,0.0,Idlewild,actor,composer
+Chiara Mastroianni,Chiara Mastroianni,1972.0,0.0,Persepolis,actress,soundtrack
+Robert Wisdom,Robert Wisdom,1953.0,0.0,The Dark Knight Rises,actor,soundtrack
+Elisha Cuthbert,Elisha Cuthbert,1982.0,0.0,The Girl Next Door,actress,director
+Anton Yelchin,Anton Yelchin,1989.0,2016.0,Star Trek,actor,camera_department
+Justin Chatwin,Justin Chatwin,1982.0,0.0,Dragonball Evolution,actor,producer
+Michelle Morgan,Michelle Morgan,1981.0,0.0,Diary of the Dead,actress,director
+Columbus Short,Columbus Short,1982.0,0.0,The Losers,actor,producer
+Zack Ward,Zack Ward,1970.0,0.0,Freddy vs. Jason,actor,writer
+Scott Speedman,Scott Speedman,1975.0,0.0,Underworld,actor,soundtrack
+Ben Burtt,Ben Burtt,1948.0,0.0,WALL·E,sound_department,miscellaneous
+Rebecca Hall,Rebecca Hall,1982.0,0.0,Vicky Cristina Barcelona,actress,producer
+Rebecca Hall,Rebecca Hall,1984.0,0.0,The Titan,make_up_department,
+Dev Patel,Dev Patel,1990.0,0.0,Slumdog Millionaire,actor,producer
+Mike Vogel,Mike Vogel,1979.0,0.0,The Help,actor,producer
+Shawn Ashmore,Shawn Ashmore,1979.0,0.0,X2,actor,producer
+Jim Sturgess,Jim Sturgess,1978.0,0.0,21,actor,music_department
+Sean Faris,Sean Faris,1982.0,0.0,Never Back Down,actor,producer
+Josh Zuckerman,Josh Zuckerman,1985.0,0.0,Austin Powers in Goldmember,actor,writer
+Ben Barnes,Ben Barnes,1981.0,0.0,The Chronicles of Narnia: Prince Caspian,actor,soundtrack
+Asa Butterfield,Asa Butterfield,1997.0,0.0,Hugo,actor,archive_footage
+Katherine Heigl,Katherine Heigl,1978.0,0.0,One for the Money,actress,producer
+Kåre Hedebrant,Kåre Hedebrant,1995.0,0.0,Let the Right One In,actor,archive_footage
+Tom Hardy,Tom Hardy,1977.0,0.0,Inception,actor,producer
+Tom Hardy,Tom Hardy,1944.0,2008.0,Passagem por Lisboa,actor,
+Carmen Electra,Carmen Electra,1972.0,0.0,Scary Movie 4,actress,producer
+Drake Bell,Drake Bell,1986.0,0.0,Drake & Josh,actor,music_department
+Ray Stevenson,Ray Stevenson,1964.0,2023.0,The Three Musketeers,actor,soundtrack
+Rhona Mitra,Rhona Mitra,1976.0,0.0,Underworld: Rise of the Lycans,actress,
+Gabriel Macht,Gabriel Macht,1972.0,0.0,The Good Shepherd,actor,producer
+Ricky Gervais,Ricky Gervais,1961.0,0.0,The Office,writer,producer
+Chris Pine,Chris Pine,1980.0,0.0,Star Trek,actor,producer
+Rainn Wilson,Rainn Wilson,1966.0,0.0,The Office,actor,producer
+Robert Hoffman,Robert Hoffman,1909.0,1992.0,Wonder Woman,cinematographer,camera_department
+Robert Hoffman,Robert Hoffman,1970.0,0.0,Shall We Dance?,actor,
+Robert Hoffman,Robert Hoffman,1985.0,0.0,Step Up 2: The Streets,actor,miscellaneous
+Paul Sorvino,Paul Sorvino,1939.0,2022.0,Repo! The Genetic Opera,actor,director
+Scott Patterson,Scott Patterson,1958.0,0.0,Saw V,actor,producer
+Scott Patterson,Scott Patterson,1962.0,0.0,Pact,director,editor
+Vinnie Jones,Vinnie Jones,1965.0,0.0,"Lock, Stock and Two Smoking Barrels",actor,producer
+Rachel Weisz,Rachel Weisz,1970.0,0.0,The Constant Gardener,actress,producer
+Josh Brolin,Josh Brolin,1968.0,0.0,Avengers: Endgame,actor,producer
+Simon Pegg,Simon Pegg,1970.0,0.0,Shaun of the Dead,actor,writer
+Brittany Snow,Brittany Snow,1986.0,0.0,Pitch Perfect,actress,producer
+Zac Efron,Zac Efron,1987.0,0.0,17 Again,actor,producer
+Sean Maguire,Sean Maguire,1976.0,0.0,Meet the Spartans,actor,soundtrack
+Matt Lanter,Matt Lanter,1983.0,0.0,Disaster Movie,actor,miscellaneous
+Tina Fey,Tina Fey,1970.0,0.0,Date Night,writer,actress
+Saoirse Ronan,Saoirse Ronan,1994.0,0.0,Hanna,actress,producer
+Jennifer Carpenter,Jennifer Carpenter,1979.0,0.0,The Exorcism of Emily Rose,actress,producer
+Frank Langella,Frank Langella,1938.0,0.0,Frost/Nixon,actor,producer
+Michelle Williams,Michelle Williams,1980.0,0.0,My Week with Marilyn,actress,producer
+Michelle Williams,Michelle Williams,1979.0,0.0,Revival,actress,composer
+Stephen McHattie,Stephen McHattie,1947.0,0.0,Pontypool,actor,director
+Ari Folman,Ari Folman,1962.0,0.0,The Congress,writer,director
+Matthew Goode,Matthew Goode,1978.0,0.0,The Imitation Game,actor,archive_footage
+Alyssa Milano,Alyssa Milano,1972.0,0.0,Charmed,actress,producer
+Rob Brown,Rob Brown,1984.0,0.0,Finding Forrester,actor,soundtrack
+Josh Peck,Josh Peck,1986.0,0.0,Drake & Josh,actor,camera_department
+Jimmy Bennett,Jimmy Bennett,1996.0,0.0,Star Trek,actor,soundtrack
+Melissa Leo,Melissa Leo,1960.0,0.0,The Fighter,actress,producer
+Sam Worthington,Sam Worthington,1976.0,0.0,Avatar,actor,producer
+Megan Fox,Megan Fox,1986.0,0.0,Transformers,actress,producer
+Megan Fox,Megan Fox,1980.0,0.0,American Dreams,actress,
+Jackie Earle Haley,Jackie Earle Haley,1961.0,0.0,Little Children,actor,director
+Zach Galifianakis,Zach Galifianakis,1969.0,0.0,The Hangover,actor,producer
+Ginnifer Goodwin,Ginnifer Goodwin,1978.0,0.0,Zootopia,actress,producer
+Jesse Eisenberg,Jesse Eisenberg,1983.0,0.0,The Social Network,actor,producer
+Sharlto Copley,Sharlto Copley,1973.0,0.0,District 9,actor,producer
+Quinton Aaron,Quinton Aaron,1984.0,0.0,The Blind Side,actor,producer
+Edward Asner,Edward Asner,1929.0,2021.0,Up,actor,producer
+Dan Fogler,Dan Fogler,1976.0,0.0,Fantastic Beasts and Where to Find Them,actor,director
+Jared Padalecki,Jared Padalecki,1982.0,0.0,Supernatural,actor,producer
+Anika Noni Rose,Anika Noni Rose,1972.0,0.0,The Princess and the Frog,actress,soundtrack
+Nathaniel Brown,Nathaniel Brown,1988.0,0.0,Enter the Void,actor,
+Eric Christian Olsen,Eric Christian Olsen,1977.0,0.0,Dumb and Dumberer: When Harry Met Lloyd,actor,producer
+Garret Dillahunt,Garret Dillahunt,1964.0,0.0,12 Years a Slave,actor,producer
+Michael Nyqvist,Michael Nyqvist,1960.0,2017.0,Mission: Impossible - Ghost Protocol,actor,producer
+Penn Badgley,Penn Badgley,1986.0,0.0,You,actor,producer
+Max Records,Max Records,1997.0,0.0,Where the Wild Things Are,actor,soundtrack
+Briana Evigan,Briana Evigan,1986.0,0.0,Step Up 2: The Streets,actress,soundtrack
+Christopher Plummer,Christopher Plummer,1929.0,2021.0,Beginners,actor,producer
+Gabourey Sidibe,Gabourey Sidibe,1983.0,0.0,Precious,actress,director
+Hye-ja Kim,,,,,,
+Michael Stuhlbarg,Michael Stuhlbarg,1968.0,0.0,A Serious Man,actor,soundtrack
+Josh Stewart,Josh Stewart,1977.0,0.0,Interstellar,actor,producer
+Rain,Rain,1982.0,0.0,"I'm a Cyborg, But That's OK",actor,writer
+Nick Zano,Nick Zano,1978.0,0.0,The Final Destination,actor,producer
+Carey Mulligan,Carey Mulligan,1985.0,0.0,Never Let Me Go,actress,producer
+Jensen Ackles,Jensen Ackles,1978.0,0.0,Supernatural,actor,producer
+Emily Blunt,Emily Blunt,1983.0,0.0,Edge of Tomorrow,actress,producer
+Tahar Rahim,Tahar Rahim,1981.0,0.0,A Prophet,actor,soundtrack
+Katie Jarvis,Katie Jarvis,1991.0,0.0,Fish Tank,actress,archive_footage
+Hayden Panettiere,Hayden Panettiere,1989.0,0.0,Heroes,actress,music_department
+Odette Annable,Odette Annable,1985.0,0.0,Cloverfield,actress,soundtrack
+Jamal Woolard,,,,,,
+Sasha Grey,Sasha Grey,1988.0,0.0,The Girlfriend Experience,actress,producer
+Christian Friedel,Christian Friedel,1943.0,0.0,"Anatahan, Anatahan",actor,writer
+Christian Friedel,Christian Friedel,1979.0,0.0,The Zone of Interest,actor,soundtrack
+Sean Patrick Flanery,Sean Patrick Flanery,1965.0,0.0,Powder,actor,producer
+Miley Cyrus,Miley Cyrus,1992.0,0.0,Hannah Montana,music_artist,actress
+Alan Van Sprang,Alan Van Sprang,1971.0,0.0,Immortals,actor,producer
+Jocelin Donahue,Jocelin Donahue,1981.0,0.0,Doctor Sleep,actress,soundtrack
+John Krasinski,John Krasinski,1979.0,0.0,Tom Clancy's Jack Ryan,actor,producer
+Abbie Cornish,Abbie Cornish,1982.0,0.0,Bright Star,actress,producer
+Jeppe Beck Laursen,Jeppe Beck Laursen,1972.0,0.0,The Last Kingdom,actor,stunts
+Ben Foster,Ben Foster,1980.0,0.0,Hell or High Water,actor,producer
+Ben Foster,Ben Foster,1983.0,0.0,Match of the Day,archive_footage,
+Evan McGuire,,,,,,
+Gemma Arterton,Gemma Arterton,1986.0,0.0,Prince of Persia: The Sands of Time,actress,producer
+Zach Cregger,Zach Cregger,1981.0,0.0,Barbarian,actor,director
+Chris Massoglia,Chris Massoglia,1992.0,0.0,Cirque du Freak: The Vampire's Assistant,actor,producer
+Ashley Tisdale,Ashley Tisdale,1985.0,0.0,Phineas and Ferb,actress,producer
+Kristin Kreuk,Kristin Kreuk,1982.0,0.0,EuroTrip,actress,producer
+Colm Meaney,Colm Meaney,1953.0,0.0,Star Trek: Deep Space Nine,actor,producer
+Michael Angarano,Michael Angarano,1987.0,0.0,Sky High,actor,director
+Rooney Mara,Rooney Mara,1985.0,0.0,The Girl with the Dragon Tattoo,actress,producer
+Jonathan D. Mellor,,,,,,
+Jay Baruchel,Jay Baruchel,1982.0,0.0,Goon,actor,producer
+Aaron Taylor-Johnson,Aaron Taylor-Johnson,1990.0,0.0,Kick-Ass,actor,producer
+Madeline Carroll,Madeline Carroll,1996.0,0.0,Flipped,actress,producer
+Scoot McNairy,Scoot McNairy,1977.0,0.0,Argo,actor,producer
+Sarah Butler,Sarah Butler,1985.0,0.0,I Spit on Your Grave,actress,producer
+Noah Ringer,Noah Ringer,1996.0,0.0,The Last Airbender,actor,
+Lubna Azabal,Lubna Azabal,1973.0,0.0,Incendies,actress,archive_footage
+Mia Wasikowska,Mia Wasikowska,1989.0,0.0,Alice in Wonderland,actress,director
+Emma Stone,Emma Stone,1988.0,0.0,La La Land,actress,producer
+Danny Trejo,Danny Trejo,1944.0,0.0,Machete,actor,producer
+Idris Elba,Idris Elba,1972.0,0.0,Beasts of No Nation,actor,producer
+Michael Fassbender,Michael Fassbender,1977.0,0.0,Shame,actor,producer
+Zachary Gordon,Zachary Gordon,1998.0,0.0,Diary of a Wimpy Kid,actor,director
+Paul Bettany,Paul Bettany,1971.0,0.0,WandaVision,actor,writer
+Robert Pattinson,Robert Pattinson,1986.0,0.0,Twilight,actor,producer
+Jennifer Lawrence,Jennifer Lawrence,1990.0,0.0,The Hunger Games,actress,producer
+Chris Brown,Chris Brown,1972.0,0.0,Outlander,art_department,art_director
+Chris Brown,Chris Brown,1989.0,0.0,Takers,music_artist,actor
+Chris Brown,Chris Brown,1978.0,0.0,The Dog House Australia,writer,producer
+Chris Brown,Chris Brown,1991.0,0.0,A Quiet Place Part II,art_department,visual_effects
+Chris Messina,Chris Messina,1974.0,0.0,Argo,actor,producer
+Keir Gilchrist,Keir Gilchrist,1992.0,0.0,It's Kind of a Funny Story,actor,
+Kodi Smit-McPhee,Kodi Smit-McPhee,1996.0,0.0,Let Me In,actor,soundtrack
+Will Forte,Will Forte,1970.0,0.0,MacGruber,actor,writer
+Eric Balfour,Eric Balfour,1977.0,0.0,The Offer,actor,producer
+Joey King,Joey King,1999.0,0.0,The Act,actress,producer
+Amanda Seyfried,Amanda Seyfried,1985.0,0.0,Les Misérables,actress,producer
+Jonah Hill,Jonah Hill,1983.0,0.0,21 Jump Street,actor,producer
+Amy Poehler,Amy Poehler,1971.0,0.0,Inside Out,actress,producer
+Sharni Vinson,Sharni Vinson,1983.0,0.0,You're Next,actress,producer
+Stephen Spinella,Stephen Spinella,1956.0,0.0,Ravenous,actor,archive_footage
+Kôji Yakusho,,,,,,
+Bill Nighy,Bill Nighy,1949.0,0.0,Love Actually,actor,producer
+Jenn Proske,Jenn Proske,1987.0,0.0,Vampires Suck,actress,cinematographer
+Chace Crawford,Chace Crawford,1985.0,0.0,The Covenant,actor,producer
+Patrick Fabian,Patrick Fabian,1964.0,0.0,The Last Exorcism,actor,producer
+Juno Temple,Juno Temple,1989.0,0.0,Atonement,actress,soundtrack
+Garrett Hedlund,Garrett Hedlund,1984.0,0.0,Tron: Legacy,actor,producer
+Connor Paolo,Connor Paolo,1990.0,0.0,Alexander,actor,writer
+Robin Wright,Robin Wright,1966.0,0.0,Forrest Gump,actress,producer
+Max Thieriot,Max Thieriot,1988.0,0.0,The Pacifier,actor,writer
+Danielle Harris,Danielle Harris,1977.0,0.0,Don't Tell Mom the Babysitter's Dead,actress,producer
+David Hyde Pierce,David Hyde Pierce,1959.0,0.0,Frasier,actor,writer
+Chris Evans,Chris Evans,1966.0,0.0,Don't Forget Your Toothbrush,writer,producer
+Chris Evans,Chris Evans,1981.0,0.0,The Avengers,actor,producer
+Chris Evans,Chris Evans,1970.0,0.0,Secretaries,actor,director
+Chris Hemsworth,Chris Hemsworth,1983.0,0.0,Snow White and the Huntsman,actor,producer
+Michael Shannon,Michael Shannon,1943.0,0.0,Dark Shadows,actor,archive_footage
+Michael Shannon,Michael Shannon,1974.0,0.0,Take Shelter,actor,producer
+Michael Shannon,Michael Shannon,1933.0,2010.0,The Rat Catchers,actor,
+Kristen Wiig,Kristen Wiig,1973.0,0.0,Bridesmaids,actress,producer
+Kristen Connolly,Kristen Connolly,1980.0,0.0,The Cabin in the Woods,actress,producer
+Emily Browning,Emily Browning,1988.0,0.0,A Series of Unfortunate Events,actress,soundtrack
+Mila Kunis,Mila Kunis,1983.0,0.0,Black Swan,actress,producer
+Henry Cavill,Henry Cavill,1983.0,0.0,Man of Steel,actor,miscellaneous
+Justin Timberlake,Justin Timberlake,1981.0,0.0,Trolls,music_artist,actor
+Elle Fanning,Elle Fanning,1998.0,0.0,Super 8,actress,producer
+Bradley Cooper,Bradley Cooper,1975.0,0.0,A Star Is Born,actor,producer
+Jason Momoa,Jason Momoa,1979.0,0.0,Aquaman,actor,producer
+Danny McBride,Danny McBride,1976.0,0.0,Pineapple Express,writer,actor
+Zoe Saldana,Zoe Saldana,1978.0,0.0,Avatar,actress,producer
+Taylor Lautner,Taylor Lautner,1992.0,0.0,Twilight,actor,producer
+Payman Maadi,Payman Maadi,1970.0,0.0,A Separation,actor,writer
+Jeremy Irvine,Jeremy Irvine,1990.0,0.0,War Horse,actor,soundtrack
+Iko Uwais,Iko Uwais,1983.0,0.0,The Raid 2,actor,producer
+Zachary Quinto,Zachary Quinto,1977.0,0.0,Star Trek,actor,producer
+Nicholas D'Agosto,Nicholas D'Agosto,1980.0,0.0,Trial & Error,actor,soundtrack
+Alex Pettyfer,Alex Pettyfer,1990.0,0.0,Magic Mike,actor,producer
+Kenny Wormald,Kenny Wormald,1984.0,0.0,Footloose,actor,producer
+Topher Grace,Topher Grace,1978.0,0.0,In Good Company,actor,producer
+Sara Paxton,Sara Paxton,1988.0,0.0,The Innkeepers,actress,writer
+Gina Carano,Gina Carano,1982.0,0.0,The Mandalorian,actress,producer
+Jean Dujardin,Jean Dujardin,1972.0,0.0,The Artist,actor,director
+Lucas Pittaway,,,,,,
+Nick Swardson,Nick Swardson,1976.0,0.0,Grandma's Boy,actor,writer
+John Boyega,John Boyega,1992.0,0.0,Star Wars: Episode VII - The Force Awakens,actor,producer
+Brendan Gleeson,Brendan Gleeson,1955.0,0.0,Calvary,actor,director
+Dominic Cooper,Dominic Cooper,1978.0,0.0,The Devil's Double,actor,producer
+Brit Marling,Brit Marling,1982.0,0.0,Another Earth,writer,producer
+Felicity Jones,Felicity Jones,1983.0,0.0,Rogue One: A Star Wars Story,actress,producer
+Elizabeth Olsen,Elizabeth Olsen,1989.0,0.0,Martha Marcy May Marlene,actress,producer
+Minka Kelly,Minka Kelly,1980.0,0.0,The Roommate,actress,soundtrack
+Selena Gomez,Selena Gomez,1992.0,0.0,Spring Breakers,music_artist,actress
+Colin O'Donoghue,Colin O'Donoghue,1981.0,0.0,The Rite,actor,soundtrack
+Christopher Denham,Christopher Denham,1939.0,0.0,The Scarlet and the Black,actor,
+Christopher Denham,Christopher Denham,1985.0,0.0,Argo,actor,writer
+Thomas Horn,Thomas Horn,1957.0,2023.0,Unraveling Revelation,producer,writer
+Rhys Wakefield,Rhys Wakefield,1988.0,0.0,True Detective,actor,writer
+Michael Parks,Michael Parks,1940.0,2017.0,Red State,actor,director
+Sarah Bolger,Sarah Bolger,1991.0,0.0,In America,actress,soundtrack
+Sarah Bolger,Sarah Bolger,1982.0,0.0,The Station Agent,actress,
+Mark Duplass,Mark Duplass,1976.0,0.0,Safety Not Guaranteed,actor,producer
+Alex Kendrick,Alex Kendrick,1970.0,0.0,Courageous,actor,writer
+Warren Christie,Warren Christie,1975.0,0.0,Apollo 18,actor,producer
+Rhys Ifans,Rhys Ifans,1967.0,0.0,The Amazing Spider-Man,actor,producer
+Russell Brand,Russell Brand,1975.0,0.0,Arthur,producer,writer
+Taylor Schilling,Taylor Schilling,1984.0,0.0,The Lucky One,actress,archive_footage
+Ranbir Kapoor,Ranbir Kapoor,1982.0,0.0,Rockstar,actor,music_department
+Anna Kendrick,Anna Kendrick,1985.0,0.0,Up in the Air,actress,producer
+Mads Mikkelsen,Mads Mikkelsen,1965.0,0.0,Hannibal,actor,miscellaneous
+Noomi Rapace,Noomi Rapace,1979.0,0.0,The Girl with the Dragon Tattoo,actress,producer
+Jared Gilman,Jared Gilman,1998.0,0.0,Moonrise Kingdom,actor,
+Jessica Chastain,Jessica Chastain,1977.0,0.0,Zero Dark Thirty,actress,producer
+Andrew Garfield,Andrew Garfield,1983.0,0.0,Hacksaw Ridge,actor,producer
+Kelly Macdonald,Kelly Macdonald,1976.0,0.0,No Country for Old Men,actress,soundtrack
+Taylor Kitsch,Taylor Kitsch,1981.0,0.0,X-Men Origins: Wolverine,actor,producer
+Alexander Skarsgård,Alexander Skarsgård,1976.0,0.0,The Legend of Tarzan,actor,producer
+Vanessa Hudgens,Vanessa Hudgens,1988.0,0.0,High School Musical 3: Senior Year,actress,producer
+Danielle Panabaker,Danielle Panabaker,1987.0,0.0,The Flash,actress,director
+Benjamin Walker,Benjamin Walker,1982.0,0.0,Abraham Lincoln: Vampire Hunter,actor,soundtrack
+Thomas Mann,Thomas Mann,1875.0,1955.0,Death in Venice,writer,archive_footage
+Thomas Mann,Thomas Mann,1991.0,0.0,Me and Earl and the Dying Girl,actor,producer
+Suraj Sharma,Suraj Sharma,2000.0,0.0,Cocoon,director,assistant_director
+Suraj Sharma,Suraj Sharma,1993.0,0.0,Life of Pi,actor,archive_footage
+Suraj Sharma,Suraj Sharma,1999.0,0.0,Hey Siri Ve Siri,miscellaneous,assistant_director
+Julianne Hough,Julianne Hough,1988.0,0.0,Rock of Ages,actress,producer
+Aubrey Plaza,Aubrey Plaza,1984.0,0.0,Safety Not Guaranteed,actress,producer
+Dane DeHaan,Dane DeHaan,1986.0,0.0,Chronicle,actor,archive_footage
+Jason Segel,Jason Segel,1980.0,0.0,Forgetting Sarah Marshall,actor,writer
+Sean Hayes,Sean Hayes,1970.0,0.0,Will & Grace,actor,producer
+Ann Dowd,Ann Dowd,1956.0,0.0,Compliance,actress,soundtrack
+Dax Shepard,Dax Shepard,1975.0,0.0,Hit and Run,podcaster,actor
+Alex Veadov,Alex Veadov,1962.0,0.0,The Equalizer,actor,miscellaneous
+Sam Riley,Sam Riley,1980.0,0.0,Control,actor,soundtrack
+Sam Riley,Sam Riley,1972.0,0.0,Noah & Saskia,actress,
+Dylan O'Brien,Dylan O'Brien,1991.0,0.0,Teen Wolf,actor,producer
+Luke Evans,Luke Evans,1979.0,0.0,Dracula Untold,actor,producer
+Lily Collins,Lily Collins,1989.0,0.0,The Mortal Instruments: City of Bones,actress,producer
+Ashley Hinshaw,Ashley Hinshaw,1988.0,0.0,Chronicle,actress,director
+Sheri Moon Zombie,Sheri Moon Zombie,1970.0,0.0,The Devil's Rejects,actress,producer
+Kathryn McCormick,Kathryn McCormick,1990.0,0.0,Step Up Revolution,actress,producer
+Paul Dano,Paul Dano,1984.0,0.0,There Will Be Blood,actor,producer
+Natasha Calis,Natasha Calis,1999.0,0.0,The Possession,actress,producer
+Adelaide Clemens,Adelaide Clemens,1989.0,0.0,Rectify,actress,soundtrack
+Jean-Louis Trintignant,Jean-Louis Trintignant,1930.0,2022.0,Amour,actor,writer
+Quvenzhané Wallis,Quvenzhané Wallis,2003.0,0.0,Beasts of the Southern Wild,actress,soundtrack
+Ashley Greene,Ashley Greene,1987.0,0.0,Twilight,actress,miscellaneous
+Jonny Weston,Jonny Weston,1988.0,0.0,Project Almanac,actor,archive_footage
+Josh Radnor,Josh Radnor,1974.0,0.0,Liberal Arts,actor,director
+Pål Sverre Hagen,Pål Sverre Hagen,1980.0,0.0,In Order of Disappearance,actor,
+Stephen Dunham,Stephen Dunham,1964.0,2012.0,The Mummy,actor,stunts
+John Magaro,John Magaro,1983.0,0.0,The Big Short,actor,producer
+Jesse McCartney,Jesse McCartney,1987.0,0.0,Keith,actor,composer
+Aamir Khan,Aamir Khan,1965.0,0.0,Like Stars on Earth,actor,producer
+Ari Graynor,Ari Graynor,1983.0,0.0,Nick and Norah's Infinite Playlist,actress,producer
+Fernanda Andrade,Fernanda Andrade,1984.0,0.0,Moon Knight,actress,producer
+Saif Ali Khan,Saif Ali Khan,1970.0,0.0,Kal Ho Naa Ho,actor,producer
+Victoria Justice,Victoria Justice,1993.0,0.0,Victorious,actress,composer
+Peter Sarsgaard,Peter Sarsgaard,1971.0,0.0,Shattered Glass,actor,producer
+Domhnall Gleeson,Domhnall Gleeson,1983.0,0.0,Ex Machina,actor,writer
+Jason Sudeikis,Jason Sudeikis,1975.0,0.0,Ted Lasso,actor,writer
+Lorenza Izzo,Lorenza Izzo,1989.0,0.0,Knock Knock,actress,soundtrack
+Daniel Brühl,Daniel Brühl,1978.0,0.0,Rush,actor,producer
+Jane Levy,Jane Levy,1989.0,0.0,Zoey's Extraordinary Playlist,actress,soundtrack
+Emily Baldoni,Emily Baldoni,1984.0,0.0,Coherence,actress,miscellaneous
+Alexandra Daddario,Alexandra Daddario,1986.0,0.0,Baywatch,actress,producer
+Nicholas Hoult,Nicholas Hoult,1989.0,0.0,About a Boy,actor,producer
+Karen Gillan,Karen Gillan,1987.0,0.0,Selfie,actress,director
+Simon Rex,Simon Rex,1974.0,0.0,Red Rocket,actor,producer
+Oscar Isaac,Oscar Isaac,1979.0,0.0,Ex Machina,actor,producer
+Chloë Grace Moretz,Chloë Grace Moretz,1997.0,0.0,Kick-Ass,actress,producer
+Julia Louis-Dreyfus,Julia Louis-Dreyfus,1961.0,0.0,Seinfeld,actress,producer
+Gugu Mbatha-Raw,Gugu Mbatha-Raw,1983.0,0.0,Belle,actress,producer
+Jaden Smith,Jaden Smith,1998.0,0.0,The Karate Kid,actor,composer
+Miles Teller,Miles Teller,1987.0,0.0,Whiplash,actor,producer
+Chadwick Boseman,Chadwick Boseman,1976.0,2020.0,Black Panther,actor,producer
+Sophie Nélisse,Sophie Nélisse,2000.0,0.0,The Book Thief,actress,
+Katie Chang,,,,,,
+Hideaki Anno,Hideaki Anno,1960.0,0.0,Shin Godzilla,writer,art_department
+Alice Englert,Alice Englert,1994.0,0.0,Beautiful Creatures,actress,director
+Carlos Alazraqui,Carlos Alazraqui,1962.0,0.0,The Fairly OddParents,actor,writer
+Bill Hader,Bill Hader,1978.0,0.0,The Skeleton Twins,actor,writer
+Macon Blair,Macon Blair,1974.0,0.0,Blue Ruin,actor,writer
+Bruce Dern,Bruce Dern,1936.0,0.0,Nebraska,actor,producer
+Christoph Waltz,Christoph Waltz,1956.0,0.0,Django Unchained,actor,producer
+Mark Strong,Mark Strong,1884.0,1953.0,The Tiger's Trail,actor,
+Mark Strong,Mark Strong,1963.0,0.0,1917,actor,producer
+Neil Patrick Harris,Neil Patrick Harris,1973.0,0.0,How I Met Your Mother,actor,producer
+Michael B. Jordan,Michael B. Jordan,1987.0,0.0,Black Panther,actor,producer
+Johnny Knoxville,Johnny Knoxville,1971.0,0.0,Jackass Presents: Bad Grandpa,writer,producer
+Amy Seimetz,Amy Seimetz,1981.0,0.0,Upstream Color,actress,writer
+Liam Hemsworth,Liam Hemsworth,1990.0,0.0,The Hunger Games,actor,miscellaneous
+Bérénice Bejo,Bérénice Bejo,1976.0,0.0,The Artist,actress,cinematographer
+Benedict Cumberbatch,Benedict Cumberbatch,1976.0,0.0,The Imitation Game,actor,producer
+Tiger Hu Chen,Tiger Hu Chen,1975.0,0.0,The Matrix Reloaded,actor,stunts
+Irrfan Khan,Irrfan Khan,1967.0,2020.0,The Lunchbox,actor,director
+Chris Pratt,Chris Pratt,1979.0,0.0,Guardians of the Galaxy,actor,producer
+Alicia Vikander,Alicia Vikander,1988.0,0.0,Ex Machina,actress,producer
+Shailene Woodley,Shailene Woodley,1991.0,0.0,Divergent,actress,producer
+Jon Favreau,Jon Favreau,1966.0,0.0,Chef,producer,actor
+Jon Favreau,Jon Favreau,1981.0,0.0,Wind of Change,producer,writer
+Jemaine Clement,Jemaine Clement,1974.0,0.0,Flight of the Conchords,actor,writer
+Frank Grillo,Frank Grillo,1965.0,0.0,The Grey,actor,producer
+Maika Monroe,Maika Monroe,1993.0,0.0,It Follows,actress,producer
+Brenton Thwaites,Brenton Thwaites,1989.0,0.0,Pirates of the Caribbean: Dead Men Tell No Tales,actor,director
+Sullivan Stapleton,Sullivan Stapleton,1977.0,0.0,Animal Kingdom,actor,producer
+Ryan Potter,Ryan Potter,1995.0,0.0,Big Hero 6,actor,producer
+Jack O'Connell,Jack O'Connell,1990.0,0.0,Unbroken,actor,archive_footage
+Perdita Weeks,Perdita Weeks,1985.0,0.0,"As Above, So Below",actress,director
+Ward Horton,Ward Horton,1976.0,0.0,Annabelle,actor,producer
+Ellar Coltrane,Ellar Coltrane,1994.0,0.0,Boyhood,actor,art_department
+Eddie Redmayne,Eddie Redmayne,1982.0,0.0,Les Misérables,actor,producer
+Essie Davis,Essie Davis,1970.0,0.0,The Babadook,actress,producer
+Darío Grandinetti,Darío Grandinetti,1959.0,0.0,Talk to Her,actor,archive_footage
+Dan Stevens,Dan Stevens,1982.0,0.0,Downton Abbey,actor,producer
+Joel Kinnaman,Joel Kinnaman,1979.0,0.0,The Killing,actor,producer
+Zoey Deutch,Zoey Deutch,1994.0,0.0,Not Okay,actress,producer
+Rose Leslie,Rose Leslie,1987.0,0.0,Honeymoon,actress,archive_footage
+Aaron Paul,Aaron Paul,1979.0,0.0,Breaking Bad,actor,producer
+Seth MacFarlane,Seth MacFarlane,1973.0,0.0,Family Guy,writer,producer
+Hugh Bonneville,Hugh Bonneville,1963.0,0.0,Downton Abbey,actor,soundtrack
+Richard Armitage,Richard Armitage,1971.0,0.0,The Hobbit: An Unexpected Journey,actor,producer
+Richard Armitage,Richard Armitage,1945.0,0.0,Last Days in Vietnam,archive_footage,
+Tom McGrath,Tom McGrath,1940.0,2009.0,Play for Tomorrow,writer,
+Tom McGrath,Tom McGrath,1964.0,0.0,Madagascar,director,writer
+Heather Sossaman,Heather Sossaman,1987.0,0.0,Unfriended,actress,
+Gabriella Wilde,Gabriella Wilde,1989.0,0.0,The Three Musketeers,actress,archive_footage
+Kit Harington,Kit Harington,1986.0,0.0,Game of Thrones,actor,writer
+Kaitlyn Dever,Kaitlyn Dever,1996.0,0.0,Booksmart,actress,producer
+Jake Johnson,Jake Johnson,1997.0,0.0,Man Up!,actor,
+Jake Johnson,Jake Johnson,1978.0,0.0,Safety Not Guaranteed,actor,producer
+Jake Johnson,Jake Johnson,1999.0,0.0,Talladega Nights: The Ballad of Ricky Bobby,actor,archive_footage
+Jake Johnson,Jake Johnson,1989.0,0.0,Moms Teach Sex,actor,
+Andy Powers,,,,,,
+Sharon Leal,Sharon Leal,1972.0,0.0,Dreamgirls,actress,producer
+David Oyelowo,David Oyelowo,1976.0,0.0,Lawmen: Bass Reeves,actor,producer
+Jon Hamm,Jon Hamm,1971.0,0.0,Mad Men,actor,producer
+John Lloyd Young,John Lloyd Young,1975.0,0.0,Jersey Boys,actor,soundtrack
+Kellan Lutz,Kellan Lutz,1985.0,0.0,The Twilight Saga: Eclipse,actor,producer
+Ryan Guzman,Ryan Guzman,1987.0,0.0,The Boy Next Door,actor,soundtrack
+Shane Harper,Shane Harper,1993.0,0.0,Hightown,actor,director
+Ty Burrell,Ty Burrell,1967.0,0.0,Modern Family,actor,producer
+Melissa McCarthy,Melissa McCarthy,1970.0,0.0,The Heat,actress,producer
+Christina Hendricks,Christina Hendricks,1975.0,0.0,Ginger & Rosa,actress,producer
+Jared Harris,Jared Harris,1961.0,0.0,Chernobyl,actor,director
+Taraji P. Henson,Taraji P. Henson,1970.0,0.0,The Curious Case of Benjamin Button,actress,producer
+Sidse Babett Knudsen,Sidse Babett Knudsen,1968.0,0.0,Borgen,actress,producer
+Olivia Cooke,Olivia Cooke,1993.0,0.0,Ready Player One,actress,producer
+Kevin Hart,Kevin Hart,1979.0,0.0,Ride Along,producer,writer
+Dakota Johnson,Dakota Johnson,1989.0,0.0,Fifty Shades of Grey,actress,producer
+Anya Taylor-Joy,Anya Taylor-Joy,1996.0,0.0,The Queen's Gambit,actress,soundtrack
+Brie Larson,Brie Larson,1989.0,0.0,Room,actress,producer
+Mark Ruffalo,Mark Ruffalo,1967.0,0.0,Spotlight,actor,producer
+Lily James,Lily James,1989.0,0.0,Cinderella,actress,producer
+Daisy Ridley,Daisy Ridley,1992.0,0.0,Star Wars: Episode VII - The Force Awakens,actress,producer
+Melissa Rauch,Melissa Rauch,1980.0,0.0,The Big Bang Theory,actress,producer
+Jason Clarke,Jason Clarke,1969.0,0.0,Zero Dark Thirty,actor,producer
+Olivia DeJonge,Olivia DeJonge,1998.0,0.0,The Visit,actress,
+Ed Helms,Ed Helms,1974.0,0.0,The Hangover,actor,producer
+Blake Lively,Blake Lively,1987.0,0.0,Gossip Girl,actress,producer
+Jim Parsons,Jim Parsons,1973.0,0.0,The Big Bang Theory,actor,producer
+Tom Hiddleston,Tom Hiddleston,1981.0,0.0,The Avengers,actor,producer
+Amy Schumer,Amy Schumer,1981.0,0.0,Trainwreck,writer,actress
+O'Shea Jackson Jr.,O'Shea Jackson Jr.,1991.0,0.0,Straight Outta Compton,actor,archive_footage
+Lake Bell,Lake Bell,1979.0,0.0,In a World...,actress,writer
+Edgar Ramírez,Edgar Ramírez,1977.0,0.0,Gold,actor,producer
+Rupert Friend,Rupert Friend,1981.0,0.0,Hitman: Agent 47,actor,producer
+Adrian Grenier,Adrian Grenier,1976.0,0.0,The Devil Wears Prada,actor,producer
+Tye Sheridan,Tye Sheridan,1996.0,0.0,Mud,actor,producer
+Levi Miller,Levi Miller,2002.0,0.0,Pan,actor,archive_footage
+Mae Whitman,Mae Whitman,1988.0,0.0,One Fine Day,actress,art_department
+Bryan Cranston,Bryan Cranston,1956.0,0.0,Breaking Bad,actor,producer
+Scott Eastwood,Scott Eastwood,1986.0,0.0,Suicide Squad,actor,producer
+Prabhas,Prabhas,1979.0,0.0,Baahubali: The Beginning,actor,archive_footage
+Nat Wolff,Nat Wolff,1994.0,0.0,Paper Towns,actor,composer
+Abraham Attah,Abraham Attah,2002.0,0.0,Beasts of No Nation,actor,producer
+Bel Powley,Bel Powley,1992.0,0.0,The Diary of a Teenage Girl,actress,producer
+Kitana Kiki Rodriguez,,,,,,
+James Ransone,James Ransone,1979.0,0.0,It Chapter Two,actor,soundtrack
+Ben Mendelsohn,Ben Mendelsohn,1969.0,0.0,Rogue One: A Star Wars Story,actor,producer
+Taron Egerton,Taron Egerton,1989.0,0.0,Kingsman: The Secret Service,actor,producer
+Lily Tomlin,Lily Tomlin,1939.0,0.0,Nashville,actress,producer
+Amy Landecker,Amy Landecker,1969.0,0.0,Dan in Real Life,actress,director
+Shameik Moore,Shameik Moore,1995.0,0.0,Spider-Man: Into the Spider-Verse,actor,soundtrack
+Adam Scott,Adam Scott,1973.0,0.0,Parks and Recreation,actor,producer
+Adam Scott,Adam Scott,1980.0,0.0,PGA Tour Golf,archive_footage,
+Donnie Yen,Donnie Yen,1963.0,0.0,Ip Man,actor,stunts
+Noah Schnapp,Noah Schnapp,2004.0,0.0,Stranger Things,actor,soundtrack
+Olivia Wilde,Olivia Wilde,1984.0,0.0,Tron: Legacy,actress,producer
+Reese Mishler,,,,,,
+Aubrey Peeples,,,,,,
+Kate Mara,Kate Mara,1983.0,0.0,Fantastic Four,actress,producer
+Rob Corddry,Rob Corddry,1971.0,0.0,Warm Bodies,actor,writer
+Priscilla C. Shirer,Priscilla C. Shirer,1974.0,0.0,War Room,actress,archive_footage
+Travis Fimmel,Travis Fimmel,1979.0,0.0,Warcraft,actor,producer
+Emilia Clarke,Emilia Clarke,1986.0,0.0,Game of Thrones,actress,producer
+Auli'i Cravalho,Auli'i Cravalho,2000.0,0.0,Moana,actress,producer
+Vera Farmiga,Vera Farmiga,1973.0,0.0,Up in the Air,actress,producer
+Eva Green,Eva Green,1980.0,0.0,Casino Royale,actress,producer
+Mahershala Ali,Mahershala Ali,1974.0,0.0,Leave the World Behind,actor,producer
+Neel Sethi,Neel Sethi,2003.0,0.0,The Jungle Book,actor,soundtrack
+Ellen DeGeneres,Ellen DeGeneres,1958.0,0.0,The Ellen DeGeneres Show,producer,writer
+Teresa Palmer,Teresa Palmer,1986.0,0.0,Warm Bodies,actress,producer
+Mike Epps,Mike Epps,1970.0,0.0,Resident Evil: Apocalypse,actor,producer
+Suki Waterhouse,Suki Waterhouse,1992.0,0.0,Daisy Jones & The Six,actress,producer
+Hailee Steinfeld,Hailee Steinfeld,1996.0,0.0,True Grit,actress,producer
+Adam Driver,Adam Driver,1983.0,0.0,Star Wars: Episode VII - The Force Awakens,actor,producer
+Lauren Cohan,Lauren Cohan,1982.0,0.0,The Boy,actress,producer
+Louis C.K.,Louis C.K.,1967.0,0.0,Louie,writer,producer
+Andy Samberg,Andy Samberg,1978.0,0.0,Popstar: Never Stop Never Stopping,actor,producer
+Blake Jenner,Blake Jenner,1992.0,0.0,The Edge of Seventeen,actor,producer
+Neal McDonough,Neal McDonough,1966.0,0.0,Minority Report,actor,producer
+John Gallagher Jr.,John Gallagher Jr.,1984.0,0.0,10 Cloverfield Lane,actor,producer
+Jack Huston,Jack Huston,1982.0,0.0,Kill Your Darlings,actor,soundtrack
+Keegan-Michael Key,Keegan-Michael Key,1971.0,0.0,Keanu,actor,writer
+Lewis MacDougall,Lewis MacDougall,2002.0,0.0,A Monster Calls,actor,archive_footage
+James Allen McCune,James Allen McCune,1990.0,0.0,Blair Witch,producer,actor
+James Arnold Taylor,James Arnold Taylor,1969.0,0.0,Star Wars: The Clone Wars,actor,producer
+Elizabeth Reaser,Elizabeth Reaser,1975.0,0.0,Twilight,actress,
+Natalie Dormer,Natalie Dormer,1982.0,0.0,Game of Thrones,actress,producer
+Lucas Till,Lucas Till,1990.0,0.0,X-Men: First Class,actor,producer
+Joe Alwyn,Joe Alwyn,1991.0,0.0,The Favourite,actor,soundtrack
+Ruth Negga,Ruth Negga,1981.0,0.0,Loving,actress,producer
+Stephan James,Stephan James,1993.0,0.0,Race,actor,producer
+Bill Skarsgård,Bill Skarsgård,1990.0,0.0,It,actor,producer
+Tom Holland,Tom Holland,1943.0,0.0,Fright Night,actor,writer
+Tom Holland,Tom Holland,1968.0,0.0,Timewatch,writer,actor
+Tom Holland,Tom Holland,1947.0,0.0,The Bible: A History,writer,
+Tom Holland,Tom Holland,1996.0,0.0,Spider-Man: Homecoming,actor,producer
+Daniel Kaluuya,Daniel Kaluuya,1989.0,0.0,Get Out,actor,producer
+Fionn Whitehead,Fionn Whitehead,1997.0,0.0,Dunkirk,actor,soundtrack
+Anthony Gonzalez,Anthony Gonzalez,1980.0,0.0,Oblivion,composer,producer
+Anthony Gonzalez,Anthony Gonzalez,2004.0,0.0,Coco,actor,soundtrack
+Ansel Elgort,Ansel Elgort,1994.0,0.0,The Fault in Our Stars,actor,producer
+Gal Gadot,Gal Gadot,1985.0,0.0,Wonder Woman,actress,producer
+Jacob Tremblay,Jacob Tremblay,2006.0,0.0,Room,actor,soundtrack
+Sally Hawkins,Sally Hawkins,1976.0,0.0,The Shape of Water,actress,writer
+Emma Watson,Emma Watson,1990.0,0.0,The Perks of Being a Wallflower,actress,director
+Frances McDormand,Frances McDormand,1957.0,0.0,"Three Billboards Outside Ebbing, Missouri",actress,producer
+Margot Robbie,Margot Robbie,1990.0,0.0,Suicide Squad,actress,producer
+Jessica Rothe,Jessica Rothe,1987.0,0.0,Happy Death Day,actress,producer
+Scott Shepherd,Scott Shepherd,1966.0,0.0,Bridge of Spies,actor,archive_footage
+Scott Shepherd,Scott Shepherd,1965.0,0.0,La Femme Nikita,sound_department,music_department
+Brooklynn Prince,Brooklynn Prince,2010.0,0.0,The Florida Project,actress,director
+Vicky Krieps,Vicky Krieps,1983.0,0.0,Phantom Thread,actress,producer
+Anthony LaPaglia,Anthony LaPaglia,1959.0,0.0,Without a Trace,actor,producer
+Andy Serkis,Andy Serkis,1964.0,0.0,War for the Planet of the Apes,actor,producer
+Michael Peña,Michael Peña,1976.0,0.0,American Hustle,actor,producer
+Kumail Nanjiani,Kumail Nanjiani,1978.0,0.0,The Big Sick,actor,writer
+Katie Leung,Katie Leung,1987.0,0.0,Harry Potter and the Order of the Phoenix,actress,archive_footage
+Matt Passmore,Matt Passmore,1973.0,0.0,The Glades,actor,producer
+Amandla Stenberg,Amandla Stenberg,1998.0,0.0,The Hunger Games,actress,miscellaneous
+Dacre Montgomery,Dacre Montgomery,1994.0,0.0,Stranger Things,actor,director
+Joel Edgerton,Joel Edgerton,1974.0,0.0,The Gift,actor,producer
+T.J. Miller,T.J. Miller,1981.0,0.0,Silicon Valley,actor,writer
+Rosario Dawson,Rosario Dawson,1979.0,0.0,Rent,actress,producer
+Regina Hall,Regina Hall,1975.0,0.0,Secret Paris,actress,miscellaneous
+Regina Hall,Regina Hall,1970.0,0.0,Girls Trip,actress,producer
+Sam Elliott,Sam Elliott,1944.0,0.0,A Star Is Born,actor,producer
+Josh Gad,Josh Gad,1981.0,0.0,Frozen,actor,producer
+Matilda Anna Ingrid Lutz,Matilda Anna Ingrid Lutz,1991.0,0.0,Revenge,actress,
+Demetrius Shipp Jr.,,,,,,
+Demi Lovato,Demi Lovato,1992.0,0.0,Camp Rock,music_artist,actress
+Eugenio Derbez,Eugenio Derbez,1962.0,0.0,Instructions Not Included,actor,producer
+Jason Drucker,,,,,,
+Emily Mortimer,Emily Mortimer,1971.0,0.0,Mary Poppins Returns,actress,writer
+Brett Dalton,Brett Dalton,1983.0,0.0,Agents of S.H.I.E.L.D.,actor,archive_footage
+Douglas Smith,Douglas Smith,1985.0,0.0,Big Little Lies,actor,composer
+Rami Malek,Rami Malek,1981.0,0.0,Bohemian Rhapsody,actor,producer
+Constance Wu,Constance Wu,1982.0,0.0,Crazy Rich Asians,actress,producer
+John David Washington,John David Washington,1984.0,0.0,Tenet,actor,producer
+Boyd Holbrook,Boyd Holbrook,1981.0,0.0,Logan,actor,producer
+Alden Ehrenreich,Alden Ehrenreich,1989.0,0.0,"Hail, Caesar!",actor,director
+Bella Thorne,Bella Thorne,1997.0,0.0,The DUFF,actress,director
+Lady Gaga,Lady Gaga,1986.0,0.0,A Star Is Born,music_artist,actress
+Elsie Fisher,Elsie Fisher,2003.0,0.0,Eighth Grade,actress,music_department
+Olivia Colman,Olivia Colman,1974.0,0.0,The Favourite,actress,producer
+Benicio Del Toro,Benicio Del Toro,1967.0,0.0,Sicario,actor,producer
+Y'lan Noel,,,,,,
+Demián Bichir,Demián Bichir,1963.0,0.0,The Hateful Eight,actor,producer
+Zain Al Rafeea,Zain Al Rafeea,2004.0,0.0,Capernaum,actor,archive_footage
+Nick Robinson,Nick Robinson,1986.0,0.0,Tom's Midnight Garden,actor,
+Nick Robinson,Nick Robinson,1963.0,0.0,Bodyguard,actor,producer
+Nick Robinson,Nick Robinson,1995.0,0.0,Jurassic World,actor,producer
+James Corden,James Corden,1978.0,0.0,The Late Late Show with James Corden,producer,writer
+Justin Theroux,Justin Theroux,1971.0,0.0,Mulholland Drive,actor,producer
+Logan Marshall-Green,Logan Marshall-Green,1976.0,0.0,The Invitation,actor,producer
+Jovan Adepo,Jovan Adepo,1988.0,0.0,Fences,actor,soundtrack
+Claire Foy,Claire Foy,1984.0,0.0,First Man,actress,producer
+Hera Hilmar,Hera Hilmar,1988.0,0.0,See,actress,miscellaneous
+Sunny Suljic,Sunny Suljic,2005.0,0.0,Mid90s,actor,
+Viola Davis,Viola Davis,1965.0,0.0,Fences,actress,producer
+Leslie Mann,Leslie Mann,1972.0,0.0,Knocked Up,actress,archive_footage
+Angourie Rice,Angourie Rice,2001.0,0.0,The Nice Guys,actress,producer
+LaKeith Stanfield,LaKeith Stanfield,1991.0,0.0,Sorry to Bother You,actor,producer
+Lucy Hale,Lucy Hale,1989.0,0.0,Truth or Dare,actress,producer
+Storm Reid,Storm Reid,2003.0,0.0,A Wrinkle in Time,actress,executive
+Amber Heard,Amber Heard,1986.0,0.0,Aquaman,actress,producer
+Ayushmann Khurrana,Ayushmann Khurrana,1984.0,0.0,Andhadhun,actor,music_department
+Aldis Hodge,Aldis Hodge,1986.0,0.0,Black Adam,actor,producer
+Lin Shaye,Lin Shaye,1943.0,0.0,Insidious,actress,producer
+Lucas Hedges,Lucas Hedges,1996.0,0.0,Manchester by the Sea,actor,soundtrack
+Alex Roe,Alex Roe,1990.0,0.0,The 5th Wave,actor,producer
+Odessa Young,Odessa Young,1998.0,0.0,The Professor,actress,soundtrack
+Colin Woodell,Colin Woodell,1991.0,0.0,The Continental,actor,
+Mackenzie Foy,Mackenzie Foy,2000.0,0.0,Interstellar,actress,soundtrack
+Cynthea Mercado,,,,,,
+Kyrie Irving,Kyrie Irving,1992.0,0.0,Uncle Drew: Chapter 4,actor,director
+Shay Mitchell,Shay Mitchell,1987.0,0.0,Pretty Little Liars,actress,producer
+KiKi Layne,KiKi Layne,1991.0,0.0,If Beale Street Could Talk,actress,producer
+Alek Skarlatos,,,,,,
+Steve Coogan,Steve Coogan,1965.0,0.0,Philomena,actor,producer
+Trevor Jackson,Trevor Jackson,1996.0,0.0,SuperFly,actor,director
+J. Michael Finley,,,,,,
+Masako Nozawa,Masako Nozawa,1936.0,0.0,Dragon Ball Z: Battle of Gods,actress,soundtrack
+Myles Truitt,Myles Truitt,2002.0,0.0,Dragged Across Concrete,actor,miscellaneous
+Wendi McLendon-Covey,Wendi McLendon-Covey,1969.0,0.0,Bridesmaids,actress,producer
+Tiffany Haddish,Tiffany Haddish,1979.0,0.0,Girls Trip,actress,producer
+Florence Pugh,Florence Pugh,1996.0,0.0,The Falling,actress,producer
+Taylor Russell,Taylor Russell,1994.0,0.0,Bones and All,actress,director
+Himesh Patel,Himesh Patel,1990.0,0.0,Yesterday,actor,writer
+Josephine Langford,Josephine Langford,1997.0,0.0,The Other Zoey,actress,
+Roman Griffin Davis,Roman Griffin Davis,2007.0,0.0,Jojo Rabbit,actor,
+Zachary Levi,Zachary Levi,1980.0,0.0,Shazam!,actor,producer
+Dean-Charles Chapman,Dean-Charles Chapman,1997.0,0.0,1917,actor,archive_footage
+Rosa Salazar,Rosa Salazar,1985.0,0.0,Alita: Battle Angel,actress,producer
+Lupita Nyong'o,Lupita Nyong'o,1983.0,0.0,12 Years a Slave,actress,producer
+Samara Weaving,Samara Weaving,1992.0,0.0,Ready or Not,actress,producer
+David Harbour,David Harbour,1975.0,0.0,Hellboy,actor,producer
+Linda Hamilton,Linda Hamilton,1956.0,0.0,Terminator 2: Judgment Day,actress,soundtrack
+Stephen Campbell Moore,Stephen Campbell Moore,1979.0,0.0,The Bank Job,actor,archive_footage
+Isabela Merced,Isabela Merced,2001.0,0.0,Transformers: The Last Knight,actress,music_department
+Donald Glover,Donald Glover,1983.0,0.0,Solo: A Star Wars Story,actor,writer
+Kyle Chandler,Kyle Chandler,1965.0,0.0,Super 8,actor,producer
+Elizabeth Banks,Elizabeth Banks,1974.0,0.0,The Hunger Games,actress,producer
+Zack Gottsagen,Zack Gottsagen,1985.0,0.0,The Peanut Butter Falcon,actor,stunts
+Octavia Spencer,Octavia Spencer,1970.0,0.0,Hidden Figures,actress,producer
+Haley Lu Richardson,Haley Lu Richardson,1995.0,0.0,Five Feet Apart,actress,producer
+Kaya Scodelario,Kaya Scodelario,1992.0,0.0,Pirates of the Caribbean: Dead Men Tell No Tales,actress,archive_footage
+Oakes Fegley,Oakes Fegley,2004.0,0.0,Pete's Dragon,actor,
+Patton Oswalt,Patton Oswalt,1969.0,0.0,Young Adult,actor,writer
+Linda Cardellini,Linda Cardellini,1975.0,0.0,Scooby-Doo,actress,producer
+Zoe Margaret Colletti,,,,,,
+Michael Ealy,Michael Ealy,1973.0,0.0,Barbershop,actor,producer
+Kotaro Daigo,Kotaro Daigo,2000.0,0.0,Weathering with You,actor,
+Jake Schur,,,,,,
+Dave Bautista,Dave Bautista,1969.0,0.0,Guardians of the Galaxy,actor,producer
+Billy Barratt,Billy Barratt,2007.0,0.0,Responsible Child,actor,
+Chloe Bennet,Chloe Bennet,1992.0,0.0,Agents of S.H.I.E.L.D.,actress,producer
+Rebel Wilson,Rebel Wilson,1980.0,0.0,Senior Year,actress,writer
+Gina Rodriguez,Gina Rodriguez,1984.0,0.0,Deepwater Horizon,actress,producer
+Gina Rodriguez,Gina Rodriguez,1967.0,0.0,Mama June: Road to Redemption,producer,actress
+Sofia Mali,,,,,,
+Tony Jaa,Tony Jaa,1976.0,0.0,Ong Bak 3,actor,stunts
+Jing Wu,Jing Wu,1974.0,0.0,The Wandering Earth,actor,producer
+Jing Wu,Jing Wu,1950.0,0.0,Cai Yue he ta de qing ren,actress,
+Louis Ashbourne Serkis,,,,,,
+Marcel Ruiz,Marcel Ruiz,2003.0,0.0,One Day at a Time,actor,archive_footage
+Yara Shahidi,Yara Shahidi,2000.0,0.0,Salt,actress,producer
+Melanie Martinez,Melanie Martinez,1995.0,0.0,K-12,music_artist,actress
+Ashley Bratcher,Ashley Bratcher,1986.0,0.0,Untitled Frances Kelsey Biopic,actress,producer
+Terry Serpico,Terry Serpico,1964.0,0.0,Law & Order: Special Victims Unit,actor,stunts
+Ace Young,Ace Young,1980.0,0.0,Sing It!,actor,composer
+Elisabeth Moss,Elisabeth Moss,1982.0,0.0,The Invisible Man,actress,producer
+Ben Schwartz,Ben Schwartz,1999.0,0.0,Abducted Anonymous,director,editor
+Ben Schwartz,Ben Schwartz,1981.0,0.0,Parks and Recreation,actor,writer
+Zhi-zhong Huang,,,,,,
