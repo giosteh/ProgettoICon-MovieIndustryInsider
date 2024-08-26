@@ -10,12 +10,12 @@ def save_to_file(strings, filename):
 
 # funzione che crea la kb
 def create_kb():
-    df = pd.read_csv('../dataset/movies_v3.csv')
+    df_movies = pd.read_csv('../dataset/movies_v2.csv')
     save_to_file([":-style_check(-discontiguous).\n"], 'facts.pl')
 
     # fatti per i film
     facts = []
-    for row in df.itertuples():
+    for row in df_movies.itertuples():
         facts.append(
             f'movie({row.id}).\n'
             f'title({row.id}, "{row.title}").\n'
@@ -33,25 +33,18 @@ def create_kb():
         )
     save_to_file(facts, 'facts.pl')
 
-    # fatti per i registi e gli attori
-    df_directors = pd.read_csv('../dataset/directors.csv')
-    df_actors = pd.read_csv('../dataset/actors.csv')
-
-    facts = []
-    for row in df_directors.iterrows():
-        facts.append(f'director("{row.director}").'
-                     f'birth_Year("{row.director}", {row.birthYear}).'
-                     f'death_Year("{row.director}", {row.deathYear}).'
-                     f'profession_1("{row.director}", "{row.profession_1}").'
-                     f'profession_2("{row.director}", "{row.profession_2}").')
-
-    for row in df_actors.iterrows():
-        facts.append(f'actor("{row.actor}").'
-                     f'birth_Year("{row.actor}", {row.birthYear}).'
-                     f'death_Year("{row.actor}", {row.deathYear}).'
-                     f'profession_1("{row.actor}", "{row.profession_1}").'
-                     f'profession_2("{row.actor}", "{row.profession_2}").')
-
+    # fatti per i professionals
+    df_professionals = pd.read_csv('../dataset/professionals.csv')
+    for row in df_professionals.itertuples():
+        facts.append(
+            f'professional({row.primaryName}).\n'
+            f'birth_year({row.primaryName}, {row.birthYear}).\n'
+            f'death_year({row.primaryName}, {row.deathYear}).\n'
+            f'known_for({row.primaryName}, "{row.knownForTitle}").\n'
+            f'primary_profession({row.primaryName}, "{row.primaryProfession}").\n'
+            f'secondary_profession({row.primaryName}, "{row.secondaryProfession}").\n'
+        )
+    
     save_to_file(facts, 'facts.pl')
 
 

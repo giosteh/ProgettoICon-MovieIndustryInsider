@@ -47,11 +47,6 @@ def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
         X_train[standardize_cols] = np.round(scaler.fit_transform(X_train[standardize_cols]), 2)
         X_test[standardize_cols] = np.round(scaler.transform(X_test[standardize_cols]), 2)
 
-    if log_standardize_cols:
-        scaler = StandardScaler()
-        X_train[log_standardize_cols] = np.round(scaler.fit_transform(np.log(X_train[log_standardize_cols] + 1)), 2)
-        X_test[log_standardize_cols] = np.round(scaler.transform(np.log(X_test[log_standardize_cols] + 1)), 2)
-    
     if minmax_cols:
         scaler = MinMaxScaler()
         X_train[minmax_cols] = np.round(scaler.fit_transform(X_train[minmax_cols]), 2)

@@ -36,11 +36,11 @@ def plot_feature_importances(importance_df):
     plt.show()
 
 # funzione che ottiene le features più importanti con RFECV
-def get_best_features_with_rfecv(model, cols, X_train, y_train, cv=5, task='regression'):
+def get_best_features_with_rfecv(model, cols, X_train, y_train, retain=1, task='regression'):
     metric = 'neg_mean_squared_error' if task == 'regression' else 'accuracy'
 
-    rfecv = RFECV(estimator=model, step=1, cv=cv,
-                  scoring=metric, n_jobs=-1)
+    rfecv = RFECV(estimator=model, step=1, min_features_to_select=retain,
+                  cv=5, scoring=metric, n_jobs=-1)
     rfecv.fit(X_train, y_train)
 
     best_features = cols[rfecv.support_]
