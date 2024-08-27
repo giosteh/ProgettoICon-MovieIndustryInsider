@@ -1,12 +1,14 @@
 % clausola per il conteggio dei film per ogni attore
-actor_num_movies(Actor, Count) :-
+actor_num_movies(Actor, N) :-
     findall(Movie, star(Movie, Actor), Movies),
-    length(Movies, Count).
+    length(Movies, Count),
+    N is Count - 1.
 
 % clausola per il conteggio dei film per ogni regista
-director_num_movies(Director, Count) :-
+director_num_movies(Director, N) :-
     findall(Movie, directed_by(Movie, Director), Movies),
-    length(Movies, Count).
+    length(Movies, Count),
+    N is Count - 1.
 
 % clausola sum_of_squares
 sum_of_squares([], _, _, 0).
@@ -15,16 +17,20 @@ sum_of_squares([Value|Rest], Total, Avg, SumSq) :-
     sum_of_squares(Rest, Total, Avg, SumSqRest).
 
 % clausola per la media di profit per ogni attore
-actor_profit_mean(Actor, AvgProfit) :-
-    findall(Profit, (star(Movie, Actor), movie_profit_index(Movie, Profit)), Profits),
+actor_profit_mean(ExcludedMovie, Actor, AvgProfit) :-
+    findall(Profit, 
+            (star(Movie, Actor), Movie \= ExcludedMovie, movie_profit_index(Movie, Profit)), 
+            Profits),
     length(Profits, N),
     sum_list(Profits, Total),
-    AvgProfit is Total / N.
+    (N > 0 -> AvgProfit is Total / N ; AvgProfit is 0).
 
 % clausola per la deviazione standard di profit per ogni attore
-actor_profit_std(Actor, StdDev) :-
-    actor_profit_mean(Actor, AvgProfit),
-    findall(Profit, (star(Movie, Actor), movie_profit_index(Movie, Profit)), Profits),
+actor_profit_std(ExcludedMovie, Actor, StdDev) :-
+    actor_profit_mean(ExcludedMovie, Actor, AvgProfit),
+    findall(Profit, 
+            (star(Movie, Actor), Movie \= ExcludedMovie, movie_profit_index(Movie, Profit)), 
+            Profits),
     length(Profits, N),
     sum_list(Profits, Total),
     sum_of_squares(Profits, Total, AvgProfit, SumSq),
@@ -32,16 +38,20 @@ actor_profit_std(Actor, StdDev) :-
     StdDev is sqrt(Variance).
 
 % clausola per la media di score per ogni attore
-actor_score_mean(Actor, AvgScore) :-
-    findall(Score, (star(Movie, Actor), score(Movie, Score)), Scores),
+actor_score_mean(ExcludedMovie, Actor, AvgScore) :-
+    findall(Score,
+            (star(Movie, Actor), Movie \= ExcludedMovie, score(Movie, Score)),
+            Scores),
     length(Scores, N),
     sum_list(Scores, Total),
-    AvgScore is Total / N.
+    (N > 0 -> AvgScore is Total / N ; AvgScore is 0).
 
 % clausola per la deviazione standard di score per ogni attore
-actor_score_std(Actor, StdDev) :-
-    actor_score_mean(Actor, AvgScore),
-    findall(Score, (star(Movie, Actor), score(Movie, Score)), Scores),
+actor_score_std(ExcludedMovie, Actor, StdDev) :-
+    actor_score_mean(ExcludedMovie, Actor, AvgScore),
+    findall(Score,
+            (star(Movie, Actor), Movie \= ExcludedMovie, score(Movie, Score)),
+            Scores),
     length(Scores, N),
     sum_list(Scores, Total),
     sum_of_squares(Scores, Total, AvgScore, SumSq),
@@ -49,16 +59,20 @@ actor_score_std(Actor, StdDev) :-
     StdDev is sqrt(Variance).
 
 % clausola per la media di profit per ogni regista
-director_profit_mean(Director, AvgProfit) :-
-    findall(Profit, (directed_by(Movie, Director), movie_profit_index(Movie, Profit)), Profits),
+director_profit_mean(ExcludedMovie, Director, AvgProfit) :-
+    findall(Profit,
+            (directed_by(Movie, Director), Movie \= ExcludedMovie, movie_profit_index(Movie, Profit)),
+            Profits),
     length(Profits, N),
     sum_list(Profits, Total),
-    AvgProfit is Total / N.
+    (N > 0 -> AvgProfit is Total / N ; AvgProfit is 0).
 
 % clausola per la deviazione standard di profit per ogni regista
-director_profit_std(Director, StdDev) :-
-    director_profit_mean(Director, AvgProfit),
-    findall(Profit, (directed_by(Movie, Director), movie_profit_index(Movie, Profit)), Profits),
+director_profit_std(ExcludedMovie, Director, StdDev) :-
+    director_profit_mean(ExcludedMovie, Director, AvgProfit),
+    findall(Profit,
+            (directed_by(Movie, Director), Movie \= ExcludedMovie, movie_profit_index(Movie, Profit)),
+            Profits),
     length(Profits, N),
     sum_list(Profits, Total),
     sum_of_squares(Profits, Total, AvgProfit, SumSq),
@@ -66,16 +80,20 @@ director_profit_std(Director, StdDev) :-
     StdDev is sqrt(Variance).
 
 % clausola per la media di score per ogni regista
-director_score_mean(Director, AvgScore) :-
-    findall(Score, (directed_by(Movie, Director), score(Movie, Score)), Scores),
+director_score_mean(ExcludedMovie, Director, AvgScore) :-
+    findall(Score,
+            (directed_by(Movie, Director), Movie \= ExcludedMovie, score(Movie, Score)),
+            Scores),
     length(Scores, N),
     sum_list(Scores, Total),
-    AvgScore is Total / N.
+    (N > 0 -> AvgScore is Total / N ; AvgScore is 0).
 
 % clausola per la deviazione standard di score per ogni regista
-director_score_std(Director, StdDev) :-
-    director_score_mean(Director, AvgScore),
-    findall(Score, (directed_by(Movie, Director), score(Movie, Score)), Scores),
+director_score_std(ExcludedMovie, Director, StdDev) :-
+    director_score_mean(ExcludedMovie, Director, AvgScore),
+    findall(Score,
+            (directed_by(Movie, Director), Movie \= ExcludedMovie, score(Movie, Score)),
+            Scores),
     length(Scores, N),
     sum_list(Scores, Total),
     sum_of_squares(Scores, Total, AvgScore, SumSq),
