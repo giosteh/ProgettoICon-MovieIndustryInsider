@@ -18,8 +18,8 @@ sns.set_style('whitegrid')
 
 # funzione che prepara i dati per il modello
 def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
-                 round_cols=[], standardize_cols=[], log_standardize_cols=[],
-                 minmax_cols=[], task='regression', resample=True, seed=42):
+                 round_cols=[], standardize_cols=[], minmax_cols=[],
+                 task='regression', resample=True, seed=42):
     # separazione tra features e target
     X = df.drop(columns=[target_col] + drop_cols, axis=1)
     y = df[target_col]
