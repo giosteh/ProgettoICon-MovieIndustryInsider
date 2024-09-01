@@ -1,6 +1,6 @@
 import pandas as pd
-import numpy as np
 from pyswip import Prolog
+
 
 # funzione che salva su un file i fatti
 def save_to_file(strings, filename):
@@ -11,7 +11,7 @@ def save_to_file(strings, filename):
 # funzione che crea la kb
 def create_kb():
     df_movies = pd.read_csv('../dataset/movies_v2.csv')
-    save_to_file([":-style_check(-discontiguous).\n"], 'facts.pl')
+    save_to_file([':-style_check(-discontiguous).\n\n'], 'facts.pl')
 
     # fatti per i film
     facts = []
@@ -42,7 +42,7 @@ def create_kb():
             f'death_year("{row.primaryName}", {row.deathYear}).\n'
             f'known_for("{row.primaryName}", "{row.knownForTitle}").\n'
             f'primary_profession("{row.primaryName}", "{row.primaryProfession}").\n'
-            f'secondary_profession("{row.primaryName}", "{row.secondaryProfession}").\n'
+            f'secondary_profession("{row.primaryName}", "{row.secondaryProfession}").'
         )
     save_to_file(facts, 'facts.pl')
 
@@ -77,11 +77,11 @@ def derive_movies_data(df, prolog_kb, binning=False, task='regression'):
         features['score'] = query_kb(prolog_kb, f'score({movie_id}, X).')
         features['quality'] = query_kb(prolog_kb, f'movie_score_binned({movie_id}, X).')
 
-        features['profit_index'] = query_kb(prolog_kb, f'movie_profit_index({movie_id}, X).')
+        features['profit'] = query_kb(prolog_kb, f'movie_profit_index({movie_id}, X).')
         features['profitability'] = query_kb(prolog_kb, f'movie_profit_index_binned({movie_id}, X).')
 
         if not binning:
-            features['cult_index'] = query_kb(prolog_kb, f'movie_cult_index({movie_id}, X).')
+            features['cultness'] = query_kb(prolog_kb, f'movie_cult_index({movie_id}, X).')
             features['age'] = query_kb(prolog_kb, f'movie_age({movie_id}, X).')
             features['runtime'] = query_kb(prolog_kb, f'runtime({movie_id}, X).')
             features['votes'] = query_kb(prolog_kb, f'votes({movie_id}, X).')

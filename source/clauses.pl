@@ -172,12 +172,12 @@ movie_runtime_binned(Movie, "long") :-
 % clausole per il binning di age
 movie_age_binned(Movie, "new") :-
     movie_age(Movie, Age),
-    Age <= 15.
+    Age =< 15.
 
 movie_age_binned(Movie, "old") :-
     movie_age(Movie, Age),
     Age > 15,
-    Age <= 30.
+    Age =< 30.
 
 movie_age_binned(Movie, "very-old") :-
     movie_age(Movie, Age),
@@ -262,22 +262,22 @@ quartile_limits_cult_index(Q1, Q2, Q3, Q4) :-
 movie_cult_index_binned(Movie, "low") :-
     movie_cult_index(Movie, Value),
     quartile_limits_cult_index(Q1, _, _, _),
-    Value <= Q1.
+    Value =< Q1.
 
 movie_cult_index_binned(Movie, "mid-low") :-
     movie_cult_index(Movie, Value),
     quartile_limits_cult_index(Q1, Q2, _, _),
-    Value > Q1, Value <= Q2.
+    Value > Q1, Value =< Q2.
 
 movie_cult_index_binned(Movie, "mid-high") :-
     movie_cult_index(Movie, Value),
     quartile_limits_cult_index(_, Q2, Q3, _),
-    Value > Q2, Value <= Q3.
+    Value > Q2, Value =< Q3.
 
 movie_cult_index_binned(Movie, "high") :-
     movie_cult_index(Movie, Value),
     quartile_limits_cult_index(_, _, Q3, Q4),
-    Value > Q3, Value <= Q4.
+    Value > Q3, Value =< Q4.
 
 % clausola per i quartili di budget
 quartile_limits_budget(Q1, Q2, Q3, Q4) :-
@@ -299,22 +299,22 @@ quartile_limits_budget(Q1, Q2, Q3, Q4) :-
 movie_budget_binned(Movie, "low") :-
     budget(Movie, Value),
     quartile_limits_budget(Q1, _, _, _),
-    Value <= Q1.
+    Value =< Q1.
 
 movie_budget_binned(Movie, "mid-low") :-
     budget(Movie, Value),
     quartile_limits_budget(Q1, Q2, _, _),
-    Value > Q1, Value <= Q2.
+    Value > Q1, Value =< Q2.
 
 movie_budget_binned(Movie, "mid-high") :-
     budget(Movie, Value),
     quartile_limits_budget(_, Q2, Q3, _),
-    Value > Q2, Value <= Q3.
+    Value > Q2, Value =< Q3.
 
 movie_budget_binned(Movie, "high") :-
     budget(Movie, Value),
     quartile_limits_budget(_, _, Q3, Q4),
-    Value > Q3, Value <= Q4.
+    Value > Q3, Value =< Q4.
 
 % clausola per i quartili di gross
 quartile_limits_gross(Q1, Q2, Q3, Q4) :-
@@ -336,22 +336,22 @@ quartile_limits_gross(Q1, Q2, Q3, Q4) :-
 movie_gross_binned(Movie, "low") :-
     gross(Movie, Value),
     quartile_limits_gross(Q1, _, _, _),
-    Value <= Q1.
+    Value =< Q1.
 
 movie_gross_binned(Movie, "mid-low") :-
     gross(Movie, Value),
     quartile_limits_gross(Q1, Q2, _, _),
-    Value > Q1, Value <= Q2.
+    Value > Q1, Value =< Q2.
 
 movie_gross_binned(Movie, "mid-high") :-
     gross(Movie, Value),
     quartile_limits_gross(_, Q2, Q3, _),
-    Value > Q2, Value <= Q3.
+    Value > Q2, Value =< Q3.
 
 movie_gross_binned(Movie, "high") :-
     gross(Movie, Value),
     quartile_limits_gross(_, _, Q3, Q4),
-    Value > Q3, Value <= Q4.
+    Value > Q3, Value =< Q4.
 
 % clausola per i quartili di votes
 quartile_limits_votes(Q1, Q2, Q3, Q4) :-
@@ -373,28 +373,32 @@ quartile_limits_votes(Q1, Q2, Q3, Q4) :-
 movie_votes_binned(Movie, "low") :-
     votes(Movie, Value),
     quartile_limits_votes(Q1, _, _, _),
-    Value <= Q1.
+    Value =< Q1.
 
 movie_votes_binned(Movie, "mid-low") :-
     votes(Movie, Value),
     quartile_limits_votes(Q1, Q2, _, _),
-    Value > Q1, Value <= Q2.
+    Value > Q1, Value =< Q2.
 
 movie_votes_binned(Movie, "mid-high") :-
     votes(Movie, Value),
     quartile_limits_votes(_, Q2, Q3, _),
-    Value > Q2, Value <= Q3.
+    Value > Q2, Value =< Q3.
 
 movie_votes_binned(Movie, "high") :-
     votes(Movie, Value),
     quartile_limits_votes(_, _, Q3, Q4),
-    Value > Q3, Value <= Q4.
+    Value > Q3, Value =< Q4.
 
 
 % clausola per il binning della media di profit_index per registi
+director_profit_mean_binned(Movie, Director, "zero") :-
+    director_profit_mean(Movie, Director, Value),
+    Value =:= 0.
+
 director_profit_mean_binned(Movie, Director, "not-profitable") :-
     director_profit_mean(Movie, Director, Value),
-    Value < 1.
+    Value < 1, Value \= 0.
 
 director_profit_mean_binned(Movie, Director, "profitable") :-
     director_profit_mean(Movie, Director, Value),
@@ -405,9 +409,13 @@ director_profit_mean_binned(Movie, Director, "very-profitable") :-
     Value >= 3.
 
 % clausola per il binning della media di profit_index per attori
+actor_profit_mean_binned(Movie, Actor, "zero") :-
+    actor_profit_mean(Movie, Actor, Value),
+    Value =:= 0.
+
 actor_profit_mean_binned(Movie, Actor, "not-profitable") :-
     actor_profit_mean(Movie, Actor, Value),
-    Value < 1.
+    Value < 1, Value \= 0.
 
 actor_profit_mean_binned(Movie, Actor, "profitable") :-
     actor_profit_mean(Movie, Actor, Value),
@@ -444,6 +452,10 @@ actor_profit_std_binned(Movie, Actor, "high") :-
     Value >= 3.
 
 % causola per il binning della media di score per registi
+director_score_mean_binned(Movie, Director, "zero") :-
+    director_score_mean(Movie, Director, Value),
+    Value =:= 0.
+
 director_score_mean_binned(Movie, Director, "low") :-
     director_score_mean(Movie, Director, Value),
     movie_score_mean(Movie, AvgScore),
@@ -471,6 +483,10 @@ director_score_mean_binned(Movie, Director, "high") :-
     Value >= AvgScore + StdDev.
 
 % clausola per il binning della media di score per attori
+actor_score_mean_binned(Movie, Actor, "zero") :-
+    actor_score_mean(Movie, Actor, Value),
+    Value =:= 0.
+
 actor_score_mean_binned(Movie, Actor, "low") :-
     actor_score_mean(Movie, Actor, Value),
     movie_score_mean(Movie, AvgScore),
@@ -552,12 +568,12 @@ actor_num_movies_binned(Actor, "high") :-
 % clausola per il binning di professional_age
 professional_age_binned(Movie, Professional, "young") :-
     professional_age(Movie, Professional, Value),
-    Value < 30.
+    Value =< 30.
 
 professional_age_binned(Movie, Professional, "adult") :-
     professional_age(Movie, Professional, Value),
-    Value >= 30, Value < 60.
+    Value > 30, Value =< 60.
 
 professional_age_binned(Movie, Professional, "old") :-
     professional_age(Movie, Professional, Value),
-    Value >= 60.
+    Value > 60.

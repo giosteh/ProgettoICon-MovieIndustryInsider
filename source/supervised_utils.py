@@ -8,7 +8,7 @@ from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier, GradientBoostingRegressor, GradientBoostingClassifier
 from sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_score, classification_report
 from sklearn.preprocessing import OneHotEncoder, LabelEncoder, StandardScaler, MinMaxScaler
-from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate
+from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate, KFold
 
 from imblearn.over_sampling import SMOTE
 import joblib
@@ -16,17 +16,20 @@ import joblib
 sns.set_style('whitegrid')
 
 
-# funzione che prepara i dati per il modello
+# funzione che prepara i dati per il training
 def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
-                 round_cols=[], standardize_cols=[], minmax_cols=[],
-                 task='regression', resample=True, seed=42):
+                 round_cols=[], clipping_cols=[], standardize_cols=[], minmax_cols=[],
+                 task='regression', resample=False, seed=42):
     # separazione tra features e target
     X = df.drop(columns=[target_col] + drop_cols, axis=1)
     y = df[target_col]
 
+
     # encoding
     if dummies_cols:
         X = pd.get_dummies(X, columns=dummies_cols, drop_first=True)
+        bool_cols = X.select_dtypes(include='bool').columns
+        X[bool_cols] = X[bool_cols].astype(int)
 
     if labels_cols:
         encoder = LabelEncoder()
@@ -36,32 +39,42 @@ def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
     # train test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_state=seed)
 
-    # resampling
+
+    # clipping degli outliers
+    if clipping_cols:
+        for col in clipping_cols:
+            lower_bound = X_train[col].quantile(.02)
+            upper_bound = X_train[col].quantile(.98)
+            X_train[col] = X_train[col].clip(lower_bound, upper_bound)
+            X_test[col] = X_test[col].clip(lower_bound, upper_bound)
+
+
+    # resampling con SMOTE
     if task == 'classification' and resample:
         smote = SMOTE(sampling_strategy='not majority', random_state=seed)
         X_train, y_train = smote.fit_resample(X_train, y_train)
+    
 
     # normalizzazione
     if standardize_cols:
         scaler = StandardScaler()
-        X_train[standardize_cols] = np.round(scaler.fit_transform(X_train[standardize_cols]), 2)
-        X_test[standardize_cols] = np.round(scaler.transform(X_test[standardize_cols]), 2)
+        X_train[standardize_cols] = np.round(scaler.fit_transform(X_train[standardize_cols]), 3)
+        X_test[standardize_cols] = np.round(scaler.transform(X_test[standardize_cols]), 3)
 
     if minmax_cols:
         scaler = MinMaxScaler()
-        X_train[minmax_cols] = np.round(scaler.fit_transform(X_train[minmax_cols]), 2)
-        X_test[minmax_cols] = np.round(scaler.transform(X_test[minmax_cols]), 2)
+        X_train[minmax_cols] = np.round(scaler.fit_transform(X_train[minmax_cols]), 3)
+        X_test[minmax_cols] = np.round(scaler.transform(X_test[minmax_cols]), 3)
     
     if round_cols:
-        X_train[round_cols] = np.round(X_train[round_cols], 2)
-        X_test[round_cols] = np.round(X_test[round_cols], 2)
+        X_train[round_cols] = np.round(X_train[round_cols], 3)
+        X_test[round_cols] = np.round(X_test[round_cols], 3)
 
-    X_train, X_test = X_train.to_numpy(), X_test.to_numpy()
 
-    # gestione della target
+    # gestione della variabile target y
     if task == 'regression':
-        y_train = np.round(y_train.to_numpy(), 2)
-        y_test = np.round(y_test.to_numpy(), 2)
+        y_train = np.round(y_train, 3)
+        y_test = np.round(y_test, 3)
     else:
         encoder = OneHotEncoder()
         y_train = encoder.fit_transform(y_train.values.reshape(-1, 1)).toarray()
@@ -84,7 +97,7 @@ def plot_cv_results(param_range, scores, xlabel, ylabel, title):
 
 
 # funzione che trova il miglior modello
-def find_best_model(model, X, y, param, param_range, cv=5, metric='neg_mean_squared_error'):
+def find_best_model(model, X, y, param, param_range, cv, metric='neg_mean_squared_error'):
     best_model = None
     best_param = None
 
@@ -116,7 +129,7 @@ def find_best_model(model, X, y, param, param_range, cv=5, metric='neg_mean_squa
 
 
 # funzione che implementa una pipeline per il tuning
-def tune_model(model, model_name, X, y, cv=5,
+def tune_model(model, model_name, X, y, cv,
                grid_params={}, grid_metrics=[],
                verbose=True, plot=True, ylabel=''):
     best_model = model
@@ -164,25 +177,31 @@ def get_cv_params(grid_best_params):
     params_dict = {}
 
     if 'max_depth' in grid_best_params.keys():
-        if grid_best_params['max_depth'] < 12:
-            params_dict['max_depth'] = [v for v in range(2, 23)]
+        param_range = []
+        if grid_best_params['max_depth'] <= 10:
+            param_range = [v for v in range(1, 21)]
         else:
-            params_dict['max_depth'] = [v for v in range(grid_best_params['max_depth'] - 10, grid_best_params['max_depth'] + 11)]
+            param_range = [v for v in range(grid_best_params['max_depth'] - 10, grid_best_params['max_depth'] + 11)]
+
+        params_dict['max_depth'] = param_range
     
     if 'n_estimators' in grid_best_params.keys():
-        if grid_best_params['n_estimators'] < 120:
-            params_dict['n_estimators'] = [v for v in range(20, 221, 10)]
+        param_range = []
+        if grid_best_params['n_estimators'] < 210:
+            param_range = [v for v in range(10, 201, 10)]
         else:
-            params_dict['n_estimators'] = [v for v in range(grid_best_params['n_estimators'] - 100, grid_best_params['n_estimators'] + 101, 10)]
+            param_range = [v for v in range(grid_best_params['n_estimators'] - 200, grid_best_params['n_estimators'] + 201, 20)]
+
+        params_dict['n_estimators'] = param_range
 
     return params_dict
 
 
 # funzione che esegue tuning e test dei modelli per il task di regressione
-def tune_and_test_models_for_regression(df, cols, cv=5, session_name=''):
+def tune_and_test_models_for_regression(df, cols, folds=5, seed=42, session_name=''):
 
-    X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'],
-                                                    cols['round'], cols['standardize'], cols['log_standardize'], cols['minmax'], seed=42)
+    X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'], cols['round'],
+                                                    cols['clipping'], cols['standardize'], cols['minmax'], task='regression')
     
     models = {
         'Ridge_Regressor': Ridge(),
@@ -221,18 +240,25 @@ def tune_and_test_models_for_regression(df, cols, cv=5, session_name=''):
         }
     }
 
+    # preparo lo splitting per il tuning
+    cv = KFold(n_splits=folds, shuffle=True, random_state=seed)
+
+
+    # ciclo di tuning e test
     for model_name, model in models.items():
         print('-' * 80)
         print(f'\nTraining and tuning [{model_name}]...\n')
 
         best_model = tune_model(model, model_name, X_train, y_train, cv=cv,
-                                grid_params=grid_params[model_name], grid_metrics=['neg_mean_squared_error'], ylabel='MSE')
+                                grid_params=grid_params[model_name],
+                                grid_metrics=['neg_mean_squared_error'],
+                                ylabel='MSE')
         
         # il miglior modello viene riaddestrato, testato e salvato
         best_model.fit(X_train, y_train)
         y_pred = best_model.predict(X_test)
 
-        joblib.dump(best_model, f'models/{model_name + '-' + session_name}.joblib')
+        joblib.dump(best_model, f'models/{model_name}-{session_name}.joblib')
 
         print(f'\nTest score for [{model_name}]:')
         print(f'MSE: {mean_squared_error(y_test, y_pred):.4f}')
@@ -241,10 +267,10 @@ def tune_and_test_models_for_regression(df, cols, cv=5, session_name=''):
 
 
 # funzione che esegue tuning e test dei modelli per il task di classificazione
-def tune_and_test_models_for_classification(df, cols, cv=5, session_name=''):
+def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, session_name=''):
 
-    X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'],
-                                                    cols['round'], cols['standardize'], cols['log_standardize'], cols['minmax'], task='classification')
+    X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'], cols['round'],
+                                                    cols['clipping'], cols['standardize'], cols['minmax'], task='classification')
     
     models = {
         'Logistic_Classifier': LogisticRegression(solver='lbfgs', max_iter=1000, multi_class='multinomial'),
@@ -284,18 +310,25 @@ def tune_and_test_models_for_classification(df, cols, cv=5, session_name=''):
         }
     }
 
+    # preparo lo splitting per il tuning
+    cv = KFold(n_splits=folds, shuffle=True, random_state=seed)
+
+
+    # ciclo di tuning e test
     for model_name, model in models.items():
         print('-' * 80)
         print(f'\nTraining and tuning [{model_name}]...\n')
 
         best_model = tune_model(model, model_name, X_train, y_train, cv=cv,
-                                grid_params=grid_params[model_name], grid_metrics=['accuracy'], ylabel='Accuracy')
+                                grid_params=grid_params[model_name],
+                                grid_metrics=['accuracy'],
+                                ylabel='Accuracy')
         
         # il miglior modello viene riaddestrato, testato e salvato
         best_model.fit(X_train, y_train)
         y_pred = best_model.predict(X_test)
 
-        joblib.dump(best_model, f'models/{model_name + '-' + session_name}.joblib')
+        joblib.dump(best_model, f'models/{model_name}-{session_name}.joblib')
 
         print(f'\nTest score for [{model_name}]:')
         print(f'Accuracy: {accuracy_score(y_test, y_pred):.4f}\n')
