@@ -179,9 +179,9 @@ def get_cv_params(grid_best_params):
     if 'max_depth' in grid_best_params.keys():
         param_range = []
         if grid_best_params['max_depth'] <= 10:
-            param_range = [v for v in range(1, 21)]
+            param_range = [v for v in range(2, 21, 2)]
         else:
-            param_range = [v for v in range(grid_best_params['max_depth'] - 10, grid_best_params['max_depth'] + 11)]
+            param_range = [v for v in range(grid_best_params['max_depth'] - 10, grid_best_params['max_depth'] + 11, 2)]
 
         params_dict['max_depth'] = param_range
     
