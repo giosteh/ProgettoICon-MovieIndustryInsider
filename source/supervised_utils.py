@@ -186,12 +186,7 @@ def get_cv_params(grid_best_params):
         params_dict['max_depth'] = param_range
     
     if 'n_estimators' in grid_best_params.keys():
-        param_range = []
-        if grid_best_params['n_estimators'] < 210:
-            param_range = [v for v in range(10, 201, 10)]
-        else:
-            param_range = [v for v in range(grid_best_params['n_estimators'] - 200, grid_best_params['n_estimators'] + 201, 20)]
-
+        param_range = [v for v in range(40, 321, 40)]
         params_dict['n_estimators'] = param_range
 
     return params_dict
@@ -223,17 +218,17 @@ def tune_and_test_models_for_regression(df, cols, folds=5, seed=42, session_name
         },
 
         'Random_Forest_Regressor': {
-            'criterion': ['squared_error', 'friedman_mse'],
-            'n_estimators': [100, 250, 500],
+            'criterion': ['squared_error'],
+            'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10, 15],
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [2, 4, 8, 10]
         },
 
         'Gradient_Boosting_Regressor': {
-            'loss': ['squared_error', 'huber'],
-            'learning_rate': [.01, .05, .1],
-            'n_estimators': [100, 250, 500],
+            'loss': ['squared_error'],
+            'learning_rate': [.01, .05],
+            'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10],
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [2, 4, 8, 10]
@@ -293,17 +288,17 @@ def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, session_
         },
 
         'Random_Forest_Classifier': {
-            'criterion': ['gini', 'entropy'],
-            'n_estimators': [100, 250, 500],
+            'criterion': ['gini'],
+            'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10, 15],
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [2, 4, 8, 10]
         },
 
         'Gradient_Boosting_Classifier': {
-            'loss': ['log_loss', 'exponential'],
-            'learning_rate': [.01, .05, .1],
-            'n_estimators': [100, 250, 500],
+            'loss': ['log_loss'],
+            'learning_rate': [.01, .05],
+            'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10],
             'min_samples_split': [2, 5, 10],
             'min_samples_leaf': [2, 4, 8, 10]
