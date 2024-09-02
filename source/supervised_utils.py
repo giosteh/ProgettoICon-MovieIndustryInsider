@@ -19,7 +19,7 @@ sns.set_style('whitegrid')
 # funzione che prepara i dati per il training
 def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
                  round_cols=[], clipping_cols=[], standardize_cols=[], minmax_cols=[],
-                 task='regression', resample=False, seed=42):
+                 task='regression', resample=False, seed=36):
     # separazione tra features e target
     X = df.drop(columns=[target_col] + drop_cols, axis=1)
     y = df[target_col]
@@ -262,10 +262,11 @@ def tune_and_test_models_for_regression(df, cols, folds=5, seed=42, session_name
 
 
 # funzione che esegue tuning e test dei modelli per il task di classificazione
-def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, session_name=''):
+def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, resample=False, session_name=''):
 
     X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'], cols['round'],
-                                                    cols['clipping'], cols['standardize'], cols['minmax'], task='classification')
+                                                    cols['clipping'], cols['standardize'], cols['minmax'], task='classification',
+                                                    resample=resample)
     
     models = {
         'Logistic_Classifier': LogisticRegression(solver='lbfgs', max_iter=1000, multi_class='multinomial'),

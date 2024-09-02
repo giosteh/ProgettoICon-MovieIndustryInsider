@@ -103,7 +103,7 @@ def derive_movies_data(df, prolog_kb, binning=False, task='regression'):
             features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean({movie_id}, {actor}, X).')
             features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std({movie_id}, {actor}, X).')
         else:
-            features['cult_index'] = query_kb(prolog_kb, f'movie_cult_index_binned({movie_id}, X).')
+            features['cultness'] = query_kb(prolog_kb, f'movie_cult_index_binned({movie_id}, X).')
             features['age'] = query_kb(prolog_kb, f'movie_age_binned({movie_id}, X).')
             features['runtime'] = query_kb(prolog_kb, f'movie_runtime_binned({movie_id}, X).')
             features['votes'] = query_kb(prolog_kb, f'movie_votes_binned({movie_id}, X).')
