@@ -27,7 +27,7 @@ def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
 
     # encoding
     if dummies_cols:
-        X = pd.get_dummies(X, columns=dummies_cols, drop_first=True)
+        X = pd.get_dummies(X, columns=dummies_cols)
         bool_cols = X.select_dtypes(include='bool').columns
         X[bool_cols] = X[bool_cols].astype(int)
 
@@ -76,9 +76,9 @@ def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
         y_train = np.round(y_train, 3)
         y_test = np.round(y_test, 3)
     else:
-        encoder = OneHotEncoder()
-        y_train = encoder.fit_transform(y_train.values.reshape(-1, 1)).toarray()
-        y_test = encoder.transform(y_test.values.reshape(-1, 1)).toarray()
+        encoder = LabelEncoder()
+        y_train = encoder.fit_transform(y_train)
+        y_test = encoder.transform(y_test)
     
     return X_train, X_test, y_train, y_test
 
@@ -176,6 +176,10 @@ def tune_model(model, model_name, X, y, cv,
 def get_cv_params(grid_best_params):
     params_dict = {}
 
+    if 'n_estimators' in grid_best_params.keys():
+        param_range = [v for v in range(40, 321, 40)]
+        params_dict['n_estimators'] = param_range
+
     if 'max_depth' in grid_best_params.keys():
         param_range = []
         if grid_best_params['max_depth'] <= 10:
@@ -185,10 +189,6 @@ def get_cv_params(grid_best_params):
 
         params_dict['max_depth'] = param_range
     
-    if 'n_estimators' in grid_best_params.keys():
-        param_range = [v for v in range(40, 321, 40)]
-        params_dict['n_estimators'] = param_range
-
     return params_dict
 
 
@@ -226,7 +226,7 @@ def tune_and_test_models_for_regression(df, cols, folds=5, seed=42, session_name
         },
 
         'Gradient_Boosting_Regressor': {
-            'loss': ['squared_error'],
+            'loss': ['friedman_mse'],
             'learning_rate': [.01, .05],
             'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10],
@@ -278,7 +278,7 @@ def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, resample
     grid_params = {
         'Logistic_Classifier': {
             'C': [.05, .1, .5, 1, 2, 5],
-            'penalty': ['l1', 'l2', 'none']
+            'penalty': ['l1', 'l2', None]
         },
 
         'Decision_Tree_Classifier': {
