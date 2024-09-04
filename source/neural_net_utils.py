@@ -233,7 +233,7 @@ def print_report(labels, preds):
     report_df = report_df.drop(columns=['support'])
 
     plt.figure(figsize=(8, 5))
-    sns.heatmap(report_df.iloc[:-1, :], annot=True, cmap='Blues', fmt='.2f')
+    sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap='Blues', fmt='.2f')
     plt.title('Classification Report')
     plt.show()
     print('\n')

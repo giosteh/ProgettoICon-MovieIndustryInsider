@@ -269,7 +269,7 @@ def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, resample
                                                     resample=resample)
     
     models = {
-        'Logistic_Classifier': LogisticRegression(solver='lbfgs', max_iter=1000, multi_class='multinomial'),
+        'Logistic_Classifier': LogisticRegression(solver='saga', max_iter=2000),
         'Decision_Tree_Classifier': DecisionTreeClassifier(),
         'Random_Forest_Classifier': RandomForestClassifier(),
         'Gradient_Boosting_Classifier': GradientBoostingClassifier()
@@ -277,8 +277,7 @@ def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, resample
 
     grid_params = {
         'Logistic_Classifier': {
-            'C': [.05, .1, .5, 1, 2, 5],
-            'penalty': ['l1', 'l2', None]
+            'penalty': ['l1', 'l2']
         },
 
         'Decision_Tree_Classifier': {
@@ -335,7 +334,7 @@ def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, resample
         report_df = report_df.drop(columns=['support'])
 
         plt.figure(figsize=(8, 5))
-        sns.heatmap(report_df.iloc[:-1, :], annot=True, cmap='Blues', fmt='.2f')
+        sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap='Blues', fmt='.2f')
         plt.title('Classification Report')
         plt.show()
         print('\n')
