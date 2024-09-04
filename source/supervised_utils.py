@@ -226,7 +226,7 @@ def tune_and_test_models_for_regression(df, cols, folds=5, seed=42, session_name
         },
 
         'Gradient_Boosting_Regressor': {
-            'loss': ['friedman_mse'],
+            'loss': ['squared_error'],
             'learning_rate': [.01, .05],
             'n_estimators': [100, 200, 300],
             'max_depth': [5, 7, 10],
@@ -332,9 +332,10 @@ def tune_and_test_models_for_classification(df, cols, folds=5, seed=42, resample
         # visualizza il report
         report = classification_report(y_test, y_pred, output_dict=True, target_names=['Classe 0', 'Classe 1', 'Classe 2'])
         report_df = pd.DataFrame(report).transpose()
+        report_df = report_df.drop(columns=['support'])
 
         plt.figure(figsize=(8, 5))
-        sns.heatmap(report_df.iloc[:-1, :-1], annot=True, cmap='Blues', fmt='.2f')
+        sns.heatmap(report_df.iloc[:-1, :], annot=True, cmap='Blues', fmt='.2f')
         plt.title('Classification Report')
         plt.show()
-        print('\n\n')
+        print('\n')
