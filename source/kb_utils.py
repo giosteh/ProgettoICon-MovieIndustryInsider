@@ -11,7 +11,7 @@ def save_to_file(strings, filename):
 # funzione che crea la kb
 def create_kb():
     df_movies = pd.read_csv('../dataset/movies_v2.csv')
-    save_to_file([':-style_check(-discontiguous).\n\n'], 'facts.pl')
+    save_to_file([':-style_check(-discontiguous).\n\n'], 'kb/facts.pl')
 
     # fatti per i film
     facts = []
@@ -44,7 +44,7 @@ def create_kb():
             f'primary_profession("{row.primaryName}", "{row.primaryProfession}").\n'
             f'secondary_profession("{row.primaryName}", "{row.secondaryProfession}").'
         )
-    save_to_file(facts, 'facts.pl')
+    save_to_file(facts, 'kb/facts.pl')
 
 
 # funzione che esegue una query safe su una kb
@@ -89,19 +89,19 @@ def derive_movies_data(df, prolog_kb, binning=False, task='regression'):
             features['gross'] = query_kb(prolog_kb, f'gross({movie_id}, X).')
 
             # features per director
-            features['director_age'] = query_kb(prolog_kb, f'professional_age({movie_id}, {director}, X).')
-            features['director_num_movies'] = query_kb(prolog_kb, f'director_num_movies({director}, X).')
-            features['director_profit_mean'] = query_kb(prolog_kb, f'director_profit_mean({movie_id}, {director}, X).')
-            features['director_profit_std'] = query_kb(prolog_kb, f'director_profit_std({movie_id}, {director}, X).')
-            features['director_score_mean'] = query_kb(prolog_kb, f'director_score_mean({movie_id}, {director}, X).')
-            features['director_score_std'] = query_kb(prolog_kb, f'director_score_std({movie_id}, {director}, X).')
+            features['director_age'] = query_kb(prolog_kb, f'professional_age({movie_id}, "{director}", X).')
+            features['director_num_movies'] = query_kb(prolog_kb, f'director_num_movies("{director}", X).')
+            features['director_profit_mean'] = query_kb(prolog_kb, f'director_profit_mean({movie_id}, "{director}", X).')
+            features['director_profit_std'] = query_kb(prolog_kb, f'director_profit_std({movie_id}, "{director}", X).')
+            features['director_score_mean'] = query_kb(prolog_kb, f'director_score_mean({movie_id}, "{director}", X).')
+            features['director_score_std'] = query_kb(prolog_kb, f'director_score_std({movie_id}, "{director}", X).')
             # features per actor
-            features['actor_age'] = query_kb(prolog_kb, f'professional_age({movie_id}, {actor}, X).')
-            features['actor_num_movies'] = query_kb(prolog_kb, f'actor_num_movies({actor}, X).')
-            features['actor_profit_mean'] = query_kb(prolog_kb, f'actor_profit_mean({movie_id}, {actor}, X).')
-            features['actor_profit_std'] = query_kb(prolog_kb, f'actor_profit_std({movie_id}, {actor}, X).')
-            features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean({movie_id}, {actor}, X).')
-            features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std({movie_id}, {actor}, X).')
+            features['actor_age'] = query_kb(prolog_kb, f'professional_age({movie_id}, "{actor}", X).')
+            features['actor_num_movies'] = query_kb(prolog_kb, f'actor_num_movies("{actor}", X).')
+            features['actor_profit_mean'] = query_kb(prolog_kb, f'actor_profit_mean({movie_id}, "{actor}", X).')
+            features['actor_profit_std'] = query_kb(prolog_kb, f'actor_profit_std({movie_id}, "{actor}", X).')
+            features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean({movie_id}, "{actor}", X).')
+            features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std({movie_id}, "{actor}", X).')
         else:
             features['cultness'] = query_kb(prolog_kb, f'movie_cult_index_binned({movie_id}, X).')
             features['age'] = query_kb(prolog_kb, f'movie_age_binned({movie_id}, X).')
@@ -111,19 +111,19 @@ def derive_movies_data(df, prolog_kb, binning=False, task='regression'):
             features['gross'] = query_kb(prolog_kb, f'movie_gross_binned({movie_id}, X).')
             
             # features per director
-            features['director_age'] = query_kb(prolog_kb, f'professional_age_binned({movie_id}, {director}, X).')
-            features['director_num_movies'] = query_kb(prolog_kb, f'director_num_movies_binned({director}, X).')
-            features['director_profit_mean'] = query_kb(prolog_kb, f'director_profit_mean_binned({movie_id}, {director}, X).')
-            features['director_profit_std'] = query_kb(prolog_kb, f'director_profit_std_binned({movie_id}, {director}, X).')
-            features['director_score_mean'] = query_kb(prolog_kb, f'director_score_mean_binned({movie_id}, {director}, X).')
-            features['director_score_std'] = query_kb(prolog_kb, f'director_score_std_binned({movie_id}, {director}, X).')
+            features['director_age'] = query_kb(prolog_kb, f'professional_age_binned({movie_id}, "{director}", X).')
+            features['director_num_movies'] = query_kb(prolog_kb, f'director_num_movies_binned("{director}", X).')
+            features['director_profit_mean'] = query_kb(prolog_kb, f'director_profit_mean_binned({movie_id}, "{director}", X).')
+            features['director_profit_std'] = query_kb(prolog_kb, f'director_profit_std_binned({movie_id}, "{director}", X).')
+            features['director_score_mean'] = query_kb(prolog_kb, f'director_score_mean_binned({movie_id}, "{director}", X).')
+            features['director_score_std'] = query_kb(prolog_kb, f'director_score_std_binned({movie_id}, "{director}", X).')
             # features per actor
-            features['actor_age'] = query_kb(prolog_kb, f'professional_age_binned({movie_id}, {actor}, X).')
-            features['actor_num_movies'] = query_kb(prolog_kb, f'actor_num_movies_binned({actor}, X).')
-            features['actor_profit_mean'] = query_kb(prolog_kb, f'actor_profit_mean_binned({movie_id}, {actor}, X).')
-            features['actor_profit_std'] = query_kb(prolog_kb, f'actor_profit_std_binned({movie_id}, {actor}, X).')
-            features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean_binned({movie_id}, {actor}, X).')
-            features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std_binned({movie_id}, {actor}, X).')
+            features['actor_age'] = query_kb(prolog_kb, f'professional_age_binned({movie_id}, "{actor}", X).')
+            features['actor_num_movies'] = query_kb(prolog_kb, f'actor_num_movies_binned("{actor}", X).')
+            features['actor_profit_mean'] = query_kb(prolog_kb, f'actor_profit_mean_binned({movie_id}, "{actor}", X).')
+            features['actor_profit_std'] = query_kb(prolog_kb, f'actor_profit_std_binned({movie_id}, "{actor}", X).')
+            features['actor_score_mean'] = query_kb(prolog_kb, f'actor_score_mean_binned({movie_id}, "{actor}", X).')
+            features['actor_score_std'] = query_kb(prolog_kb, f'actor_score_std_binned({movie_id}, "{actor}", X).')
         
         new_data.append(features)
     

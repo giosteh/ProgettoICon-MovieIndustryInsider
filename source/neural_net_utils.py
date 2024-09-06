@@ -19,9 +19,11 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 def define_net_architecture(input_dim):
     # definisco l'architettura della rete
     layers = []
-    if input_dim <= 60:
+    if input_dim <= 30:
+        layers = [input_dim, 32, 16, 8]
+    elif input_dim <= 60:
         layers = [input_dim, 64, 32, 16, 8]
-    else:
+    elif input_dim <= 120:
         layers = [input_dim, 128, 64, 32, 16, 8]
     
     # costruisco la rete
