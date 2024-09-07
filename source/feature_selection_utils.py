@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 from sklearn.metrics import mean_squared_error, accuracy_score
-from sklearn.feature_selection import RFECV
+from sklearn.model_selection import cross_val_score
 
 from supervised_utils import *
 
@@ -30,32 +30,107 @@ def get_feature_importances(model, cols_list):
 
     return importance_df
 
-# funzione che ottiene le features più importanti con RFECV
-def get_best_features_with_rfecv(model, X, y, cv, retain=2, task='regression'):
-    # definisco la metrica
-    metric = 'neg_mean_squared_error' if task == 'regression' else 'accuracy'
+def manual_recursive_feature_elimination(model, X, y, retain=2, task='regression', verbose=False):
+    # Definisco la metrica
+    if task == 'regression':
+        score_func = mean_squared_error
+    elif task == 'classification':
+        score_func = accuracy_score
+    else:
+        raise ValueError("Task must be 'regression' or 'classification'")
 
-    rfecv = RFECV(estimator=model, step=1, min_features_to_select=retain,
-                  cv=cv, scoring=metric, n_jobs=-1)
-    rfecv.fit(X, y)
+    features = list(X.columns)  # Lista delle feature iniziali
+    retained = len(features)  # Numero di feature da mantenere
 
-    # ottengo le features selezionate
-    selected_features = list(X.columns[rfecv.support_])
-    ranking = rfecv.ranking_[rfecv.support_]
+    # Suddivido in training set e validation set
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=.2, random_state=36)
 
-    best_features_df = pd.DataFrame({'feature': selected_features, 'ranking': ranking})
-    best_features_df = best_features_df.sort_values(by='ranking', ascending=True)
+    while retained > retain:
+        feature_importances = []
 
-    # plotto l'importanza delle features
-    plt.figure(figsize=(8, 5))
-    sns.barplot(x='ranking', y='feature', data=best_features_df)
-    plt.title('Best Features got with RFECV')
-    plt.xlabel('Ranking')
-    plt.ylabel('Features')
+        # Addestro il modello con tutte le feature attuali
+        model.fit(X_train[features], y_train)
+        original_score = score_func(y_val, model.predict(X_val[features]))
 
-    plt.show()
+        # Itero su ogni feature per calcolarne l'importanza
+        for feature in features[:]:  # Uso una copia della lista features
+            feature_subset = [f for f in features if f != feature]
 
+            # Valido il modello con il subset delle features
+            X_train_subset = X_train[feature_subset]
+            X_val_subset = X_val[feature_subset]
+            model.fit(X_train_subset, y_train)
+            score = score_func(y_val, model.predict(X_val_subset))
+
+            # Calcolo l'importanza della feature
+            importance = abs(original_score - score)
+            feature_importances.append((feature, importance))
+
+        # Trovo la feature con l'impatto minore e la rimuovo
+        worst_feature, worst_importance = min(feature_importances, key=lambda x: x[1])
+
+        if verbose:
+            print(f"Removing {worst_feature} with importance {worst_importance}")
+
+        # Rimuovo la feature con l'importanza minore
+        features.remove(worst_feature)
+
+        # Aggiorno il numero di feature rimanenti
+        retained = len(features)
+
+    best_features_df = pd.DataFrame({'feature': features})
     return best_features_df
+
+"""
+# funzione che ottiene le features più importanti con tramite recursive feature elimination
+def manual_recursive_feature_elimination(model, X, y, retain=2, task='regression', verbose=False):
+    # definisco la metrica
+    if task == 'regression':
+        def score_func(y_true, y_pred):
+            return mean_squared_error(y_true, y_pred)
+    elif task == 'classification':
+        def score_func(y_true, y_pred):
+            return accuracy_score(y_true, y_pred)
+
+
+    features = list(X.columns)
+    feature_indices = list(range(X.shape[1]))
+    retained = X.shape[1]
+
+    # suddivido in training set e validation set
+    X_train, X_val, y_train, y_val = train_test_split(X, y, test_size=.2, random_state=36)
+
+    while retained > retain:
+        feature_importances = []
+        model.fit(X_train, y_train)
+        original_score = score_func(y_val, model.predict(X_val))
+
+        for j in feature_indices:
+            feature_subset = [f for f in features if f != features[j]]
+
+            # valido il modello con il subset delle features
+            X_train_subset = X_train[feature_subset]
+            X_val_subset = X_val[feature_subset]
+            model.fit(X_train_subset, y_train)
+            score = score_func(y_val, model.predict(X_val_subset))
+
+            importance = abs(abs(original_score) - abs(score))
+            feature_importances.append((features[j], importance))
+
+        # trovo la feature con l'impatto minore e la rimuovo
+        worst_feature, worst_importance = min(feature_importances, key=lambda x: x[1])
+
+        if verbose:
+            print(f'Removing {worst_feature} with importance {worst_importance}')
+
+        feature_indices.remove(features.index(worst_feature))
+        features.remove(worst_feature)
+
+        retained = len(features)
+    
+    best_features_df = pd.DataFrame({'feature': features})
+    return best_features_df
+"""
 
 
 # funzione che, dato un modello, ottiene le features più importanti con RFECV e lo riaddestra
@@ -74,17 +149,19 @@ def study_model_with_best_features(model_name, df, cols, folds=5, retain=None,
     # ottengo l'importanza delle features
     if retain == 'all':
         get_feature_importances(model, list(X_train.columns))
+        return
 
     new_model = model_class(**model_params)
     cv = KFold(n_splits=folds, shuffle=True, random_state=42)
 
     # ottengo le features più importanti con RFECV
-    best_features_df = get_best_features_with_rfecv(new_model, X_train, y_train, cv, retain, task)
+    best_features_df = manual_recursive_feature_elimination(new_model, X_train, y_train, retain, task, verbose=True)
 
-
-    # tuning del modello
-    if grid_params:
-        best_features = list(best_features_df['feature'])
+    if not grid_params:
+        return best_features_df
+    else:
+        # faccio tuning del modello con le features più importanti
+        best_features = list(best_features_df['Top k features'])
         X_train = X_train[best_features]
         X_test = X_test[best_features]
 
@@ -106,7 +183,3 @@ def study_model_with_best_features(model_name, df, cols, folds=5, retain=None,
         else:
             print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
     
-    
-    # ritorno le features più importanti
-    if retain != 'all':
-        return best_features
