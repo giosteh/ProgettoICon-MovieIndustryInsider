@@ -253,10 +253,11 @@ def get_data_loaders(df, cols, features=None, batch_size=32, val_split=0.2, resa
     input_dim = len(X_train.columns)
 
     X_train_tensor = torch.tensor(X_train.values, dtype=torch.float32)
-    y_train_tensor = torch.tensor(y_train.values, dtype=torch.float32)
     X_test_tensor = torch.tensor(X_test.values, dtype=torch.float32)
-    y_test_tensor = torch.tensor(y_test.values, dtype=torch.float32)
+    y_train_tensor = torch.tensor(y_train.values, dtype=torch.float32).reshape(-1, 1)
+    y_test_tensor = torch.tensor(y_test.values, dtype=torch.float32).reshape(-1, 1)
 
+    # ottengo i dataset
     train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
     test_dataset = TensorDataset(X_test_tensor, y_test_tensor)
 
@@ -302,7 +303,7 @@ def train_and_test_net(df, cols, features=None, epochs=100, val_split=0.2, resam
         train_loss = train_net(model, train_loader, loss_fn, optimizer)
         val_loss = validate_net(model, val_loader, loss_fn)
 
-        print(f'Epoch {epoch + 1} | train loss: {train_loss}, val loss: {val_loss}')
+        print(f'Epoch {epoch + 1} | train loss: {train_loss:.4f}, val loss: {val_loss:.4f}')
 
         # early stopping
         early_stopping(model, val_loss, train_loss)
