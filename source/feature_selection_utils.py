@@ -106,7 +106,10 @@ def study_model_with_best_features(model_name, df, cols, folds=5, retain=None, b
         X_train = X_train[best_features]
         X_test = X_test[best_features]
 
-        metric = 'neg_mean_squared_error' if task == 'regression' else 'accuracy'
+        if task == 'regression':
+            metric, metric_name = 'neg_mean_squared_error', 'MSE'
+        else:
+            metric, metric_name = 'accuracy', 'Accuracy'
 
         new_best_model = tune_model(new_model, model_name, X_train, y_train, cv=cv,
                                     grid_params=grid_params, grid_metrics=[metric],
@@ -118,7 +121,7 @@ def study_model_with_best_features(model_name, df, cols, folds=5, retain=None, b
 
         print('Test score:')
         if task == 'regression':
-            print(f'MSE: {mean_squared_error(y_test, y_pred)}')
+            print(f'MSE: {mean_squared_error(y_test, y_pred):.4f}')
         else:
-            print(f'Accuracy: {accuracy_score(y_test, y_pred)}')
+            print(f'Accuracy: {accuracy_score(y_test, y_pred):.4f}')
     

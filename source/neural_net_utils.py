@@ -247,8 +247,9 @@ def get_data_loaders(df, cols, features=None, batch_size=32, val_split=0.2, resa
     X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'],
                                                     cols['round'], cols['clipping'], cols['standardize'], cols['minmax'],
                                                     resample=resample, task=task)
-    X_train = X_train[features]
-    X_test = X_test[features]
+    if features:
+        X_train = X_train[features]
+        X_test = X_test[features]
     input_dim = len(X_train.columns)
 
     X_train_tensor = torch.tensor(X_train.values, dtype=torch.float32)
