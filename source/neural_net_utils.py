@@ -96,7 +96,7 @@ class ClassificationNet(nn.Module):
 # classe che implementa l'early-stopping
 class EarlyStopping:
 
-    def __init__(self, patience=5, delta=0, verbose=True, path='net/model.pt'):
+    def __init__(self, patience=5, delta=0, verbose=True, path='nets/model.pt'):
         self.patience = patience
         self.delta = delta
         self.verbose = verbose
@@ -242,11 +242,13 @@ def print_report(labels, preds):
 
 
 # funzione che ottiene i data loader per training, validation e test
-def get_data_loaders(df, cols, batch_size=32, val_split=0.2, resample=False, task='regression'):
+def get_data_loaders(df, cols, features=None, batch_size=32, val_split=0.2, resample=False, task='regression'):
     # ottengo X e y
     X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'],
                                                     cols['round'], cols['clipping'], cols['standardize'], cols['minmax'],
                                                     resample=resample, task=task)
+    X_train = X_train[features]
+    X_test = X_test[features]
     input_dim = len(X_train.columns)
 
     X_train_tensor = torch.tensor(X_train.values, dtype=torch.float32)
@@ -270,9 +272,9 @@ def get_data_loaders(df, cols, batch_size=32, val_split=0.2, resample=False, tas
 
 
 # funzione per il tuning e test della rete
-def train_and_test_net(df, cols, epochs=100, val_split=0.2, resample=False, task='regression'):
+def train_and_test_net(df, cols, features=None, epochs=100, val_split=0.2, resample=False, task='regression'):
     # data loaders per training, validation e test
-    train_loader, val_loader, test_loader, input_dim = get_data_loaders(df, cols, val_split=val_split, resample=resample, task=task)
+    train_loader, val_loader, test_loader, input_dim = get_data_loaders(df, cols, features, val_split=val_split, resample=resample, task=task)
 
     loss_fn = None
     model = None
@@ -291,7 +293,7 @@ def train_and_test_net(df, cols, epochs=100, val_split=0.2, resample=False, task
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 
     # inizializzo l'early stopping
-    path = f'net/model-{task}.pt'
+    path = f'nets/model-{task}.pt'
     early_stopping = EarlyStopping(patience=5, verbose=True, path=path)
 
     # training della rete
