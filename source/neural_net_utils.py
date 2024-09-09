@@ -20,19 +20,17 @@ def define_net_architecture(input_dim):
     # definisco l'architettura della rete
     layers = []
     if input_dim <= 30:
-        layers = [input_dim, 32, 16, 8]
+        layers = [input_dim, 32, 32, 16, 8]
     elif input_dim <= 60:
-        layers = [input_dim, 64, 32, 16, 8]
-    elif input_dim <= 120:
-        layers = [input_dim, 128, 64, 32, 16, 8]
-    
+        layers = [input_dim, 64, 64, 32, 16, 8]
+
     # costruisco la rete
     layers_list = []
     for i in range(len(layers) - 1):
         layers_list.append(nn.Linear(layers[i], layers[i + 1]))
         layers_list.append(nn.ReLU())
         if i > 0:
-            layers_list.append(nn.Dropout(p=0.3))
+            layers_list.append(nn.Dropout(p=0.2))
 
     return layers_list
 
@@ -111,8 +109,9 @@ class EarlyStopping:
     
     # funzione che implementa l'early-stopping
     def __call__(self, model, val_loss, train_loss):
-        self.val_scores.append(val_loss)
-        self.train_scores.append(train_loss)
+        if self.val_loss_min != float('inf'):
+            self.val_scores.append(val_loss)
+            self.train_scores.append(train_loss)
 
         score = -val_loss
 
@@ -242,7 +241,7 @@ def print_report(labels, preds):
 
 
 # funzione che ottiene i data loader per training, validation e test
-def get_data_loaders(df, cols, features=None, batch_size=32, val_split=0.2, resample=False, task='regression'):
+def get_data_loaders(df, cols, features=None, batch_size=64, val_split=0.2, resample=False, task='regression'):
     # ottengo X e y
     X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'],
                                                     cols['round'], cols['clipping'], cols['standardize'], cols['minmax'],
@@ -296,7 +295,7 @@ def train_and_test_net(df, cols, features=None, epochs=100, val_split=0.2, resam
 
     # inizializzo l'early stopping
     path = f'nets/model-{task}.pt'
-    early_stopping = EarlyStopping(patience=5, verbose=True, path=path)
+    early_stopping = EarlyStopping(patience=10, verbose=True, path=path)
 
     # training della rete
     for epoch in range(epochs):
@@ -311,11 +310,12 @@ def train_and_test_net(df, cols, features=None, epochs=100, val_split=0.2, resam
             print(f'\nEarly stopping at epoch {epoch}.')
             break
     
+    
     # plotto l'evoluzione della loss durante il training
     early_stopping.plot_scores()
 
     # carico il modello migliore
-    model.load_state_dict(torch.load(path))
+    model.load_state_dict(torch.load(path, weights_only=True))
 
     # test della rete
     if task == 'regression':
