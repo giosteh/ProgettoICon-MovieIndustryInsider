@@ -291,11 +291,11 @@ def train_and_test_net(df, cols, features=None, epochs=100, val_split=0.2, resam
     model = model.to(device)
 
     # inizializzo l'optimizer
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
+    optimizer = torch.optim.Adam(model.parameters(), lr=1e-2)
 
     # inizializzo l'early stopping
-    path = f'nets/model-{task}.pt'
-    early_stopping = EarlyStopping(patience=10, verbose=True, path=path)
+    path = f'nets/{task}-net.pt'
+    early_stopping = EarlyStopping(patience=12, verbose=True, path=path)
 
     # training della rete
     for epoch in range(epochs):

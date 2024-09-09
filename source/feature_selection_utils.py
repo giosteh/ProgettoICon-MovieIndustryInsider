@@ -68,7 +68,7 @@ def manual_recursive_feature_elimination(model, X, y, retain=2, task='regression
         worst_feature, worst_importance = min(feature_importances, key=lambda x: x[1])
 
         if verbose:
-            print(f'Removing {worst_feature} with importance {worst_importance:.4f}')
+            print(f'Removing \"{worst_feature}\" with importance {worst_importance:.4f}')
 
         features.remove(worst_feature)
         retained = len(features)
