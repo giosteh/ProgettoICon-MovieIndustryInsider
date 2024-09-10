@@ -75,10 +75,13 @@ def prepare_data(df, target_col, drop_cols=[], dummies_cols=[], labels_cols=[],
     if task == 'regression':
         y_train = np.round(y_train, 3)
         y_test = np.round(y_test, 3)
-    else:
+    elif task == 'classification':
         encoder = LabelEncoder()
         y_train = encoder.fit_transform(y_train)
         y_test = encoder.transform(y_test)
+
+    y_train = pd.DataFrame(y_train, columns=[target_col])
+    y_test = pd.DataFrame(y_test, columns=[target_col])
     
     return X_train, X_test, y_train, y_test
 
