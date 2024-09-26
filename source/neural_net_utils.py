@@ -9,20 +9,18 @@ from sklearn.metrics import classification_report
 
 from supervised_utils import prepare_data
 
-sns.set_style('whitegrid')
+sns.set_style("whitegrid")
+
 
 # setting del device
-device = 'cuda' if torch.cuda.is_available() else 'cpu'
+device = "cuda" if torch.cuda.is_available() else "cpu"
+
 
 
 # funzione che definisce l'architettura della rete
 def define_net_architecture(input_dim):
     # definisco l'architettura della rete
-    layers = []
-    if input_dim <= 30:
-        layers = [input_dim, 32, 32, 16, 8]
-    elif input_dim <= 60:
-        layers = [input_dim, 64, 64, 32, 16, 8]
+    layers = [input_dim, 64, 64, 32, 16, 8]
 
     # costruisco la rete
     layers_list = []
@@ -30,7 +28,7 @@ def define_net_architecture(input_dim):
         layers_list.append(nn.Linear(layers[i], layers[i + 1]))
         layers_list.append(nn.ReLU())
         if i > 0:
-            layers_list.append(nn.Dropout(p=0.2))
+            layers_list.append(nn.Dropout(p=.2))
 
     return layers_list
 
@@ -41,7 +39,6 @@ class RegressionNet(nn.Module):
     def __init__(self, input_dim):
         super(RegressionNet, self).__init__()
 
-        # ottengo l'architettura della rete
         layers_list = define_net_architecture(input_dim)
         layers_list.append(nn.Linear(8, 1))
 
@@ -54,7 +51,7 @@ class RegressionNet(nn.Module):
     def _initialize_weights(self):
         for m in self.modules():
             if isinstance(m, nn.Linear):
-                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.normal_(m.weight, 0, 1)
                 nn.init.constant_(m.bias, 0)
     
     # metodo di forward propagation
@@ -69,7 +66,6 @@ class ClassificationNet(nn.Module):
     def __init__(self, input_dim, num_classes):
         super(ClassificationNet, self).__init__()
 
-        # ottengo l'architettura della rete
         layers_list = define_net_architecture(input_dim)
         layers_list.append(nn.Linear(8, num_classes))
 
@@ -82,7 +78,7 @@ class ClassificationNet(nn.Module):
     def _initialize_weights(self):
         for m in self.modules():
             if isinstance(m, nn.Linear):
-                nn.init.normal_(m.weight, 0, 0.01)
+                nn.init.normal_(m.weight, 0, 1)
                 nn.init.constant_(m.bias, 0)
     
     # metodo di forward propagation
@@ -94,233 +90,212 @@ class ClassificationNet(nn.Module):
 # classe che implementa l'early-stopping
 class EarlyStopping:
 
-    def __init__(self, patience=5, delta=0, verbose=True, path='nets/model.pt'):
-        self.patience = patience
-        self.delta = delta
-        self.verbose = verbose
-        self.path = path
-        self.counter = 0
-        self.val_loss_min = float('inf')
-        self.best_score = None
-        self.early_stop = False
+    def __init__(self, patience=15, dir_path="nets", model_name="model.pt", mode="max"):
+        self._patience = patience
+        self._counter = 0
+        self._best_score = None
+        self._stop = False
+        self.mode = mode
+        self._checkpoint_path = f"{dir_path}/{model_name}"
 
-        self.val_scores = []
-        self.train_scores = []
+        self._train_scores = []
+        self._val_scores = []
     
-    # funzione che implementa l'early-stopping
-    def __call__(self, model, val_loss, train_loss):
-        if self.val_loss_min != float('inf'):
-            self.val_scores.append(val_loss)
-            self.train_scores.append(train_loss)
-
-        score = -val_loss
-
-        if self.best_score is None:
-            self.best_score = score
-        elif score < self.best_score + self.delta:
-            self.counter += 1
-            if self.verbose:
-                print(f'Early-stopping counter: {self.counter}/{self.patience}')
-            if self.counter >= self.patience:
-                self.early_stop = True
+    # metodo che controlla se il modello migliora
+    def _is_improvement(self, score):
+        if self._mode == "max":
+            return score > self._best_score
         else:
-            self.best_score = score
-            self.save_checkpoint(val_loss, model)
-            self.counter = 0
-
-    # funzione che salva il modello
-    def save_checkpoint(self, val_loss, model):
-        if self.verbose:
-            print(f'Val loss ({self.val_loss_min:.4f} --> {val_loss:.4f})')
-        torch.save(model.state_dict(), self.path)
-        self.val_loss_min = val_loss
+            return score < self._best_score
     
-    # funzione che plotta i risultati
+    # metodo che verifica se il modello migliora
+    def __call__(self, train_score, val_score):
+        self._train_scores.append(train_score)
+        self._val_scores.append(val_score)
+        score = val_score
+
+        if self._best_score is None:
+            self._best_score = score
+        elif self._is_improvement(score):
+            self._save_checkpoint()
+            self._best_score = score
+            self._counter = 0
+        else:
+            self._counter += 1
+            if self._counter >= self._patience:
+                self._stop = True
+        
+        return self._stop
+
+    # metodo che salva il modello
+    def _save_checkpoint(self):
+        torch.save(self._model.state_dict(), self._checkpoint_path)
+    
+    # metodo che plotta i risultati
     def plot_scores(self):
+        score_name = "Accuracy" if self._mode == "max" else "Loss"
+        title = f"Model performance (best {score_name}: {self._best_score:.4f})"
+
         plt.figure(figsize=(8, 5))
-        plt.plot(self.train_scores, label='Train loss', linestyle='dashed', linewidth=2)
-        plt.plot(self.val_scores, label='Validation loss', linewidth=2.5)
-        plt.ylabel('loss')
-        plt.xlabel('epoch')
-        plt.title('Loss per epoch')
+        plt.plot(self._train_scores, label=f"Train {score_name}", linestyle="dashed", linewidth=2.3)
+        plt.plot(self._val_scores, label=f"Val {score_name}", linewidth=2.7)
+        plt.xlabel("Epoch")
+        plt.ylabel(score_name)
+        plt.title(title)
         plt.legend()
 
         plt.show()
 
 
-# funzione per il training della rete
-def train_net(model, train_loader, loss_fn, optimizer):
-    size = len(train_loader)
-    running_loss = .0
+# classe che implementa il trainer
+class Trainer:
 
-    model.train()
-    for X, y in train_loader:
-        # forward
-        pred = model(X)
-        loss = loss_fn(pred, y)
-        # backward
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
+    def __init__(self, df, cols, task="regression", num_classes=None):
+        self._task = task
+        self._train_loader, self._val_loader, self._test_loader, self._input_dim = self._get_data_loaders(df, cols, task=task)
+        self._model = RegressionNet(self._input_dim) if task == "regression" else ClassificationNet(self._input_dim, num_classes)
+        self._model.to(device)
 
-        running_loss += loss.item()
+        self._criterion = nn.MSELoss() if task == "regression" else nn.CrossEntropyLoss()
+        self._optimizer = torch.optim.Adam(self._model.parameters(), lr=1e-2)
+
+        self._model_name = f"{task}-net.pt"
+        self._early_stopping = EarlyStopping(model=self._model, model_name=self._model_name)
+        self._early_stopping.mode = "min" if task == "regression" else "max"
+
+    # metodo che prepara i data loaders
+    def _get_data_loaders(self, df, cols, features_subset=None, batch_size=64,
+                          val_split=0.2, resample=False, task="regression"):
+        X_train, X_test, y_train, y_test = prepare_data(df, cols, resample=resample, task=task)
+
+        if features_subset:
+            X_train = X_train[features_subset]
+            X_test = X_test[features_subset]
+
+        train_dataset = TensorDataset(torch.tensor(X_train.values, dtype=torch.float32),
+                                      torch.tensor(y_train.values, dtype=torch.float32).reshape(-1, 1))
+        test_dataset = TensorDataset(torch.tensor(X_test.values, dtype=torch.float32),
+                                     torch.tensor(y_test.values, dtype=torch.float32).reshape(-1, 1))
+
+        train_size = int(len(train_dataset) * (1 - val_split))
+        val_size = len(train_dataset) - train_size
+        train_dataset, val_dataset = random_split(train_dataset, [train_size, val_size])
+
+        train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
+        val_loader = DataLoader(val_dataset, batch_size=batch_size)
+        test_loader = DataLoader(test_dataset, batch_size=batch_size)
+
+        return train_loader, val_loader, test_loader, X_train.shape[1]
     
-    # ritorno la training loss media
-    return running_loss / size
+    # metodo che esegue il training per un'epoca
+    def _train(self):
+        self._model.train()
 
+        correct = 0
+        size = len(self._train_loader.dataset)
 
-# funzione per la validation della rete
-def validate_net(model, val_loader, loss_fn):
-    size = len(val_loader)
-    val_loss = .0
+        total_loss = .0
+        for features, labels in self._train_loader:
+            features = features.to(device)
+            labels = labels.to(device)
 
-    model.eval()
-    with torch.no_grad():
-        for X, y in val_loader:
-            # forward
-            pred = model(X)
-            loss = loss_fn(pred, y)
+            logits = self._model(features)
+            loss = self._criterion(logits, labels)
 
-            val_loss += loss.item()
-    
-    # ritorno la validation loss media
-    return val_loss / size
+            # backpropagation
+            self._optimizer.zero_grad()
+            loss.backward()
+            self._optimizer.step()
 
+            total_loss += loss.item()
 
-# funzione per il test della rete
-def test_net(model, test_loader, loss_fn, task='regression'):
-    size = len(test_loader)
-    total = len(test_loader.dataset)
-    test_loss = .0
-    correct = 0
+            if self._task == "classification":
+                predicted = logits.argmax(dim=-1)
+                correct += (predicted == labels).sum().item()
 
-    preds = []
-    labels = []
+        total_loss /= size
+        if self._task == "classification":
+            accuracy = 100 * correct / size
+            return total_loss, accuracy
+        else:
+            return total_loss, None
 
-    model.eval()
-    with torch.no_grad():
-        for X, y in test_loader:
-            # forward
-            pred = model(X)
-            loss = loss_fn(pred, y)
+    # metodo che esegue la validazione
+    def _validate(self):
+        self._model.eval()
 
-            test_loss += loss.item()
+        correct = 0
+        size = len(self._val_loader.dataset)
 
-            if task == 'classification':
-                _, pred = torch.max(pred, dim=1)
-                correct += (pred == y).sum().item()
+        total_loss = .0
+        with torch.no_grad():
+            for features, labels in self._val_loader:
+                features = features.to(device)
+                labels = labels.to(device)
 
-                preds.extend(pred.cpu().numpy())
-                labels.extend(y.cpu().numpy())
+                logits = self._model(features)
+                loss = self._criterion(logits, labels)
 
-    # calcolo della test loss media
-    test_loss = test_loss / size
+                total_loss += loss.item()
 
-    if task == 'classification':
-        # stampo il classification report
-        print_report(labels, preds)
+                if self._task == "classification":
+                    predicted = logits.argmax(dim=-1)
+                    correct += (predicted == labels).sum().item()
 
-        accuracy = 100 * correct / total
-        return test_loss, accuracy
+        total_loss /= size
+        if self._task == "classification":
+            accuracy = 100 * correct / size
+            return total_loss, accuracy
+        else:
+            return total_loss, None
 
-    return test_loss
+    # metodo che esegue il test
+    def test(self):
+        self._model.eval()
 
+        correct = 0
+        size = len(self._test_loader.dataset)
 
-# funzione che stampa il classification report
-def print_report(labels, preds):
-    report = classification_report(labels, preds, output_dict=True,
-                                   target_names=['Classe 0', 'Classe 1', 'Classe 2'])
-    report_df = pd.DataFrame(report).transpose()
-    report_df = report_df.drop(columns=['support'])
+        total_loss = .0
+        with torch.no_grad():
+            for features, labels in self._test_loader:
+                features = features.to(device)
+                labels = labels.to(device)
 
-    plt.figure(figsize=(8, 5))
-    sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap='Blues', fmt='.2f')
-    plt.title('Classification Report')
-    plt.show()
-    print('\n')
+                logits = self._model(features)
+                loss = self._criterion(logits, labels)
 
+                total_loss += loss.item()
 
-# funzione che ottiene i data loader per training, validation e test
-def get_data_loaders(df, cols, features=None, batch_size=64, val_split=0.2, resample=False, task='regression'):
-    # ottengo X e y
-    X_train, X_test, y_train, y_test = prepare_data(df, cols['target'], cols['drop'], cols['dummies'], cols['labels'],
-                                                    cols['round'], cols['clipping'], cols['standardize'], cols['minmax'],
-                                                    resample=resample, task=task)
-    if features:
-        X_train = X_train[features]
-        X_test = X_test[features]
-    input_dim = len(X_train.columns)
+                if self._task == "classification":
+                    predicted = logits.argmax(dim=-1)
+                    correct += (predicted == labels).sum().item()
 
-    X_train_tensor = torch.tensor(X_train.values, dtype=torch.float32)
-    X_test_tensor = torch.tensor(X_test.values, dtype=torch.float32)
-    y_train_tensor = torch.tensor(y_train.values, dtype=torch.float32).reshape(-1, 1)
-    y_test_tensor = torch.tensor(y_test.values, dtype=torch.float32).reshape(-1, 1)
+        total_loss /= size
+        if self._task == "classification":
+            accuracy = 100 * correct / size
+            return total_loss, accuracy
+        else:
+            return total_loss, None
 
-    # ottengo i dataset
-    train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
-    test_dataset = TensorDataset(X_test_tensor, y_test_tensor)
+    # metodo che esegue il training della rete
+    def fit(self, epochs=100, verbose=True):
+        for epoch in range(epochs):
+            train_loss, train_acc = self._train()
+            val_loss, val_acc = self._validate()
 
-    train_size = int(len(train_dataset) * (1 - val_split))
-    val_size = len(train_dataset) - train_size
-    train_dataset, val_dataset = random_split(train_dataset, [train_size, val_size])
+            train_score, val_score = train_acc, val_acc if self._task == "classification" else train_loss, val_loss
+            stop = self._early_stopping(train_score, val_score)
 
-    # ottengo i data loader
-    train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=True)
-    test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True)
+            if verbose:
+                print(f"\nEpoch #{epoch+1}/{epochs} [")
+                if self._task == "classification":
+                    print(f"Train loss: {train_loss:.4f}, Train accuracy: {train_acc:.4f}")
+                    print(f"Val loss: {val_loss:.4f}, Val accuracy: {val_acc:.4f}\n]")
+                else:
+                    print(f"Train loss: {train_loss:.4f}\nVal loss: {val_loss:.4f}\n]")
 
-    return train_loader, val_loader, test_loader, input_dim
-
-
-# funzione per il tuning e test della rete
-def train_and_test_net(df, cols, features=None, epochs=100, val_split=0.2, resample=False, task='regression'):
-    # data loaders per training, validation e test
-    train_loader, val_loader, test_loader, input_dim = get_data_loaders(df, cols, features, val_split=val_split, resample=resample, task=task)
-
-    loss_fn = None
-    model = None
-
-    # inizializzo la rete
-    if task == 'regression':
-        model = RegressionNet(input_dim)
-        loss_fn = nn.MSELoss()
-    elif task == 'classification':
-        model = ClassificationNet(input_dim, 3)
-        loss_fn = nn.CrossEntropyLoss()
-    
-    model = model.to(device)
-
-    # inizializzo l'optimizer
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-2)
-
-    # inizializzo l'early stopping
-    path = f'nets/{task}-net.pt'
-    early_stopping = EarlyStopping(patience=12, verbose=True, path=path)
-
-    # training della rete
-    for epoch in range(epochs):
-        train_loss = train_net(model, train_loader, loss_fn, optimizer)
-        val_loss = validate_net(model, val_loader, loss_fn)
-
-        print(f'Epoch {epoch + 1} | train loss: {train_loss:.4f}, val loss: {val_loss:.4f}')
-
-        # early stopping
-        early_stopping(model, val_loss, train_loss)
-        if early_stopping.early_stop:
-            print(f'\nEarly stopping at epoch {epoch}.')
-            break
-    
-    
-    # plotto l'evoluzione della loss durante il training
-    early_stopping.plot_scores()
-
-    # carico il modello migliore
-    model.load_state_dict(torch.load(path, weights_only=True))
-
-    # test della rete
-    if task == 'regression':
-        test_loss = test_net(model, test_loader, loss_fn)
-        print(f'\nTest loss: {test_loss:.4f}')
-    elif task == 'classification':
-        test_loss, accuracy = test_net(model, test_loader, loss_fn, task=task)
-        print(f'\nTest accuracy: {accuracy:.2f}%\nTest loss: {test_loss:.4f}')
+            if stop:
+                if verbose:
+                    print(f"Early stopping at epoch #{epoch+1}")
+                break
