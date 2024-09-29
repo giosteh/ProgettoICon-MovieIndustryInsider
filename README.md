@@ -1,2 +1,2 @@
 # ProgettoICON-Movies
-Repo per il progetto di ICON.
+Repo in cui trovate codice e dati del progetto di ICon.
