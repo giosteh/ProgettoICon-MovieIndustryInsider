@@ -115,7 +115,7 @@ runtime_category(Movie, "long") :-
 budget_efficiency(Movie, Eff) :-
     budget(Movie, Budget),
     gross(Movie, Gross),
-    Budget > 0,
+    Budget \= 0,
 
     Eff is Gross / Budget.
 

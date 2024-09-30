@@ -23,18 +23,22 @@ def prepare_data(df, cols, task="regression", resample=False, seed=36):
     Prepara i dati per il training di un modello.
     """
     X = df.drop(columns=[cols["target"]] + cols["drop"], axis=1)
-    y = df[cols["target"]]
+    y = df[cols["target"]].to_numpy()
+    y = y.ravel()
 
     # encoding
     if cols["dummies"]:
         X = pd.get_dummies(X, columns=cols["dummies"])
-        bool_cols = X.select_dtypes(include="bool").columns
-        X[bool_cols] = X[bool_cols].astype(int)
+    bool_cols = X.select_dtypes(include="bool").columns
+    X[bool_cols] = X[bool_cols].astype(int)
 
     if cols["labels"]:
         encoder = LabelEncoder()
         for col in cols["labels"]:
             X[col] = encoder.fit_transform(X[col])
+    
+    float_cols = X.select_dtypes(include="float").columns
+    X[float_cols] = np.round(X[float_cols], 4)
     
     # train test split
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=.2, random_state=seed)
@@ -63,9 +67,6 @@ def prepare_data(df, cols, task="regression", resample=False, seed=36):
         encoder = LabelEncoder()
         y_train = encoder.fit_transform(y_train)
         y_test = encoder.transform(y_test)
-
-    y_train = pd.DataFrame(y_train, columns=[cols["target"]])
-    y_test = pd.DataFrame(y_test, columns=[cols["target"]])
     
     return X_train, X_test, y_train, y_test
 
@@ -119,7 +120,7 @@ def find_best_model(model, X, y, param, param_range, cv, metric="neg_mean_square
 
 
 def tune_model(model, model_name, X, y, cv, grid_params={}, grid_metrics=[],
-               verbose=True, plot=True, ylabel=""):
+               ylabel="", verbose=True, plot=True):
     """
     Implementa una ricerca dei migliori parametri per un modello.
     """
@@ -157,7 +158,7 @@ def tune_model(model, model_name, X, y, cv, grid_params={}, grid_metrics=[],
                 print(f"Best score: {{'{grid_metric_name}': {best_score:.4f}}}\n")
 
             if plot:
-                plot_cv_results(cv_params[param], scores, param, ylabel, title=f"{model_name} - {param}")
+                plot_cv_results(cv_params[param], scores, param, ylabel, title=f"{model_name} / {param}")
     
     return best_model
 
@@ -186,7 +187,7 @@ def get_cv_params(grid_best_params):
 
 
 
-# MODELS FOR REGRESSION
+# Modelli per la regressione
 MODELS_REG = {
     "Ridge_Regressor": Ridge(),
     "Decision_Tree_Regressor": DecisionTreeRegressor(),
@@ -194,7 +195,6 @@ MODELS_REG = {
     "XGBoost_Regressor": XGBRegressor()
 }
 
-# GRID PARAMETERS FOR REGRESSION
 GRID_PARAMS_REG = {
     "Ridge_Regressor": {
         "alpha": [.05, .1, .5, 1, 2, 5]
@@ -224,8 +224,7 @@ GRID_PARAMS_REG = {
     }
 }
 
-
-# MODELS FOR CLASSIFICATION
+# Modelli per la classificazione
 MODELS_CLS = {
     "Logistic_Regression": LogisticRegression(),
     "Decision_Tree_Classifier": DecisionTreeClassifier(),
@@ -233,7 +232,6 @@ MODELS_CLS = {
     "XGBoost_Classifier": XGBClassifier()
 }
 
-# GRID PARAMETERS FOR CLASSIFICATION
 GRID_PARAMS_CLS = {
     "Logistic_Regression": {
         "solver": ["saga"],
@@ -265,7 +263,6 @@ GRID_PARAMS_CLS = {
     }
 }
 
-
 # funzione che esegue tuning e test dei modelli per i task di regressione e classificazione
 def tune_and_test_models(df, cols, task="regression", models=None, grid_params=None,
                          folds=5, resample=False, seed=42, session_name=""):
@@ -280,21 +277,18 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
         cv = StratifiedKFold(n_splits=folds, shuffle=True, random_state=seed)
         metric, metric_name = "accuracy", "Accuracy"
     
-    # modelli e parametri per il tuning
     if not models:
         models = MODELS_REG if task == "regression" else MODELS_CLS
     if not grid_params:
         grid_params = GRID_PARAMS_REG if task == "regression" else GRID_PARAMS_CLS
-    
-    # tuning
+
+    # ciclo di tuning per i modelli
     for model_name, model in models.items():
+        name = " ".join(model_name.split('_'))
         print("_" * 80)
-        print(f"TUNING AND TRAINING {model_name}...")
-        best_model = tune_model(model, model_name, X_train, y_train, cv,
-                                grid_params=grid_params[model_name],
-                                grid_metrics=[metric],
-                                ylabel=metric_name)
-        
+        print(f"TUNING & TRAINING [{name}]...\n")
+
+        best_model = tune_model(model, name, X_train, y_train, cv, grid_params[model_name], [metric], metric_name)
         best_model.fit(X_train, y_train)
         y_pred = best_model.predict(X_test)
 
@@ -302,7 +296,7 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
         joblib.dump(best_model, model_path)
 
         # test del modello
-        print("TESTING...")
+        print("> TESTING...")
         if task == "regression":
             mse = mean_squared_error(y_test, y_pred)
             mae = mean_absolute_error(y_test, y_pred)
@@ -316,5 +310,5 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
             report_df = report_df.drop(columns=["support"])
             plt.figure(figsize=(8, 5))
             sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap="Blues", fmt=".2f")
-            plt.title("Classification Report")
+            plt.title(f"Classification Report for {name}")
             plt.show()
