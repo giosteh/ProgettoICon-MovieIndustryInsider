@@ -76,17 +76,17 @@ def derive_movies_data(df, kb):
         # `movie` features
         features["id"] = movie_id
         features["title"] = query_kb(kb, f"title({movie_id}, X).")
-        features["rating"] = query_kb(kb, f"rating_regrouped({movie_id}, X).")
-        features["genre"] = query_kb(kb, f"genre_regrouped({movie_id}, X).")
-        features["runtime"] = query_kb(kb, f"runtime_category({movie_id}, X).")
+        features["runtime"] = query_kb(kb, f"runtime({movie_id}, X).")
+        features["rating_cat"] = query_kb(kb, f"rating_regrouped({movie_id}, X).")
+        features["genre_cat"] = query_kb(kb, f"genre_regrouped({movie_id}, X).")
+        features["popularity_cat"] = query_kb(kb, f"popularity_category({movie_id}, X).")
+        features["budget_cat"] = query_kb(kb, f"budget_category({movie_id}, X).")
+        features["budget_efficiency"] = query_kb(kb, f"budget_efficiency({movie_id}, X).")
+        features["budget_efficiency_cat"] = query_kb(kb, f"budget_efficiency_category({movie_id}, X).")
         features["age"] = query_kb(kb, f"age({movie_id}, X).")
-        features["popularity"] = query_kb(kb, f"popularity_category({movie_id}, X).")
         features["score"] = query_kb(kb, f"score({movie_id}, X).")
         features["is_acclaimed"] = query_kb(kb, f"is_acclaimed({movie_id}).")
         features["is_panned"] = query_kb(kb, f"is_panned({movie_id}).")
-        features["budget_efficiency"] = query_kb(kb, f"budget_efficiency_category({movie_id}, X).")
-        features["is_blockbuster"] = query_kb(kb, f"is_blockbuster({movie_id}).")
-        features["is_indie"] = query_kb(kb, f"is_indie({movie_id}).")
 
         # `director` features
         features["director_age_in_movie"] = query_kb(kb, f"age_in_movie(\"{director}\", {movie_id}, X).")

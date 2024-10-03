@@ -132,18 +132,22 @@ budget_efficiency_category(Movie, "high") :-
     X >= 3.
 
 
-% clausola per determinare se un film è un blockbuster
-is_blockbuster(Movie) :-
-    budget(Movie, Budget),
+% clausola per determinare la categoria di budget di un film
+budget_category(Movie, "low") :-
+    budget(Movie, X),
+    X < 10000000.
 
-    Budget > 100000000.
+budget_category(Movie, "mid") :-
+    budget(Movie, X),
+    X >= 10000000, X < 30000000.
 
+budget_category(Movie, "high") :-
+    budget(Movie, X),
+    X >= 30000000, X < 60000000.
 
-% clausola per determinare se un film è indipendente
-is_indie(Movie) :-
-    budget(Movie, Budget),
-
-    Budget < 10000000.
+budget_category(Movie, "very-high") :-
+    budget(Movie, X),
+    X >= 60000000.
 
 
 % clausola per determinare la categoria di popolarità di un film

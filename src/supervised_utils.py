@@ -24,7 +24,7 @@ def print_info(df):
     Stampa le informazioni sul dataframe.
     """
     info = [(col, str(type)) for col, type in df.dtypes.items()]
-    print(f"# cols: {len(df.columns)} | # rows: {len(df)}")
+    print(f"# cols: {len(df.columns)} | # rows: {len(df)}\n")
     print(tabulate(info, headers=["Column", "Type"], tablefmt="pretty"))
 
 
@@ -87,7 +87,7 @@ def plot_cv_results(param_range, scores, xlabel, ylabel, title):
     """
     plt.figure(figsize=(8, 5))
     plt.plot(param_range, scores["train"], label="Train score", linestyle="dashed", linewidth=2.3)
-    plt.plot(param_range, scores["val"], label="Validation score", linewidth=2.7)
+    plt.plot(param_range, scores["val"], label="Validation score", linewidth=2.3)
     plt.legend()
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -218,7 +218,7 @@ GRID_PARAMS_REG = {
     },
 
     "Random_Forest_Regressor": {
-        "criterion": ["squared_error"],
+        "criterion": ["squared_error", "friedman_mse"],
         "n_estimators": [100, 200, 300],
         "max_depth": [5, 7, 10, 15],
         "min_samples_split": [2, 5, 10],
@@ -295,7 +295,7 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
     # ciclo di tuning per i modelli
     for model_name, model in models.items():
         name = " ".join(model_name.split('_'))
-        print("_" * 80)
+        print("-" * 80)
         print(f"TUNING & TRAINING [{name}]...\n")
 
         best_model = tune_model(model, name, X_train, y_train, cv, grid_params[model_name], [metric], metric_name)
@@ -318,7 +318,7 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
             report = classification_report(y_test, y_pred, output_dict=True, target_names=["Classe 0", "Classe 1", "Classe 2"])
             report_df = pd.DataFrame(report).transpose()
             report_df = report_df.drop(columns=["support"])
-            plt.figure(figsize=(8, 5))
+            plt.figure(figsize=(5, 5))
             sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap="Blues", fmt=".2f")
             plt.title(f"Classification Report for {name}")
             plt.show()
