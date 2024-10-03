@@ -196,7 +196,6 @@ def get_cv_params(grid_best_params):
     return params_dict
 
 
-
 # Modelli per la regressione
 MODELS_REG = {
     "Ridge_Regressor": Ridge(),
@@ -314,7 +313,7 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
         else:
             acc = accuracy_score(y_test, y_pred) * 100
             print(f"Accuracy: {acc:.4f}%")
-
+            
             report = classification_report(y_test, y_pred, output_dict=True, target_names=["Classe 0", "Classe 1", "Classe 2"])
             report_df = pd.DataFrame(report).transpose()
             report_df = report_df.drop(columns=["support"])

@@ -157,7 +157,7 @@ class EarlyStopping:
 
         plt.figure(figsize=(8, 5))
         plt.plot(self._train_scores, label=f"Train {score_name}", linestyle="dashed", linewidth=2.3)
-        plt.plot(self._val_scores, label=f"Val {score_name}", linewidth=2.7)
+        plt.plot(self._val_scores, label=f"Val {score_name}", linewidth=2.3)
         plt.xlabel("Epoch")
         plt.ylabel(score_name)
         plt.title(title)
