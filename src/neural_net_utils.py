@@ -16,7 +16,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 
-def define_net_architecture(input_dim):
+def build_net_architecture(input_dim):
     """
     Definisce l'architettura della rete.
     """
@@ -40,7 +40,7 @@ class RegressionNet(nn.Module):
     def __init__(self, input_dim):
         super(RegressionNet, self).__init__()
 
-        layers_list = define_net_architecture(input_dim)
+        layers_list = build_net_architecture(input_dim)
         layers_list.append(nn.Linear(8, 1))
 
         self.net = nn.Sequential(*layers_list)
@@ -72,7 +72,7 @@ class ClassificationNet(nn.Module):
     def __init__(self, input_dim, num_classes):
         super(ClassificationNet, self).__init__()
 
-        layers_list = define_net_architecture(input_dim)
+        layers_list = build_net_architecture(input_dim)
         layers_list.append(nn.Linear(8, num_classes))
 
         self.net = nn.Sequential(*layers_list)

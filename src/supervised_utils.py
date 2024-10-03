@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from tabulate import tabulate
 
 from sklearn.linear_model import Ridge, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
@@ -16,6 +17,15 @@ import joblib
 
 sns.set_style("whitegrid")
 
+
+
+def print_info(df):
+    """
+    Stampa le informazioni sul dataframe.
+    """
+    info = [(col, str(type)) for col, type in df.dtypes.items()]
+    print(f"# cols: {len(df.columns)} | # rows: {len(df)}")
+    print(tabulate(info, headers=["Column", "Type"], tablefmt="pretty"))
 
 
 def prepare_data(df, cols, task="regression", resample=False, seed=36):
@@ -235,7 +245,7 @@ MODELS_CLS = {
 GRID_PARAMS_CLS = {
     "Logistic_Regression": {
         "solver": ["saga"],
-        "max_iter": [100, 200, 300],
+        "max_iter": [10000, 20000],
         "penalty": ["l1", "l2"]
     },
 
@@ -302,8 +312,8 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
             mae = mean_absolute_error(y_test, y_pred)
             print(f"MSE: {mse:.4f}, MAE: {mae:.4f}\n")
         else:
-            acc = accuracy_score(y_test, y_pred)
-            print(f"Accuracy: {acc:.4f}")
+            acc = accuracy_score(y_test, y_pred) * 100
+            print(f"Accuracy: {acc:.4f}%")
 
             report = classification_report(y_test, y_pred, output_dict=True, target_names=["Classe 0", "Classe 1", "Classe 2"])
             report_df = pd.DataFrame(report).transpose()
