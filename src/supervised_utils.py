@@ -15,7 +15,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV, cross_valida
 from imblearn.over_sampling import SMOTE
 import joblib
 
-sns.set_style("whitegrid")
+sns.set_style("darkgrid")
 
 
 
