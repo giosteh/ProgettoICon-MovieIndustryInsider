@@ -103,9 +103,10 @@ def find_best_model(model, X, y, param, param_range, cv, metric="neg_mean_square
     best_model = None
     best_param = None
 
-    regression = metric.startswith("neg")
-
+    regression = metric.startswith("neg_")
     best_score = np.inf if regression else -np.inf
+    score_sign = -1 if regression else 1
+
     train_scores, test_scores = [], []
 
     for val in param_range:
@@ -114,8 +115,8 @@ def find_best_model(model, X, y, param, param_range, cv, metric="neg_mean_square
 
         cv_results = cross_validate(current_model, X, y, scoring=metric, cv=cv, return_train_score=True)
 
-        train_score = -cv_results["train_score"].mean() if regression else cv_results["train_score"].mean()
-        test_score = -cv_results["test_score"].mean() if regression else cv_results["test_score"].mean()
+        train_score = score_sign * cv_results["train_score"].mean()
+        test_score = score_sign * cv_results["test_score"].mean()
         train_scores.append(train_score)
         test_scores.append(test_score)
 
@@ -181,17 +182,13 @@ def get_cv_params(grid_best_params):
 
     # range sui parametri max_depth e n_estimators
     if "n_estimators" in grid_best_params.keys():
-        param_range = [v for v in range(40, 321, 40)]
-        params_dict["n_estimators"] = param_range
+        params_dict["n_estimators"] = list(range(50, 401, 50))
 
     if "max_depth" in grid_best_params.keys():
-        param_range = []
-        if grid_best_params["max_depth"] <= 10:
-            param_range = [v for v in range(2, 21, 2)]
-        else:
-            param_range = [v for v in range(grid_best_params["max_depth"] - 10, grid_best_params["max_depth"] + 11, 2)]
-
-        params_dict["max_depth"] = param_range
+        params_start = grid_best_params["max_depth"] - 10
+        if params_start < 2:
+            params_start = 2
+        params_dict["max_depth"] = list(range(params_start, params_start + 21, 2))
     
     return params_dict
 
@@ -295,7 +292,7 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
     for model_name, model in models.items():
         name = " ".join(model_name.split('_'))
         print("-" * 80)
-        print(f"TUNING & TRAINING [{name}]...\n")
+        print(f"TUNING & TRAINING <{name}>...\n")
 
         best_model = tune_model(model, name, X_train, y_train, cv, grid_params[model_name], [metric], metric_name)
         best_model.fit(X_train, y_train)
@@ -307,9 +304,8 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
         # test del modello
         print("> TESTING...")
         if task == "regression":
-            mse = mean_squared_error(y_test, y_pred)
             mae = mean_absolute_error(y_test, y_pred)
-            print(f"MSE: {mse:.4f}, MAE: {mae:.4f}\n")
+            print(f"MAE: {mae:.4f}\n")
         else:
             acc = accuracy_score(y_test, y_pred) * 100
             print(f"Accuracy: {acc:.4f}%")

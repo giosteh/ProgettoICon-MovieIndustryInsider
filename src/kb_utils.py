@@ -60,9 +60,9 @@ def query_kb(prolog_kb, query):
     return None
 
 
-def derive_movies_data(df, kb):
+def derive_movies_data_for_reg(df, kb):
     """
-    Deriva il nuovo dataframe dei movies dalla kb.
+    Deriva il nuovo dataframe dei movies dalla kb per la regressione.
     """
     new_data = []
 
@@ -76,32 +76,123 @@ def derive_movies_data(df, kb):
         # `movie` features
         features["id"] = movie_id
         features["title"] = query_kb(kb, f"title({movie_id}, X).")
-        features["runtime"] = query_kb(kb, f"runtime({movie_id}, X).")
+
+        features["age"] = query_kb(kb, f"age({movie_id}, X).")
         features["rating_cat"] = query_kb(kb, f"rating_regrouped({movie_id}, X).")
         features["genre_cat"] = query_kb(kb, f"genre_regrouped({movie_id}, X).")
-        features["popularity_cat"] = query_kb(kb, f"popularity_category({movie_id}, X).")
-        features["budget_cat"] = query_kb(kb, f"budget_category({movie_id}, X).")
-        features["budget_efficiency"] = query_kb(kb, f"budget_efficiency({movie_id}, X).")
-        features["budget_efficiency_cat"] = query_kb(kb, f"budget_efficiency_category({movie_id}, X).")
-        features["age"] = query_kb(kb, f"age({movie_id}, X).")
+        features["runtime"] = query_kb(kb, f"runtime({movie_id}, X).")
+        features["popularity"] = query_kb(kb, f"votes({movie_id}, X).")
         features["score"] = query_kb(kb, f"score({movie_id}, X).")
-        features["is_acclaimed"] = query_kb(kb, f"is_acclaimed({movie_id}).")
-        features["is_panned"] = query_kb(kb, f"is_panned({movie_id}).")
+        features["budget"] = query_kb(kb, f"budget({movie_id}, X).")
+        features["budget_efficiency"] = query_kb(kb, f"budget_efficiency({movie_id}, X).")
 
         # `director` features
-        features["director_age_in_movie"] = query_kb(kb, f"age_in_movie(\"{director}\", {movie_id}, X).")
+        features["director_age"] = query_kb(kb, f"age_in_movie(\"{director}\", {movie_id}, X).")
         features["director_experience"] = query_kb(kb, f"director_experience(\"{director}\", {movie_id}, X).")
         features["director_is_acclaimed"] = query_kb(kb, f"director_is_acclaimed(\"{director}\", {movie_id}).")
         features["director_is_panned"] = query_kb(kb, f"director_is_panned(\"{director}\", {movie_id}).")
-        features["director_budget_efficiency"] = query_kb(kb, f"director_budget_efficiency(\"{director}\", {movie_id}, X).")
+        features["director_efficiency"] = query_kb(kb, f"director_budget_efficiency(\"{director}\", {movie_id}, X).")
 
         # `star` features
-        features["star_age_in_movie"] = query_kb(kb, f"age_in_movie(\"{star}\", {movie_id}, X).")
+        features["star_age"] = query_kb(kb, f"age_in_movie(\"{star}\", {movie_id}, X).")
         features["star_experience"] = query_kb(kb, f"star_experience(\"{star}\", {movie_id}, X).")
         features["star_is_acclaimed"] = query_kb(kb, f"star_is_acclaimed(\"{star}\", {movie_id}).")
         features["star_is_panned"] = query_kb(kb, f"star_is_panned(\"{star}\", {movie_id}).")
-        features["star_budget_efficiency"] = query_kb(kb, f"star_budget_efficiency(\"{star}\", {movie_id}, X).")
+        features["star_efficiency"] = query_kb(kb, f"star_budget_efficiency(\"{star}\", {movie_id}, X).")
+
+        new_data.append(features)
+
+    new_df = pd.DataFrame(new_data)
+    return new_df
+
+
+def derive_movies_data_for_cls(df, kb):
+    """
+    Deriva il nuovo dataframe dei movies dalla kb per la classificazione.
+    """
+    new_data = []
+
+    for row in df.itertuples():
+        features = {}
+
+        movie_id = row.id
+        director = row.director
+        star = row.star
+
+        # `movie` features
+        features["id"] = movie_id
+        features["title"] = query_kb(kb, f"title({movie_id}, X).")
+
+        features["age"] = query_kb(kb, f"age({movie_id}, X).")
+        features["rating_cat"] = query_kb(kb, f"rating_regrouped({movie_id}, X).")
+        features["genre_cat"] = query_kb(kb, f"genre_regrouped({movie_id}, X).")
+        features["runtime"] = query_kb(kb, f"runtime({movie_id}, X).")
+        features["popularity"] = query_kb(kb, f"votes({movie_id}, X).")
+        features["score"] = query_kb(kb, f"score({movie_id}, X).")
+        features["budget"] = query_kb(kb, f"budget({movie_id}, X).")
+        features["budget_efficiency_cat"] = query_kb(kb, f"budget_efficiency_category({movie_id}, X).")
+
+        # `director` features
+        features["director_age"] = query_kb(kb, f"age_in_movie(\"{director}\", {movie_id}, X).")
+        features["director_experience"] = query_kb(kb, f"director_experience(\"{director}\", {movie_id}, X).")
+        features["director_is_acclaimed"] = query_kb(kb, f"director_is_acclaimed(\"{director}\", {movie_id}).")
+        features["director_is_panned"] = query_kb(kb, f"director_is_panned(\"{director}\", {movie_id}).")
+        features["director_efficiency"] = query_kb(kb, f"director_budget_efficiency(\"{director}\", {movie_id}, X).")
+
+        # `star` features
+        features["star_age"] = query_kb(kb, f"age_in_movie(\"{star}\", {movie_id}, X).")
+        features["star_experience"] = query_kb(kb, f"star_experience(\"{star}\", {movie_id}, X).")
+        features["star_is_acclaimed"] = query_kb(kb, f"star_is_acclaimed(\"{star}\", {movie_id}).")
+        features["star_is_panned"] = query_kb(kb, f"star_is_panned(\"{star}\", {movie_id}).")
+        features["star_efficiency"] = query_kb(kb, f"star_budget_efficiency(\"{star}\", {movie_id}, X).")
+
+        new_data.append(features)
+
+    new_df = pd.DataFrame(new_data)
+    return new_df
+
+
+def derive_movies_data_for_nb(df, kb):
+    """
+    Deriva il nuovo dataframe dei movies dalla kb per la classificazione con Naive Bayes.
+    """
+    new_data = []
+
+    for row in df.itertuples():
+        features = {}
+
+        movie_id = row.id
+        director = row.director
+        star = row.star
+
+        # `movie` features
+        features["id"] = movie_id
+        features["title"] = query_kb(kb, f"title({movie_id}, X).")
+
+        features["age_cat"] = query_kb(kb, f"age_category({movie_id}, X).")
+        features["rating_cat"] = query_kb(kb, f"rating_regrouped({movie_id}, X).")
+        features["genre_cat"] = query_kb(kb, f"genre_regrouped({movie_id}, X).")
+        features["runtime_cat"] = query_kb(kb, f"runtime_category({movie_id}, X).")
+        features["popularity_cat"] = query_kb(kb, f"popularity_category({movie_id}, X).")
+        features["score_cat"] = query_kb(kb, f"score_category({movie_id}, X).")
+        features["budget_cat"] = query_kb(kb, f"budget_category({movie_id}, X).")
+        features["budget_efficiency_cat"] = query_kb(kb, f"budget_efficiency_category({movie_id}, X).")
+
+        # `director` features
+        features["director_age_cat"] = query_kb(kb, f"age_in_movie_category(\"{director}\", {movie_id}, X).")
+        features["director_experience_cat"] = query_kb(kb, f"director_experience_category(\"{director}\", {movie_id}, X).")
+        features["director_is_acclaimed"] = query_kb(kb, f"director_is_acclaimed(\"{director}\", {movie_id}).")
+        features["director_is_panned"] = query_kb(kb, f"director_is_panned(\"{director}\", {movie_id}).")
+        features["director_efficiency_cat"] = query_kb(kb, f"director_efficiency_category(\"{director}\", {movie_id}, X).")
+
+        # `star` features
+        features["star_age_cat"] = query_kb(kb, f"age_in_movie_category(\"{star}\", {movie_id}, X).")
+        features["star_experience_cat"] = query_kb(kb, f"star_experience_category(\"{star}\", {movie_id}, X).")
+        features["star_is_acclaimed"] = query_kb(kb, f"star_is_acclaimed(\"{star}\", {movie_id}).")
+        features["star_is_panned"] = query_kb(kb, f"star_is_panned(\"{star}\", {movie_id}).")
+        features["star_efficiency_cat"] = query_kb(kb, f"star_efficiency_category(\"{star}\", {movie_id}, X).")
 
         new_data.append(features)
     
-    return pd.DataFrame(new_data)
+    new_df = pd.DataFrame(new_data)
+    return new_df

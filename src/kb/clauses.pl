@@ -11,6 +11,20 @@ age_in_movie(Artist, UntilMovie, Age) :-
     Age is YearUntilMovie - BirthYear.
 
 
+% clausola per determinare la categoria di age di un artista
+age_category(Artist, "young") :-
+    age_in_movie(Artist, UntilMovie, Age),
+    Age < 30.
+
+age_category(Artist, "adult") :-
+    age_in_movie(Artist, UntilMovie, Age),
+    Age >= 30, Age < 60.
+
+age_category(Artist, "elderly") :-
+    age_in_movie(Artist, UntilMovie, Age),
+    Age >= 60.
+
+
 % clausola per contare i film per ogni regista
 director_experience(Director, UntilMovie, N) :-
     year(UntilMovie, YearUntilMovie),
@@ -28,6 +42,34 @@ star_experience(Actor, UntilMovie, N) :-
             Movies),
     
     length(Movies, N).
+
+
+% clausola per determinare la categoria di director experience
+director_experience_category(Director, "low") :-
+    director_experience(Director, UntilMovie, N),
+    N < 3.
+
+director_experience_category(Director, "mid") :-
+    director_experience(Director, UntilMovie, N),
+    N >= 3, N < 6.
+
+director_experience_category(Director, "high") :-
+    director_experience(Director, UntilMovie, N),
+    N >= 6.
+
+
+% clausola per determinare la categoria di star experience
+star_experience_category(Actor, "low") :-
+    star_experience(Actor, UntilMovie, N),
+    N < 3.
+
+star_experience_category(Actor, "mid") :-
+    star_experience(Actor, UntilMovie, N),
+    N >= 3, N < 6.
+
+star_experience_category(Actor, "high") :-
+    star_experience(Actor, UntilMovie, N),
+    N >= 6.
 
 
 % clausola per determinare se un regista ha almeno un film acclamato
@@ -89,12 +131,62 @@ star_budget_efficiency(Actor, UntilMovie, AvgEff) :-
     (N > 0 -> AvgEff is Total / N ; AvgEff is 0).
 
 
+% clausola per determinare la categoria di budget efficiency di un regista
+director_budget_efficiency_category(Director, UntilMovie, "none") :-
+    director_budget_efficiency(Director, UntilMovie, AvgEff),
+    AvgEff =:= 0.
+
+director_efficiency_category(Director, UntilMovie, "low") :-
+    director_budget_efficiency(Director, UntilMovie, AvgEff),
+    AvgEff > 0, AvgEff < 1.
+
+director_efficiency_category(Director, UntilMovie, "mid") :-
+    director_budget_efficiency(Director, UntilMovie, AvgEff),
+    AvgEff >= 1, AvgEff < 3.
+
+director_efficiency_category(Director, UntilMovie, "high") :-
+    director_budget_efficiency(Director, UntilMovie, AvgEff),
+    AvgEff >= 3.
+
+
+% clausola per determinare la categoria di budget efficiency di un attore
+star_budget_efficiency_category(Actor, UntilMovie, "none") :-
+    star_budget_efficiency(Actor, UntilMovie, AvgEff),
+    AvgEff =:= 0.
+
+star_efficiency_category(Actor, UntilMovie, "low") :-
+    star_budget_efficiency(Actor, UntilMovie, AvgEff),
+    AvgEff > 0, AvgEff < 1.
+
+star_efficiency_category(Actor, UntilMovie, "mid") :-
+    star_budget_efficiency(Actor, UntilMovie, AvgEff),
+    AvgEff >= 1, AvgEff < 3.
+
+star_efficiency_category(Actor, UntilMovie, "high") :-
+    star_budget_efficiency(Actor, UntilMovie, AvgEff),
+    AvgEff >= 3.
+
+
 % MOVIES
 
 % clausola per il calcolo della age di un film
 age(Movie, Age) :-
     year(Movie, Year),
     Age is 2024 - Year.
+
+
+% clausola per determinare la categoria di age di un film
+age_category(Movie, "recent") :-
+    age(Movie, Age),
+    Age < 10.
+
+age_category(Movie, "old") :-
+    age(Movie, Age),
+    Age >= 10, Age < 25.
+
+age_category(Movie, "very-old") :-
+    age(Movie, Age),
+    Age >= 25.
 
 
 % clausola per determinare la categoria di runtime di un film
@@ -166,6 +258,32 @@ popularity_category(Movie, "high") :-
 popularity_category(Movie, "very-high") :-
     votes(Movie, X),
     X >= 100000.
+
+
+% clausola per determinare la categoria di score di un film
+score_category(Movie, "very-low") :-
+    score(Movie, X),
+    score_mean(Mean),
+    score_std(Std),
+    X < Mean - Std.
+
+score_category(Movie, "low") :-
+    score(Movie, X),
+    score_mean(Mean),
+    score_std(Std),
+    X >= Mean - Std, X < Mean.
+
+score_category(Movie, "high") :-
+    score(Movie, X),
+    score_mean(Mean),
+    score_std(Std),
+    X >= Mean, X < Mean + Std.
+
+score_category(Movie, "very-high") :-
+    score(Movie, X),
+    score_mean(Mean),
+    score_std(Std),
+    X >= Mean + Std.
 
 
 % clausola per il calcolo della media di score dei film
