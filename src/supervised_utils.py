@@ -8,7 +8,7 @@ from sklearn.linear_model import Ridge, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
 from xgboost import XGBRegressor, XGBClassifier
-from sklearn.metrics import mean_squared_error, mean_absolute_error, accuracy_score, classification_report
+from sklearn.metrics import root_mean_squared_error, mean_absolute_error, accuracy_score, classification_report
 from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate, KFold, StratifiedKFold
 
@@ -85,7 +85,7 @@ def plot_cv_results(param_range, scores, xlabel, ylabel, title):
     """
     Visualizza in un grafico i risultati della cross validation.
     """
-    plt.figure(figsize=(8, 5))
+    plt.figure(figsize=(7, 5))
     plt.plot(param_range, scores["train"], label="Train score", linestyle="dashed", linewidth=2.3)
     plt.plot(param_range, scores["val"], label="Validation score", linewidth=2.3)
     plt.legend()
@@ -290,8 +290,8 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
 
     # ciclo di tuning per i modelli
     for model_name, model in models.items():
-        name = " ".join(model_name.split('_'))
-        print("-" * 80)
+        name = " ".join(model_name.split("_"))
+        print("\\\n/\n")
         print(f"TUNING & TRAINING <{name}>...\n")
 
         best_model = tune_model(model, name, X_train, y_train, cv, grid_params[model_name], [metric], metric_name)
@@ -305,15 +305,16 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
         print("> TESTING...")
         if task == "regression":
             mae = mean_absolute_error(y_test, y_pred)
-            print(f"MAE: {mae:.4f}\n")
+            mse = root_mean_squared_error(y_test, y_pred)**2
+            print(f"MAE: {mae:.4f}\nMSE: {mse:.4f}\n")
         else:
             acc = accuracy_score(y_test, y_pred) * 100
-            print(f"Accuracy: {acc:.4f}%")
+            print(f"Accuracy: {acc:.2f}%\n")
             
             report = classification_report(y_test, y_pred, output_dict=True, target_names=["Classe 0", "Classe 1", "Classe 2"])
             report_df = pd.DataFrame(report).transpose()
             report_df = report_df.drop(columns=["support"])
-            plt.figure(figsize=(5, 5))
+            plt.figure(figsize=(7, 5))
             sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap="Blues", fmt=".2f")
             plt.title(f"Classification Report for {name}")
             plt.show()
