@@ -156,8 +156,8 @@ class EarlyStopping:
         title = f"Model performance (best {score_name}: {self._best_score:.4f})"
 
         plt.figure(figsize=(8, 5))
-        plt.plot(self._train_scores, label=f"Train {score_name}", linestyle="dashed", linewidth=2.3)
-        plt.plot(self._val_scores, label=f"Val {score_name}", linewidth=2.3)
+        plt.plot(self._train_scores, label=f"Train {score_name}", color="dodgerblue", linestyle="dashed", linewidth=2.3)
+        plt.plot(self._val_scores, label=f"Val {score_name}", color="crimson", linewidth=2.3)
         plt.xlabel("Epoch")
         plt.ylabel(score_name)
         plt.title(title)
@@ -194,10 +194,14 @@ class Trainer:
             X_train = X_train[features_subset]
             X_test = X_test[features_subset]
 
-        train_dataset = TensorDataset(torch.tensor(X_train.values, dtype=torch.float32),
-                                      torch.tensor(y_train.values, dtype=torch.float32).reshape(-1, 1))
-        test_dataset = TensorDataset(torch.tensor(X_test.values, dtype=torch.float32),
-                                     torch.tensor(y_test.values, dtype=torch.float32).reshape(-1, 1))
+        train_dataset = TensorDataset(
+            torch.tensor(X_train.values, dtype=torch.float32),
+            torch.tensor(y_train.values, dtype=torch.float32).reshape(-1, 1)
+        )
+        test_dataset = TensorDataset(
+            torch.tensor(X_test.values, dtype=torch.float32),
+            torch.tensor(y_test.values, dtype=torch.float32).reshape(-1, 1)
+        )
 
         train_size = int(len(train_dataset) * (1 - val_split))
         val_size = len(train_dataset) - train_size
