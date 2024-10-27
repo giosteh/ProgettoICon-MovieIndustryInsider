@@ -7,6 +7,7 @@ from tabulate import tabulate
 from sklearn.linear_model import Ridge, LogisticRegression
 from sklearn.tree import DecisionTreeRegressor, DecisionTreeClassifier
 from sklearn.ensemble import RandomForestRegressor, RandomForestClassifier
+from sklearn.naive_bayes import GaussianNB, MultinomialNB
 from xgboost import XGBRegressor, XGBClassifier
 from sklearn.metrics import root_mean_squared_error, mean_absolute_error, accuracy_score, classification_report
 from sklearn.preprocessing import LabelEncoder, StandardScaler, MinMaxScaler
@@ -86,8 +87,8 @@ def plot_cv_results(param_range, scores, xlabel, ylabel, title):
     Visualizza in un grafico i risultati della cross validation.
     """
     plt.figure(figsize=(7, 5))
-    plt.plot(param_range, scores["train"], label="Train score", linestyle="dashed", linewidth=2.3)
-    plt.plot(param_range, scores["val"], label="Validation score", linewidth=2.3)
+    plt.plot(param_range, scores["train"], label="Train Score", color="dodgerblue", linestyle="dashed", linewidth=2.3)
+    plt.plot(param_range, scores["val"], label="Val Score", color="crimson", linewidth=2.3)
     plt.legend()
     plt.xlabel(xlabel)
     plt.ylabel(ylabel)
@@ -239,7 +240,7 @@ MODELS_CLS = {
 }
 
 GRID_PARAMS_CLS = {
-    "Logistic_Regression": {
+    "Logistic_Regression_Classifier": {
         "solver": ["saga"],
         "max_iter": [10000, 20000],
         "penalty": ["l1", "l2"]
@@ -269,7 +270,7 @@ GRID_PARAMS_CLS = {
     }
 }
 
-# funzione che esegue tuning e test dei modelli per i task di regressione e classificazione
+
 def tune_and_test_models(df, cols, task="regression", models=None, grid_params=None,
                          folds=5, resample=False, seed=42, session_name=""):
     """
@@ -291,7 +292,7 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
     # ciclo di tuning per i modelli
     for model_name, model in models.items():
         name = " ".join(model_name.split("_"))
-        print("\\\n/\n")
+        print("***\n")
         print(f"TUNING & TRAINING <{name}>...\n")
 
         best_model = tune_model(model, name, X_train, y_train, cv, grid_params[model_name], [metric], metric_name)
@@ -310,11 +311,38 @@ def tune_and_test_models(df, cols, task="regression", models=None, grid_params=N
         else:
             acc = accuracy_score(y_test, y_pred) * 100
             print(f"Accuracy: {acc:.2f}%\n")
-            
-            report = classification_report(y_test, y_pred, output_dict=True, target_names=["Classe 0", "Classe 1", "Classe 2"])
+
+            report = classification_report(y_test, y_pred, output_dict=True)
             report_df = pd.DataFrame(report).transpose()
             report_df = report_df.drop(columns=["support"])
             plt.figure(figsize=(7, 5))
             sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap="Blues", fmt=".2f")
             plt.title(f"Classification Report for {name}")
             plt.show()
+
+
+def train_and_test_naive_bayes(df, cols, mode="multinomial", resample=False, seed=42, session_name=""):
+    """
+    Esegue training e test del modello naive bayes.
+    """
+    X_train, X_test, y_train, y_test = prepare_data(df, cols, task="classification", resample=resample, seed=seed)
+
+    print("***\n")
+    model = MultinomialNB() if mode == "multinomial" else GaussianNB()
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+
+    model_path = f"models/naive_bayes-{session_name}.joblib"
+    joblib.dump(model, model_path)
+
+    print("> TESTING...")
+    acc = accuracy_score(y_test, y_pred) * 100
+    print(f"Accuracy: {acc:.2f}%\n")
+
+    report = classification_report(y_test, y_pred, output_dict=True)
+    report_df = pd.DataFrame(report).transpose()
+    report_df = report_df.drop(columns=["support"])
+    plt.figure(figsize=(7, 5))
+    sns.heatmap(report_df.iloc[:-3, :], annot=True, cmap="Blues", fmt=".2f")
+    plt.title("Classification Report")
+    plt.show()
