@@ -233,7 +233,7 @@ GRID_PARAMS_REG = {
 
 # Modelli per la classificazione
 MODELS_CLS = {
-    "Logistic_Regression": LogisticRegression(),
+    "Logistic_Regression_Classifier": LogisticRegression(),
     "Decision_Tree_Classifier": DecisionTreeClassifier(),
     "Random_Forest_Classifier": RandomForestClassifier(),
     "XGBoost_Classifier": XGBClassifier()
