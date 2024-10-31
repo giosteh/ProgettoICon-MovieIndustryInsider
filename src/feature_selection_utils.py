@@ -8,7 +8,7 @@ from sklearn.feature_selection import mutual_info_regression, mutual_info_classi
 
 from supervised_utils import *
 
-sns.set_style("whitegrid")
+sns.set_style("darkgrid")
 
 
 
@@ -18,14 +18,15 @@ def plot_mutual_information(df, cols, task="regression"):
     """
     X_train, X_test, y_train, y_test = prepare_data(df, cols, task)
     X = pd.concat([X_train, X_test])
-    y = np.vstack([y_train, y_test])
+    y = np.concatenate([y_train, y_test], axis=0)
+    cols_list = list(X.columns)
 
     if task == "regression":
         mi = mutual_info_regression(X, y)
     else:
         mi = mutual_info_classif(X, y)
 
-    mi_df = pd.DataFrame({"feature": cols, "importance": mi})
+    mi_df = pd.DataFrame({"feature": cols_list, "importance": mi})
     mi_df = mi_df.sort_values(by="importance", ascending=False)
 
     plt.figure(figsize=(8, 5))
@@ -38,10 +39,15 @@ def plot_mutual_information(df, cols, task="regression"):
     return mi_df
 
 
-def plot_feature_importances(model, cols_list):
+def plot_feature_importances(df, cols, model, task="regression"):
     """
     Visualizza in un grafico l'importanza delle features.
     """
+    X_train, X_test, y_train, y_test = prepare_data(df, cols, task)
+    X = pd.concat([X_train, X_test])
+    y = np.concatenate([y_train, y_test], axis=0)
+    cols_list = list(X.columns)
+
     # ottengo l'importanza delle features
     if hasattr(model, "get_score"):
         importances_dict = model.get_score(importance_type="gain")
@@ -64,7 +70,7 @@ def plot_feature_importances(model, cols_list):
     return importances_df
 
 
-def manual_forward_selection(model, df, cols, k_features=5, task="regression"):
+def manual_forward_selection(df, cols, model, k_features=10, task="regression"):
     """
     Implementa l'algoritmo di forward selection.
     """
@@ -76,7 +82,7 @@ def manual_forward_selection(model, df, cols, k_features=5, task="regression"):
     # preparo il dataset
     X_train, X_test, y_train, y_test = prepare_data(df, cols, task)
     X = pd.concat([X_train, X_test])
-    y = np.vstack([y_train, y_test])
+    y = np.concatenate([y_train, y_test], axis=0)
 
     features = []
     remaining_features = list(X.columns)
@@ -99,4 +105,4 @@ def manual_forward_selection(model, df, cols, k_features=5, task="regression"):
         remaining_features.remove(best_feature)
         print(f"+ Added {best_feature}")
 
-    return features
+    return pd.DataFrame({"feature": features})
