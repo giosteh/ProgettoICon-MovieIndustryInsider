@@ -29,7 +29,7 @@ def print_info(df):
     print(tabulate(info, headers=["Column", "Type"], tablefmt="pretty"))
 
 
-def prepare_data(df, cols, task="regression", resample=False, seed=36):
+def prepare_data(df, cols, task="regression", resample=False, seed=25):
     """
     Prepara i dati per il training di un modello.
     """
@@ -186,35 +186,35 @@ def get_cv_params(grid_best_params):
         params_dict["n_estimators"] = list(range(50, 401, 50))
 
     if "max_depth" in grid_best_params.keys():
-        params_start = grid_best_params["max_depth"] - 10
+        params_start = grid_best_params["max_depth"] - 5
         if params_start < 2:
             params_start = 2
-        params_dict["max_depth"] = list(range(params_start, params_start + 21, 2))
+        params_dict["max_depth"] = list(range(params_start, params_start + 12))
     
     return params_dict
 
 
 # Modelli per la regressione
 MODELS_REG = {
-    "Ridge_Regressor": Ridge(),
-    "Decision_Tree_Regressor": DecisionTreeRegressor(),
-    "Random_Forest_Regressor": RandomForestRegressor(),
-    "XGBoost_Regressor": XGBRegressor()
+    "Ridge_Reg": Ridge(),
+    "Decision_Tree_Reg": DecisionTreeRegressor(),
+    "Random_Forest_Reg": RandomForestRegressor(),
+    "XGBoost_Reg": XGBRegressor()
 }
 
 GRID_PARAMS_REG = {
-    "Ridge_Regressor": {
+    "Ridge_Reg": {
         "alpha": [.05, .1, .5, 1, 2, 5]
     },
 
-    "Decision_Tree_Regressor": {
+    "Decision_Tree_Reg": {
         "criterion": ["squared_error", "friedman_mse"], 
         "max_depth": [5, 10, 15, 20],
         "min_samples_split": [2, 5, 10, 15],
         "min_samples_leaf": [2, 4, 8, 10, 12]
     },
 
-    "Random_Forest_Regressor": {
+    "Random_Forest_Reg": {
         "criterion": ["squared_error", "friedman_mse"],
         "n_estimators": [100, 200, 300],
         "max_depth": [5, 7, 10, 15],
@@ -222,7 +222,7 @@ GRID_PARAMS_REG = {
         "min_samples_leaf": [2, 4, 8, 10]
     },
 
-    "XGBoost_Regressor": {
+    "XGBoost_Reg": {
         "n_estimators": [100, 200, 300],
         "max_depth": [3, 5, 7, 10],
         "learning_rate": [.01, .1, .2],
@@ -233,27 +233,27 @@ GRID_PARAMS_REG = {
 
 # Modelli per la classificazione
 MODELS_CLS = {
-    "Logistic_Regression_Classifier": LogisticRegression(),
-    "Decision_Tree_Classifier": DecisionTreeClassifier(),
-    "Random_Forest_Classifier": RandomForestClassifier(),
-    "XGBoost_Classifier": XGBClassifier()
+    "Logistic_Regression_Cls": LogisticRegression(),
+    "Decision_Tree_Cls": DecisionTreeClassifier(),
+    "Random_Forest_Cls": RandomForestClassifier(),
+    "XGBoost_Cls": XGBClassifier()
 }
 
 GRID_PARAMS_CLS = {
-    "Logistic_Regression_Classifier": {
+    "Logistic_Regression_Cls": {
         "solver": ["saga"],
         "max_iter": [10000, 20000],
         "penalty": ["l1", "l2"]
     },
 
-    "Decision_Tree_Classifier": {
+    "Decision_Tree_Cls": {
         "criterion": ["gini", "entropy"],
         "max_depth": [5, 10, 15, 20],
         "min_samples_split": [2, 5, 10, 15],
         "min_samples_leaf": [2, 4, 8, 10, 12]
     },
 
-    "Random_Forest_Classifier": {
+    "Random_Forest_Cls": {
         "criterion": ["gini", "entropy"],
         "n_estimators": [100, 200, 300],
         "max_depth": [5, 7, 10, 15],
@@ -261,7 +261,7 @@ GRID_PARAMS_CLS = {
         "min_samples_leaf": [2, 4, 8, 10]
     },
 
-    "XGBoost_Classifier": {
+    "XGBoost_Cls": {
         "n_estimators": [100, 200, 300],
         "max_depth": [3, 5, 7, 10],
         "learning_rate": [.01, .1, .2],

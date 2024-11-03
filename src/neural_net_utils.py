@@ -20,7 +20,7 @@ def build_net_architecture(input_dim):
     """
     Definisce l'architettura della rete.
     """
-    layers = [input_dim, 64, 64, 32, 16, 8]
+    layers = [input_dim, 32, 16, 12, 8, 4]
 
     layers_list = []
     for i in range(len(layers) - 1):
@@ -101,7 +101,7 @@ class EarlyStopping:
     Early stopping per l'addestramento della rete.
     """
 
-    def __init__(self, patience=15, dir_path="nets", model_name="model.pt", mode="max"):
+    def __init__(self, patience=15, dir_path="models", model_name="model.pt", mode="max"):
         self._patience = patience
         self._counter = 0
         self._best_score = None
@@ -139,6 +139,7 @@ class EarlyStopping:
             self._counter += 1
             if self._counter >= self._patience:
                 self._stop = True
+                self.plot()
         
         return self._stop
 
@@ -170,21 +171,21 @@ class Trainer:
     Trainer per l'addestramento della rete.
     """
 
-    def __init__(self, df, cols, task="regression", num_classes=None):
+    def __init__(self, df, cols, features_subset=None, resample=False, task="regression", num_classes=None):
         self._task = task
-        self._train_loader, self._val_loader, self._test_loader, self._input_dim = self._get_data_loaders(df, cols, task=task)
+        self._train_loader, self._val_loader, self._test_loader, self._input_dim = self._get_data_loaders(df, cols, features_subset, resample, task=task)
         self._model = RegressionNet(self._input_dim) if task == "regression" else ClassificationNet(self._input_dim, num_classes)
         self._model.to(device)
 
         self._criterion = nn.MSELoss() if task == "regression" else nn.CrossEntropyLoss()
-        self._optimizer = torch.optim.Adam(self._model.parameters(), lr=1e-2)
+        self._optimizer = torch.optim.SGD(self._model.parameters(), lr=1e-2, weight_decay=1e-2)
 
         self._model_name = f"{task}-net.pt"
         self._early_stopping = EarlyStopping(model=self._model, model_name=self._model_name)
         self._early_stopping.mode = "min" if task == "regression" else "max"
 
-    def _get_data_loaders(self, df, cols, features_subset=None, batch_size=64,
-                          val_split=0.2, resample=False, task="regression"):
+    def _get_data_loaders(self, df, cols, features_subset=None, resample=False,
+                          batch_size=32, val_split=0.2, task="regression"):
         """
         Prepara i data loaders per l'addestramento della rete.
         """
@@ -310,7 +311,7 @@ class Trainer:
         else:
             return total_loss, None
 
-    def fit(self, epochs, verbose=True):
+    def fit(self, epochs=100, verbose=True):
         """
         Addestra il modello.
         """
