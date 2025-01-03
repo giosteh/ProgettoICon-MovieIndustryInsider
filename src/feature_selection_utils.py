@@ -87,7 +87,7 @@ def manual_forward_selection(df, cols, model, k_features=10, task="regression"):
     features = []
     remaining_features = list(X.columns)
 
-    for i in range(k_features):
+    for _ in range(k_features):
         best_feature = None
         best_score = -np.inf
 

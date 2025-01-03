@@ -16,15 +16,15 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 
-def build_net_architecture(input_dim):
+def build_mlp_architecture(input_dim):
     """
     Definisce l'architettura della rete.
     """
-    layers = [input_dim, 32, 16, 12, 8, 4]
+    layer_dims = [input_dim, 32, 16, 8]
 
     layers_list = []
-    for i in range(len(layers) - 1):
-        layers_list.append(nn.Linear(layers[i], layers[i + 1]))
+    for i in range(len(layer_dims) - 1):
+        layers_list.append(nn.Linear(layer_dims[i], layer_dims[i + 1]))
         layers_list.append(nn.ReLU())
         if i > 0:
             layers_list.append(nn.Dropout(p=.2))
@@ -32,18 +32,18 @@ def build_net_architecture(input_dim):
     return layers_list
 
 
-class RegressionNet(nn.Module):
+class RegressionMLP(nn.Module):
     """
     Rete per il task di regressione.
     """
 
     def __init__(self, input_dim):
-        super(RegressionNet, self).__init__()
+        super(RegressionMLP, self).__init__()
 
-        layers_list = build_net_architecture(input_dim)
+        layers_list = build_mlp_architecture(input_dim)
         layers_list.append(nn.Linear(8, 1))
 
-        self.net = nn.Sequential(*layers_list)
+        self.mlp = nn.Sequential(*layers_list)
 
         self._initialize_weights()
 
@@ -53,29 +53,29 @@ class RegressionNet(nn.Module):
         """
         for m in self.modules():
             if isinstance(m, nn.Linear):
-                nn.init.normal_(m.weight, 0, 1)
+                nn.init.kaiming_normal_(m.weight, nonlinearity="relu")
                 nn.init.constant_(m.bias, 0)
     
     def forward(self, x):
         """
         Forward propagation.
         """
-        y = self.net(x)
+        y = self.mlp(x)
         return y
 
 
-class ClassificationNet(nn.Module):
+class ClassificationMLP(nn.Module):
     """
     Rete per il task di classificazione.
     """
 
     def __init__(self, input_dim, num_classes):
-        super(ClassificationNet, self).__init__()
+        super(ClassificationMLP, self).__init__()
 
-        layers_list = build_net_architecture(input_dim)
+        layers_list = build_mlp_architecture(input_dim)
         layers_list.append(nn.Linear(8, num_classes))
 
-        self.net = nn.Sequential(*layers_list)
+        self.mlp = nn.Sequential(*layers_list)
 
         self._initialize_weights()
     
@@ -85,14 +85,14 @@ class ClassificationNet(nn.Module):
         """
         for m in self.modules():
             if isinstance(m, nn.Linear):
-                nn.init.normal_(m.weight, 0, 1)
+                nn.init.kaiming_normal_(m.weight, nonlinearity="relu")
                 nn.init.constant_(m.bias, 0)
     
     def forward(self, x):
         """
         Forward propagation.
         """
-        y = self.net(x)
+        y = self.mlp(x)
         return y
 
 
@@ -156,7 +156,7 @@ class EarlyStopping:
         score_name = "Accuracy" if self._mode == "max" else "Loss"
         title = f"Model performance (best {score_name}: {self._best_score:.4f})"
 
-        plt.figure(figsize=(8, 5))
+        plt.figure(figsize=(7, 5))
         plt.plot(self._train_scores, label=f"Train {score_name}", color="dodgerblue", linestyle="dashed", linewidth=2.3)
         plt.plot(self._val_scores, label=f"Val {score_name}", color="crimson", linewidth=2.3)
         plt.xlabel("Epoch")
@@ -174,13 +174,13 @@ class Trainer:
     def __init__(self, df, cols, features_subset=None, resample=False, task="regression", num_classes=None):
         self._task = task
         self._train_loader, self._val_loader, self._test_loader, self._input_dim = self._get_data_loaders(df, cols, features_subset, resample, task=task)
-        self._model = RegressionNet(self._input_dim) if task == "regression" else ClassificationNet(self._input_dim, num_classes)
+        self._model = RegressionMLP(self._input_dim) if task == "regression" else ClassificationMLP(self._input_dim, num_classes)
         self._model.to(device)
 
         self._criterion = nn.MSELoss() if task == "regression" else nn.CrossEntropyLoss()
         self._optimizer = torch.optim.SGD(self._model.parameters(), lr=1e-2, weight_decay=1e-2)
 
-        self._model_name = f"{task}-net.pt"
+        self._model_name = f"{task}-mlp.pt"
         self._early_stopping = EarlyStopping(model=self._model, model_name=self._model_name)
         self._early_stopping.mode = "min" if task == "regression" else "max"
 
