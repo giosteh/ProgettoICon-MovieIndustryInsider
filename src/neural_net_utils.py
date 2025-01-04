@@ -5,7 +5,6 @@ from torch.utils.data import TensorDataset, DataLoader, random_split
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.metrics import classification_report
 
 from supervised_utils import prepare_data
 
@@ -101,7 +100,7 @@ class EarlyStopping:
     Early stopping per l'addestramento della rete.
     """
 
-    def __init__(self, patience=15, dir_path="models", model_name="model.pt", mode="max"):
+    def __init__(self, patience=30, dir_path="models", model_name="model.pt", mode="max"):
         self._patience = patience
         self._counter = 0
         self._best_score = None
@@ -185,7 +184,7 @@ class Trainer:
         self._early_stopping.mode = "min" if task == "regression" else "max"
 
     def _get_data_loaders(self, df, cols, features_subset=None, resample=False,
-                          batch_size=32, val_split=0.2, task="regression"):
+                          batch_size=32, val_split=.2, task="regression"):
         """
         Prepara i data loaders per l'addestramento della rete.
         """
@@ -197,11 +196,11 @@ class Trainer:
 
         train_dataset = TensorDataset(
             torch.tensor(X_train.values, dtype=torch.float32),
-            torch.tensor(y_train.values, dtype=torch.float32).reshape(-1, 1)
+            torch.tensor(y_train, dtype=torch.float32).reshape(-1, 1)
         )
         test_dataset = TensorDataset(
             torch.tensor(X_test.values, dtype=torch.float32),
-            torch.tensor(y_test.values, dtype=torch.float32).reshape(-1, 1)
+            torch.tensor(y_test, dtype=torch.float32).reshape(-1, 1)
         )
 
         train_size = int(len(train_dataset) * (1 - val_split))
@@ -311,7 +310,7 @@ class Trainer:
         else:
             return total_loss, None
 
-    def fit(self, epochs=100, verbose=True):
+    def fit(self, epochs=120, verbose=True):
         """
         Addestra il modello.
         """
