@@ -100,8 +100,9 @@ class EarlyStopping:
     Early stopping per l'addestramento della rete.
     """
 
-    def __init__(self, patience=30, dir_path="models", model_name="model.pt", mode="max"):
+    def __init__(self, model, model_name, patience=30, dir_path="models", mode="min"):
         self._patience = patience
+        self._model = model
         self._counter = 0
         self._best_score = None
         self._stop = False
@@ -180,7 +181,7 @@ class Trainer:
         self._optimizer = torch.optim.SGD(self._model.parameters(), lr=1e-2, weight_decay=1e-2)
 
         self._model_name = f"{task}-mlp.pt"
-        self._early_stopping = EarlyStopping(model=self._model, model_name=self._model_name)
+        self._early_stopping = EarlyStopping(self._model, self._model_name)
         self._early_stopping.mode = "min" if task == "regression" else "max"
 
     def _get_data_loaders(self, df, cols, features_subset=None, resample=False,
