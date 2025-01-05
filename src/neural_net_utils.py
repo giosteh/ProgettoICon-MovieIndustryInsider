@@ -8,7 +8,7 @@ import seaborn as sns
 
 from supervised_utils import prepare_data
 
-sns.set_style("whitegrid")
+sns.set_style("darkgrid")
 
 # setting del device
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -154,17 +154,16 @@ class EarlyStopping:
         Visualizza in un grafico la progressione del training.
         """
         score_name = "Accuracy" if self.mode == "max" else "Loss"
-        title = f"Model performance (best {score_name}: {self._best_score:.4f})"
-
         plt.figure(figsize=(7, 5))
         plt.plot(self._train_scores, label=f"Train {score_name}", color="dodgerblue", linestyle="dashed", linewidth=2.3)
         plt.plot(self._val_scores, label=f"Val {score_name}", color="crimson", linewidth=2.3)
+        plt.title("Model Performance")
         plt.xlabel("Epoch")
         plt.ylabel(score_name)
-        plt.title(title)
+
         plt.legend()
         plt.show()
-
+        plt.close()
 
 class Trainer:
     """
@@ -173,19 +172,20 @@ class Trainer:
 
     def __init__(self, df, cols, features_subset=None, resample=False, task="regression", num_classes=3):
         self._task = task
-        self._train_loader, self._val_loader, self._test_loader, self._input_dim = self._get_data_loaders(df, cols, features_subset, resample, task=task)
+        self._train_loader, self._val_loader, self._test_loader, self._input_dim = self._get_data_loaders(df, cols, features_subset, resample, task)
         self._model = RegressionMLP(self._input_dim) if task == "regression" else ClassificationMLP(self._input_dim, num_classes)
         self._model.to(device)
 
+        # training setup
         self._criterion = nn.MSELoss() if task == "regression" else nn.CrossEntropyLoss()
         self._optimizer = torch.optim.SGD(self._model.parameters(), lr=1e-2, weight_decay=1e-2)
 
-        self._model_name = f"{task}-mlp.pt"
+        self._model_name = f"{task.capitalize()}_MLP.pt"
         self._early_stopping = EarlyStopping(self._model, self._model_name)
         self._early_stopping.mode = "min" if task == "regression" else "max"
 
     def _get_data_loaders(self, df, cols, features_subset=None, resample=False,
-                          batch_size=32, val_split=.2, task="regression"):
+                          task="regression", val_split=.2, batch_size=32):
         """
         Prepara i data loaders per l'addestramento della rete.
         """
@@ -195,15 +195,21 @@ class Trainer:
             X_train = X_train[features_subset]
             X_test = X_test[features_subset]
 
-        train_dataset = TensorDataset(
-            torch.tensor(X_train.values, dtype=torch.float32),
-            torch.tensor(y_train, dtype=torch.float32).reshape(-1, 1)
-        )
-        test_dataset = TensorDataset(
-            torch.tensor(X_test.values, dtype=torch.float32),
-            torch.tensor(y_test, dtype=torch.float32).reshape(-1, 1)
-        )
-
+        if task == "regression":
+            train_dataset = TensorDataset(
+                torch.tensor(X_train.values, dtype=torch.float32),
+                torch.tensor(y_train, dtype=torch.float32).reshape(-1, 1))
+            test_dataset = TensorDataset(
+                torch.tensor(X_test.values, dtype=torch.float32),
+                torch.tensor(y_test, dtype=torch.float32).reshape(-1, 1))
+        else:
+            train_dataset = TensorDataset(
+                torch.tensor(X_train.values, dtype=torch.float32),
+                torch.tensor(y_train, dtype=torch.long))
+            test_dataset = TensorDataset(
+                torch.tensor(X_test.values, dtype=torch.float32),
+                torch.tensor(y_test, dtype=torch.long))
+        
         train_size = int(len(train_dataset) * (1 - val_split))
         val_size = len(train_dataset) - train_size
         train_dataset, val_dataset = random_split(train_dataset, [train_size, val_size])
@@ -219,7 +225,6 @@ class Trainer:
         Addestra il modello per una singola epoca.
         """
         self._model.train()
-
         correct = 0
         size = len(self._train_loader.dataset)
 
@@ -254,7 +259,6 @@ class Trainer:
         Valida il modello.
         """
         self._model.eval()
-
         correct = 0
         size = len(self._val_loader.dataset)
 
@@ -285,7 +289,6 @@ class Trainer:
         Testa il modello.
         """
         self._model.eval()
-
         correct = 0
         size = len(self._test_loader.dataset)
 
@@ -303,18 +306,19 @@ class Trainer:
                 if self._task == "classification":
                     predicted = logits.argmax(dim=-1)
                     correct += (predicted == labels).sum().item()
-
-        total_loss /= size
+        
+        loss = total_loss / size
         if self._task == "classification":
             accuracy = 100 * correct / size
-            return total_loss, accuracy
-        else:
-            return total_loss, None
+            return loss, accuracy
+        return loss, None
 
-    def fit(self, epochs=120, verbose=True):
+    def fit(self, epochs=100, verbose=True):
         """
         Addestra il modello.
         """
+        if verbose:
+            print("> TRAINING...\n")
         for epoch in range(epochs):
             train_loss, train_acc = self._train()
             val_loss, val_acc = self._validate()
@@ -323,17 +327,25 @@ class Trainer:
                 train_score, val_score = train_acc, val_acc
             else:
                 train_score, val_score = train_loss, val_loss
-            stop = self._early_stopping(train_score, val_score)
-
+            
             if verbose:
-                print(f"\nEpoch #{epoch+1}/{epochs} [")
+                print(f"Epoch #{epoch+1}")
                 if self._task == "classification":
-                    print(f"Train loss: {train_loss:.4f}, Train accuracy: {train_acc:.4f}")
-                    print(f"Val loss: {val_loss:.4f}, Val accuracy: {val_acc:.4f}\n]")
+                    print(f"Train accuracy: {train_acc:.2f}% | Val accuracy: {val_acc:.2f}%\n")
                 else:
-                    print(f"Train loss: {train_loss:.4f}\nVal loss: {val_loss:.4f}\n]")
-
+                    print(f"Train loss: {train_loss:.4f} | Val loss: {val_loss:.4f}\n")
+            
+            stop = self._early_stopping(train_score, val_score)
             if stop:
                 if verbose:
                     print(f"Early stopping at epoch #{epoch+1}.\n")
                 break
+        
+        # testing del modello
+        if verbose:
+            print("> TESTING...\n")
+        test_loss, test_acc = self.test()
+        if self._task == "classification":
+            print(f"Accuracy: {test_acc:.2f}%")
+        else:
+            print(f"Loss: {test_loss:.4f}\n")
