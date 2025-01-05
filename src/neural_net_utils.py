@@ -334,13 +334,12 @@ class Trainer:
                     print(f"Train accuracy: {train_acc:.2f}% | Val accuracy: {val_acc:.2f}%\n")
                 else:
                     print(f"Train loss: {train_loss:.4f} | Val loss: {val_loss:.4f}\n")
-            
+            # early stopping
             stop = self._early_stopping(train_score, val_score)
             if stop:
                 if verbose:
                     print(f"Early stopping at epoch #{epoch+1}.\n")
                 break
-        
         # testing del modello
         if verbose:
             print("> TESTING...\n")
