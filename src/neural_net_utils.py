@@ -319,7 +319,10 @@ class Trainer:
             train_loss, train_acc = self._train()
             val_loss, val_acc = self._validate()
 
-            train_score, val_score = train_acc, val_acc if self._task == "classification" else train_loss, val_loss
+            if self._task == "classification":
+                train_score, val_score = train_acc, val_acc
+            else:
+                train_score, val_score = train_loss, val_loss
             stop = self._early_stopping(train_score, val_score)
 
             if verbose:
