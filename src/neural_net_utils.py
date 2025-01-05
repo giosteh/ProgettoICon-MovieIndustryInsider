@@ -116,7 +116,7 @@ class EarlyStopping:
         """
         Controlla se lo score migliora.
         """
-        if self._mode == "max":
+        if self.mode == "max":
             return score > self._best_score
         else:
             return score < self._best_score
@@ -153,7 +153,7 @@ class EarlyStopping:
         """
         Visualizza in un grafico la progressione del training.
         """
-        score_name = "Accuracy" if self._mode == "max" else "Loss"
+        score_name = "Accuracy" if self.mode == "max" else "Loss"
         title = f"Model performance (best {score_name}: {self._best_score:.4f})"
 
         plt.figure(figsize=(7, 5))
@@ -171,7 +171,7 @@ class Trainer:
     Trainer per l'addestramento della rete.
     """
 
-    def __init__(self, df, cols, features_subset=None, resample=False, task="regression", num_classes=None):
+    def __init__(self, df, cols, features_subset=None, resample=False, task="regression", num_classes=3):
         self._task = task
         self._train_loader, self._val_loader, self._test_loader, self._input_dim = self._get_data_loaders(df, cols, features_subset, resample, task=task)
         self._model = RegressionMLP(self._input_dim) if task == "regression" else ClassificationMLP(self._input_dim, num_classes)
