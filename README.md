@@ -1,2 +1,2 @@
 # ProgettoICon: Movie Industry Insider
-Repo contenente codice, dati e documentazione del progetto per il corso di *Ingegneria della Conoscenza* 2023-24.
+Repository contenente codice, dati, modelli e documentazione del progetto per l'esame del corso di *Ingegneria della Conoscenza* 2023-24.
