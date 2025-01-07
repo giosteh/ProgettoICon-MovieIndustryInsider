@@ -1,2 +1,2 @@
 # ProgettoICon: Movie Industry Insider
-Repo in cui trovate codice e dati del progetto di ICon.
+Repo contenente codice, dati e documentazione del progetto per il corso di *Ingegneria della Conoscenza* 2023-24.
