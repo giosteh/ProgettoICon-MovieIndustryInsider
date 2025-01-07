@@ -41,7 +41,6 @@ class RegressionMLP(nn.Module):
 
         layers_list = build_mlp_architecture(input_dim)
         layers_list.append(nn.Linear(8, 1))
-
         self.mlp = nn.Sequential(*layers_list)
 
         self._initialize_weights()
@@ -73,7 +72,6 @@ class ClassificationMLP(nn.Module):
 
         layers_list = build_mlp_architecture(input_dim)
         layers_list.append(nn.Linear(8, num_classes))
-
         self.mlp = nn.Sequential(*layers_list)
 
         self._initialize_weights()
@@ -176,7 +174,7 @@ class Trainer:
         self._model = RegressionMLP(self._input_dim) if task == "regression" else ClassificationMLP(self._input_dim, num_classes)
         self._model.to(device)
 
-        # training setup
+        # setup per il training
         self._criterion = nn.MSELoss() if task == "regression" else nn.CrossEntropyLoss()
         self._optimizer = torch.optim.SGD(self._model.parameters(), lr=1e-2, weight_decay=1e-2)
 
@@ -334,7 +332,7 @@ class Trainer:
                     print(f"Train accuracy: {train_acc:.2f}% | Val accuracy: {val_acc:.2f}%\n")
                 else:
                     print(f"Train loss: {train_loss:.4f} | Val loss: {val_loss:.4f}\n")
-            # early stopping
+            # check per l'early stopping
             stop = self._early_stopping(train_score, val_score)
             if stop:
                 if verbose:

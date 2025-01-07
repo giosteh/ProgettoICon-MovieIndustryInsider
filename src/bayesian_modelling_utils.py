@@ -110,6 +110,6 @@ def sensitivity_analysis(model, target, variables, baseline_evidence=None):
         print(f"\nSensibilità di {target.upper()} rispetto alla variabile [{var.upper()}]")
         for value, probs in var_results.items():
             print(f"* Dato {var.upper()} = '{value}':")
-            # stampa le probabilità condizionate della target
+            # visualizzo le probabilità condizionate della target
             table = [(f"'{target_val}'", f"{target_prob*100:.2f}%") for target_val, target_prob in probs]
             print(tabulate(table, headers=[target.upper(), "Prob. (%)"], tablefmt="fancy_grid"))
