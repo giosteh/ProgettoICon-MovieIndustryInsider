@@ -37,12 +37,11 @@ def prepare_data(df, cols, task="regression", resample=False, seed=25):
     y = df[cols["target"]].to_numpy()
     y = y.ravel()
 
-    # encoding
+    # encoding (onehot o label)
     if cols["dummies"]:
         X = pd.get_dummies(X, columns=cols["dummies"])
     bool_cols = X.select_dtypes(include="bool").columns
     X[bool_cols] = X[bool_cols].astype(int)
-
     if cols["labels"]:
         encoder = LabelEncoder()
         for col in cols["labels"]:
@@ -64,7 +63,6 @@ def prepare_data(df, cols, task="regression", resample=False, seed=25):
         scaler = StandardScaler()
         X_train[cols["standardize"]] = np.round(scaler.fit_transform(X_train[cols["standardize"]]), 4)
         X_test[cols["standardize"]] = np.round(scaler.transform(X_test[cols["standardize"]]), 4)
-
     if cols["minmax"]:
         scaler = MinMaxScaler()
         X_train[cols["minmax"]] = np.round(scaler.fit_transform(X_train[cols["minmax"]]), 4)
