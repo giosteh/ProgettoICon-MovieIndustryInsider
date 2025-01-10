@@ -54,10 +54,14 @@ def query_kb(prolog_kb, query):
     """
     Esegui una query safe sulla kb.
     """
-    result = prolog_kb.query(query)
+    result = list(prolog_kb.query(query))
     if result:
-        return list(result)[0]["X"]
-    return None
+        if "X" in result[0]:
+            # query standard
+            return result[0]["X"]
+        # query booleana
+        return True
+    return False
 
 
 def derive_movies_data_for_reg(df, kb):
@@ -68,7 +72,6 @@ def derive_movies_data_for_reg(df, kb):
 
     for row in df.itertuples():
         features = {}
-
         movie_id = row.id
         director = row.director
         star = row.star
@@ -114,7 +117,6 @@ def derive_movies_data_for_cls(df, kb):
 
     for row in df.itertuples():
         features = {}
-
         movie_id = row.id
         director = row.director
         star = row.star
@@ -160,7 +162,6 @@ def derive_movies_data_for_nb(df, kb):
 
     for row in df.itertuples():
         features = {}
-
         movie_id = row.id
         director = row.director
         star = row.star

@@ -42,6 +42,7 @@ def process_df(df, drop_cols=[], only_drop=True):
     """
     Prepara il dataframe per l'apprendimento del modello bayesiano.
     """
+    # rimozione delle colonne
     df = df.drop(columns=drop_cols, axis=1)
     if only_drop:
         return df

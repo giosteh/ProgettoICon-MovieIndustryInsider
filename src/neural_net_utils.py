@@ -42,7 +42,7 @@ class RegressionMLP(nn.Module):
         layers_list = build_mlp_architecture(input_dim)
         layers_list.append(nn.Linear(8, 1))
         self.mlp = nn.Sequential(*layers_list)
-
+        # inizializzazione dei pesi
         self._initialize_weights()
 
     def _initialize_weights(self):
@@ -73,7 +73,7 @@ class ClassificationMLP(nn.Module):
         layers_list = build_mlp_architecture(input_dim)
         layers_list.append(nn.Linear(8, num_classes))
         self.mlp = nn.Sequential(*layers_list)
-
+        # inizializzazione dei pesi
         self._initialize_weights()
     
     def _initialize_weights(self):
