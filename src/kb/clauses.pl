@@ -3,15 +3,14 @@
 
 % ARTISTS
 
-% clausola per il calcolo della age per ogni artista
+% clausola per calcolare la age di un artista in un film
 age_in_movie(Artist, UntilMovie, Age) :-
     year(UntilMovie, YearUntilMovie),
     birth_year(Artist, BirthYear),
-
     Age is YearUntilMovie - BirthYear.
 
 
-% clausola per determinare la categoria di age di un artista
+% clausola per determinare la categoria di age di un artista di un film
 age_in_movie_category(Artist, UntilMovie, "young") :-
     age_in_movie(Artist, UntilMovie, Age),
     Age < 30.
@@ -25,26 +24,24 @@ age_in_movie_category(Artist, UntilMovie, "elderly") :-
     Age >= 60.
 
 
-% clausola per contare i film per ogni regista
+% clausola per contare i film fatti da un regista fino a un certo anno
 director_experience(Director, UntilMovie, N) :-
     year(UntilMovie, YearUntilMovie),
     findall(Movie, 
             (directed_by(Movie, Director), year(Movie, Year), Year < YearUntilMovie),
             Movies),
-    
     length(Movies, N).
 
-% clausola per contare i film per ogni attore
+% clausola per contare i film fatti da un attore fino a un certo anno
 star_experience(Actor, UntilMovie, N) :-
     year(UntilMovie, YearUntilMovie),
     findall(Movie, 
             (starring(Movie, Actor), year(Movie, Year), Year < YearUntilMovie),
             Movies),
-    
     length(Movies, N).
 
 
-% clausola per determinare la categoria di director experience
+% clausola per determinare la categoria di esperienza di un regista
 director_experience_category(Director, UntilMovie, "low") :-
     director_experience(Director, UntilMovie, N),
     N < 3.
@@ -58,7 +55,7 @@ director_experience_category(Director, UntilMovie, "high") :-
     N >= 6.
 
 
-% clausola per determinare la categoria di star experience
+% clausola per determinare la categoria di esperienza di un attore
 star_experience_category(Actor, UntilMovie, "low") :-
     star_experience(Actor, UntilMovie, N),
     N < 3.
@@ -72,7 +69,7 @@ star_experience_category(Actor, UntilMovie, "high") :-
     N >= 6.
 
 
-% clausola per determinare se un regista ha almeno un film acclamato
+% clausola per determinare se un regista ha almeno un film acclamato fino a un certo anno
 director_is_acclaimed(Director, UntilMovie) :-
     year(UntilMovie, YearUntilMovie),
     findall(Movie, 
@@ -81,7 +78,7 @@ director_is_acclaimed(Director, UntilMovie) :-
     length(Movies, N),
     N > 0.
 
-% clausola per determinare se un regista ha almeno un film stroncato
+% clausola per determinare se un regista ha almeno un film stroncato fino a un certo anno
 director_is_panned(Director, UntilMovie) :-
     year(UntilMovie, YearUntilMovie),
     findall(Movie, 
@@ -91,7 +88,7 @@ director_is_panned(Director, UntilMovie) :-
     N > 0.
 
 
-% clausola per determinare se un attore ha almeno un film acclamato
+% clausola per determinare se un attore ha almeno un film acclamato fino a un certo anno
 star_is_acclaimed(Actor, UntilMovie) :-
     year(UntilMovie, YearUntilMovie),
     findall(Movie, 
@@ -100,7 +97,7 @@ star_is_acclaimed(Actor, UntilMovie) :-
     length(Movies, N),
     N > 0.
 
-% clausola per determinare se un attore ha almeno un film stroncato
+% clausola per determinare se un attore ha almeno un film stroncato fino a un certo anno
 star_is_panned(Actor, UntilMovie) :-
     year(UntilMovie, YearUntilMovie),
     findall(Movie, 
@@ -110,7 +107,7 @@ star_is_panned(Actor, UntilMovie) :-
     N > 0.
 
 
-% clausola per calcolare la media di budget_efficiency per un regista
+% clausola per calcolare la media di budget efficiency per un regista fino a un certo anno
 director_budget_efficiency(Director, UntilMovie, AvgEff) :-
     year(UntilMovie, YearUntilMovie),
     findall(Eff, 
@@ -120,7 +117,7 @@ director_budget_efficiency(Director, UntilMovie, AvgEff) :-
     sum_list(Effs, Total),
     (N > 0 -> AvgEff is Total / N ; AvgEff is 0).
 
-% clausola per calcolare la media di budget_efficiency per un attore
+% clausola per calcolare la media di budget efficiency per un attore fino a un certo anno
 star_budget_efficiency(Actor, UntilMovie, AvgEff) :-
     year(UntilMovie, YearUntilMovie),
     findall(Eff, 
@@ -131,7 +128,7 @@ star_budget_efficiency(Actor, UntilMovie, AvgEff) :-
     (N > 0 -> AvgEff is Total / N ; AvgEff is 0).
 
 
-% clausola per determinare la categoria di budget efficiency di un regista
+% clausola per determinare la categoria di budget efficiency di un regista fino a un certo anno
 director_budget_efficiency_category(Director, UntilMovie, "none") :-
     director_budget_efficiency(Director, UntilMovie, AvgEff),
     AvgEff =:= 0.
@@ -149,7 +146,7 @@ director_efficiency_category(Director, UntilMovie, "high") :-
     AvgEff >= 3.
 
 
-% clausola per determinare la categoria di budget efficiency di un attore
+% clausola per determinare la categoria di budget efficiency di un attore fino a un certo anno
 star_budget_efficiency_category(Actor, UntilMovie, "none") :-
     star_budget_efficiency(Actor, UntilMovie, AvgEff),
     AvgEff =:= 0.
@@ -169,7 +166,7 @@ star_efficiency_category(Actor, UntilMovie, "high") :-
 
 % MOVIES
 
-% clausola per il calcolo della age di un film
+% clausola per calcolare la age di un film
 age(Movie, Age) :-
     year(Movie, Year),
     Age is 2024 - Year.
@@ -203,13 +200,14 @@ runtime_category(Movie, "long") :-
     X >= 120.
 
 
-% clausola per il calcolo della budget efficiency
+% clausola per calcolare la budget efficiency di un film
 budget_efficiency(Movie, Eff) :-
     budget(Movie, Budget),
     gross(Movie, Gross),
     Budget \= 0,
     Eff is Gross / Budget.
 
+% clausola per determinare la categoria di budget efficiency di un film
 budget_efficiency_category(Movie, "low") :-
     budget_efficiency(Movie, X),
     X < 1.
@@ -285,7 +283,7 @@ score_category(Movie, "very-high") :-
     X >= Mean + Std.
 
 
-% clausola per il calcolo della media di score dei film
+% clausola per calcolare la media di score dei film
 score_mean(Mean) :-
     findall(Score, score(_, Score), Scores),
     sum_list(Scores, Total),
@@ -300,7 +298,7 @@ sum_of_squares([Value|Rest], Avg, SumSq) :-
     SumSq is RestSumSq + (Value - Avg)^2.
 
 
-% clausola per il calcolo della deviazione standard di score dei film
+% clausola per calcolare la deviazione standard di score dei film
 score_std(Std) :-
     score_mean(Mean),
     findall(Score, score(_, Score), Scores),
@@ -334,7 +332,6 @@ genre_regrouped(Movie, "Other") :-
 genre_regrouped(Movie, Genre) :-
     genre(Movie, Genre),
     \+ member(Genre, ["Fantasy", "Mystery", "Thriller", "Sci-Fi", "Family", "Romance", "Western"]).
-
 
 % clausola per rimappare il rating di un film
 rating_regrouped(Movie, "Other") :-
