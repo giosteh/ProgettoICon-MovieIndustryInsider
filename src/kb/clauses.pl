@@ -12,15 +12,15 @@ age_in_movie(Artist, UntilMovie, Age) :-
 
 
 % clausola per determinare la categoria di age di un artista
-age_category(Artist, "young") :-
+age_in_movie_category(Artist, UntilMovie, "young") :-
     age_in_movie(Artist, UntilMovie, Age),
     Age < 30.
 
-age_category(Artist, "adult") :-
+age_in_movie_category(Artist, UntilMovie, "adult") :-
     age_in_movie(Artist, UntilMovie, Age),
     Age >= 30, Age < 60.
 
-age_category(Artist, "elderly") :-
+age_in_movie_category(Artist, UntilMovie, "elderly") :-
     age_in_movie(Artist, UntilMovie, Age),
     Age >= 60.
 
@@ -45,29 +45,29 @@ star_experience(Actor, UntilMovie, N) :-
 
 
 % clausola per determinare la categoria di director experience
-director_experience_category(Director, "low") :-
+director_experience_category(Director, UntilMovie, "low") :-
     director_experience(Director, UntilMovie, N),
     N < 3.
 
-director_experience_category(Director, "mid") :-
+director_experience_category(Director, UntilMovie, "mid") :-
     director_experience(Director, UntilMovie, N),
     N >= 3, N < 6.
 
-director_experience_category(Director, "high") :-
+director_experience_category(Director, UntilMovie, "high") :-
     director_experience(Director, UntilMovie, N),
     N >= 6.
 
 
 % clausola per determinare la categoria di star experience
-star_experience_category(Actor, "low") :-
+star_experience_category(Actor, UntilMovie, "low") :-
     star_experience(Actor, UntilMovie, N),
     N < 3.
 
-star_experience_category(Actor, "mid") :-
+star_experience_category(Actor, UntilMovie, "mid") :-
     star_experience(Actor, UntilMovie, N),
     N >= 3, N < 6.
 
-star_experience_category(Actor, "high") :-
+star_experience_category(Actor, UntilMovie, "high") :-
     star_experience(Actor, UntilMovie, N),
     N >= 6.
 
@@ -208,7 +208,6 @@ budget_efficiency(Movie, Eff) :-
     budget(Movie, Budget),
     gross(Movie, Gross),
     Budget \= 0,
-
     Eff is Gross / Budget.
 
 budget_efficiency_category(Movie, "low") :-
@@ -292,12 +291,10 @@ score_mean(Mean) :-
     sum_list(Scores, Total),
     length(Scores, N),
     N > 0,
-
     Mean is Total / N.
 
 
 sum_of_squares([], _, 0).
-
 sum_of_squares([Value|Rest], Avg, SumSq) :-
     sum_of_squares(Rest, Avg, RestSumSq),
     SumSq is RestSumSq + (Value - Avg)^2.
@@ -310,25 +307,22 @@ score_std(Std) :-
     sum_of_squares(Scores, Mean, SumSq),
     length(Scores, N),
     N > 1,
-
     Std is sqrt(SumSq / (N - 1)).
 
 
-% clausola per determinare se un film è acclamato dal pubblico
+% clausola per determinare se un film è stato acclamato dal pubblico
 is_acclaimed(Movie) :-
     score(Movie, Score),
     score_mean(Mean),
     score_std(Std),
-
     Score > Mean + Std.
 
 
-% clausola per determinare se un film è stroncato dal pubblico
+% clausola per determinare se un film è stato stroncato dal pubblico
 is_panned(Movie) :-
     score(Movie, Score),
     score_mean(Mean),
     score_std(Std),
-
     Score < Mean - Std.
 
 
