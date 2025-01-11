@@ -79,12 +79,14 @@ def manual_forward_selection(df, cols, model, k_features=10, task="regression"):
     if task == "classification":
         metric = "accuracy"
         cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    score_sign = -1 if task == "regression" else 1
     # preparo il dataset
     X_train, X_test, y_train, y_test = prepare_data(df, cols, task)
     X = pd.concat([X_train, X_test])
     y = np.concatenate([y_train, y_test], axis=0)
 
     features = []
+    scores = []
     remaining_features = list(X.columns)
 
     for _ in range(k_features):
@@ -102,7 +104,13 @@ def manual_forward_selection(df, cols, model, k_features=10, task="regression"):
                 best_score = score
 
         features.append(best_feature)
+        scores.append(best_score * score_sign)
         remaining_features.remove(best_feature)
-        print(f"+ Added {best_feature}")
 
-    return pd.DataFrame({"feature": features})
+    scores_df = pd.DataFrame({"features": features, "score": scores})
+    # visualizzo i risultati in un grafico
+    plt.figure(figsize=(12, 7))
+    sns.lineplot(x="features", y="score", data=scores_df, marker="o")
+    plt.xticks(rotation=90)
+    plt.show()
+    return scores_df
